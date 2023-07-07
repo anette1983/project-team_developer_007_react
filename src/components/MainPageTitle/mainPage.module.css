@@ -1,0 +1,68 @@
+  @media screen and (min-width: 375px) {
+       .title{
+        color: #001833;
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: -0.56px;
+        
+       }
+       .firstGreen{
+        position: absolute;
+        top: 12px;
+        left: 130px;
+    }
+    .black{
+        position: absolute;
+        bottom: 0;
+        left: 231px;
+    }
+    .lastGreen{
+        position: absolute;
+        top:44px;
+        right: 16px;
+    }
+    }
+    @media screen and (min-width: 768px) {
+     .title{
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: -0.64px;
+       }
+       .firstGreen{
+        top: 21px;
+        left: 187px;
+    }
+     .black{
+        left: 405px;
+    }
+    .lastGreen{
+        top:34px;
+        right: 32px;
+    }
+    }
+  
+    @media screen and (min-width: 1440px) {
+    .title{
+        font-size: 44px;
+        line-height: 44px;
+        letter-spacing: -0.88px;
+       }
+       .firstGreen{
+        top: 56px;
+        left: 328px;
+    }
+     .black{
+       
+        left: 807px;
+    }
+    .lastGreen{
+        top:69px;
+        right: 171px;
+    }
+    }
+   
+    
+    
+    
