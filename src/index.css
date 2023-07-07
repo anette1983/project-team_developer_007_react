@@ -55,14 +55,12 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins_SemiBold';
+  font-family: 'Poppins_Regular';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 /* Reset CSS */
