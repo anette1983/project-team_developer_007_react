@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkproject_team_developer_007_react=self.webpackChunkproject_team_developer_007_react||[]).push([[502],{2502:function(e,t,r){r.r(t);var a=r(184);t.default=function(){return(0,a.jsx)(a.Fragment,{children:"ShoppingListPage"})}}}]);
+//# sourceMappingURL=502.10ebc31b.chunk.js.map
