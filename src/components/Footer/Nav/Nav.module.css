@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.list {
+   margin-bottom: 32px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.item:not(:last-child){
+    padding-bottom: 14px;
+}
+
+.item_link {
+    color: #FAFAFA;
+    text-decoration: none;
+    
+font-size: 14px;
+font-weight: 500;
+line-height: 18px;
+letter-spacing: -0.02em;
+text-align: left;
+
+}
+
