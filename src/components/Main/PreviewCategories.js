@@ -3,7 +3,10 @@ import { RecipeList } from "./RecipesList";
 import { Link } from "react-router-dom";
 
 export const PreviewCategories =()=>{
-const [reciepes, setReciepes]= useState([]);
+  // Видалив setReciepes тому що він поки що не використовується, а за нього не збтрається проект! 
+  // Коли буде активний запит то повернути setReciepes
+const [reciepes]= useState([]);
+  // const [reciepes, setReciepes]= useState([]);
 
 useEffect(()=>{
 // axios.
