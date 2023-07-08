@@ -4,7 +4,7 @@ import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
 
 const NotFoundPage = lazy(() => import('pages/NotFoundPage/NotFoundPage'));
-const WelcomePage = lazy(() => import('pages/WelcomePage/WelcomePage'));
+const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
 const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
 const SignInPage = lazy(() => import('pages/SignInPage/SignInPage'));
 const MainPage = lazy(() => import('pages/MainPage/MainPage'));
