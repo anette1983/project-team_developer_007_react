@@ -1,3 +1,4 @@
+import { Footer } from 'components/Footer/Footer/Footer';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
@@ -10,7 +11,8 @@ const SharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
-      <div>Footer</div>
+      <Footer/>
+      {/* <div>Footer</div> */}
     </>
   );
 };
