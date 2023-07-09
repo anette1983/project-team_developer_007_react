@@ -4,6 +4,7 @@ import SearchForm from "../../components/SearchForm/SearchInput"
 import css from "../pages.module.css"
 import searchCss from "./searchContainer.module.css"
 import SearchedRecipesList from "components/SearchedRecipesList/SearchedRecipesList"
+import { Pagination } from "@mui/material"
 
  const SearchPage = () => {
     return (
@@ -21,6 +22,10 @@ import SearchedRecipesList from "components/SearchedRecipesList/SearchedRecipesL
             <div className={`${css.container} ${searchCss.container}`}>
                 <SearchedRecipesList/>
             </div>
+            <div className={searchCss.paginationWrap}>
+                <Pagination count={5} siblingCount={0} />
+            </div>
+           
         </div>
     )
     

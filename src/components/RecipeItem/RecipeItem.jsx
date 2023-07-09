@@ -1,7 +1,7 @@
 const RecipeItem = ({url, text}) => {
     return (
          <li>
-             <img src={ url} alt="burger" />
+            <img src={url} alt={ text} />
             <div>
                 <p>{ text}
                 </p>

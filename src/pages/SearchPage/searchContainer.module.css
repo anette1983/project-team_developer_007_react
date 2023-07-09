@@ -29,3 +29,12 @@
            padding: 102px 100px 0 100px;
         }
     }
+    .paginationWrap{
+        width: 275px;
+        height: 51px;
+        border-radius: 26px;
+        background: #FAFAFA;
+        box-shadow: 0px 4px 4px 0px rgba(135, 135, 135, 0.20);
+        display: flex;
+        align-items: center;
+    }
