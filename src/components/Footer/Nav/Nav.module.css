@@ -1,6 +1,18 @@
 .container {
     display: flex;
     justify-content: space-around;
+   
+}
+@media screen and (min-width: 768px) {
+    .container {
+        padding-left: 172px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        padding-left: 0;
+    }
 }
 
 .list {
@@ -15,14 +27,13 @@
 }
 
 .item_link {
-    color: #FAFAFA;
-    text-decoration: none;
-    
-font-size: 14px;
-font-weight: 500;
-line-height: 18px;
-letter-spacing: -0.02em;
-text-align: left;
+ color: #FAFAFA;
+ text-decoration: none;
+ font-size: 14px;
+ font-weight: 500;
+ line-height: 18px;
+ letter-spacing: -0.02em;
+ text-align: left;
 
 }
 

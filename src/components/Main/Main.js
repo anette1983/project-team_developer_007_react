@@ -1,6 +1,6 @@
-import {ChooseYourBreakfast} from "./ChooseYourBreakfast";
-import {Search} from "./Search";
-import {PreviewCategories} from "./PreviewCategories"
+import {ChooseYourBreakfast} from "./ChooseYourBreakfast/ChooseYourBreakfast";
+import {Search} from "./Search/Search";
+import {PreviewCategories} from "./PreviewCategories/PreviewCategories"
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 

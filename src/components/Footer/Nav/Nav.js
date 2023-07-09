@@ -11,8 +11,6 @@ export const Nav = () => {
     <li className={css.item}><Link to ="/favorite" className={css.item_link}>Favorite</Link></li>
     <li className={css.item}><Link to ="/shopping-list" className={css.item_link}>Shopping list</Link></li>
   </ul>
-  
 </div>
-
     )
 }
