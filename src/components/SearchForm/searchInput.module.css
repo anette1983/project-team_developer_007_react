@@ -2,7 +2,7 @@
     width: 295px;
     height: 53px;
     fill: #FFF;
-    stroke-width: 1px;
+    strokeWidth: 1px;
     filter: drop-shadow(0px 4px 97px rgba(34, 37, 42, 0.03));
     border-radius: 24px 44px;
     outline: none;
@@ -84,7 +84,8 @@
     align-items: flex-start;
     justify-content: space-evenly;
     border-radius: 0px 0px 6px 6px;
-    
+    z-index: 999;
+    cursor: pointer;
 }
 .text{
     margin-left: 9px;
@@ -97,8 +98,4 @@
     opacity: 0.16;  
     border-radius: 0px 0px 6px 6px;
     background-color: #FAFAFA; 
-}
-.textWrap{
-    
-    
 }

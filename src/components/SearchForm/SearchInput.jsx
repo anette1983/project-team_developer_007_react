@@ -9,6 +9,10 @@ const SearchForm = () => {
         e.preventDefault();
         
     }
+    const handleOption = (e) => {
+        console.log( e.currentTarget.id);
+        setSelectBy( e.currentTarget.id)  
+    }
     return (
         <form onSubmit={handleBtnSubmit} className={ css.form}>
             <div className={ css.inputWrap}>
@@ -21,16 +25,17 @@ const SearchForm = () => {
                 {selectBy}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="chevron-up">
-                    <path id="Vector" d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#8BAA36" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="Vector" d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#8BAA36" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
                     </g>
                 </svg>
                 </div>
                 <div className={css.optionWrap}>
-                        <p className={css.text}>Title</p>
-                        <p className={css.text}>Ingredients</p>              
+                        <p onClick={handleOption} className={css.text} id="Title">Title</p>
+                        <p onClick={handleOption} className={css.text} id="Ingredients">Ingredients</p>              
                 </div>
+                
             </div>                
-            </form>   
+        </form>   
     )
     
 }

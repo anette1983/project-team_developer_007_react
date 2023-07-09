@@ -3,10 +3,24 @@
             padding: 50px 16px 0 16px; 
             position: relative;
         }
+         .mobPhoto{
+            margin: 0 auto;
+        }
+        .tabPhoto{
+            display: none;
+        }
     }
     @media screen and (min-width: 768px) {
         .container{
           padding: 72px 32px 0 32px;
+        }
+        .mobPhoto{
+            display: none;
+          
+        }
+          .tabPhoto{
+            display: block;
+            margin: 0 auto;
         }
     }
   
