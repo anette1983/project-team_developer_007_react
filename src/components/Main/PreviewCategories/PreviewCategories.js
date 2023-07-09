@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { RecipeList } from "./RecipesList";
+import { RecipeList } from "../RecipeList/RecipesList";
 import { Link } from "react-router-dom";
 
 export const PreviewCategories =()=>{

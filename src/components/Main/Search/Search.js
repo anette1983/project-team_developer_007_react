@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import css from "./Search.module.css";
 
 export const Search =({onSubmit})=> {
 const [value, setValue] = useState ('');
@@ -15,8 +16,9 @@ onSubmit(value)
 }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={css.form} onSubmit={handleSubmit}>
             <input
+            className={css.input}
             type="text"
             autoComplete="off"
             autoFocus
