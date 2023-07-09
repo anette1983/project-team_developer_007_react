@@ -1,5 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchMainPage, fetchByCategory, fetchMore } from './operations';
+import {
+  fetchMainPage,
+  fetchByCategory,
+  fetchMore,
+  fetchRecipeById,
+} from './operations';
 
 const handlePending = state => (state.isLoading = true);
 
@@ -20,7 +25,7 @@ const recipesSlice = createSlice({
   name: 'recipes',
   initialState,
   extraReducers: {
-    //[fetchMainPage.pending]: handlePending,
+    [fetchMainPage.pending]: handlePending,
     [fetchMainPage.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
@@ -28,15 +33,15 @@ const recipesSlice = createSlice({
     },
     [fetchMainPage.rejected]: handleReject,
 
-    // [fetchByCategory.pending]: handlePending,
+    [fetchByCategory.pending]: handlePending,
     [fetchByCategory.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.availableRecipes = action.payload;
     },
-    [fetchMainPage.rejected]: handleReject,
+    [fetchByCategory.rejected]: handleReject,
 
-    //[fetchMore.pending]: handlePending,
+    [fetchMore.pending]: handlePending,
     [fetchMore.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
@@ -44,6 +49,14 @@ const recipesSlice = createSlice({
       state.page = state.page + 1;
     },
     [fetchMore.rejected]: handleReject,
+
+    [fetchRecipeById.pending]: handlePending,
+    [fetchRecipeById.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.currentRecipe = action.payload;
+    },
+    [fetchRecipeById.rejected]: handleReject,
   },
 });
 
