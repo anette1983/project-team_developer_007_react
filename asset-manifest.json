@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/project-team_developer_007_react/static/css/main.ca794d8e.css",
-    "main.js": "/project-team_developer_007_react/static/js/main.d112fab6.js",
+    "main.css": "/project-team_developer_007_react/static/css/main.31544a51.css",
+    "main.js": "/project-team_developer_007_react/static/js/main.f2e7a9f9.js",
     "static/js/794.1a166d7d.chunk.js": "/project-team_developer_007_react/static/js/794.1a166d7d.chunk.js",
     "static/css/629.eb73b9be.chunk.css": "/project-team_developer_007_react/static/css/629.eb73b9be.chunk.css",
     "static/js/629.8d2a481c.chunk.js": "/project-team_developer_007_react/static/js/629.8d2a481c.chunk.js",
     "static/js/589.06ad5298.chunk.js": "/project-team_developer_007_react/static/js/589.06ad5298.chunk.js",
     "static/js/75.ef62fbab.chunk.js": "/project-team_developer_007_react/static/js/75.ef62fbab.chunk.js",
-    "static/css/775.31d6cfe0.chunk.css": "/project-team_developer_007_react/static/css/775.31d6cfe0.chunk.css",
-    "static/js/775.99a51bdd.chunk.js": "/project-team_developer_007_react/static/js/775.99a51bdd.chunk.js",
+    "static/css/414.6f2a9939.chunk.css": "/project-team_developer_007_react/static/css/414.6f2a9939.chunk.css",
+    "static/js/414.d02d7bbf.chunk.js": "/project-team_developer_007_react/static/js/414.d02d7bbf.chunk.js",
     "static/js/243.7e814060.chunk.js": "/project-team_developer_007_react/static/js/243.7e814060.chunk.js",
     "static/js/230.e31553ee.chunk.js": "/project-team_developer_007_react/static/js/230.e31553ee.chunk.js",
     "static/js/212.d8cdae57.chunk.js": "/project-team_developer_007_react/static/js/212.d8cdae57.chunk.js",
@@ -27,15 +27,18 @@
     "static/media/Poppins-Bold.ttf": "/project-team_developer_007_react/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/Poppins-Black.ttf": "/project-team_developer_007_react/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
     "static/media/Helvetica.ttf": "/project-team_developer_007_react/static/media/Helvetica.b161b49dfacc02dbd2e8.ttf",
+    "static/media/hero-mob@2x.jpg": "/project-team_developer_007_react/static/media/hero-mob@2x.7a1ce13a8f5fb7561188.jpg",
+    "static/media/hero-mob.jpg": "/project-team_developer_007_react/static/media/hero-mob.8a0684550a0ce10d67a6.jpg",
     "index.html": "/project-team_developer_007_react/index.html",
-    "main.ca794d8e.css.map": "/project-team_developer_007_react/static/css/main.ca794d8e.css.map",
-    "main.d112fab6.js.map": "/project-team_developer_007_react/static/js/main.d112fab6.js.map",
+    "main.31544a51.css.map": "/project-team_developer_007_react/static/css/main.31544a51.css.map",
+    "main.f2e7a9f9.js.map": "/project-team_developer_007_react/static/js/main.f2e7a9f9.js.map",
     "794.1a166d7d.chunk.js.map": "/project-team_developer_007_react/static/js/794.1a166d7d.chunk.js.map",
     "629.eb73b9be.chunk.css.map": "/project-team_developer_007_react/static/css/629.eb73b9be.chunk.css.map",
     "629.8d2a481c.chunk.js.map": "/project-team_developer_007_react/static/js/629.8d2a481c.chunk.js.map",
     "589.06ad5298.chunk.js.map": "/project-team_developer_007_react/static/js/589.06ad5298.chunk.js.map",
     "75.ef62fbab.chunk.js.map": "/project-team_developer_007_react/static/js/75.ef62fbab.chunk.js.map",
-    "775.99a51bdd.chunk.js.map": "/project-team_developer_007_react/static/js/775.99a51bdd.chunk.js.map",
+    "414.6f2a9939.chunk.css.map": "/project-team_developer_007_react/static/css/414.6f2a9939.chunk.css.map",
+    "414.d02d7bbf.chunk.js.map": "/project-team_developer_007_react/static/js/414.d02d7bbf.chunk.js.map",
     "243.7e814060.chunk.js.map": "/project-team_developer_007_react/static/js/243.7e814060.chunk.js.map",
     "230.e31553ee.chunk.js.map": "/project-team_developer_007_react/static/js/230.e31553ee.chunk.js.map",
     "212.d8cdae57.chunk.js.map": "/project-team_developer_007_react/static/js/212.d8cdae57.chunk.js.map",
@@ -47,7 +50,7 @@
     "502.10ebc31b.chunk.js.map": "/project-team_developer_007_react/static/js/502.10ebc31b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca794d8e.css",
-    "static/js/main.d112fab6.js"
+    "static/css/main.31544a51.css",
+    "static/js/main.f2e7a9f9.js"
   ]
 }
