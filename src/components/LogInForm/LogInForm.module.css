@@ -1,0 +1,43 @@
+.LogIn__title {
+  display: block;
+  margin-bottom: 40px;
+
+  color: #fafafa;
+
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.48px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+
+    font-size: 28px;
+    line-height: 1.07;
+    letter-spacing: -0.56px;
+  }
+}
+
+.LogIn__label {
+  display: block;
+
+  &:nth-of-type(1) {
+    margin-bottom: 12px;
+  }
+
+  &:nth-of-type(2) {
+    margin-bottom: 28px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:nth-of-type(1) {
+      margin-bottom: 24px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 50px;
+    }
+  }
+}
