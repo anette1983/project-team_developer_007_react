@@ -8,6 +8,9 @@ import { Pagination } from "@mui/material"
 import { useState } from "react"
 import fetchByIngredientName from "../../services/fetchByIngredients"
 import fetchByRecipe from "../../services/fetchRecipes"
+import mobPhoto from '../../picture/vegetables-5abfb9c60122f5 1.png'
+import tabPhoto from '../../picture/vegetables-5abfb9c60122f5 1_tab.png'
+
 
 
     
@@ -27,7 +30,8 @@ const SearchPage = () => {
             <div className={`${css.container} ${searchCss.container}`}>
                 <SearchForm title={ setRecipe} />
             </div>
-            {!recipe &&  <div className={`${css.container} ${searchCss.container}`}>
+            {!recipe && <div className={`${css.container} ${searchCss.container}`}>
+               
                 <img className={searchCss.mobPhoto} src={require('../../picture/vegetables-5abfb9c60122f5 1.png')} alt="vegetables" />
                  <img className={searchCss.tabPhoto} src={require('../../picture/vegetables-5abfb9c60122f5 1_tab.png')} alt="vegetables" />
             </div>}

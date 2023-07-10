@@ -2,16 +2,14 @@
     width: 295px;
     height: 53px;
     fill: #FFF;
-    strokeWidth: 1px;
     filter: drop-shadow(0px 4px 97px rgba(34, 37, 42, 0.03));
     border-radius: 24px 44px;
     outline: none;
     border: 0 solid;
     padding: 16px 32px;
     color: #3E4462;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins_Regular', sans-serif;
     font-size: 12px;
-    font-weight: 400;
 }
 .button{
     background-color: transparent;
@@ -21,9 +19,8 @@
     height: 53px;
     width: 113px;
     background-color: #8BAA36;
-    font-family: Poppins;
+    font-family: 'Poppins_Regular', sans-serif;
     font-size: 16px;
-    font-weight: 400;
     padding: 0;
     position: absolute;
     border: none;
@@ -40,9 +37,8 @@
 }
 .label{
     color: #001833;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins_Medium", sans-serif;
     font-size: 12px;
-    font-weight: 500;
     line-height: 16px;
     letter-spacing: -0.24px;
     margin-right: 15px;
@@ -57,9 +53,8 @@
     gap: 80px;
     align-items: center;
     padding-left: 14px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins_Regular", sans-serif;
     font-size: 12px;
-    font-weight: 400;
     letter-spacing: -0.24px;
 }
 .selectWrap{
@@ -90,9 +85,8 @@
 .text{
     margin-left: 9px;
     color: #001833;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins_Medium", sans-serif;
     font-size: 12px;
-    font-weight: 500;
     line-height: 16px;
     letter-spacing: -0.24px;
     opacity: 0.16;  
