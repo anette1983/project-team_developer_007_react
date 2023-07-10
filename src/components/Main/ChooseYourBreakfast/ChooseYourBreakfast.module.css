@@ -8,6 +8,17 @@
     padding: 8px 8px 30px 8px;
 }
 
+@media screen and (min-width: 768px) {
+    .container  {
+        width: 260px;
+        height: 100px;
+        padding: 12px 12px 34px 12px;
+        margin-top: 0;
+        margin-left: 475px;
+       
+     }
+  }
+
 .text {
   
 font-size: 12px;
@@ -17,6 +28,12 @@ letter-spacing: -0.24px;
 text-align: left;
 color: #3E4462;
 }
+
+@media screen and (min-width: 768px) {
+    .text {
+        font-size: 14px;
+     }
+  }
 
 .text_active {
  color: #8BAA36;   
@@ -35,3 +52,10 @@ color: #3E4462;
    background-color: transparent;
    margin: 4px 8px 8px 136px;
 }
+
+@media screen and (min-width: 768px) {
+    .btn {
+        width: 86px;
+        margin: 4px 12px 12px 162px;
+     }
+  }

@@ -1,8 +1,9 @@
 // import { Link } from "react-router-dom"
+import css from "./RecipeList.module.css";
 
 export function RecipeList({ data }) {
   return (
-    <ul>
+    <ul className={css.list}>
       {/* {data.map((recipe)=> {
 return (
     <li key={recipe.id}>
