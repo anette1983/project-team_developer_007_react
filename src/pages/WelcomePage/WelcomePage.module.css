@@ -1,58 +1,75 @@
-.container {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.60) 46.30%, rgba(0, 0, 0, 0.35) 72.75%, rgba(0, 0, 0, 0.00) 100%), url('./test-img/ronise-daluz-LgTyii0GDKQ-unsplash.png'), lightgray -206.788px -336.532px / 213.333% 146.873% no-repeat;
+.Welcome__section {
+  background: url('../../../public/image/welcom_mob.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: gray;
+
+  @media screen and (min-width: 768px) {
+    background: url('../../../public/image/welcome_tabl.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+  }
 
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    outline: 1px solid red;
+  @media screen and (min-width: 1440px) {
+    background: url('../../../public/image/welcome_desk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 305px;
-    height: 281px;
-    outline: 2px solid blue;
+.Welcome__container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  padding: 280px 35px 261px 35px;
+
+  @media screen and (max-width: 767.8px) {
+    max-width: 375px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 342px 131.5px;
+
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 214px 450px 216px 450px;
+
+    width: 1440px;
+  }
 }
 
-.title {
-    width: 247px;
-    height: 24px;
-    margin-bottom: 14px;
-    text-align: center;
-    font-family: 'Poppins_Bold';
-    color: #FAFAFA;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -0.48px;
+.Welcome__title {
+  margin-bottom: 14px;
+
+  font-family: 'Poppins_Bold';
+  color: #fafafa;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.48px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
 }
 
-.subtitle {
-    width: 305px;
-    margin-bottom: 44px;
-    text-align: center;
-    color: #FAFAFA;
-    line-height: 18px;
-    letter-spacing: -0.48px;
+.Welcome__subtitle {
+  margin-bottom: 44px;
+
+  text-align: center;
+  color: #fafafa;
+  line-height: 1.29;
+  letter-spacing: -0.28px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.36px;
+  }
 }
-
-@media screen and (min-width: 768px) {
-    .title {
-        font-size: 28px;
-        line-height: 28px;
-        letter-spacing: -0.56px;
-    }
-
-    .subtitle {
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.36px;
-    }
-}
-
-@media screen and (min-width: 1440px) {}
