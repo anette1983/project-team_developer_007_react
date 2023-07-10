@@ -4,51 +4,52 @@
 
 /* fonts */
 @font-face {
-  font-family: "Helvetica";
-  src: local("Helvetica"),
-    url("./fonts/Helvetica/Helvetica.ttf") format("truetype");
+  font-family: 'Helvetica';
+  src: local('Helvetica'),
+    url('./fonts/Helvetica/Helvetica.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Inter";
-  src: local("Inter"),
-    url("./fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-family: 'Inter';
+  src: local('Inter'),
+    url('./fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
-    url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
+      format('truetype');
 }
 
 @font-face {
-  font-family: "Poppins_Black";
-  src: local("Poppins_Black"),
-    url("./fonts/Poppins/Poppins-Black.ttf") format("truetype");
+  font-family: 'Poppins_Black';
+  src: local('Poppins_Black'),
+    url('./fonts/Poppins/Poppins-Black.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Poppins_Bold";
-  src: local("Poppins_Bold"),
-    url("./fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-family: 'Poppins_Bold';
+  src: local('Poppins_Bold'),
+    url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Poppins_Medium";
-  src: local("Poppins_Medium"),
-    url("./fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-family: 'Poppins_Medium';
+  src: local('Poppins_Medium'),
+    url('./fonts/Poppins/Poppins-Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Poppins_Regular";
-  src: local("Poppins_Regular"),
-    url("./fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-family: 'Poppins_Regular';
+  src: local('Poppins_Regular'),
+    url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Poppins_SemiBold";
-  src: local("Poppins_SemiBold"),
-    url("./fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-family: 'Poppins_SemiBold';
+  src: local('Poppins_SemiBold'),
+    url('./fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
 }
 
 /*  */
@@ -59,6 +60,7 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  background: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -98,4 +100,19 @@ dd {
 img {
   max-width: 100%;
   display: block;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
 }
