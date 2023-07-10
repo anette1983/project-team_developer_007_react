@@ -6,10 +6,10 @@ import searchCss from "./searchContainer.module.css"
 import SearchedRecipesList from "components/SearchedRecipesList/SearchedRecipesList"
 import { Pagination } from "@mui/material"
 import { useState } from "react"
-import fetchByIngredientName from "../../services/fetchByIngredients"
-import fetchByRecipe from "../../services/fetchRecipes"
-import mobPhoto from '../../picture/vegetables-5abfb9c60122f5 1.png'
-import tabPhoto from '../../picture/vegetables-5abfb9c60122f5 1_tab.png'
+// import fetchByIngredientName from "../../services/fetchByIngredients"
+// import fetchByRecipe from "../../services/fetchRecipes"
+// import mobPhoto from '../../picture/vegetables-5abfb9c60122f5 1.png'
+// import tabPhoto from '../../picture/vegetables-5abfb9c60122f5 1_tab.png'
 
 
 
