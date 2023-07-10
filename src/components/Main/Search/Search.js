@@ -24,9 +24,10 @@ onSubmit(value)
             autoFocus
             value={value}
             onChange={handleChange}
+            placeholder="Enter the text"
             />
             <Link to="/search" >
-            <button type="submit">Search</button>
+            <button className={css.btn} type="submit">Search</button>
             </Link>
             
         </form>
