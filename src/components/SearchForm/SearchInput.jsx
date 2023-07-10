@@ -1,22 +1,27 @@
 import { useState } from "react";
 import css from "./searchInput.module.css"
 
-const SearchForm = () => {
+const SearchForm = ({title}) => {
     const [selectBy, setSelectBy] = useState("Title");
-
-
+    const [search, setSearch] = useState('')
     const handleBtnSubmit = (e) => {
         e.preventDefault();
-        
+        title({ selectBy, search })
+        reset()    
     }
     const handleOption = (e) => {
-        console.log( e.currentTarget.id);
         setSelectBy( e.currentTarget.id)  
+    }
+     const handleInput = e => {
+        setSearch(e.target.value)
+    }
+    const  reset = () => {
+        setSearch('')
     }
     return (
         <form onSubmit={handleBtnSubmit} className={ css.form}>
             <div className={ css.inputWrap}>
-                <input type="text" className={css.input} />
+                <input type="text" className={css.input} name='search' value={ search} onChange={handleInput} />
                 <button type="submit" className={css.button}>Search</button>
             </div>
             <div className={css.selectWrap}>

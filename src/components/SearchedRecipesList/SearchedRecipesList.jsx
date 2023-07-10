@@ -2,7 +2,6 @@ import RecipeItem from "components/RecipeItem/RecipeItem";
 import file from "../../recipes.json"
 
 const SearchedRecipesList = () => {
-    console.log(file);
     return (
       
         <ul>
