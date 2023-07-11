@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 // import { useDispatch } from 'react-redux';
 
-import { addMyRecipi } from '../../redux/myReciprs/operations';
-import { selectMyRecipesError } from '../../redux/myReciprs/selectors';
+import { addMyRecipi } from '../../redux/myRecipes/operations';
+import { selectMyRecipesError } from '../../redux/myRecipes/selectors';
 
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
