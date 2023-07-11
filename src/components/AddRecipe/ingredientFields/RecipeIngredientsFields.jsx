@@ -2,7 +2,7 @@ import css from "./RecipeIngredientsFields.module.css";ingredientsQuantity
 import { MdRemove, MdAdd, MdOutlineKeyboard, MdOutlineClose } from "react-icons/md";
 
 import { useState } from "react";
-import ingredientList from "../../../redux/constants/ingredients.json";
+import { ingredients as ingredientList } from "../../../redux/constants/index";
 
 export const RecipeIngredients = ({
     ingredients,
@@ -130,7 +130,7 @@ export const RecipeIngredients = ({
                                 {filteredIngredients.map((item) => (
                                     <li className={css.selectIngredientItem}
                                     key={item.name}
-                                    onClick={() => setIngredient(index, item.name, item.id )}
+                                    onClick={() => setIngredient(index, item.name, item._id )}
                                     >
                                     {item.name}
                                     </li>
