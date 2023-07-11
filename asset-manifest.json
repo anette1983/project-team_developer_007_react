@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-team_developer_007_react/static/css/main.302cd43d.css",
-    "main.js": "/project-team_developer_007_react/static/js/main.185c9a3b.js",
+    "main.js": "/project-team_developer_007_react/static/js/main.a6f2c449.js",
     "static/js/794.1a166d7d.chunk.js": "/project-team_developer_007_react/static/js/794.1a166d7d.chunk.js",
     "static/css/632.6343aecf.chunk.css": "/project-team_developer_007_react/static/css/632.6343aecf.chunk.css",
     "static/js/632.6943fba9.chunk.js": "/project-team_developer_007_react/static/js/632.6943fba9.chunk.js",
@@ -54,7 +54,7 @@
     "static/media/reg-bgc_desk_2x.png": "/project-team_developer_007_react/static/media/reg-bgc_desk_2x.1ed33fce803aa769883e.png",
     "index.html": "/project-team_developer_007_react/index.html",
     "main.302cd43d.css.map": "/project-team_developer_007_react/static/css/main.302cd43d.css.map",
-    "main.185c9a3b.js.map": "/project-team_developer_007_react/static/js/main.185c9a3b.js.map",
+    "main.a6f2c449.js.map": "/project-team_developer_007_react/static/js/main.a6f2c449.js.map",
     "794.1a166d7d.chunk.js.map": "/project-team_developer_007_react/static/js/794.1a166d7d.chunk.js.map",
     "632.6343aecf.chunk.css.map": "/project-team_developer_007_react/static/css/632.6343aecf.chunk.css.map",
     "632.6943fba9.chunk.js.map": "/project-team_developer_007_react/static/js/632.6943fba9.chunk.js.map",
@@ -79,6 +79,6 @@
   },
   "entrypoints": [
     "static/css/main.302cd43d.css",
-    "static/js/main.185c9a3b.js"
+    "static/js/main.a6f2c449.js"
   ]
 }
