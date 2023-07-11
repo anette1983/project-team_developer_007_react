@@ -1,0 +1,303 @@
+.ingredientsFieldWrapper {
+    margin-bottom: 44px;
+ }
+
+.subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #3E4462;
+ }
+
+.subtitleWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.ingredientsCounter {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 92px;
+    height: 28px;
+    border: 1px solid rgba(51, 51, 51, 0.3);
+    border-radius: 18px;
+}
+
+.counterBtn {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.counterBtnIcon {
+    width: 14px;
+    height: 14px;
+    color: #8BAA36;
+}
+
+.counterValue {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #333333;
+}
+
+.ingredientItem {
+    width: 343px;
+    display: flex;
+    align-items: center;
+}
+.ingredientItem :not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.ingredientNameField {
+    display: flex;
+    justify-content: center;
+}
+
+.ingredientNameInput {
+    width: 194px;
+    height: 53px;
+    margin-right: 14px;
+    padding: 16px;
+    background-color: #D9D9D9;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.selectIngredients {
+    width: 194px;
+    height: 154px;
+    position: absolute;
+    z-index: 3;
+    background: #FFFFFF;
+    box-shadow: 0px 6.51852px 7.82222px rgba(0, 0, 0, 0.0314074);
+    border-radius: 6px;
+    overflow-y: scroll;
+    padding: 8px 18px;
+}
+
+.selectIngredientItem {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #000000;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.selectIngredientItem :not(:last-child) {
+    margin-bottom: 6px;
+}
+.selectIngredientItem :hover, :focus {
+    color: #8BAA36;
+}
+
+.ingredientQuantityField {
+    position: relative;
+    width: 84px;
+    height: 53px;
+    margin-right: 51px;
+    cursor: pointer;
+}
+
+.ingredientQuantityInput {
+    width: 84px;
+    height: 53px;
+    padding: 16px 0 16px 10px;
+    background-color: #f5f5f5;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #23262A;
+}
+
+.selectBox {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 84px;
+    height: 53px;
+    background-color: #F5F5F5;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+
+.arrow {
+    color: #8BAA36;
+}
+
+.selectLabel {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #333333;
+}
+
+.selectQuantityList {
+    width: 84px;
+    height: 112px;
+    padding: 12px 28px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 6.51852px 7.82222px rgba(0, 0, 0, 0.0314074);
+    border-radius: 6px;
+    z-index: 5;
+    position: absolute;
+}
+
+.selectQuantityItem {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #000000;
+    opacity: 0.5;
+}
+.selectQuantityItem :not(:last-child) {
+      margin-bottom: 4px;
+  }
+.selectQuantityItem :hover, :focus {
+    color: #8BAA36;
+  }
+
+.deleteBtn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.deleteBtnIcon {
+    color: #333333;
+}
+
+.errorMsg {
+    margin-top: 8px;
+    color: red;
+    font-size: 12px;
+}
+
+
+
+ @media screen and (min-width: 768px) {
+    .ingredientsFieldWrapper {
+        margin-bottom: 100px;
+    }
+
+    .subtitleWrapper {
+        margin-bottom: 32px;
+    }
+
+    .ingredientsCounter {
+        width: 110px;
+        height: 32px;
+    }
+
+    .counterBtnIcon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .counterValue {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .ingredientItem {
+        width: 704px;
+    }
+    .ingredientItem :not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    .ingredientNameInput {
+        width: 398px;
+        height: 59px;
+        margin-right: 32px;
+        font-size: 18px;
+    }
+
+    .selectIngredients {
+        width: 398px;
+        height: 172px;
+    }
+
+    .selectIngredientItem {
+        font-size: 14px;
+    }
+
+    .ingredientQuantityField {
+        width: 100px;
+        height: 59px;
+        margin-right: 177px;
+    }
+
+    .ingredientQuantityInput {
+        width: 100px;
+        height: 59px;
+        font-size: 18px;
+    }
+
+    .selectBox {
+        width: 100px;
+        height: 59px;
+        background-position: 28px 22px;
+    }
+    .arrow {
+        width: 20px;
+        height: 20px;
+    }
+
+    .selectLabel {
+        font-size: 18px;
+    }
+
+    .selectQuantityList {
+        width: 100px;
+        height: 128px;
+    }
+
+    .selectQuantityItem {
+        font-size: 14px;
+    }
+ }
+
+
+ @media screen and (min-width: 1440px) {
+    .subtitleWrapper {
+        width: 609px;
+    }
+
+    .ingredientItem {
+        width: 609px;
+    }
+
+    .ingredientQuantityField {
+        margin-right: 80px;
+    }
+ }
