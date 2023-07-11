@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom/dist';
-import css from './header.module.css';
+// import css from './header.module.css';
 import { ReactComponent as LogoDesktop } from '../../pictures/logo/logoDesktop.svg';
 import { ReactComponent as LogoMobile } from '../../pictures/logo/logoMobile.svg';
 import React, { useState, useEffect } from 'react';
