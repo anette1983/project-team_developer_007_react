@@ -1,5 +1,5 @@
 import { FollowUs } from "../Footer/FollowUs/FollowUs";
-import css from "./AddRecipeCompinents";
+import css from "./AddRecipeComponents";
 
 export const FollowUsBlock = () => {
         <div className={css.socialsWrapper}>
