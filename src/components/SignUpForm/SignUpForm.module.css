@@ -1,26 +1,48 @@
 .Registration__Section {
-  background-image: url(../../../public/image/Order\ food-pana.png),
-    url(../../../public/image/Rectangle_8970.png);
+  background-image: url(../../images/login/woman_mob_1x.png),
+    url(../../images/login/reg-bgc_mob_1x.png);
   background-repeat: no-repeat;
   background-position: top 87px center, bottom;
   background-size: 285px 250px, 375px 490px;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../../images/login/woman_mob_2x.png),
+      url(../../images/login/reg-bgc_mob_2x.png);
+  }
+
   @media screen and (min-width: 768px) {
-    background-image: url(../../../public/image/Order\ food-pana_tabl.png),
-      url(../../../public/image/Rectangle_tabl.png);
+    background-image: url(../../images/login/woman_tab_1x.png),
+      url(../../images/login/reg-bgc_tab_1x.png);
     background-position: top 84px center, bottom;
     background-size: 409px 359px, 768px 606px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/login/woman_tab_2x.png),
+        url(../../images/login/reg-bgc_tab_2x.png);
+    }
   }
 
   @media screen and (min-width: 1440px) {
-    background-image: url(../../../public/image/Order\ food-pana_desk.png),
-      url(../../../public/image/Rectangle_desk.png);
+    background-image: url(../../images/login/woman_desk_1x.png),
+      url(../../images/login/reg-bgc_desk_1x.png);
     background-position: top 115px left 113px, bottom;
     background-size: 532px 468px, 1440px 325px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/login/woman_desk_2x.png),
+        url(../../images/login/reg-bgc_desk_2x.png);
+    }
   }
 }
 
 .Registration__container {
+  text-align: center;
   margin: 0 auto;
   padding: 305px 20px 118px 20px;
   min-height: 812px;
@@ -188,9 +210,7 @@
 }
 
 .Registration__link {
-  display: flex;
-  justify-content: center;
-
+  padding: 5px;
   color: #fafafa;
 }
 
