@@ -8,7 +8,8 @@ import {
   MdOutlineClose,
 } from 'react-icons/md';
 
-import { ingredients as ingredientList } from '../../../redux/constants/index';
+// import { ingredients as ingredientList } from '../../../redux/constants';
+import { constants } from '../../../redux/constants';
 
 export const RecipeIngredients = ({
   ingredients,
@@ -19,6 +20,7 @@ export const RecipeIngredients = ({
   updateErrors,
   errors,
 }) => {
+  const ingredientList = constants.ingredients;
   const ingredientsQuantityMeasure = [
     'tbs',
     'tsp',

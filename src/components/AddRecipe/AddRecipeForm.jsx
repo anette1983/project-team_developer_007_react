@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
 import { addMyRecipi } from '../../redux/myReciprs/operations';
-// import { selectMyRecipesError } from '../../redux/myReciprs/selectors';
+import { selectMyRecipesError } from '../../redux/myReciprs/selectors';
 
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -13,10 +13,11 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { recipeFormSchema } from './recipeFormSchema';
 
 import { RecipeDescriptionFields } from './descriptionFields/RecipeDescriptionFields';
-import { RecipeIngredientsFields } from './ingredientFields/RecipeIngredientsFields';
+// import { RecipeIngredientsFields } from './ingredientFields/RecipeIngredientsFields';
+import { RecipeIngredients } from './ingredientFields/RecipeIngredientsFields';
 import { RecipePreparationFields } from './preparationFields/RecipePreparationFields';
 
-import css from './AddRecipeComponents';
+import css from './AddRecipeComponents.module.css';
 
 export const AddRecipeForm = () => {
   const [img, setImg] = useState('');
@@ -130,7 +131,7 @@ export const AddRecipeForm = () => {
   formData.append('instructions', preparation);
 
   const dispatch = useDispatch();
-  // const error = useSelector(selectMyRecipesError);
+  const error = useSelector(selectMyRecipesError);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -160,6 +161,8 @@ export const AddRecipeForm = () => {
     setErrors(prevState => ({ ...prevState, [value]: '' }));
   };
 
+  console.log(error);
+
   return (
     <div className={css.addSectionWrap}>
       <form className={css.addRecipeForm} onSubmit={handleSubmit}>
@@ -176,7 +179,15 @@ export const AddRecipeForm = () => {
           errors={errors}
         />
 
-        <RecipeIngredientsFields
+        {/* <RecipeIngredientsFields
+          ingredients={ingredients}
+          incrIngredientFields={incrIngredientFields}
+          decrIngredientFields={decrIngredientFields}
+          deleteIngredient={deleteIngredient}
+          updateIngredient={updateIngredient}
+          errors={errors}
+        /> */}
+        <RecipeIngredients
           ingredients={ingredients}
           incrIngredientFields={incrIngredientFields}
           decrIngredientFields={decrIngredientFields}

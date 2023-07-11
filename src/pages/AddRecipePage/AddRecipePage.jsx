@@ -1,8 +1,10 @@
-import css from './AddRecipePage';
 // import { AddRecipeForm } from '../../Components/AddRecipeForm/AddRecipeForm';
-import { PopularRecipe } from '../../components/AddRecipe/PopularRecipe';
-import { FollowUsBlock } from '../../components/AddRecipe/FollowUsBlock';
+import { AddRecipeForm } from 'components/AddRecipe/AddRecipeForm';
+import { FollowUsBlock } from 'components/AddRecipe/FollowUsBlock';
 import { MainPageTitle } from '../../components/MainPageTitle/MainPageTitle';
+import PopularRecipe from 'components/AddRecipe/PopularRecipe';
+
+import css from './AddRecipePage.module.css';
 
 const AddRecipePage = () => {
   return (
@@ -11,7 +13,7 @@ const AddRecipePage = () => {
         {/* <MainTitleWrapper /> */}
         <MainPageTitle text="Add recipe" />
         <div className={css.formContainer}>
-{/*           <AddRecipeForm /> */}
+          <AddRecipeForm />
           <div className={css.sidebar}>
             <FollowUsBlock />
             <PopularRecipe />
