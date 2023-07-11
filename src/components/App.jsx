@@ -21,6 +21,7 @@ const ShoppingListPage = lazy(() =>
 );
 
 export const App = () => {
+  // Перед сдачеє проекта видалити коментарі в RecipePage
   return (
     <>
       <Routes>

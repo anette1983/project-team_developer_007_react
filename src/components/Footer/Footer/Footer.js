@@ -5,22 +5,12 @@ export const Footer =()=> {
     return (
         <div className={css.footer}>
          <div className={css.container}>
-            <div className={css.footer_text}>
-            <h3 className={css.title}>So Yummy</h3>
-            <div className={css.wrapper}>
-         <ul className={css.list}>
-          <li className={css.item}>Database of recipes that can be replenished </li>
-          <li className={css.item}>Flexible search for desired and unwanted ingredients</li>
-          <li className={css.item}>Ability to add your own recipes with photos</li>
-          <li className={css.item}>Convenient and easy to use</li>
-        </ul>
-            </div>
-            </div>
-           
-        <Navigation/>
+          <Navigation/>
         </div>
+        <div className={css.footer_text}>
+          <p >&#169; 2023 All Rights Reserved.</p>
+          <p className={css.footer_text_service}>Terms of Service</p></div>
         </div>
-        
-        
+       
     )
 }

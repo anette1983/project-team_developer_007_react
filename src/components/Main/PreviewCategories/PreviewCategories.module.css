@@ -1,0 +1,30 @@
+.container {
+    padding: 64px 16px 0 16px;
+}
+
+.section {
+    margin-top: 32px;
+}
+
+.title {
+color: #001833;    
+font-size: 28px;
+font-weight: 600;
+line-height: 28px;
+letter-spacing: -0.02em;
+text-align: left;
+
+}
+
+.btn {
+width: 94px;
+height: 38px;
+background-color: #8AA936;
+color: #FAFAFA;
+border: none;
+border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: #22252A;
+}

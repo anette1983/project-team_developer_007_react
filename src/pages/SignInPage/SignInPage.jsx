@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom';
+import { LogInForm } from 'components/LogInForm/LogInForm';
 
 const SignInPage = () => {
   return (
     <>
-      <h1>SignInPage</h1>
-      <Link to="/register">To Register</Link>
+      <LogInForm />
     </>
   );
 };
