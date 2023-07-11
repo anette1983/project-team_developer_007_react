@@ -16,7 +16,7 @@ import { RecipeDescriptionFields } from './descriptionFields/RecipeDescriptionFi
 import { RecipeIngredientsFields } from './ingredientFields/RecipeIngredientsFields';
 import { RecipePreparationFields } from './preparationFields/RecipePreparationFields';
 
-import css from './AddRecipeCompinents';
+import css from './AddRecipeComponents';
 
 export const AddRecipeForm = () => {
   const [img, setImg] = useState('');
