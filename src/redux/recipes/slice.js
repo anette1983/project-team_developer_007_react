@@ -6,7 +6,9 @@ import {
   fetchRecipeById,
 } from './operations';
 
-const handlePending = state => (state.isLoading = true);
+const handlePending = state => {
+  state.isLoading = true;
+};
 
 const handleReject = (state, action) => {
   state.isLoading = false;
