@@ -26,8 +26,8 @@ const MyRecipesItem = ({ recipe }) => {
       <button
         className={css.delete_btn}
         type="button"
-        onClick={() => handleDelete(recipe)}
-        disabled={delId === recipe}
+        onClick={() => handleDelete(recipe._id)}
+        disabled={delId === recipe._id}
       >
         del
       </button>

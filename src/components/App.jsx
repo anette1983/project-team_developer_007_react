@@ -109,8 +109,11 @@ export const App = () => {
             <PrivateRoute component={ShoppingListPage} redirectTo="/signin" />
           }
         />
+        <Route
+          path="*"
+          element={<PrivateRoute component={NotFoundPage} redirectTo="/" />}
+        />
       </Route>
-      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };
