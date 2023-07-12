@@ -1,7 +1,7 @@
 // import { useEffect, useState } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 // Все що закоментовано треба буде поновити
 import file from '../../recipes.json';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react';
