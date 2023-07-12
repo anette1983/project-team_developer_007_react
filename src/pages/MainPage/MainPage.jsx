@@ -3,38 +3,28 @@ import {Main} from "../../components/Main/Main"
 import css from "./MainPage.module.css"
 // import { selectIsLoggedIn, selectIsRefreshing } from "redux/auth/selectors";
 // import { useEffect } from "react";
-// import { fetchByCategory, fetchMainPage, fetchMore, fetchRecipeById } from "../../redux/recipes/operations";
-// import { selectCategories } from "redux/categories/selectors";
-// import { selectRecipes } from "redux/recipes/selectors";
+// import { fetchMainPage } from "../../redux/recipes/operations";
+// import { selectCategories } from "../../redux/categories/selectors";
 // import { fetchCategories } from "redux/categories/operations";
 
 const MainPage = () => {
-// const dispatch = useDispatch();
-// const recipes=fetchByCategory();
-// const categories = selectCategories;
-// console.log(categories);
-// fetchByCategory(categories);
-// const recipes = selectRecipes;
-// console.log(recipes);
-// fetchMainPage();
-// const res = fetchMainPage()
-// fetchMainPage()
-// console.log(recipes);
 
-// fetchByCategory()
+// const dispatch = useDispatch();
+
 // const isLoggedIn = useSelector(selectIsLoggedIn);
 // const isRefresh = useSelector(selectIsRefreshing);
 
 
-// useEffect(()=> {
-//   // if (!isRefresh) {
-    // dispatch(fetchMainPage())
-//   // }
-// }, [dispatch])
+//  useEffect(()=> {
+// // //  if (!isRefresh) {
+//     dispatch(fetchMainPage())
+// // // }
+//  }, [dispatch])
+
 
   return(
     <>
-{/* {isLoggedIn && !isRefresh && */}
+{/* { !isRefresh && */}
 <div className={css.wrapper}>
 <div className={css.wrapper_leaf}>
 <div className={css.container}>
@@ -47,9 +37,8 @@ const MainPage = () => {
  </div>
  </div>
 </div>
- 
 
-{/* } */}
+{/* }  */}
     </>
   )
   

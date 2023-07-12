@@ -44,7 +44,7 @@
     line-height: 18px;
     letter-spacing: 0.015em;
     text-align: left;
-    margin-bottom: 32px;  
+    /* margin-bottom: 32px;   */
     }
 
     @media screen and (min-width: 768px) {
@@ -76,3 +76,9 @@
 .item {
     padding-bottom: 10px;
     }    
+
+.nav {
+    display: flex;
+    align-items: center;
+}    
+

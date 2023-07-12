@@ -25,7 +25,7 @@ export const Main =()=> {
     return(
         <div>
             <div className={css.container}>
-            <ChooseYourBreakfast/>
+           <ChooseYourBreakfast/>
            <Search onSubmit={formSubmitHendler} data = {value}/>
             </div>
        
