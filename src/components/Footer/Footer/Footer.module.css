@@ -1,19 +1,48 @@
 .footer {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     color: #FAFAFA;
+    background-image: url('../../../images/bgc/404_spinach_bottom_bg_mob_1x.png');
+    background-repeat: no-repeat;
+    background-position: 190px 330px;
    
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .footer {
+    background-image: url('../../../images/bgc/404_spinach_bottom_bg_mob_2x.png')
+  }
 }
 
 @media screen and (min-width: 768px) {
     .footer {
-        padding-top: 200px;
+        /* padding-top: 200px; */
+        background-image: url('../../../images/bgc/404_spinach_bottom_bg_tab_1x.png');
+        /* background-position: 0px 0px; */
+        background-position: 450px 240px;
     }
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .footer {
+    background-image: url('../../../images/bgc/404_spinach_bottom_bg_tab_2x.png')
+  }
+}
 }
 
 @media screen and (min-width: 1440px) {
     .footer {
         padding-top: 118px;
+        background-image: url('../../../images/bgc/404_spinach_bottom_bg_desk_1x.png');
     }
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .footer {
+      background-image: url('../../../images/bgc/404_spinach_bottom_bg_desk_2x.png')
+    }
+  }
 }
 
 .footer_text {
@@ -27,9 +56,8 @@
     text-align: left;
     color: #22252A;
     opacity: 0.5;
-    
+  
 }
-
 
 @media screen and (min-width: 768px) {
     .footer_text {
@@ -41,7 +69,7 @@
 
 @media screen and (min-width: 768px) {
     .footer_text {
-    padding: 50px 0 ;
+    /* padding: 50px 0 ; */
      }
 }
 
