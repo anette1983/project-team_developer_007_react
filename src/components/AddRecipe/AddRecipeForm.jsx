@@ -27,7 +27,7 @@ export const AddRecipeForm = () => {
     {
       id: nanoid(),
       ingredientsQuantityMeasure: 'tbs',
-      ingredientsQuantity: '',
+      ingredientsQuantity: 0,
       name: '',
     },
   ]);
@@ -63,7 +63,7 @@ export const AddRecipeForm = () => {
       {
         id: nanoid(),
         ingredientsQuantityMeasure: 'tbs',
-        ingredientsQuantity: '',
+        ingredientsQuantity: 0,
         name: '',
       },
     ]);
@@ -82,10 +82,13 @@ export const AddRecipeForm = () => {
     setIngredients(ingredients.filter(item => item.id !== itemId));
   };
 
-  const updateIngredient = (index, value, id) => {
+  const updateIngredient = (index, value, id, prop) => {
+    console.log('ADD', { index, value, id, prop })
+
     setIngredients(prevState => {
+      console.log('STATE', prevState)
       const newState = [...prevState];
-      newState[index].name = value;
+      newState[index][prop] = value;
       newState[index].id = id;
       return newState;
     });
@@ -183,6 +186,7 @@ export const AddRecipeForm = () => {
             decrIngredientFields={decrIngredientFields}
             deleteIngredient={deleteIngredient}
             updateIngredient={updateIngredient}
+            updateErrors={updateErrors}
             errors={errors}
         />
         <RecipePreparationFields

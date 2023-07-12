@@ -50,9 +50,9 @@
 .ingredientItem {
     width: 343px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
-.ingredientItem :not(:last-child) {
+.ingredientItem:not(:last-child) {
     margin-bottom: 18px;
 }
 
@@ -61,9 +61,17 @@
     justify-content: center;
 }
 
+.ingredientInputBox {
+ display: flex;
+ position: relative;
+ margin-bottom: 0;
+}
+
 .ingredientNameInput {
+    display: block;
     width: 194px;
     height: 53px;
+    margin-bottom: 0;
     margin-right: 14px;
     padding: 16px;
     background-color: #D9D9D9;
@@ -88,6 +96,7 @@
     border-radius: 6px;
     overflow-y: scroll;
     padding: 8px 18px;
+    list-style: none;
 }
 
 .selectIngredientItem {
@@ -98,10 +107,11 @@
     opacity: 0.5;
     cursor: pointer;
 }
-.selectIngredientItem :not(:last-child) {
+.selectIngredientItem:not(:last-child) {
     margin-bottom: 6px;
 }
-.selectIngredientItem :hover, :focus {
+.selectIngredientItem:hover,
+.selectIngredientItem:focus {
     color: #8BAA36;
 }
 
@@ -150,6 +160,14 @@
     color: #8BAA36;
 }
 
+.arrowIngr {
+    position: absolute;
+    left: 85%;
+    top: 25%;
+    color: #8BAA36;
+    width: 20px;
+}
+
 .selectLabel {
     font-size: 14px;
     line-height: 1.5;
@@ -159,13 +177,15 @@
 
 .selectQuantityList {
     width: 84px;
-    height: 112px;
-    padding: 12px 28px;
+    height: 154px;
+    padding: 8px 18px;
     background-color: #FFFFFF;
     box-shadow: 0px 6.51852px 7.82222px rgba(0, 0, 0, 0.0314074);
     border-radius: 6px;
     z-index: 5;
     position: absolute;
+    overflow-y: scroll;
+    list-style: none;
 }
 
 .selectQuantityItem {
@@ -175,10 +195,11 @@
     color: #000000;
     opacity: 0.5;
 }
-.selectQuantityItem :not(:last-child) {
+.selectQuantityItem:not(:last-child) {
       margin-bottom: 4px;
   }
-.selectQuantityItem :hover, :focus {
+.selectQuantityItem:hover,
+.selectQuantityItem:focus {
     color: #8BAA36;
   }
 
@@ -231,14 +252,12 @@
     .ingredientItem {
         width: 704px;
     }
-    .ingredientItem :not(:last-child) {
-        margin-bottom: 24px;
-    }
 
     .ingredientNameInput {
         width: 398px;
         height: 59px;
         margin-right: 32px;
+        margin-bottom: 0;
         font-size: 18px;
     }
 
@@ -252,21 +271,23 @@
     }
 
     .ingredientQuantityField {
-        width: 100px;
+        width: 110px;
         height: 59px;
         margin-right: 177px;
     }
 
     .ingredientQuantityInput {
-        width: 100px;
-        height: 59px;
+        width: 100%;
+        height: 100%;
         font-size: 18px;
+        padding: 16px;
     }
 
     .selectBox {
-        width: 100px;
-        height: 59px;
-        background-position: 28px 22px;
+        width: 80px;
+        height: 100%;
+        background-position: 22px;
+        padding: 16px 16px 16px 4px;
     }
     .arrow {
         width: 20px;
@@ -278,8 +299,8 @@
     }
 
     .selectQuantityList {
-        width: 100px;
-        height: 128px;
+        width: 100%;
+        height: 154px;
     }
 
     .selectQuantityItem {
