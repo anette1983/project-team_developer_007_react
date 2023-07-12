@@ -1,13 +1,20 @@
+.UserLogoContainer {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+.avatarHeaderImg {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+}
+
 .UserLogoModal {
   position: absolute;
   top: 20px;
   left: 20px;
-  outline: 1px solid red;
-}
-
-.UserInfoModal {
-  position: absolute;
-  top: 200px;
   outline: 1px solid red;
 }
 
