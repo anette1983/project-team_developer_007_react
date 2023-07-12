@@ -1,5 +1,6 @@
 import css from './RecipeDescriptionFields.module.css';
-import { MdOutlineKeyboard } from 'react-icons/md';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+import addImg from '../../../images/addrecipe/add_photo_icon_x2.png'
 
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -75,7 +76,7 @@ export const RecipeDescriptionFields = ({
     <div className={css.descriptionFieldWrapper}>
       <div className={css.imgWrapper} onChange={e => onFileInputChange(e)}>
         <label htmlFor="dishImg">
-          <img className={css.mockImg} src="#" alt="addphoto" />
+          <img className={css.mockImg} src={`${addImg}`} alt="addphoto" />
         </label>
         <input
           className={css.imgInput}
@@ -118,7 +119,7 @@ export const RecipeDescriptionFields = ({
           <div className={css.selectLabel}>Category</div>
           <div className={css.selectVariantsBox}>
             <span className={css.selectVariants}>{category}</span>
-            <MdOutlineKeyboard className={css.arrow} size="18" />
+            <MdKeyboardArrowDown className={css.arrow} size="18" />
           </div>
           {categorySelectIsActive && (
             <ul className={css.selectList}>
@@ -138,7 +139,7 @@ export const RecipeDescriptionFields = ({
           <div className={css.selectLabel}>Cooking time</div>
           <div className={css.selectVariantsBox}>
             <span className={css.selectVariants}>{time}</span>
-            <MdOutlineKeyboard className={css.arrow} size="18" />
+            <MdKeyboardArrowDown className={css.arrow} size="18" />
           </div>
           {timeSelectIsActive && (
             <ul className={css.selectList}>

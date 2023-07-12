@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import css from './RecipeIngredientsFields.module.css';
-// ingredientsQuantity
+
 import {
   MdRemove,
   MdAdd,
-  MdOutlineKeyboard,
+  MdKeyboardArrowDown,
   MdOutlineClose,
 } from 'react-icons/md';
 
-// import { ingredients as ingredientList } from '../../../redux/constants';
 import { constants } from '../../../redux/constants';
 
-export const RecipeIngredients = ({
+
+export const RecipeIngredientsFields = ({
   ingredients,
   incrIngredientFields,
   decrIngredientFields,
@@ -144,7 +144,6 @@ export const RecipeIngredients = ({
                     value={ingredients[index].name}
                     onChange={e => onInputChange(index, e.target.value)}
                   />
-                  <MdOutlineKeyboard className={css.arrow} size="18" />
                   {errors[`ingredients[${index}].name`] && (
                     <p className={css.errorMsg}>
                       {errors[`ingredients[${index}].name`]}
@@ -165,6 +164,7 @@ export const RecipeIngredients = ({
                       ))}
                     </ul>
                   )}
+                  <MdKeyboardArrowDown className={css.arrow} size="18" />
                 </div>
                 <div className={css.ingredientQuantityField}>
                   <input
@@ -180,7 +180,7 @@ export const RecipeIngredients = ({
                     <span className={css.selectLabel}>
                       {ingredients[index].ingredientQuantity}
                     </span>
-                    <MdOutlineKeyboard className={css.arrow} size="18" />
+                    <MdKeyboardArrowDown className={css.arrow} size="18" />
                   </div>
                   {quantityIsActive[index] && (
                     <ul className={css.selectQuantityList}>
