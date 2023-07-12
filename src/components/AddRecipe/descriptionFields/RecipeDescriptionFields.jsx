@@ -31,6 +31,7 @@ export const RecipeDescriptionFields = ({
 }) => {
   const dispatch = useDispatch();
   const categoriesList = useSelector(selectCategories);
+  console.log(categoriesList);
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -126,10 +127,10 @@ export const RecipeDescriptionFields = ({
               {categoriesList.map((item, index) => (
                 <li
                   className={css.selectItem}
-                  key={index}
-                  onClick={() => setCategory(item)}
+                  key={item._id}
+                  onClick={() => setCategory(item.name)}
                 >
-                  {item}
+                  {item.name}
                 </li>
               ))}
             </ul>
