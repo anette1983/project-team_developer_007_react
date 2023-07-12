@@ -25,7 +25,7 @@
 @media screen and (min-width: 1440px) {
   .card_container {
     display: flex;
-  
+
     gap: 54px;
     padding: 40px;
     margin-bottom: 50px;
@@ -35,6 +35,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .top_wrapper {
@@ -42,6 +43,7 @@
 }
 
 .card_title {
+  max-width: 70%;
   color: #3e4462;
   font-size: 14px;
   font-style: normal;
@@ -53,6 +55,7 @@
 }
 @media screen and (min-width: 768px) {
   .card_title {
+    max-width: 70%;
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 28px;
@@ -61,6 +64,7 @@
 
 @media screen and (min-width: 1440px) {
   .card_title {
+    max-width: 100%;
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 40px;
@@ -68,9 +72,9 @@
 }
 
 .card_text {
-  /* width: 163px; */
+  width: 163px;
   color: #23262a;
- 
+
   font-size: 8px;
   font-style: normal;
   font-weight: 400;
@@ -81,7 +85,7 @@
 
 @media screen and (min-width: 768px) {
   .card_text {
-    /* width: 350px; */
+    width: 350px;
     font-size: 14px;
 
     line-height: 18px;

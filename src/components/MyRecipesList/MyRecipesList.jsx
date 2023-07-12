@@ -1,12 +1,16 @@
 import MyRecipesItem from 'components/MyRecipesItem/MyRecipesItem';
 
+// import { selectMyRecipes } from 'redux/myRecipes/selectors';
+import recipesFromServer from '../../recipes.json';
+import css from './MyRecipesList.module.css';
+
 const MyRecipesList = () => {
-  const myRecipes = [1, 2, 3, 4];
+  // const myRecipes2 = useSelector(selectMyRecipes);
   return (
     <>
-      <ul>
-        {myRecipes.map(recipe => {
-          return <MyRecipesItem key={recipe} recipe={recipe} />;
+      <ul className={css.list}>
+        {recipesFromServer.map(recipe => {
+          return <MyRecipesItem key={recipe._id} recipe={recipe} />;
         })}
       </ul>
     </>
