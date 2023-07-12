@@ -3,6 +3,7 @@ import {Search} from "./Search/Search";
 import {PreviewCategories} from "./PreviewCategories/PreviewCategories"
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import css from "./Main.module.css"
 
 export const Main =()=> {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -22,10 +23,13 @@ export const Main =()=> {
           }
 
     return(
-        <>
-        <ChooseYourBreakfast/>
-        <Search onSubmit={formSubmitHendler} data = {value}/>
+        <div>
+            <div className={css.container}>
+            <ChooseYourBreakfast/>
+           <Search onSubmit={formSubmitHendler} data = {value}/>
+            </div>
+       
         <PreviewCategories/>
-        </>
+        </div>
     )
 }
