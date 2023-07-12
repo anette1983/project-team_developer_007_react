@@ -13,11 +13,11 @@ export const fetchMyRecipes = createAsyncThunk(
   }
 );
 
-export const addMyRecipi = createAsyncThunk(
-  'myRecipes/addRecipi',
-  async (recipiData, { rejectWithValue }) => {
+export const addMyRecipe = createAsyncThunk(
+  'myRecipes/addRecipe',
+  async (recipeData, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post('/api/recipes/own-recipes', recipiData);
+      const { data } = await axios.post('/api/recipes/own-recipes', recipeData);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -25,12 +25,12 @@ export const addMyRecipi = createAsyncThunk(
   }
 );
 
-export const deleteMyRecipi = createAsyncThunk(
-  'myRecipi/deleteMyRecipi',
-  async (recipiId, { rejectWithValue }) => {
+export const deleteMyRecipe = createAsyncThunk(
+  'myRecipe/deleteMyRecipe',
+  async (recipeId, { rejectWithValue }) => {
     try {
       const { data } = await axios.delete(
-        `/api/recipes/own-recipes/${recipiId}`
+        `/api/recipes/own-recipes/${recipeId}`
       );
       return data;
     } catch (error) {

@@ -1,34 +1,50 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import img from './1.jpg';
 import css from './MyRecipesItem.module.css';
+import { deleteMyRecipe } from 'redux/myRecipes/operations';
 
 const MyRecipesItem = ({ recipe }) => {
+  const [delId, setDelId] = useState();
+  const dispatch = useDispatch();
+
+  const handleDelete = id => {
+    setDelId(id);
+    dispatch(deleteMyRecipe(id));
+    return alert(`Recipe deleted successfully`);
+  };
+
   return (
     <li className={css.card_container}>
       <div className={css.img_wrapper}>
-        <img src={`${img}`} alt={`${recipe}`} className={css.img} />
+        <img
+          src={`${recipe.preview}`}
+          alt={`${recipe.title}`}
+          className={css.img}
+        />
       </div>
-      <button className={css.delete_btn} type="button">
+      <button
+        className={css.delete_btn}
+        type="button"
+        onClick={() => handleDelete(recipe)}
+        disabled={delId === recipe}
+      >
         del
       </button>
       <div className={css.wrapper}>
         <div className={css.top_wrapper}>
-          <h2 className={css.card_title}>Apple Frangipan Tart</h2>
-          <p className={css.card_text}>
-            Apple Frangipane Tart is a classic and elegant treat fit for any
-            dessert table. A crisp, sweet-crust is filled with rich almond
-            frangipane filling, baked with sliced
-          </p>
+          <h2 className={css.card_title}>{recipe.title}</h2>
+          <p className={css.card_text}>{recipe.description}</p>
         </div>
         <div className={css.bottom_wrapper}>
-          <span className={css.card_time}>20 min</span>
+          <span className={css.card_time}>{recipe.time} min</span>
 
           <Link
-            to={`/recipe/${recipe}`}
+            to={`/recipe/${recipe._id}`}
             state={{ from: `/my` }}
             className={css.card_btn}
           >
-            See recipe {recipe}
+            See recipe {recipe.id}
           </Link>
         </div>
       </div>

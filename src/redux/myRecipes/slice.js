@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { initialState } from './initialState';
-import { addMyRecipi, deleteMyRecipi, fetchMyRecipes } from './operations';
+import { addMyRecipe, deleteMyRecipe, fetchMyRecipes } from './operations';
 import {
-  handleAddMyRecipi,
-  handleDeleteMyRecipi,
+  handleAddMyRecipe,
+  handleDeleteMyRecipe,
   handleFetchMyRecipes,
   handlePending,
   handleReject,
@@ -18,12 +18,12 @@ const myRecipesSlice = createSlice({
       .addCase(fetchMyRecipes.pending, handlePending)
       .addCase(fetchMyRecipes.fulfilled, handleFetchMyRecipes)
       .addCase(fetchMyRecipes.rejected, handleReject)
-      .addCase(addMyRecipi.pending, handlePending)
-      .addCase(addMyRecipi.fulfilled, handleAddMyRecipi)
-      .addCase(addMyRecipi.rejected, handleReject)
-      .addCase(deleteMyRecipi.pending, handlePending)
-      .addCase(deleteMyRecipi.fulfilled, handleDeleteMyRecipi)
-      .addCase(deleteMyRecipi.rejected, handleReject);
+      .addCase(addMyRecipe.pending, handlePending)
+      .addCase(addMyRecipe.fulfilled, handleAddMyRecipe)
+      .addCase(addMyRecipe.rejected, handleReject)
+      .addCase(deleteMyRecipe.pending, handlePending)
+      .addCase(deleteMyRecipe.fulfilled, handleDeleteMyRecipe)
+      .addCase(deleteMyRecipe.rejected, handleReject);
   },
 });
 
