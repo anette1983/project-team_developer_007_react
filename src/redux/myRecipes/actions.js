@@ -1,5 +1,5 @@
 export const handlePending = state => {
-  state.isloading = true;
+  state.isLoading = true;
 };
 
 export const handleReject = (state, { payload }) => {
