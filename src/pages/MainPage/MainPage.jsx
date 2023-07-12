@@ -1,8 +1,32 @@
+// import { useDispatch, useSelector } from "react-redux";
 import {Main} from "../../components/Main/Main"
 import css from "./MainPage.module.css"
+// import { selectIsLoggedIn, selectIsRefreshing } from "redux/auth/selectors";
+// import { useEffect } from "react";
+// import { fetchMainPage } from "../../redux/recipes/operations";
+// import { selectCategories } from "../../redux/categories/selectors";
+// import { fetchCategories } from "redux/categories/operations";
 
 const MainPage = () => {
+
+// const dispatch = useDispatch();
+
+// const isLoggedIn = useSelector(selectIsLoggedIn);
+// const isRefresh = useSelector(selectIsRefreshing);
+
+
+//  useEffect(()=> {
+// // //  if (!isRefresh) {
+//     dispatch(fetchMainPage())
+// // // }
+//  }, [dispatch])
+
+
   return(
+    <>
+{/* { !isRefresh && */}
+<div className={css.wrapper}>
+<div className={css.wrapper_leaf}>
 <div className={css.container}>
   <h1 className={css.title}>
      <span className={css.title_start}>So</span>Yummy</h1>
@@ -11,6 +35,11 @@ const MainPage = () => {
   </p>
 <Main/>
  </div>
+ </div>
+</div>
+
+{/* }  */}
+    </>
   )
   
 };
