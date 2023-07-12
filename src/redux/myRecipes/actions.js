@@ -1,5 +1,5 @@
 export const handlePending = state => {
-  state.isloading = true;
+  state.isLoading = true;
 };
 
 export const handleReject = (state, { payload }) => {
@@ -13,13 +13,16 @@ export const handleFetchMyRecipes = (state, { payload }) => {
   state.availableRecipes = payload;
 };
 
+
 export const handleAddMyRecipe = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
   state.availableRecipes.push(payload);
 };
 
+
 export const handleDeleteMyRecipe = (state, { payload }) => {
+
   state.isLoading = false;
   state.error = null;
   const index = state.availableRecipes.findIndex(

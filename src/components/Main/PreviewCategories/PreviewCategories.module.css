@@ -1,10 +1,57 @@
 .container {
-    padding: 64px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 16px 100px 16px;
+    background-image: url('../../../images/bgc/404_spinach_top_bg_mob_1x.png');
+  background-repeat: no-repeat;
+background-size: contain;
+background-position: 0px 300px;
 }
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .container {
+    background-image: url('../../../images/bgc/404_spinach_top_bg_mob_2x.png');
+  }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        /* padding: 72px 32px 32px 32px; */
+      background-image: url('../../../images/bgc/404_spinach_top_bg_tab_1x.png');
+      background-position: 0px 280px;
+     }
+
+     @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .container {
+    background-image: url('../../../images/bgc/404_spinach_top_bg_tab_2x.png');
+  }
+}
+    }
+
+    @media screen and (min-width: 1440px) {
+        .container {
+          
+          background-image: url('../../../images/bgc/404_spinach_top_bg_desk_1x.png');
+          /* background-position: 400px 159px; */
+         }
+    
+         @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .container {
+        background-image: url('../../../images/bgc/404_spinach_top_bg_desk_2x.png');
+      }
+    }
+        }
 
 .section {
     margin-top: 32px;
 }
+
 
 .title {
 color: #001833;    
@@ -16,6 +63,13 @@ text-align: left;
 
 }
 
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 44px;
+        line-height: 44px;
+    }
+    }
+
 .btn {
 width: 94px;
 height: 38px;
@@ -23,8 +77,56 @@ background-color: #8AA936;
 color: #FAFAFA;
 border: none;
 border-radius: 6px;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: center;
+
 }
 
 .btn:hover {
     background-color: #22252A;
 }
+
+.btn_other {
+    width: 195px;
+    height: 46px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #22252A;
+    border-radius: 24px 44px;
+    border: 1px solid #8BAA36;
+    margin-top: 40px;
+    margin-left: 74px;
+    padding: 14px 32px;
+}
+
+.btn_other:hover {
+    background-color:  #8BAA36;
+    color: #FAFAFA;
+}
+
+@media screen and (min-width: 768px) {
+    .btn_other {
+        width: 239px;
+        height: 61px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 32px;
+        margin-left: 265px;
+        padding: 20px ;
+    }
+    }
+
+    @media screen and (min-width: 1440px) {
+        .btn_other {
+           
+            margin-top: 14px;
+            margin-left: 265px;
+         
+        }
+        }    

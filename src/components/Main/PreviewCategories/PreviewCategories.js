@@ -3,8 +3,9 @@ import { RecipeList } from "../RecipeList/RecipesList";
 import { Link } from "react-router-dom";
 import css from "./PreviewCategories.module.css";
 // import { fetchByCategory} from "../../../redux/recipes/operations"
-// import { useDispatch } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 // import {selectCategories} from "../../../redux/categories/selectors"
+// import { fetchMainPage } from "redux/recipes/operations";
 
 
 export const PreviewCategories =()=>{
@@ -13,7 +14,8 @@ export const PreviewCategories =()=>{
 
 //   dispatch(fetchByCategory());
 
-    // const recipe = useSelector(selectCategories);
+    // const recipe = fetchMainPage();
+    // console.log(recipe);
     // console.log(recipe);
 
     // const page = fetchMainPage();
@@ -66,7 +68,7 @@ export const PreviewCategories =()=>{
             <button className={css.btn} type="button">See all</button>
             </Link>
             </section>
-            <Link to="/categories">Other categories</Link>
+        <Link className={css.btn_other} to="/categories">Other categories</Link>
         </div>
     )
 }
