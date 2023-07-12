@@ -1,12 +1,21 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+// import { useEffect, useState } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+// Все що закоментовано треба буде поновити
 import file from '../../recipes.json';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react';
-import { selectCategories } from 'redux/categories/selectors';
+// import { selectCategories } from 'redux/categories/selectors';
 import { nanoid } from 'nanoid';
 
 const CategoryDetails = () => {
-  const [category, setCategory] = useState(
+  // const [category, setCategory] = useState(
+  //   file
+  //     .map(data => data.category)
+  //     .sort()
+  //     .filter((category, index, array) => array.indexOf(category) === index)
+  // );
+  const [category] = useState(
     file
       .map(data => data.category)
       .sort()
@@ -15,7 +24,7 @@ const CategoryDetails = () => {
   const [filterCategory, setFilterCategory] = useState(category[0]);
   const [filterList, setFilterList] = useState(file);
 
-  const categoryList = useSelector(selectCategories);
+  // const categoryList = useSelector(selectCategories);
 
   const handleClick = e => {
     e.preventDefault();
