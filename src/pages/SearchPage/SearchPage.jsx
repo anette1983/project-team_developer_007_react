@@ -39,7 +39,7 @@ const SearchPage = () => {
             <div className={`${css.container} ${searchCss.container}`}>
                 <SearchedRecipesList/>
             </div>
-            <div className={searchCss.paginationWrap}>
+            <div className={`${searchCss.paginationWrap} `}>
                 <Pagination count={5} page={page} onChange={handleChange}/>
                 
             </div>

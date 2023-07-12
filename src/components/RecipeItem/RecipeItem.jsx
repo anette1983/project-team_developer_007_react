@@ -1,8 +1,10 @@
-const RecipeItem = ({url, text}) => {
+import css from "./recipeItem.module.css"
+
+const RecipeItem = ({ url, text }) => {
     return (
-         <li>
+        <li className={ css.item}>
             <img src={url} alt={ text} />
-            <div>
+            <div className={ css.textWrap}>
                 <p>{ text}
                 </p>
             </div>
