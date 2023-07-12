@@ -1,64 +1,30 @@
-import UserInfoModal from './UserInfoModal';
-import UserLogoutModal from './UserLogoutModal';
 import css from './UserProfile.module.css';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
-const UserLogoModal = ({ closeUserLogoModal }) => {
-  const [isOpenUserInfoModal, setIsOpenUserInfoModal] = useState(false);
-  const [isOpenUserLogoutModal, setIsOpenUserLogoutModal] = useState(false);
-  // const [ishidden, setIsHidden] = useState(false);
+const UserLogoModal = ({
 
+  openUserLogoutModal,
+  openUserInfoModal,
+}) => {
   return (
     <>
       <div className={css.UserLogoModal}>
         <button
           type="button"
-          onClick={() => {
-            console.log('click on UserInfoModal');
-            setIsOpenUserInfoModal(true);
-            // setIsHidden(true);
-          }}
+          onClick={openUserInfoModal}
+          className={css.UserLogoutModalButton}
         >
-          Edit Profile
+          Edit profile
         </button>
         <button
           type="button"
-          onClick={() => {
-            console.log('click on UserInfoModal');
-            closeUserLogoModal();
-          }}
+          onClick={openUserLogoutModal}
+          className={css.UserLogoutModalButton}
         >
-          Close
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            setIsOpenUserLogoutModal(true);
-            // setIsHidden(true);
-          }}
-        >
-          Logout
+          Log out
         </button>
       </div>
-      <>
-        {isOpenUserInfoModal && (
-          <UserInfoModal
-            closeUserInfoModal={() => {
-              setIsOpenUserInfoModal(false);
-            }}
-          />
-        )}
-      </>
-      <>
-        {isOpenUserLogoutModal && (
-          <UserLogoutModal
-            closeUserLogoutModal={() => {
-              setIsOpenUserLogoutModal(false);
-            }}
-          />
-        )}
-      </>
     </>
   );
 };

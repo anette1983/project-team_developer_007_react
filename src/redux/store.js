@@ -18,6 +18,7 @@ import { myRecipesReduser } from './myRecipes/slice';
 import { ingredientsReduser } from './ingredients/slice';
 import { favoriteRecipesReduser } from './favoriteRecipes/slice';
 
+
 const authPersistConfig = {
   key: 'auth',
   storage,
@@ -32,6 +33,7 @@ export const store = configureStore({
     categories: categoryReduser,
     ingredients: ingredientsReduser,
     favoriteRecipes: favoriteRecipesReduser,
+
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
