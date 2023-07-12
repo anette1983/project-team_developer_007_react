@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 // import { useDispatch } from 'react-redux';
 
-import { addMyRecipi } from '../../redux/myRecipes/operations';
+import { addMyRecipe } from '../../redux/myRecipes/operations';
 import { selectMyRecipesError } from '../../redux/myRecipes/selectors';
 
 import { nanoid } from 'nanoid';
@@ -138,7 +138,7 @@ export const AddRecipeForm = () => {
     recipeFormSchema
       .validate(initVal, { abortEarly: false })
       .then(() => {
-        dispatch(addMyRecipi(formData))
+        dispatch(addMyRecipe(formData))
           .unwrap()
           .then(() => {
             navigate('/my', { replace: true });
