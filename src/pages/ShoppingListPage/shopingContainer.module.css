@@ -1,0 +1,20 @@
+
+@media screen and (min-width: 375px) {
+        .container{
+            padding: 50px 8px 0 8px; 
+            position: relative;
+        }
+       
+    }
+    @media screen and (min-width: 768px) {
+        .container{
+          padding: 72px 32px 0 32px;
+        }
+    
+    }
+    @media screen and (min-width: 1440px) {
+       .container{  
+           padding: 102px 100px 0 100px;
+        }
+    }
+  

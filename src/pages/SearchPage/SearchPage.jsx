@@ -6,6 +6,7 @@ import searchCss from "./searchContainer.module.css"
 import SearchedRecipesList from "components/SearchedRecipesList/SearchedRecipesList"
 import { Pagination } from "@mui/material"
 import { useState } from "react"
+import {fetchByCategory} from '../../redux/recipes/operations'
 // import fetchByIngredientName from "../../services/fetchByIngredients"
 // import fetchByRecipe from "../../services/fetchRecipes"
 // import mobPhoto from '../../picture/vegetables-5abfb9c60122f5 1.png'
@@ -20,7 +21,7 @@ const SearchPage = () => {
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
     };
-    console.log(recipe);
+    
     
     return (
         <div className={css.section}>
