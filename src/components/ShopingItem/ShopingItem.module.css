@@ -4,23 +4,24 @@
     justify-content: space-between;
     width: 100%;
     height: 86px;
-    border-radius: 8px;
-    padding: 0px 10px;
-    background-color: #EBF3D4;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #E0E0E0;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .wrapper_img {
-    width: 65px;
-    height: 65px;
-    padding: 4px;
-    background-color: transparent;
-    outline: 1px solid blue;
-    margin-right: 8px;
+    width: 60px;
+    height: 60px;
+    background-color: #EBF3D4;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+   
 }
 
 .wrapper_ingridient_title {
     display: flex;
-    align-items: center;
     width: 95px;
     height: 54px;
 }
@@ -35,12 +36,13 @@
 }
 
 .wrapper_ingridient_quantity {
-    width: 62px;
+    width: 37px;
     height: 23px;
     border-radius: 4px;
     background: #8BAA36;
-    padding: 4px;
-    margin-left: 28px;
+   display: flex;
+   align-items: center;
+    justify-content: center;
 }
 
 .ingridient_quantity {
@@ -51,21 +53,26 @@
     line-height: normal;
 }
 
-.input_checkbox {
-    margin-left: 28px;
+.wrapper_img_text{
+    display: flex;
 }
-
-@media screen and (min-width:767.98px) {
+.icon{
+    margin-right: 19px;
+}
+@media screen and (min-width:768px) {
     .container {
         height: 178px;
-        padding: 0px 24px;
+        width: 704px;
+    margin: 0 auto;
+    gap: 16px;
     }
-
+.icon{
+    margin-right: 40px;
+}
     .wrapper_img {
-        width: 144px;
-        height: 146px;
-        padding: 17px 16px;
-        margin-right: 24px;
+        width: 93px;
+        height: 97px;
+       
     }
 
     .wrapper_ingridient_title {
@@ -81,7 +88,7 @@
         width: 68px;
         height: 53px;
         padding: 4px 8px;
-        margin-left: 65px;
+        margin-left: 80px;
     }
 
     .text_ingridient_quantity {
@@ -91,19 +98,22 @@
     .input_checkbox {
         margin-left: 58px;
     }
+    .ingredient_img{
+        width: 81px;
+    }
 }
 
-@media screen and (min-width:1439.98px) {
+@media screen and (min-width:1440px) {
     .container {
-        height: 182px;
-        padding: 0px 32px;
+        height: 140px;
+        width: 1160px;
     }
 
     .wrapper_img {
-        width: 180px;
-        height: 180px;
+        width: 93px;
+        height: 97px;
         padding: 26px;
-        margin-right: 40px;
+        margin-right: 16px;
     }
 
     .wrapper_ingridient_title {
@@ -118,4 +128,7 @@
     .input_checkbox {
         margin-right: 70px;
     }
+    .icon{
+    margin-right: 20px;
+}
 }

@@ -13,7 +13,7 @@ const ShoppingListPage = () => {
        <div className={`${css.container} ${searchCss.container}`}>
                 <ShopingHeader/>
       </div>
-      <div className={`${css.container} ${searchCss.container}`}>
+      <div className={`${css.container} ${searchCss.sahopingConteiner}`}>
                 <ShopingList/>
       </div>
       </div>
