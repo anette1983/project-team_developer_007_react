@@ -1,5 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { selectIngredients } from "../../../redux/ingredients/selectors";
+import { fetchIngredients } from "../../../redux/ingredients/operations";
+
 import css from './RecipeIngredientsFields.module.css';
+
 
 import {
   MdRemove,
@@ -8,7 +13,6 @@ import {
   MdOutlineClose,
 } from 'react-icons/md';
 
-import { constants } from '../../../redux/constants';
 
 
 export const RecipeIngredientsFields = ({
@@ -20,10 +24,17 @@ export const RecipeIngredientsFields = ({
   updateErrors,
   errors,
 }) => {
-  const ingredientList = constants.ingredients;
-  console.log('LIST', ingredientList);
 
-  console.log('INGREDIENTS', ingredients);
+  const dispatch = useDispatch();
+  const ingredientsList = useSelector(selectIngredients);
+
+  useEffect(() => {
+    dispatch(fetchIngredients());
+  }, [dispatch]);
+
+  const [filteredIngredients, setFilteredIngredients] =
+    useState(ingredientsList);
+  
   const ingredientsQuantityMeasure = [
     'tbs',
     'tsp',
@@ -39,9 +50,6 @@ export const RecipeIngredientsFields = ({
   const [ingredientIsActive, setIngredientIsActive] = useState(
     new Array(ingredients.length).fill('')
   );
-
-  const [filteredIngredients, setFilteredIngredients] =
-    useState(ingredientList);
 
   const incrementFields = () => {
     incrIngredientFields();
@@ -100,9 +108,7 @@ export const RecipeIngredientsFields = ({
     });
 
     setFilteredIngredients(
-      ingredientList.filter(item =>
-        item.toLowerCase().includes(value.toLowerCase())
-      )
+      ingredientsList.filter(item => item.name.toLowerCase().includes(value.toLowerCase())).map((item) => item.name)
     );
 
     updateIngredient(index, value, id, 'name');
@@ -150,6 +156,7 @@ export const RecipeIngredientsFields = ({
                 <div>
                   <div className={css.ingredientInputBox}>
                     <input
+                      name='ingredients'
                       className={css.ingredientNameInput}
                       autoFocus={true}
                       value={ingredient.name}
@@ -164,7 +171,7 @@ export const RecipeIngredientsFields = ({
                   )}
                   {ingredientIsActive[index] && (
                     <ul className={css.selectIngredients}>
-                      {filteredIngredients.map(item => (
+                      {filteredIngredients.map((item) => (
                         <li
                           className={css.selectIngredientItem}
                           key={item}
