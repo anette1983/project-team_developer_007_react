@@ -1,0 +1,16 @@
+.list{
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+@media screen and (min-width: 375px) {
+    .list{
+        gap: 32px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .list{
+        gap: 14px;
+    }
+}
