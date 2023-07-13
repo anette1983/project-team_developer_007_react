@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
 
 import { addMyRecipe } from '../../redux/myRecipes/operations';
 import { selectMyRecipesError } from '../../redux/myRecipes/selectors';
@@ -13,8 +12,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { recipeFormSchema } from './recipeFormSchema';
 
 import { RecipeDescriptionFields } from './descriptionFields/RecipeDescriptionFields';
-// import { RecipeIngredientsFields } from './ingredientFields/RecipeIngredientsFields';
-import { RecipeIngredients } from './ingredientFields/RecipeIngredientsFields';
+import { RecipeIngredientsFields } from './ingredientFields/RecipeIngredientsFields';
 import { RecipePreparationFields } from './preparationFields/RecipePreparationFields';
 
 import css from './AddRecipeComponents.module.css';
@@ -29,7 +27,7 @@ export const AddRecipeForm = () => {
     {
       id: nanoid(),
       ingredientsQuantityMeasure: 'tbs',
-      ingredientsQuantity: '',
+      ingredientsQuantity: 0,
       name: '',
     },
   ]);
@@ -65,7 +63,7 @@ export const AddRecipeForm = () => {
       {
         id: nanoid(),
         ingredientsQuantityMeasure: 'tbs',
-        ingredientsQuantity: '',
+        ingredientsQuantity: 0,
         name: '',
       },
     ]);
@@ -84,10 +82,13 @@ export const AddRecipeForm = () => {
     setIngredients(ingredients.filter(item => item.id !== itemId));
   };
 
-  const updateIngredient = (index, value, id) => {
+  const updateIngredient = (index, value, id, prop) => {
+    console.log('ADD', { index, value, id, prop })
+
     setIngredients(prevState => {
+      console.log('STATE', prevState)
       const newState = [...prevState];
-      newState[index].name = value;
+      newState[index][prop] = value;
       newState[index].id = id;
       return newState;
     });
@@ -167,39 +168,31 @@ export const AddRecipeForm = () => {
     <div className={css.addSectionWrap}>
       <form className={css.addRecipeForm} onSubmit={handleSubmit}>
         <RecipeDescriptionFields
-          title={title}
-          description={description}
-          time={cookingTime}
-          category={category}
-          onInputImgUpload={onInputImgUpload}
-          onTitleChange={onTitleChange}
-          onDescriptionChange={onDescriptionChange}
-          onCategoryChange={onCategoryChange}
-          onTimeChange={onTimeChange}
-          errors={errors}
+            title={title}
+            description={description}
+            time={cookingTime}
+            category={category}
+            onInputImgUpload={onInputImgUpload}
+            onTitleChange={onTitleChange}
+            onDescriptionChange={onDescriptionChange}
+            onCategoryChange={onCategoryChange}
+            onTimeChange={onTimeChange}
+            errors={errors}
         />
 
-        {/* <RecipeIngredientsFields
-          ingredients={ingredients}
-          incrIngredientFields={incrIngredientFields}
-          decrIngredientFields={decrIngredientFields}
-          deleteIngredient={deleteIngredient}
-          updateIngredient={updateIngredient}
-          errors={errors}
-        /> */}
-        <RecipeIngredients
-          ingredients={ingredients}
-          incrIngredientFields={incrIngredientFields}
-          decrIngredientFields={decrIngredientFields}
-          deleteIngredient={deleteIngredient}
-          updateIngredient={updateIngredient}
-          errors={errors}
+        <RecipeIngredientsFields
+            ingredients={ingredients}
+            incrIngredientFields={incrIngredientFields}
+            decrIngredientFields={decrIngredientFields}
+            deleteIngredient={deleteIngredient}
+            updateIngredient={updateIngredient}
+            updateErrors={updateErrors}
+            errors={errors}
         />
-
         <RecipePreparationFields
-          onPreparationTextChange={onPreparationTextChange}
-          preparation={preparation}
-          errors={errors}
+            onPreparationTextChange={onPreparationTextChange}
+            preparation={preparation}
+            errors={errors}
         />
         <button className={css.addButton} type="submit">
           Add

@@ -44,6 +44,7 @@
         min-height: 224px;
         padding: 16px 22px;
         margin: 32px 0;
+        font-size: 18px;
     }
     .recipeTextarea::placeholder {
         font-size: 18px;

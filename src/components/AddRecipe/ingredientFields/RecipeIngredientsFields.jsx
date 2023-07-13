@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import css from './RecipeIngredientsFields.module.css';
-// ingredientsQuantity
+
 import {
   MdRemove,
   MdAdd,
-  MdOutlineKeyboard,
+  MdKeyboardArrowDown,
   MdOutlineClose,
 } from 'react-icons/md';
 
-// import { ingredients as ingredientList } from '../../../redux/constants';
 import { constants } from '../../../redux/constants';
 
-export const RecipeIngredients = ({
+
+export const RecipeIngredientsFields = ({
   ingredients,
   incrIngredientFields,
   decrIngredientFields,
@@ -21,17 +21,24 @@ export const RecipeIngredients = ({
   errors,
 }) => {
   const ingredientList = constants.ingredients;
+  console.log('LIST', ingredientList);
+
+  console.log('INGREDIENTS', ingredients);
   const ingredientsQuantityMeasure = [
     'tbs',
     'tsp',
     'kg',
     'g',
     'ml',
+    'pcs',
     'to taste',
   ];
   const [field, setFields] = useState(1);
-  const [quantityIsActive, setQuantityIsActive] = useState(false);
-  const [ingredientIsActive, setIngredientIsActive] = useState(false);
+  const [quantityIsActive, setQuantityIsActive] = useState(
+    new Array(ingredients.length).fill(''));
+  const [ingredientIsActive, setIngredientIsActive] = useState(
+    new Array(ingredients.length).fill('')
+  );
 
   const [filteredIngredients, setFilteredIngredients] =
     useState(ingredientList);
@@ -68,17 +75,20 @@ export const RecipeIngredients = ({
     });
   };
 
-  const setQuantity = (index, value) => {
+  const setQuantityMeasure = (index, value, id) => {
+    console.log('Set quantity', {id, value})
     setQuantityIsActive(prevState => {
       const newState = [...prevState];
       newState[index] = !newState[index];
       return newState;
     });
-    updateIngredient(index, 'ingredientQuantityMeasure', value);
+
+    updateIngredient(index, value, id, 'ingredientsQuantityMeasure');
   };
 
-  const changeQuantity = (index, value) => {
-    updateIngredient(index, 'ingredientQuantity', value);
+  const changeQuantity = (index, value, id) => {
+    console.log('Quantity', { index, value })
+    updateIngredient(index, value, id, 'ingredientsQuantity');
     updateErrors([`ingredients[${index}].ingredientQuantity`]);
   };
 
@@ -91,17 +101,17 @@ export const RecipeIngredients = ({
 
     setFilteredIngredients(
       ingredientList.filter(item =>
-        item.name.toLowerCase().includes(value.toLowerCase())
+        item.toLowerCase().includes(value.toLowerCase())
       )
     );
 
-    updateIngredient(index, value, id);
+    updateIngredient(index, value, id, 'name');
 
-    updateErrors([`ingredients[${index}].name`]);
+    updateErrors([`ingredients[${index}]`]);
   };
 
   const setIngredient = (index, value, id) => {
-    updateIngredient(index, value, id);
+    updateIngredient(index, value, id, 'name');
 
     setIngredientIsActive(prevState => {
       const newState = [...prevState];
@@ -133,21 +143,23 @@ export const RecipeIngredients = ({
         </div>
       </div>
       <ul className={css.ingredientsList}>
-        {ingredients.map((item, index) => {
+        {ingredients.map((ingredient, index) => {
           return (
-            <li className={css.ingredientItem} key={item.id}>
+            <li className={css.ingredientItem} key={ingredient.id}>
               <div className={css.ingredientNameField}>
                 <div>
-                  <input
-                    className={css.ingredientNameInput}
-                    autoFocus={true}
-                    value={ingredients[index].name}
-                    onChange={e => onInputChange(index, e.target.value)}
-                  />
-                  <MdOutlineKeyboard className={css.arrow} size="18" />
-                  {errors[`ingredients[${index}].name`] && (
+                  <div className={css.ingredientInputBox}>
+                    <input
+                      className={css.ingredientNameInput}
+                      autoFocus={true}
+                      value={ingredient.name}
+                      onChange={e => onInputChange(index, e.target.value, ingredient.id)}
+                    />
+                    <MdKeyboardArrowDown className={css.arrowIngr} size="18" />
+                  </div>
+                  {errors[`ingredients[${index}]`] && (
                     <p className={css.errorMsg}>
-                      {errors[`ingredients[${index}].name`]}
+                      {errors[`ingredients[${index}]`]}
                     </p>
                   )}
                   {ingredientIsActive[index] && (
@@ -155,32 +167,33 @@ export const RecipeIngredients = ({
                       {filteredIngredients.map(item => (
                         <li
                           className={css.selectIngredientItem}
-                          key={item.name}
+                          key={item}
                           onClick={() =>
-                            setIngredient(index, item.name, item._id)
+                            setIngredient(index, item, ingredient.id)
                           }
                         >
-                          {item.name}
+                          {item}
                         </li>
                       ))}
                     </ul>
                   )}
+                  
                 </div>
                 <div className={css.ingredientQuantityField}>
                   <input
                     className={css.ingredientQuantityInput}
                     type="number"
-                    value={item.ingredientQuantity}
-                    onChange={e => changeQuantity(index, e.target.value)}
+                    value={ingredient.ingredientsQuantity}
+                    onChange={e => changeQuantity(index, e.target.value, ingredient.id)}
                   />
                   <div
                     className={css.selectBox}
                     onClick={() => toggleQuantity(index)}
                   >
                     <span className={css.selectLabel}>
-                      {ingredients[index].ingredientQuantity}
+                      {ingredient.ingredientsQuantityMeasure}
                     </span>
-                    <MdOutlineKeyboard className={css.arrow} size="18" />
+                    <MdKeyboardArrowDown className={css.arrow} size="18" />
                   </div>
                   {quantityIsActive[index] && (
                     <ul className={css.selectQuantityList}>
@@ -188,7 +201,7 @@ export const RecipeIngredients = ({
                         <li
                           className={css.selectQuantityItem}
                           key={item}
-                          onClick={() => setQuantity(index, item)}
+                          onClick={() => setQuantityMeasure(index, item, ingredient.id)}
                         >
                           {item}
                         </li>
@@ -196,13 +209,13 @@ export const RecipeIngredients = ({
                     </ul>
                   )}
                   {errors[
-                    `ingredients[${index}].ingredientQuantityMeasure`
+                    `ingredients[${index}].ingredientsQuantity`
                   ] && (
                     <p className={css.errorMsg}>
                       {' '}
                       {
                         errors[
-                          `ingredients[${index}].ingredientQuantityMeasure`
+                          `ingredients[${index}].ingredientsQuantity`
                         ]
                       }{' '}
                     </p>
@@ -212,7 +225,7 @@ export const RecipeIngredients = ({
               <button
                 className={css.deleteBtn}
                 type="button"
-                onClick={() => deleteField(item.id, index)}
+                onClick={() => deleteField(ingredient.id, index)}
               >
                 <MdOutlineClose className={css.deleteBtnIcon} size="18px" />
               </button>
