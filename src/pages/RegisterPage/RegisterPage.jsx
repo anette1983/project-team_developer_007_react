@@ -6,7 +6,7 @@ import Notiflix from 'notiflix';
 const RegisterPage = () => {
   const error = useSelector(selectAuthError);
 
-  if (error) {
+  if (!error) {
     Notiflix.Notify.failure('Sorry, something went wrong');
   }
 
