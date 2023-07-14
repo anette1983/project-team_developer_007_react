@@ -43,7 +43,7 @@ const Navigation = ({ width, closeModal }) => {
       </NavLink>
 
       {width < 1441 ? (
-        <div>
+        <div className={css.mobileSearchLink}>
           <NavLink to="/search" onClick={closeModal}>
             <Search className={css.mobileSearchSVG} />
 
