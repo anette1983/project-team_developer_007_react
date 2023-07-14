@@ -29,11 +29,11 @@ const MyRecipesPage = () => {
     <>
       <div className={`${myRecipesCss.wrapper_leaf}`}>
         <div className={css.section}>
+          {isLoading && !error && <h3>Request in progress...</h3>}
+          {error && <p>{error}</p>}
           <div className={`${css.container} ${searchCss.container}`}>
             <MainPageTitle text={text} />
           </div>
-          {isLoading && !error && <h3>Request in progress...</h3>}
-          {error && <p>{error}</p>}
 
           <div className={`${css.container} ${myRecipesCss.wrapper}`}>
             <MyRecipesList />
