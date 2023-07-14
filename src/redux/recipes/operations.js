@@ -29,10 +29,10 @@ export const fetchByCategory = createAsyncThunk(
 
 export const fetchMore = createAsyncThunk(
   'recipes/fetchMore',
-  async ({ category, page }, thunkAPI) => {
+  async ({ category, page, limit }, thunkAPI) => {
     try {
       const { data } = await axios.get('/api/recipes/', {
-        params: { category, page }, // need find out correct parameter key for pagination from backend
+        params: { category, page, limit },
       });
       return data;
     } catch (error) {
@@ -48,6 +48,48 @@ export const fetchRecipeById = createAsyncThunk(
       const { data } = await axios.get('/api/recipes/', {
         params: { id: recipiId },
       });
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchBySearch = createAsyncThunk(
+  'recipes/fetchBySearch',
+  async ({ searchBy, query }, thunkAPI) => {
+    //possible value for searchBy: 'search' (means title) || 'ingredients'
+    try {
+      const { data } = await axios.get(`/api/recipes/${searchBy}`, {
+        params: { query },
+      });
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchMoreBySearch = createAsyncThunk(
+  'recipes/fetchMoreBySearch',
+  async ({ searchBy, query, page, limit }, thunkAPI) => {
+    //possible value for searchBy: 'search' (means title) || 'ingredients'
+    try {
+      const { data } = await axios.get(`/api/recipes/${searchBy}`, {
+        params: { query, page, limit },
+      });
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchPopular = createAsyncThunk(
+  'recipes/fetchPopular',
+  async (_, thunkAPI) => {
+    try {
+      const { data } = await axios.get('/api/recipes/popular-recipe');
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
