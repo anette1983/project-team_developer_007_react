@@ -69,7 +69,7 @@ export const refreshUser = createAsyncThunk(
 );
 
 export const updateUserData = createAsyncThunk(
-  'users/userinfoupd',
+  'auth/userinfoupd',
   async (updatedUserData, thunkAPI) => {
     try {
       const { data } = await axios.patch('/users/userinfoupd', updatedUserData);
@@ -79,4 +79,3 @@ export const updateUserData = createAsyncThunk(
     }
   }
 );
-// нужен патч ?

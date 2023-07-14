@@ -10,5 +10,5 @@ export const handleReject = (state, { payload }) => {
 export const handleFetchIngredients = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-  state.availableIngredients = payload;
+  state.ingredientsList = payload;
 };

@@ -84,6 +84,7 @@ export const RecipeDescriptionFields = ({
           type="file"
           accept=".jpg, .jpeg, .png"
           id="dishImg"
+          name='img'
         />
         {imgs && <img className={css.recipeImg} src={imgs} alt="recipeImage" />}
         {errors.imgs && <p className={css.errorMsg}>{errors.imgs}</p>}
@@ -107,7 +108,7 @@ export const RecipeDescriptionFields = ({
             className={css.inputRaw}
             type="text"
             id="about"
-            name="about"
+            name="description"
             placeholder="Enter about recipe"
             onChange={e => onDescriptionChange(e.target.value)}
             value={description}

@@ -26,8 +26,8 @@ export const AddRecipeForm = () => {
   const [ingredients, setIngredients] = useState([
     {
       id: nanoid(),
-      ingredientsQuantityMeasure: 'tbs',
       ingredientsQuantity: 0,
+      ingredientsQuantityMeasure: 'tbs',
       name: '',
     },
   ]);
@@ -62,8 +62,8 @@ export const AddRecipeForm = () => {
       ...prevState,
       {
         id: nanoid(),
-        ingredientsQuantityMeasure: 'tbs',
         ingredientsQuantity: 0,
+        ingredientsQuantityMeasure: 'tbs',
         name: '',
       },
     ]);
@@ -121,6 +121,8 @@ export const AddRecipeForm = () => {
     ingredients,
     preparation,
   };
+
+  console.log(initVal);
 
   const formData = new FormData();
   formData.append('img', img);

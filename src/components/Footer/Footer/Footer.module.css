@@ -19,7 +19,6 @@
     .footer {
         /* padding-top: 200px; */
         background-image: url('../../../images/bgc/404_spinach_bottom_bg_tab_1x.png');
-        /* background-position: 0px 0px; */
         background-position: 450px 240px;
     }
     @media (min-device-pixel-ratio: 2),
