@@ -39,7 +39,8 @@ export const handleRefreshFulfilled = (state, { payload }) => {
 };
 
 export const handleUpdateFulfilled = (state, { payload }) => {
-  state.user = payload;
+  state.user.name = payload.name;
+  state.user.avatar = payload.avatarURL;
   state.isLoggedIn = true;
   state.isRefreshing = false;
   state.error = null;
