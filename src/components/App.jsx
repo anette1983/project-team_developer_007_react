@@ -1,6 +1,6 @@
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './Layout';
+// import Layout from './Layout';
 import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
 import { useDispatch, useSelector } from 'react-redux';
@@ -45,7 +45,7 @@ export const App = () => {
     <b>Fetching user data...</b>
   ) : (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<SharedLayout />}>
         <Route
           index
           element={

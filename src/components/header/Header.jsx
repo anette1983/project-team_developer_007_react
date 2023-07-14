@@ -4,19 +4,23 @@ import ThemeToggler from './ThemeToggler';
 import UserLogo from './UserProfile/UserLogo';
 import css from './header.module.css';
 import globalcss from '../../pages/pages.module.css';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from 'redux/auth/selectors';
 
 // import defaultUserAvatar from '../../pictures/userDefault.png'
 
 const Header = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
-    <div className={`${css.header} ${globalcss.container}`}>
-      <Logo />
-      <Navigation width={1441} />
-      <UserLogo />
+    isLoggedIn && (
+      <div className={`${css.header} ${globalcss.container}`}>
+        <Logo />
+        <Navigation width={1441} />
+        <UserLogo />
 
-      <ThemeToggler />
-
-    </div>
+        <ThemeToggler />
+      </div>
+    )
   );
 };
 export default Header;
