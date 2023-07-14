@@ -25,8 +25,8 @@ export const RecipePreparationFields = ({
         <h3 className={css.subtitle}>Recipe Preparation</h3>
         <textarea
         className={css.recipeTextarea}
-        name="recipe"
-        id="recipe"
+        name="instructions"
+        id="instructions"
         placeholder="Enter recipe"
         onKeyDown={handleKeyDown}
         onChange={handleChange}
