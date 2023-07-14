@@ -60,6 +60,7 @@ export const refreshUser = createAsyncThunk(
     try {
       authHeader.set(persistedToken);
       const { data } = await axios.get('/users/current');
+
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -70,7 +71,6 @@ export const refreshUser = createAsyncThunk(
 export const updateUserData = createAsyncThunk(
   'users/userinfoupd',
   async (updatedUserData, thunkAPI) => {
-    console.log(updatedUserData);
     try {
       const { data } = await axios.patch('/users/userinfoupd', updatedUserData);
       return data;

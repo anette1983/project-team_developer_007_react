@@ -12,8 +12,8 @@ const UserLogoutModal = ({ closeUserLogoutModal }) => {
   };
   return (
     <>
-      <div className={css.UserLogoutModal}>
-        <div className={css.UserLogoutModalText}>
+      <div className={css.UserLogoutModal} id="modal">
+        <div className={css.UserLogoutModalText} id="modal">
           <p>Are you sure you want to log out ?</p>
         </div>
         <div className={css.UserLogoutModalButtons}>

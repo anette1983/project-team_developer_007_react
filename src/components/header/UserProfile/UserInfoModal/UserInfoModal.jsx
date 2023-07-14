@@ -13,7 +13,7 @@ const UserInfoModal = ({ onClose }) => {
   const newAvatarUrl = useSelector(selectUserAvatar);
 
   const [name, setName] = useState(nickName);
-  const [avatar, setAvatar] = useState(newAvatarUrl);
+  const [avatar, setAvatar] = useState(newAvatarUrl || '');
   const [file, setFile] = useState(null);
   const dispatch = useDispatch();
 
@@ -37,12 +37,11 @@ const UserInfoModal = ({ onClose }) => {
 
     dispatch(updateUserData(formData));
     onClose();
-    console.log(e.target.parentNode.id);
   };
 
   return (
-    <>
-      <form className={css.container} id="UserInfoMdal">
+    <div id="modal">
+      <form className={css.container} id="modal">
         <input
           className={css.avatarContainer}
           type="file"
@@ -71,133 +70,8 @@ const UserInfoModal = ({ onClose }) => {
         </button>
       </form>
       <Cross className={css.cross} onClick={onClose} />
-    </>
+    </div>
   );
 };
 
 export default UserInfoModal;
-
-// export const UserProfile = ({ onClose, photoURL, userName, handleChange }) => {
-//   const [avatar, setAvatar] = useState(photoURL);
-//   const [file, setFile] = useState();
-//   const [newName, setNewName] = useState(userName);
-//   const dispatch = useDispatch();
-
-//   const isLoading = useSelector(selectIsLoading);
-//   const error = useSelector(selectError);
-
-//   const uploadContent = e => {
-//     if (e.target.files[0]) {
-//       const objectUrl = URL.createObjectURL(e.target.files[0]);
-//       setAvatar(objectUrl);
-//       setFile(e.target.files[0]);
-//     }
-//   };
-
-//   const handleSubmit = async () => {
-//     const formData = new FormData();
-//     if (newName) {
-//       formData.append('name', newName);
-//     }
-//     if (file) {
-//       formData.append('image', file);
-//     }
-//     try {
-//       await dispatch(updateUserData(formData));
-//       if (newName) {
-//         dispatch(updateUserSuccess({ name: newName, avatarURL: avatar }));
-//       }
-//       if (file) {
-//         dispatch(
-//           updateUserSuccess({
-//             name: newName,
-//             avatarURL: URL.createObjectURL(file),
-//           })
-//         );
-//       }
-//       if (newName && file) {
-//         dispatch(
-//           updateUserSuccess({
-//             name: newName,
-//             avatarURL: URL.createObjectURL(file),
-//           })
-//         );
-//       }
-//       handleChange(formData);
-//       onClose();
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-
-//   return (
-//     <EditContainer>
-//       <CircleImage style={{ backgroundImage: `url(${avatar})` }}>
-//         <AddPhotoButton>
-//           <AiOutlinePlus
-//             style={{
-//               width: '18px',
-//               height: '18px',
-//             }}
-//           />
-//           <input type="file" accept="image/*" onChange={uploadContent} hidden />
-//         </AddPhotoButton>
-//       </CircleImage>
-
-//       <InputContainer>
-//         <Input
-//           type="text"
-//           placeholder="name"
-//           value={newName}
-//           onChange={event => {
-//             setNewName(event.target.value);
-//           }}
-//         />
-
-//         <InputIcon>
-//           <UserIcon />
-//         </InputIcon>
-//         <IconPen />
-//       </InputContainer>
-//       <Button type="submit" onClick={handleSubmit}>
-//         Save changes
-//       </Button>
-//       <ButtonClose onClick={onClose} />
-//       {isLoading && !error && <Loader />}
-//     </EditContainer>
-//   );
-// };
-
-// const UserInfoModal = ({ closeUserInfoModal }) => {
-//   const handleSubmit = (values, actions) => {
-//     console.log(values);
-//     closeUserInfoModal();
-//   };
-//   return (
-//     <>
-
-//       <Formik
-//         initialValues={{ name: '', avatarUrl: '' }}
-//         onSubmit={handleSubmit}
-//       >
-//         {({ setFieldValue }) => (
-//           <Form autoComplete="off" className={css.UserInfoModal}>
-//             <Field name="name" type="text" placeholder="Name" />
-//             <img src={defualtImage} alt="ss" />
-//             <Field
-//               name="avatarUrl"
-//               type="file"
-//               className={css.UserAvatar}
-//               // onChange={e =>
-//               //   setFieldValue('avatarUrl', e.currentTarget.files[0])
-//               // }
-//             />
-//             <button type="submit"> Save Changes</button>
-//           </Form>
-//         )}
-//       </Formik>
-//     </>
-//   );
-// };
-
-// export default UserInfoModal;
