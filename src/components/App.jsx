@@ -73,7 +73,7 @@ export const App = () => {
         />
 
         <Route
-          path="/categories"
+          path="categories"
           element={
             <PrivateRoute component={CategoriesPage} redirectTo="/signin" />
           }
