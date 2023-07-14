@@ -125,13 +125,14 @@ export const AddRecipeForm = () => {
   console.log(initVal);
 
   const formData = new FormData();
-  formData.append('img', img);
+  formData.append('preview', img);
   formData.append('title', title);
   formData.append('description', description);
   formData.append('category', category);
   formData.append('time', cookingTime);
   formData.append('ingredients', JSON.stringify(updatedIngredients));
   formData.append('instructions', preparation);
+
 
   const dispatch = useDispatch();
   const error = useSelector(selectMyRecipesError);
