@@ -1,0 +1,38 @@
+.textWrap{
+    width: 307px;
+    height: 52px;
+    padding: 16px;
+    position: absolute;
+    left: 18px;
+    bottom: 26px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+.item{
+    position: relative;
+    width: 343px;
+    height: 323px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 375px) {
+    .item{
+        width: 336px;
+    }
+    .textWrap{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .item{
+        width: 300px;
+    }
+    .textWrap{
+        width: 268px;
+        left: 16px;
+    }
+    .img{
+    max-width: 323px;
+}
+}

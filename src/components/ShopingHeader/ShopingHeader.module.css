@@ -1,0 +1,43 @@
+
+.text{
+    color: #FAFAFA;
+    font-family: "Poppins_SemiBold", sans-serif;
+}
+@media screen and (min-width: 375px) {
+      .wrap{
+    width: 359px;
+    height: 38px;
+    background-color: #8BAA36;
+    border-radius: 8px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.textWrap{
+    display: flex;
+    gap: 24px;
+}
+       
+    }
+    @media screen and (min-width: 768px) {
+       .wrap{
+        width: 704px;
+        height: 58px;
+        padding: 20px;
+       }
+       .textWrap{    
+        gap: 78px;
+    }
+    
+    }
+    @media screen and (min-width: 1440px) {
+        .wrap{
+        width: 1240px;
+        height: 60px;
+        padding: 0 40px;
+       }
+       .textWrap{
+        gap: 142px;
+       }
+    }

@@ -1,4 +1,10 @@
-  @media screen and (min-width: 375px) {
+.tabPhoto{
+            display: none;
+        }
+        .paginationWrap{
+            margin: 0 auto;
+        }
+@media screen and (min-width: 375px) {
         .container{
             padding: 50px 16px 0 16px; 
             position: relative;

@@ -1,64 +1,49 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { initialState } from './initialState';
 import {
   fetchMainPage,
   fetchByCategory,
   fetchMore,
   fetchRecipeById,
+  fetchBySearch,
+  fetchMoreBySearch,
+  fetchPopular,
 } from './operations';
-
-const handlePending = state => {
-  state.isLoading = true;
-};
-
-const handleReject = (state, action) => {
-  state.isLoading = false;
-  state.error = action.payload;
-};
-
-const initialState = {
-  availableRecipes: [],
-  page: 1,
-  currentRecipe: null,
-  isLoading: false,
-  error: null,
-};
+import {
+  handleFetchByIdFullfilled,
+  handleFetchMoreFullfilled,
+  handleFirstFetchFulfilled,
+  handlePending,
+  handleReject,
+} from './actions';
 
 const recipesSlice = createSlice({
   name: 'recipes',
   initialState,
-  extraReducers: {
-    [fetchMainPage.pending]: handlePending,
-    [fetchMainPage.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.availableRecipes = action.payload;
-    },
-    [fetchMainPage.rejected]: handleReject,
 
-    [fetchByCategory.pending]: handlePending,
-    [fetchByCategory.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.availableRecipes = action.payload;
-    },
-    [fetchByCategory.rejected]: handleReject,
-
-    [fetchMore.pending]: handlePending,
-    [fetchMore.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.availableRecipes.push(...action.payload);
-      state.page = state.page + 1;
-    },
-    [fetchMore.rejected]: handleReject,
-
-    [fetchRecipeById.pending]: handlePending,
-    [fetchRecipeById.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.currentRecipe = action.payload;
-    },
-    [fetchRecipeById.rejected]: handleReject,
+  extraReducers: builder => {
+    builder
+      .addCase(fetchMainPage.pending, handlePending)
+      .addCase(fetchMainPage.fulfilled, handleFirstFetchFulfilled)
+      .addCase(fetchMainPage.rejected, handleReject)
+      .addCase(fetchByCategory.pending, handlePending)
+      .addCase(fetchByCategory.fulfilled, handleFirstFetchFulfilled)
+      .addCase(fetchByCategory.rejected, handleReject)
+      .addCase(fetchMore.pending, handlePending)
+      .addCase(fetchMore.fulfilled, handleFetchMoreFullfilled)
+      .addCase(fetchMore.rejected, handleReject)
+      .addCase(fetchRecipeById.pending, handlePending)
+      .addCase(fetchRecipeById.fulfilled, handleFetchByIdFullfilled)
+      .addCase(fetchRecipeById.rejected, handleReject)
+      .addCase(fetchBySearch.pending, handlePending)
+      .addCase(fetchBySearch.fulfilled, handleFirstFetchFulfilled)
+      .addCase(fetchBySearch.rejected, handleReject)
+      .addCase(fetchMoreBySearch.pending, handlePending)
+      .addCase(fetchMoreBySearch.fulfilled, handleFetchMoreFullfilled)
+      .addCase(fetchMoreBySearch.rejected, handleReject)
+      .addCase(fetchPopular.pending, handlePending)
+      .addCase(fetchPopular.fulfilled, handleFirstFetchFulfilled)
+      .addCase(fetchPopular.rejected, handleReject);
   },
 });
 

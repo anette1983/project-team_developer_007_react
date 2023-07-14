@@ -4,6 +4,7 @@ import css from "./searchInput.module.css"
 const SearchForm = ({title}) => {
     const [selectBy, setSelectBy] = useState("Title");
     const [search, setSearch] = useState('')
+    const [isHidden, setIsHidden] = useState(false);
     const handleBtnSubmit = (e) => {
         e.preventDefault();
         title({ selectBy, search })
@@ -18,6 +19,12 @@ const SearchForm = ({title}) => {
     const  reset = () => {
         setSearch('')
     }
+    const handleHidden = () => {
+        setIsHidden(!isHidden)
+    }
+    const handleCloseHidden = () => {
+        setIsHidden(false)
+    }
     return (
         <form onSubmit={handleBtnSubmit} className={ css.form}>
             <div className={ css.inputWrap}>
@@ -26,7 +33,7 @@ const SearchForm = ({title}) => {
             </div>
             <div className={css.selectWrap}>
                      <p className={ css.label}>Search by:</p>
-            <div className={css.select}>
+            <div className={css.select} onClick={handleHidden}>
                 {selectBy}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="chevron-up">
@@ -34,10 +41,10 @@ const SearchForm = ({title}) => {
                     </g>
                 </svg>
                 </div>
-                <div className={css.optionWrap}>
+                {isHidden &&<div className={css.optionWrap} onClick={handleCloseHidden}>
                         <p onClick={handleOption} className={css.text} id="Title">Title</p>
                         <p onClick={handleOption} className={css.text} id="Ingredients">Ingredients</p>              
-                </div>
+                </div>}
                 
             </div>                
         </form>   
