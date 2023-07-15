@@ -7,7 +7,7 @@ import { selectRecipes } from "redux/recipes/selectors";
 export const PreviewCategories =()=>{
 
 const recipes = useSelector(selectRecipes);
-// console.log(recipes);
+console.log(recipes);
     return (
         
          <div className={css.container}>
@@ -15,7 +15,7 @@ const recipes = useSelector(selectRecipes);
 
          <section className={css.section}>
          <h2 className={css.title}>Breakfast</h2>
-         <RecipeList data={recipes.Chicken}/>
+         <RecipeList data={recipes.Breakfast}/>
          <Link to="/categories/:breakfast">
          <button className={css.btn} type="button">See all</button>
          </Link>
@@ -24,7 +24,7 @@ const recipes = useSelector(selectRecipes);
   
  <section className={css.section}>
      <h2 className={css.title}>Miscellaneous</h2>
-     <RecipeList data={recipes.Lamb}/>
+     <RecipeList data={recipes.Miscellaneous}/>
      <Link to="/categories/:miscellaneous">
      <button className={css.btn} type="button">See all</button>
      </Link>
@@ -32,14 +32,14 @@ const recipes = useSelector(selectRecipes);
      </section>
  <section className={css.section}>
      <h2 className={css.title}>Chicken</h2>
-     <RecipeList data={recipes.Seafood}/>
+     <RecipeList data={recipes.Chicken}/>
      <Link to="/categories/:chicken">
      <button className={css.btn} type="button">See all</button>
      </Link>
      </section>
  <section className={css.section}>
      <h2 className={css.title}>Deserts</h2>
-     <RecipeList data={recipes.Vegan}/>
+     <RecipeList data={recipes.Deserts}/>
      <Link to="/categories/:deserts">
      <button className={css.btn} type="button">See all</button>
      </Link>
