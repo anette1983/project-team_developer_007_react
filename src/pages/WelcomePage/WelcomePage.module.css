@@ -99,6 +99,33 @@
   }
 }
 
+.Welcome__svgwrapper {
+  margin: 0 auto;
+  margin-bottom: 28px;
+  padding: 5px;
+
+  width: 54px;
+
+  cursor: pointer;
+  border-radius: 12px;
+
+  background-color: #8baa36;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 44px;
+    padding: 12px;
+
+    width: 68px;
+  }
+
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: #8bcc55;
+  }
+}
+
 .Welcome__title {
   margin-bottom: 14px;
 
