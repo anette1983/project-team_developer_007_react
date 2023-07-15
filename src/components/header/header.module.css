@@ -36,12 +36,6 @@
     flex-direction: column;
     gap: 32px;
   }
-  /* .closeModal {
-    padding-left: 16px;
-  } */
-  /* .logoModal {
-    padding-left: 16px;
-  } */
 }
 @media screen and (min-width: 768px) {
   .burgerMenu {
@@ -53,12 +47,10 @@
   .mobileNav {
     gap: 40px;
   }
-  /* .closeModal {
-    padding-left: 32px;
-  } */
-  /* .logoModal {
-    padding-left: 28px;
-  } */
+  .mobileSearchSVG {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -84,6 +76,16 @@
 .nav a.active {
   color: rgba(139, 170, 54, 1);
   cursor: pointer;
+}
+.mobileSearchLink:hover {
+  & a {
+    color: rgba(139, 170, 54, 1);
+  }
+
+  & svg {
+    stroke: rgba(139, 170, 54, 1);
+    fill: none;
+  }
 }
 
 .mobileNav a {

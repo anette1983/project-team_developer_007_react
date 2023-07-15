@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import css from './MyRecipesItem.module.css';
-import { deleteMyRecipe } from 'redux/myRecipes/operations';
+import { deleteMyRecipe, fetchMyRecipes } from 'redux/myRecipes/operations';
+import sprite from '../../images/svg/sprite.svg';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const MyRecipesItem = ({ recipe }) => {
   const [delId, setDelId] = useState();
@@ -11,7 +13,8 @@ const MyRecipesItem = ({ recipe }) => {
   const handleDelete = id => {
     setDelId(id);
     dispatch(deleteMyRecipe(id));
-    return alert(`Recipe deleted successfully`);
+    dispatch(fetchMyRecipes());
+    return Notify.success(`Recipe deleted successfully`);
   };
 
   return (
@@ -29,7 +32,9 @@ const MyRecipesItem = ({ recipe }) => {
         onClick={() => handleDelete(recipe._id)}
         disabled={delId === recipe._id}
       >
-        del
+        <svg>
+          <use href={sprite + '#trash'} />
+        </svg>
       </button>
       <div className={css.wrapper}>
         <div className={css.top_wrapper}>

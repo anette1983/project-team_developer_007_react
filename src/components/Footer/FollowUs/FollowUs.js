@@ -1,27 +1,37 @@
 import css from './FollowUs.module.css';
-// import insta from '../../../images/svg/sprite.svg'
+import sprite from '../../../images/svg/sprite.svg';
+
 export const FollowUs = () => {
   return (
     <div className={css.container}>
       <ul className={css.list}>
-        <li>
-          <a href=" " className={css.icon}>
-          <svg width="20" height="20"  >
-            <use
-            // href={insta}
-             href="../../../images/svg/sprite.svg#clock"
-             />
+        <li className={css.item}>
+          <a href=" " >
+          <svg width="20" height="20">
+            <use href={sprite + "#face"}/>
           </svg>
-          </a>facebook
+          </a>
         </li>
-        <li>
-          <a href="/">/</a>youtube
+        <li className={css.item}>
+          <a href=" ">
+           <svg width="20" height="20">
+            <use href={sprite + "#youtube"}/>
+          </svg>
+          </a>
         </li>
-        <li>
-          <a href="/">/</a>twitter
+        <li className={css.item}>
+          <a href=" "> 
+          <svg width="20" height="20">
+            <use href={sprite + "#twitter"}/>
+          </svg>
+          </a>
         </li>
-        <li>
-          <a href="/">/</a>instagram
+        <li className={css.item}>
+          <a href=" ">
+           <svg width="17" height="17">
+            <use href={sprite + "#insta"}/>
+          </svg>
+          </a>
         </li>
       </ul>
     </div>

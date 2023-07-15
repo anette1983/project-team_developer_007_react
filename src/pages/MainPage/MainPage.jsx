@@ -1,30 +1,28 @@
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {Main} from "../../components/Main/Main"
 import css from "./MainPage.module.css"
-// import { selectIsLoggedIn, selectIsRefreshing } from "redux/auth/selectors";
-// import { useEffect } from "react";
-// import { fetchMainPage } from "../../redux/recipes/operations";
-// import { selectCategories } from "../../redux/categories/selectors";
-// import { fetchCategories } from "redux/categories/operations";
+import { selectIsLoggedIn, selectIsRefreshing } from "redux/auth/selectors";
+import { useEffect} from "react";
+import { fetchMainPage } from "../../redux/recipes/operations";
+
 
 const MainPage = () => {
 
-// const dispatch = useDispatch();
+const dispatch = useDispatch();
+const isLoggedIn = useSelector(selectIsLoggedIn);
+const isRefresh = useSelector(selectIsRefreshing);
 
-// const isLoggedIn = useSelector(selectIsLoggedIn);
-// const isRefresh = useSelector(selectIsRefreshing);
+ useEffect(()=> {
+ if (!isRefresh) {
+    dispatch(fetchMainPage())
+}
+ }, [dispatch, isRefresh])
 
-
-//  useEffect(()=> {
-// // //  if (!isRefresh) {
-//     dispatch(fetchMainPage())
-// // // }
-//  }, [dispatch])
 
 
   return(
     <>
-{/* { !isRefresh && */}
+{ isLoggedIn && !isRefresh &&
 <div className={css.wrapper}>
 <div className={css.wrapper_leaf}>
 <div className={css.container}>
@@ -38,7 +36,7 @@ const MainPage = () => {
  </div>
 </div>
 
-{/* }  */}
+}  
     </>
   )
   

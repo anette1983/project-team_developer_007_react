@@ -18,12 +18,15 @@
 
 .list {
     display: flex;
+    align-items: center;
 }  
 
-.icon {
-    /* width: 20px;
-    height: 20px; */
-    fill: #8BAA36;
-    
-    /* background-color: black; */
+.item:not(:first-child) {
+  margin-left: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .item:not(:first-child) {
+        margin-left: 18px;
+      }
 }

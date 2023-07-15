@@ -1,10 +1,15 @@
 import AuthNav from 'components/AuthNav.jsx/AuthNav';
+// import logoDesktop from '../../pictures/logo/logoDesktop.svg';
 import css from './WelcomePage.module.css';
 
 const WelcomePage = () => {
   return (
     <section className={css.Welcome__section}>
       <div className={css.Welcome__container}>
+        {/* <svg>
+          <use href={logoDesktop} />
+        </svg> */}
+
         <h1 className={css.Welcome__title}>Welcome to the app!</h1>
         <p className={css.Welcome__subtitle}>
           This app offers more than just a collection of recipes - it is

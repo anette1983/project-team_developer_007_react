@@ -2,20 +2,27 @@
   width: auto;
   height: auto;
   display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .avatarHeaderImg {
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   border: none;
   border-radius: 50%;
+  @media screen and (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+  }
 }
-
-.UserLogoModal {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  outline: 1px solid red;
+.nickName {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .UserLogoutModal {
@@ -66,9 +73,6 @@
   }
 }
 
-.hidden {
-  display: none;
-}
 .cross {
   position: absolute;
   width: 20px;
@@ -85,6 +89,15 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .UserLogoModal {
+    margin-top: 30px;
+    top: 13%;
+    left: 70%;
+    width: 177px;
+    height: 134px;
+    gap: 32px;
+  }
+
   .UserLogoutModal {
     width: 480px;
     height: 215px;
