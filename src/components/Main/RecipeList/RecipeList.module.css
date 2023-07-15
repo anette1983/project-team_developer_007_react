@@ -1,5 +1,6 @@
 .list {
     display: flex;
+    gap: 8px;
 }
 
 .item {
@@ -12,14 +13,34 @@
     position: relative;
     border-radius: 8px;
 }
+.list_item:not(:first-child) {
+    display: none;
+}
 
 @media screen and (min-width: 768px) {
     .list_item{
         width: 336px;
+        /* margin-right: 32px; */
+        
+    }
+    .list_item:not(:first-child) {
+        display: block;
     }
 
     .list_item:nth-child(odd){
-        margin-right: 32px;
+        
+        display: none;
+    }
+  
+    }
+    @media screen and (min-width: 1440px) {
+    .list_item{
+        width: 300px;
+    }
+    .list_item:nth-child(odd){
+        
+        display: block;
+       
     }
     }
 
@@ -36,7 +57,7 @@
     line-height: 20px;
     letter-spacing: -0.24px;
     text-align: left;
-   
+   border-radius: 8px;
 padding: 16px 128px 16px 16px;
 }
 

@@ -32,15 +32,16 @@ background-position: 100px 30px;
 
 @media screen and (min-width: 1440px) {
   .wrapper {
-    background-image: url('../../../src/images/bgc/start_corner_besk_1x.jpg');
-    background-position: 650px -430px;
+    background-image: url('../../../src/images/bgc/start_corner_desk_1x.png');
+    background-position: 700px -230px;
+    background-size: 35%;
     
   }
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .wrapper {
-    background-image: url('../../../src/images/bgc/start_corner_besk_2x.jpg');
+    background-image: url('../../../src/images/bgc/start_corner_desk_2x.png');
   }
 }
 }

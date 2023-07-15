@@ -16,7 +16,7 @@ export function RecipeList({data}) {
     {data.map((recipe)=> {
 return (
   <li key={recipe._id} className={css.list_item}>
-      <Link to={`/reciepe/:${recipe._id}`}>
+      <Link to={`/recipe/:${recipe._id}`}>
       <h3 className={css.list_title}>{recipe.title}</h3>
       <img className={css.img} src={recipe.thumb} alt="recipe"/>
       </Link>
