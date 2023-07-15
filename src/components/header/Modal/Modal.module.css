@@ -6,6 +6,18 @@
     transform: translateY(0);
   }
 }
+
+.svg {
+  height: 28px;
+  width: 28px;
+  stroke: rgba(34, 37, 42, 1);
+  background-color: transparent;
+  &:hover {
+    scale: 1.2;
+    stroke: rgba(139, 170, 54, 1);
+  }
+}
+
 .modalOverlay {
   position: absolute;
   top: 0;
@@ -32,14 +44,26 @@
   letter-spacing: -0.02em;
   text-align: left;
 
-  @media screen and (min-width: 768px) {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../../../images/bgc/menu_mob_2x.png');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modalOverlay {
     background-image: url('../../../images/bgc/menu_tab_1x.png');
     font-size: 24px;
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .modalOverlay {
+      background-image: url('../../../images/bgc/menu_tab_2x.png');
+    }
+  }
 }
-/* .modalHeader {
-    padding: 18px 32px 0 32px;
-} */
 
 .modalContent {
   width: 100%;
@@ -59,4 +83,10 @@
   top: 4%;
   right: 10%;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .svg {
+    height: 32px;
+    width: 32px;
+  }
 }

@@ -3,6 +3,7 @@ import css from './Modal.module.css';
 import Logo from '../Logo';
 import Navigation from '../Navigation';
 import { ReactComponent as Cross } from '../X.svg';
+import sprite from '../../../images/svg/sprite.svg';
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,17 +18,15 @@ const Modal = () => {
 
   return (
     <>
-      <p onClick={openModal}>Open Modal</p>
+      <svg className={css.svg} onClick={openModal}>
+        <use href={sprite + '#burger'} />
+      </svg>
 
       {isOpen && (
         <div className={css.modalOverlay}>
           <span className={css.logoModal}>
-            <Logo />
+            <Logo closeModal={closeModal} />
           </span>
-          {/* <button onClick={closeModal} className={css.closeModal}>
-            Close Modal
-          </button> */}
-
           <Navigation width={500} closeModal={closeModal} />
           <Cross className={css.cross} onClick={closeModal} />
         </div>
