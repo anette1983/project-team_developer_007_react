@@ -90,6 +90,7 @@ export const AddRecipeForm = () => {
       const newState = [...prevState];
       newState[index][prop] = value;
       newState[index].id = id;
+      console.log(newState);
       return newState;
     });
   };
