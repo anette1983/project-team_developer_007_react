@@ -31,7 +31,6 @@ export const RecipeDescriptionFields = ({
 }) => {
   const dispatch = useDispatch();
   const categoriesList = useSelector(selectCategories);
-  console.log(categoriesList);
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -72,7 +71,6 @@ export const RecipeDescriptionFields = ({
     onTimeChange(value);
     setTimeSelectIsActive(false);
   };
-  console.log(imgs);
   return (
     <div className={css.descriptionFieldWrapper}>
       <div className={css.imgWrapper} onChange={e => onFileInputChange(e)}>
@@ -149,9 +147,9 @@ export const RecipeDescriptionFields = ({
                 <li
                   className={css.selectItem}
                   key={item}
-                  onClick={() => setCookingTime(item)}
+                  onClick={() => setCookingTime(`${item} min`)}
                 >
-                  {item}
+                  {item} min
                 </li>
               ))}
             </ul>

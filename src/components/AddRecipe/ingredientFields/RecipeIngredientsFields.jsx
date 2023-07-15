@@ -160,7 +160,7 @@ export const RecipeIngredientsFields = ({
                       className={css.ingredientNameInput}
                       autoFocus={true}
                       value={ingredient.name}
-                      onChange={e => onInputChange(index, e.target.value, ingredient.id)}
+                      onChange={e => onInputChange(index, e.target.value, ingredientsList[index]._id)}
                     />
                     <MdKeyboardArrowDown className={css.arrowIngr} size="18" />
                   </div>
