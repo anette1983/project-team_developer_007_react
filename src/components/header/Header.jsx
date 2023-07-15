@@ -16,9 +16,10 @@ const Header = () => {
       <div className={`${css.header} ${globalcss.container}`}>
         <Logo />
         <Navigation width={1441} />
-        <UserLogo />
-
-        <ThemeToggler />
+        <div className={css.userContainer}>
+          <UserLogo />
+          <ThemeToggler />
+        </div>
       </div>
     )
   );

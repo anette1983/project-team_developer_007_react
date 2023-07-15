@@ -61,7 +61,7 @@ const UserLogo = () => {
           alt="avatar_image"
           className={css.avatarHeaderImg}
         />
-        <span className={css.nickName}>{nickName}zaglushka</span>
+        <span className={css.nickName}>{nickName}</span>
       </button>
       <div id="modal">
         {modalToShow === 'User Logo' && (

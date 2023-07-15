@@ -6,7 +6,6 @@ import { ReactComponent as Cross } from '../X.svg';
 const UserLogoutModal = ({ closeUserLogoutModal }) => {
   const dispatch = useDispatch();
   const handleLogout = () => {
-    console.log('click on LOgout');
     dispatch(logOut());
     closeUserLogoutModal();
   };
@@ -32,8 +31,8 @@ const UserLogoutModal = ({ closeUserLogoutModal }) => {
             Cancel
           </button>
         </div>
+        <Cross className={css.cross} onClick={closeUserLogoutModal} />
       </div>
-      <Cross className={css.cross} onClick={closeUserLogoutModal} />
     </>
   );
 };

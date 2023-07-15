@@ -40,8 +40,8 @@ const UserInfoModal = ({ onClose }) => {
   };
 
   return (
-    <div id="modal">
-      <form className={css.container} id="modal">
+    <form id="modal" className={css.container}>
+      <label htmlFor="avatar" id="modal">
         <input
           className={css.avatarContainer}
           type="file"
@@ -50,27 +50,31 @@ const UserInfoModal = ({ onClose }) => {
           name="avatar"
           onChange={uploadAvatar}
         />
-        <div>
-          <img src={avatar || defualtImage} alt="avatar_image" />
-        </div>
+      </label>
+      <div>
+        <img src={avatar || defualtImage} alt="avatar_image" />
+      </div>
+      <label htmlFor="name" id="modal">
         <input
           type="text"
           id="name"
           name="name"
-          placeholder="name"
+          placeholder={nickName}
           onChange={e => setName(e.target.value)}
           value={name}
+          className={css.input}
         />
-        <button
-          type="submit"
-          onClick={handleSubmit}
-          className={css.UserLogoutModalButton}
-        >
-          Save changes
-        </button>
-      </form>
+      </label>
+      <button
+        type="submit"
+        onClick={handleSubmit}
+        className={css.UserLogoutModalButton}
+        aria-label="edit-profile-save-changes-button"
+      >
+        Save changes
+      </button>
       <Cross className={css.cross} onClick={onClose} />
-    </div>
+    </form>
   );
 };
 

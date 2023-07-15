@@ -37,6 +37,16 @@ export const App = () => {
   //     dispatch(refreshUser());
   //   }
   // }, [dispatch, token]);
+
+  // const hasFetchedData = useRef(false);
+
+  // useEffect(() => {
+  //   if (!hasFetchedData.current) {
+  //     dispatch(refreshUser());
+  //     hasFetchedData.current = true;
+  //   }
+  // }, []);
+
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
