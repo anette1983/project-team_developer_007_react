@@ -7,7 +7,7 @@ const Navigation = ({ width, closeModal }) => {
   return (
     <nav className={width < 1441 ? css.mobileNav : css.nav}>
       <NavLink
-        to="/categories/:categoryName"
+        to="/categories"
         className={navData => (navData.isActive ? css.active : '')}
         onClick={closeModal}
       >
