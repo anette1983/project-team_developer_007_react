@@ -15,7 +15,7 @@
   @media screen and (min-width: 768px) {
     background-image: url(../../images/login/woman_tab_1x.png),
       url(../../images/login/reg-bgc_tab_1x.png);
-    background-position: top 84px center, bottom;
+    background-position: top 96px center, bottom;
     background-size: 409px 359px, 768px 606px;
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -234,4 +234,32 @@
 .Registration__input_error {
   opacity: 1;
   border-color: #e74a3b;
+}
+
+.Registration__inputwrapper {
+  position: relative;
+}
+
+.Registration__svg {
+  position: absolute;
+
+  top: 13.5px;
+  left: 14px;
+
+  stroke: #fafafa;
+
+  @media screen and (min-width: 768px) {
+    top: 17.5px;
+    left: 18px;
+
+    width: 24px;
+    height: 24px;
+  }
+
+  transition: stroke 250ms linear;
+}
+
+.Registration__input:hover + .Registration__svg,
+.Registration__input:focus + .Registration__svg {
+  stroke: #ffffff;
 }

@@ -1,13 +1,19 @@
 import { useState } from "react";
 import css from "./searchInput.module.css"
 
-const SearchForm = ({title}) => {
+const SearchForm = ({title, setSearchBy}) => {
     const [selectBy, setSelectBy] = useState("Title");
     const [search, setSearch] = useState('')
     const [isHidden, setIsHidden] = useState(false);
     const handleBtnSubmit = (e) => {
         e.preventDefault();
         title({ selectBy, search })
+        if (selectBy === "Title") {
+            setSearchBy("search")
+        }
+         if (selectBy === "Ingredients") {
+            setSearchBy("ingredients")
+        }
         reset()    
     }
     const handleOption = (e) => {

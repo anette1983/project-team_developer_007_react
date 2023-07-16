@@ -1,9 +1,9 @@
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-// import Layout from './Layout';
+import { useDispatch, useSelector } from 'react-redux';
+import Loader from './Loader';
 import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
-import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from 'redux/auth/operations';
 import { selectIsRefreshing } from 'redux/auth/selectors';
 import { RestrictedRoute } from './RestrictedRoute';
@@ -30,6 +30,7 @@ export const App = () => {
   // Перед сдачеє проекта видалити коментарі в RecipePage
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
+
   // const token = useSelector(selectToken);
 
   // useEffect(() => {
@@ -52,7 +53,7 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Fetching user data...</b>
+    <Loader />
   ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
