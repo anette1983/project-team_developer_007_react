@@ -1,15 +1,9 @@
 .list {
     display: flex;
     gap: 8px;
-}
-
-
-.list_item{
-    width: 343px;
-    height: 323px;
     position: relative;
-   
 }
+
 .list_item:not(:first-child) {
     display: none;
 }
@@ -17,8 +11,7 @@
 @media screen and (min-width: 768px) {
     .list_item{
         width: 336px;
-      
-        
+       
     }
     .list_item:not(:first-child) {
         display: block;
@@ -47,7 +40,7 @@
     color: #3E4462;
     background-color: #FFFFFF;
     position: absolute;
-    top: 245px;
+    top: 280px;
     right: 18px;
     font-size: 16px;
     font-weight: 500;
@@ -55,7 +48,7 @@
     letter-spacing: -0.24px;
     text-align: left;
    border-radius: 8px;
-padding: 16px 128px 16px 16px;
+padding: 16px 0px 16px 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -72,4 +65,8 @@ padding: 16px 128px 16px 16px;
         }
 .img {
     border-radius: 8px;
+    width: 343px;
+    height: 323px;
+    margin-top: 32px;
+    position: relative;
 }    

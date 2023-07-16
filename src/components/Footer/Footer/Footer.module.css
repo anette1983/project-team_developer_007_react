@@ -1,8 +1,9 @@
 .footer {
   margin: 0 auto;
-  padding: 0 100px 0 100px;
+  /* padding: 0 100px 0 100px; */
     width: 375px;
     color: #FAFAFA;
+    /* background-color: rgba(34, 37, 42, 1); */
     background-image: url('../../../images/bgc/404_spinach_bottom_bg_mob_1x.png');
     background-repeat: no-repeat;
     background-position: 190px 330px;
