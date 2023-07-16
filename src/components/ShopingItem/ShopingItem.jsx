@@ -19,7 +19,7 @@ const ShopingItem = ({ title, quantity }) => {
         <div className={wrapper_img}>
           <img
             className={ingredient_img}
-            src={require('../../pictures/userDefault.png')}
+            src={require('../../images/shopping_list/avocado_mob_1x.png')}
             alt="trout"
           />
         </div>
