@@ -18,7 +18,7 @@ const ShopingItem = ({img, title, quantity, handleDelete}) => {
         <li className={container}>
             <div className={wrapper_img_text}>
                 <div className={wrapper_img}>
-                <img className={ingredient_img} src={require('../../picture/image4.png')} alt="trout" />      
+                <img className={ingredient_img} src={require('../../pictures/SearchPage/image4.png')} alt="trout" />      
             </div>      
             <div className={wrapper_ingridient_title}>         
                 <p className={ingridient_title}>{title}</p>     

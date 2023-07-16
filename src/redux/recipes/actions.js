@@ -1,3 +1,4 @@
+
 export const handlePending = state => {
   state.isLoading = true;
 };
@@ -28,3 +29,7 @@ export const handleFetchByIdFullfilled = (state, { payload }) => {
   state.error = null;
   state.currentRecipe = payload;
 };
+
+export const handleClearRecipe = (state) => {
+  state.availableRecipes=[]
+}

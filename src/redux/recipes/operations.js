@@ -98,3 +98,9 @@ export const fetchPopular = createAsyncThunk(
     }
   }
 );
+
+export const clearRecipes = createAsyncThunk(
+  'recipes/clearRecipes', (_, thunkAPI) => { 
+   
+  } 
+)
