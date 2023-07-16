@@ -2,7 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import css from './Paginator.module.css';
 import { selectTotalMyRecipes } from 'redux/myRecipes/selectors';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
 import { fetchMyRecipes } from 'redux/myRecipes/operations';
 
 const Paginator = () => {
