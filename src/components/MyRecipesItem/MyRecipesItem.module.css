@@ -11,6 +11,9 @@
 .card_container:not(:last-child) {
   margin-bottom: 18px;
 }
+.card_container:last-child {
+  margin-bottom: 40px;
+}
 
 @media screen and (min-width: 768px) {
   .card_container {
@@ -21,6 +24,9 @@
   .card_container:not(:last-child) {
     margin-bottom: 40px;
   }
+  .card_container:last-child {
+  margin-bottom: 50px;
+}
 }
 @media screen and (min-width: 1440px) {
   .card_container {

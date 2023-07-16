@@ -3,16 +3,18 @@ import axios from 'axios';
 
 export const fetchMyRecipes = createAsyncThunk(
   'myRecipes/fetchAll',
-  async (_, { rejectWithValue }) => {
+  async (page, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get('/api/recipes/own-recipes');
+      const { data } = await axios.get(`/api/recipes/own-recipes/`, {
+        params: { page },
+      });
+
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
   }
 );
-
 
 export const addMyRecipe = createAsyncThunk(
   'myRecipes/addMyRecipe',
@@ -26,14 +28,12 @@ export const addMyRecipe = createAsyncThunk(
   }
 );
 
-
 export const deleteMyRecipe = createAsyncThunk(
   'myRecipes/deleteMyRecipe',
   async (recipeId, { rejectWithValue }) => {
     try {
       const { data } = await axios.delete(
         `/api/recipes/own-recipes/${recipeId}`
-
       );
       return data;
     } catch (error) {
