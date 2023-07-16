@@ -8,6 +8,7 @@ import {
   fetchBySearch,
   fetchMoreBySearch,
   fetchPopular,
+  clearRecipes,
 } from './operations';
 import {
   handleFetchByIdFullfilled,
@@ -15,6 +16,7 @@ import {
   handleFirstFetchFulfilled,
   handlePending,
   handleReject,
+  handleClearRecipe,
 } from './actions';
 
 const recipesSlice = createSlice({
@@ -43,7 +45,10 @@ const recipesSlice = createSlice({
       .addCase(fetchMoreBySearch.rejected, handleReject)
       .addCase(fetchPopular.pending, handlePending)
       .addCase(fetchPopular.fulfilled, handleFirstFetchFulfilled)
-      .addCase(fetchPopular.rejected, handleReject);
+      .addCase(fetchPopular.rejected, handleReject)
+      .addCase(clearRecipes.pending, handleClearRecipe)
+      .addCase(clearRecipes.fulfilled, handleClearRecipe)
+      .addCase(clearRecipes.rejected, handleClearRecipe);
   },
 });
 

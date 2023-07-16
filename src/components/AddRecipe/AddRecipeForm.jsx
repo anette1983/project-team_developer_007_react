@@ -123,7 +123,6 @@ export const AddRecipeForm = () => {
     preparation,
   };
 
-  console.log(initVal);
 
   const formData = new FormData();
   formData.append('preview', img);

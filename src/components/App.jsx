@@ -1,14 +1,12 @@
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-// import Layout from './Layout';
+import { useDispatch, useSelector } from 'react-redux';
+import Loader from './Loader';
 import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
-import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from 'redux/auth/operations';
 import {
-  selectIsLoggedIn,
   selectIsRefreshing,
-  selectToken,
 } from 'redux/auth/selectors';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
@@ -34,15 +32,25 @@ export const App = () => {
   // Перед сдачеє проекта видалити коментарі в RecipePage
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  const token = useSelector(selectToken);
+
+
 
   // useEffect(() => {
   //   if (token) {
   //     dispatch(refreshUser());
   //   }
   // }, [dispatch, token]);
+
+  // const hasFetchedData = useRef(false);
+
+  // useEffect(() => {
+  //   if (!hasFetchedData.current) {
+  //     dispatch(refreshUser());
+  //     hasFetchedData.current = true;
+  //   }
+  // }, []);
+
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
@@ -53,7 +61,7 @@ export const App = () => {
   // }, [dispatch, isLoggedIn]);
 
   return isRefreshing ? (
-    <b>Fetching user data...</b>
+    <Loader />
   ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>

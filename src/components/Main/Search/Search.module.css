@@ -7,7 +7,7 @@
 @media screen and (min-width: 768px) {
     .form {
        margin: 0;
-       /* position: absolute; */
+      
        top: 40%
      }
   }
@@ -37,7 +37,7 @@
 }
 .input:focus {
     color:#23262A;
-    /* opacity: 20%; */
+   
     border-color: linear-gradient(0deg, rgba(35, 38, 42, 0.2), rgba(35, 38, 42, 0.2)),
 linear-gradient(0deg, #FFFFFF, #FFFFFF);
 border:1px solid 

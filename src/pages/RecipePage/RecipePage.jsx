@@ -1,54 +1,45 @@
 import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { selectIsLoading } from 'redux/recipes/selectors';
+import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectors';
+import { fetchRecipeById } from 'redux/recipes/operations';
+import { RecipePageTitle } from 'components/Main/RecipePageTitle/RecipePageTitle';
+import { RecipeInngredientsList } from 'components/RecipeInngredientsList/RecipeInngredientsList';
+import { RecipePreparation } from 'components/Main/RecipePreparation/RecipePreparation';
+
 import css from './RecipePage.module.css';
-import RecipeInngredient from 'components/RecipeInngredient/RecipeInngredient';
-import { clsx } from 'clsx';
 
 const RecipePage = () => {
-  const {
-    container,
-    hero,
-    title,
-    subtitle,
-    button,
-    time_prepeare,
-    wrapper_title_table,
-    section,
-    title_table,
-    title_table_position,
-    // wrapper_title_position,
-  } = css;
+  const { container } = css;
+
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const isRefresh = useSelector(selectIsRefreshing);
+  const isLoading = useSelector(selectIsLoading);
+
   const { recipeId } = useParams();
+
+  useEffect(() => {
+    dispatch(fetchRecipeById(recipeId));
+  }, [dispatch, isRefresh, recipeId]);
+
   return (
     <div className={container}>
-      <section className={hero}>
-        <h1 className={title}>Salmon Avocado Salad</h1>
-        <p className={subtitle}>
-          Is a healthy salad recipe that’s big on nutrients and flavor. A moist,
-          pan seared salmon is layered on top of spinach, avocado, tomatoes, and
-          red onions. Then drizzled with a homemade lemon vinaigrette.
-        </p>
-        <button type="button" className={button}>
-          Add to favorite recipes
-        </button>
-        <p className={time_prepeare}>20 min</p>
-      </section>
+      {isLoggedIn && !isRefresh && (
+        <>
+          {isLoading ? (
+            <h3>Request in progress...</h3>
+          ) : (
+            <>
+              <RecipePageTitle />
 
-      <section className={section}>
-        <div className={wrapper_title_table}>
-          <p className={title_table}>Ingredients</p>
-          <p className={clsx([title_table, title_table_position])}>Number</p>
-          <p className={title_table}>Add to list</p>
-        </div>
-        {/* <div className={wrapper_title_table}>
-          <p className={title_table}>Ingredients</p>
-          <div className={wrapper_title_position}>
-            <p className={title_table}>Number</p>
-            <p className={title_table}>Add to list</p>
-          </div>
-        </div> */}
-        <RecipeInngredient />
-      </section>
-      <h2>{recipeId}</h2>
+              <RecipeInngredientsList />
+              <RecipePreparation />
+            </>
+          )}
+        </>
+      )}
     </div>
   );
 };

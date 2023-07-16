@@ -1,6 +1,5 @@
 export const selectMyRecipes = state =>
   state.myRecipes.availableRecipes.recipes;
-// export const selectMyRecipes = state => state.myRecipes;
 
 export const selectMyRecipesIsLoading = state => state.myRecipes.isLoading;
 

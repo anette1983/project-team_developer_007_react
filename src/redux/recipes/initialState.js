@@ -4,4 +4,5 @@ export const initialState = {
   currentRecipe: null,
   isLoading: false,
   error: null,
+  total:null,
 };

@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   height: 46px;
+
 }
 
 .nav {
@@ -117,4 +118,10 @@
 .mobileSearchSVG:hover {
   stroke: rgba(139, 170, 54, 1);
   fill: none;
+}
+.userContainer {
+  display: flex;
+  flex-direction: raw;
+  align-items: center;
+  gap: 50px;
 }
