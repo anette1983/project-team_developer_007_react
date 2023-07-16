@@ -60,7 +60,7 @@ export const fetchRecipeById = createAsyncThunk(
   async (recipeId, thunkAPI) => {
     try {
       const { data } = await axios.get(`/api/recipes/recipe/${recipeId}`);
-      return data[0];
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
