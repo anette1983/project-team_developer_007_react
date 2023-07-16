@@ -8,7 +8,7 @@ import { Pagination } from '@mui/material';
 import { useEffect, useState } from 'react';
 import {selectRecipes} from "../../redux/recipes/selectors"
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMoreBySearch } from 'redux/recipes/operations';
+import { fetchMoreBySearch, clearRecipes } from 'redux/recipes/operations';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 import { useSearchParams } from 'react-router-dom';
 
@@ -27,7 +27,11 @@ const SearchPage = () => {
       setPage(value);
      
   };
- 
+  useEffect(() => {
+    
+    dispatch(clearRecipes())
+  },[dispatch])
+  
   useEffect(() => {
     if (!query) return
       if (window.innerWidth>=1440) {
@@ -55,12 +59,12 @@ const SearchPage = () => {
         <div className={`${css.container} ${searchCss.container}`}>
           <img
             className={searchCss.mobPhoto}
-            src={require('../../picture/vegetables-5abfb9c60122f5 1.png')}
+            src={require('../../pictures/SearchPage/vegetables-5abfb9c60122f5 1.png')}
             alt="vegetables"
           />
           <img
             className={searchCss.tabPhoto}
-            src={require('../../picture/vegetables-5abfb9c60122f5 1_tab.png')}
+            src={require('../../pictures/SearchPage/vegetables-5abfb9c60122f5 1_tab.png')}
             alt="vegetables"
           />
         </div>
