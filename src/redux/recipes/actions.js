@@ -31,5 +31,6 @@ export const handleFetchByIdFullfilled = (state, { payload }) => {
 };
 
 export const handleClearRecipe = (state) => {
-  state.availableRecipes=[]
+  state.availableRecipes = []
+  state.total=null
 }
