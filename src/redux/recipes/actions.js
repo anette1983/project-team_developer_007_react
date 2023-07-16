@@ -5,6 +5,8 @@ export const handlePending = state => {
 export const handleReject = (state, { payload }) => {
   state.isLoading = false;
   state.error = payload;
+  state.availableRecipes = []
+  
 };
 
 export const handleFirstFetchFulfilled = (state, { payload }) => {
@@ -17,7 +19,7 @@ export const handleFirstFetchFulfilled = (state, { payload }) => {
 export const handleFetchMoreFullfilled = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-  state.availableRecipes.push(...payload);
+  state.availableRecipes = payload;
   state.page = state.page + 1;
 };
 
