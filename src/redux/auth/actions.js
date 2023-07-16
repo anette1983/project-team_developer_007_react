@@ -1,5 +1,6 @@
 export const handleRefreshPending = state => {
   state.isRefreshing = true;
+  state.error = null;
 };
 
 export const handleReject = (state, { payload }) => {
