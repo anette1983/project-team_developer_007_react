@@ -9,6 +9,10 @@
     padding-bottom: 100px;
 }
 
+.formContainer {
+    margin-top: 72px;
+}
+
 @media (min-width: 375px) {
     .wrapper {
         width: 375px;
@@ -35,6 +39,7 @@
     .formContainer {
         display: flex;
         justify-content: space-between;
+        margin-top: 100px;
     }
 
     .sidebar {
