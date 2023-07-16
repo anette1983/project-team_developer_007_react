@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import css from './UserInfoModal.module.css';
 // import { Formik, Form, Field } from 'formik';
-import defaultUserAvatar from '../../../../pictures/userDefault.png';
+import defaultUserAvatar from '../../../../images/header/userDefault.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUserData } from 'redux/auth/operations';
 import { selectUserAvatar, selectUserName } from 'redux/auth/selectors';
-import { ReactComponent as Cross } from '../../X.svg';
+import { ReactComponent as Cross } from '../../../../images/header/svg/X.svg';
+import { ReactComponent as Pencil } from '../../../../images/header/svg/pencil.svg';
+import { ReactComponent as UserDefault } from '../../../../images/header/svg/usericondefault.svg';
+import { ReactComponent as Plus } from '../../../../images/header/svg/plus.svg';
 const defualtImage = defaultUserAvatar;
 
 const UserInfoModal = ({ onClose }) => {
@@ -41,7 +44,7 @@ const UserInfoModal = ({ onClose }) => {
 
   return (
     <form id="modal" className={css.container}>
-      <label htmlFor="avatar" id="modal">
+      <label htmlFor="avatar" id="modal" className={css.avatarLabel}>
         <input
           className={css.avatarContainer}
           type="file"
@@ -50,11 +53,18 @@ const UserInfoModal = ({ onClose }) => {
           name="avatar"
           onChange={uploadAvatar}
         />
+        <Plus className={css.addAvatarUrl} id="modal" />
+        {/* <UserDefault className={css.usersvg} /> */}
+        <img
+          src={avatar || defualtImage}
+          alt="avatar_image"
+          className={css.avatarImage}
+        />
+        <Cross className={css.cross} onClick={onClose} />
       </label>
-      <div>
-        <img src={avatar || defualtImage} alt="avatar_image" />
-      </div>
-      <label htmlFor="name" id="modal">
+
+      <label htmlFor="name" id="modal" className={css.label}>
+        <UserDefault className={css.svgafter} />
         <input
           type="text"
           id="name"
@@ -64,6 +74,7 @@ const UserInfoModal = ({ onClose }) => {
           value={name}
           className={css.input}
         />
+        <Pencil className={css.svgbefore} />
       </label>
       <button
         type="submit"
@@ -73,7 +84,6 @@ const UserInfoModal = ({ onClose }) => {
       >
         Save changes
       </button>
-      <Cross className={css.cross} onClick={onClose} />
     </form>
   );
 };

@@ -13,9 +13,10 @@ const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     isLoggedIn && (
-      <div className={`${css.header} ${globalcss.container}`}>
+      <div className={` ${globalcss.container} ${css.header}`}>
         <Logo />
         <Navigation width={1441} />
+
         <div className={css.userContainer}>
           <UserLogo />
           <ThemeToggler />

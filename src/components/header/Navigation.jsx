@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './header.module.css';
-import { ReactComponent as Search } from '../../pictures/search/search.svg';
+import { ReactComponent as Search } from '../../images/header/svg/search/search.svg';
 
 const Navigation = ({ width, closeModal }) => {
   return (

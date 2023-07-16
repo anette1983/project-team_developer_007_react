@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operations';
 import css from './UserProfile.module.css';
-import { ReactComponent as Cross } from '../X.svg';
+import { ReactComponent as Cross } from '../../../images/header/svg/X.svg';
 
 const UserLogoutModal = ({ closeUserLogoutModal }) => {
   const dispatch = useDispatch();
@@ -14,6 +14,7 @@ const UserLogoutModal = ({ closeUserLogoutModal }) => {
       <div className={css.UserLogoutModal} id="modal">
         <div className={css.UserLogoutModalText} id="modal">
           <p>Are you sure you want to log out ?</p>
+          <Cross className={css.cross} onClick={closeUserLogoutModal} />
         </div>
         <div className={css.UserLogoutModalButtons}>
           <button
@@ -31,7 +32,6 @@ const UserLogoutModal = ({ closeUserLogoutModal }) => {
             Cancel
           </button>
         </div>
-        <Cross className={css.cross} onClick={closeUserLogoutModal} />
       </div>
     </>
   );

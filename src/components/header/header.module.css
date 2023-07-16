@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: space-between;
   height: 46px;
-
+  position: absolute;
+  z-index: 22;
 }
 
 .nav {
@@ -55,6 +56,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .header {
+    position: absolute;
+  }
   .burgerMenu {
     display: none;
   }
