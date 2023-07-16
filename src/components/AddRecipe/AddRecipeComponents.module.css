@@ -25,6 +25,78 @@
     background-color: #8BAA36;
 }
 
+.socialsWrapper {
+    display: none;
+}
+
+.subtitle {
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #3E4462;
+}
+
+.popularRecipesList {
+    width: 343px;
+}
+
+.popularRecipesItem {
+    width: 343px;
+    height: 98px;
+    display: flex;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.17);
+}
+    
+.popularRecipesItem:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.popularRecipesLink {
+    width: 100%;
+    height: 100%;
+}
+
+.recipePreview {
+    width: 104px;
+    height: 85px;
+    margin-right: 12px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.popularRecipeSubtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.24px;
+    color: #3E4462;
+    width: 212px;
+    margin-bottom: 3px;
+}
+
+.popularRecipeText {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: -0.24px;
+    color: #7E7E7E;
+
+    width: 212px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.notFoundText {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.24px;
+    color: #3E4462;
+}
+
+
     
 @media screen and (min-width: 768px) {
     .addSectionWrap {
@@ -34,11 +106,61 @@
         width: 161px;
         height: 52px;
     }
+
+    .subtitle {
+        margin-bottom: 40px;
+    }
+
+    .popularRecipesList {
+        width: 704px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .popularRecipesItem {
+        width: 336px;
+    }
+
+    .recipePreview {
+        width: 102px;
+    }
+
+    .popularRecipeText {
+        width: 208px;
+    }
 }
 
 
 @media screen and (min-width: 1440px) {
     .addSectionWrap {
         padding-bottom: 0;
+    }
+
+    .socialsWrapper {
+        display: block;
+    }
+
+    .popularRecipesList {
+        width: 319px;
+        display: block;
+    }
+
+    .popularRecipesItem {
+        width: 319px;
+    }
+
+    .recipePreview {
+        width: 97px;
+        margin-right: 11px;
+    }
+
+    .popularRecipeText {
+        width: 196px;
+    }
+
+    .followUsBlock {
+        margin-left: -220px;
+        margin-bottom: 100px;
     }
 }

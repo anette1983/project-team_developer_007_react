@@ -149,7 +149,7 @@ export const RecipeDescriptionFields = ({
                   key={item}
                   onClick={() => setCookingTime(`${item} min`)}
                 >
-                  {item} min
+                  {item}
                 </li>
               ))}
             </ul>
