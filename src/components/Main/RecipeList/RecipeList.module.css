@@ -3,15 +3,12 @@
     gap: 8px;
 }
 
-.item {
-
-}
 
 .list_item{
     width: 343px;
     height: 323px;
     position: relative;
-    border-radius: 8px;
+   
 }
 .list_item:not(:first-child) {
     display: none;
