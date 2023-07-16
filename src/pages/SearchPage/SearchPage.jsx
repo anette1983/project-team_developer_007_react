@@ -18,29 +18,48 @@ const SearchPage = () => {
   const [limit, setLimit] = useState(6);
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
-  const recipes = useSelector(selectRecipes);
+  const {total, recipes} = useSelector(selectRecipes);
   const isLoged = useSelector(selectIsLoggedIn);
   const query = searchParams.get('query') ?? '';
+  const [pageCount, setPageCount] = useState(1)
+  const windowsWidth = window.innerWidth
+  
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
+
   useEffect(() => {
     dispatch(clearRecipes());
   }, [dispatch]);
 
+  useEffect(() => { 
+
+    if (query) {
+      setPageCount(1)
+    }
+  }, [query])
+  
   useEffect(() => {
     if (!query) return;
-    if (window.innerWidth >= 1440) {
+
+    //check width
+    if (windowsWidth >= 1440) {
       setLimit(12);
     }
+
+    //set pagination pages
+    setPageCount(Math.ceil(+total / limit));
+        
     if (isLoged) {
       dispatch(fetchMoreBySearch({ searchBy, page, limit, query }));
     }
-  }, [dispatch, page, query, limit, searchBy, isLoged]);
+    setSearchParams({ query, page, limit });
+    
+  }, [dispatch, page, query, limit, searchBy, isLoged, pageCount, total, setSearchParams, windowsWidth]);
 
   const setParams = value => {
-    setSearchParams({ query: value.search, page, limit: 6 });
+    setSearchParams({ query: value.search, page, limit });
   };
 
   return (
@@ -49,29 +68,30 @@ const SearchPage = () => {
         <MainPageTitle text="Search" />
       </div>
       <div className={`${css.container} ${searchCss.container}`}>
-        <SearchForm title={setParams} setSearchBy={setSearchBy} />
+        <SearchForm title={setParams} setSearchBy={setSearchBy}/>
       </div>
-      {!recipes.length && (
+      {!recipes && (
         <div className={`${css.container} ${searchCss.container}`}>
           <img
             className={searchCss.mobPhoto}
-            src={require('../../pictures/userDefault.png')}
+            src={require('../../images/SearchPage/vegetables-5abfb9c60122f5 1.png')}
             alt="vegetables"
           />
           <img
             className={searchCss.tabPhoto}
-            src={require('../../pictures/userDefault.png')}
+            src={require('../../images/SearchPage/vegetables-5abfb9c60122f5 1_tab.png')}
             alt="vegetables"
           />
+          <p className={searchCss.text}>Try looking for something else..</p>
         </div>
       )}
-      {recipes.length && (
+      {recipes && (
         <>
           <div className={`${css.container} ${searchCss.container}`}>
             <SearchedRecipesList recipes={recipes} />
           </div>
           <div className={`${searchCss.paginationWrap} `}>
-            <Pagination count={5} page={page} onChange={handleChange} />
+            {pageCount && <Pagination count={+pageCount} page={page} onChange={handleChange} siblingCount={0}/>}
           </div>
         </>
       )}

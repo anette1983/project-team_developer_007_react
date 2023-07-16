@@ -4,10 +4,14 @@
         .paginationWrap{
             margin: 0 auto;
         }
+        .text{
+            font-family: Poppins_Medium;
+        }
 @media screen and (min-width: 375px) {
         .container{
             padding: 50px 16px 0 16px; 
             position: relative;
+            text-align: center;
         }
             .mobPhoto{
             margin: 0 auto;

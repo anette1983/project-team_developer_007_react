@@ -1,7 +1,7 @@
 import { useState } from "react";
 import css from "./searchInput.module.css"
 
-const SearchForm = ({title, setSearchBy}) => {
+const SearchForm = ({title, setSearchBy }) => {
     const [selectBy, setSelectBy] = useState("Title");
     const [search, setSearch] = useState('')
     const [isHidden, setIsHidden] = useState(false);
