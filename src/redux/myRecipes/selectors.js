@@ -1,4 +1,5 @@
-export const selectMyRecipes = state => state.myRecipes.availableRecipes;
+export const selectMyRecipes = state =>
+  state.myRecipes.availableRecipes.recipes;
 
 export const selectMyRecipesIsLoading = state => state.myRecipes.isLoading;
 
