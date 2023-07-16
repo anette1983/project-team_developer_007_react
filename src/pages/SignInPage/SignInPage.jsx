@@ -1,6 +1,8 @@
 import { LogInForm } from 'components/LogInForm/LogInForm';
 import { useSelector } from 'react-redux';
-import { selectAuthError, selectUserName } from 'redux/auth/selectors';
+// import { selectAuthError, selectUserName } from 'redux/auth/selectors';
+import { selectAuthError } from 'redux/auth/selectors';
+
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const SignInPage = () => {
