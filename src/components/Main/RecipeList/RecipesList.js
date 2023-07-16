@@ -3,7 +3,7 @@ import css from "./RecipeList.module.css";
 
 
 export function RecipeList({data}) {
- 
+
 
   return (
     <>   

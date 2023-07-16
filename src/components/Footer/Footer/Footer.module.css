@@ -1,5 +1,7 @@
 .footer {
-    /* padding-top: 100px; */
+  margin: 0 auto;
+  padding: 0 100px 0 100px;
+    width: 375px;
     color: #FAFAFA;
     background-image: url('../../../images/bgc/404_spinach_bottom_bg_mob_1x.png');
     background-repeat: no-repeat;
@@ -17,7 +19,7 @@
 
 @media screen and (min-width: 768px) {
     .footer {
-        /* padding-top: 200px; */
+      width: 768px;
         background-image: url('../../../images/bgc/404_spinach_bottom_bg_tab_1x.png');
         background-position: 450px 240px;
     }
@@ -32,6 +34,7 @@
 
 @media screen and (min-width: 1440px) {
     .footer {
+      width: 1440px;
         padding-top: 118px;
         background-image: url('../../../images/bgc/404_spinach_bottom_bg_desk_1x.png');
     }
@@ -68,7 +71,7 @@
 
 @media screen and (min-width: 768px) {
     .footer_text {
-    /* padding: 50px 0 ; */
+   
      }
 }
 

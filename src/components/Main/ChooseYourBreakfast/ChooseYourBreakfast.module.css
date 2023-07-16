@@ -4,14 +4,12 @@
     background-color: #FAFAFA;
     border-radius: 8px;
     margin-top: 157px;
-    /* margin-left: 116px; */
     padding: 8px 8px 30px 8px;
   }
 
 @media screen and (min-width: 768px) {
     .container  {
         width: 260px;
-        /* height: 100px; */
         padding: 12px 12px 34px 12px;
         margin-top: 0;
         margin-left: 75px;

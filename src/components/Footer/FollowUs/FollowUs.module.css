@@ -3,16 +3,16 @@
     justify-content: space-around;
     }
 
-    @media screen and (min-width: 768px) {
+    /* @media screen and (min-width: 768px) {
         .container {
-            padding-left: 285px;
+            
         }
-    }  
+    }   */
    
     @media screen and (min-width: 1440px) {
         .container {
           margin-top: 41px;
-          padding-right: 270px;
+          
         }
     } 
 
