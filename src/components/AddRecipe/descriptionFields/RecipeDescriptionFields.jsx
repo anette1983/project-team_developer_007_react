@@ -147,7 +147,7 @@ export const RecipeDescriptionFields = ({
                 <li
                   className={css.selectItem}
                   key={item}
-                  onClick={() => setCookingTime(`${item} min`)}
+                  onClick={() => setCookingTime(`${item}`)}
                 >
                   {item}
                 </li>

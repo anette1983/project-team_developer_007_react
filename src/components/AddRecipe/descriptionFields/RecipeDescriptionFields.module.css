@@ -16,6 +16,9 @@
     height: 260px;
     margin-top: 8px;
     opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
 .mockImg {
@@ -24,6 +27,7 @@
     position: absolute;
     top: calc(50% - 32px);
     left: calc(50% - 32px);
+    z-index: 0;
 }
 
 .recipeImg {
@@ -33,6 +37,7 @@
     border-radius: 8px;
     position: absolute;
     top: 0;
+    z-index: 0;
 }
 
 .inputBox {

@@ -144,15 +144,18 @@ export const AddRecipeForm = () => {
       .then(() => {
         dispatch(addMyRecipe(formData))
           .unwrap()
-          .then(() => {
+          .then((res) => {
+            console.log('RES', res)
             navigate('/my', { replace: true });
             Notify.success('Hooray! The recipe was successfully added');
           })
           .catch(error => {
+            console.log(error)
             Notify.error('Ooops, smth is going wrong... Try again!');
           });
       })
       .catch(err => {
+        console.log('ERRR', err)
         const errors = err.inner.reduce(
           (acc, err) => ({ ...acc, [err.path]: err.message }),
           {}
