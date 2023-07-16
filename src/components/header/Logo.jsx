@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom/dist';
 // import css from './header.module.css';
-import { ReactComponent as LogoDesktop } from '../../pictures/logo/logoDesktop.svg';
-import { ReactComponent as LogoMobile } from '../../pictures/logo/logoMobile.svg';
+import { ReactComponent as LogoDesktop } from '../../images/header/svg/logo/logoDesktop.svg';
+import { ReactComponent as LogoMobile } from '../../images/header/svg/logo/logoMobile.svg';
 import React, { useState, useEffect } from 'react';
 const Logo = ({ closeModal }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

@@ -11,21 +11,53 @@
   box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.1);
   border-radius: 24px;
 }
+.avatarLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  margin-left: 97px;
+  margin-bottom: 52px;
+
+  @media screen and (min-width: 768px) {
+    width: 103px;
+    height: 103px;
+    margin-left: 150px;
+    margin-bottom: 52px;
+  }
+}
 .avatarContainer {
-  width: 40px;
-  outline: 1px solid green;
+  width: 100%;
+  background-color: rgba(217, 217, 217, 1);
+  color: transparent;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+.addAvatarUrl {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 71px;
+  left: 53px;
+  z-index: 1112;
+  cursor: pointer;
+  &:hover {
+    scale: 1.1;
+  }
 }
 
 .input {
   height: 48px;
   width: 100%;
   border-width: 0px, 0px, 0px, 0px;
-
   border-style: solid;
   opacity: 30%;
   border-color: rgba(35, 38, 42, 1);
   display: inline-flex;
-  padding: 15.4px 14px 11.84px 14px;
+  padding: 15.4px 14px 11.84px 40px;
   font-family: inherit;
   font-size: 14px;
   font-weight: 400;
@@ -39,12 +71,56 @@
   }
 }
 
+input[type='file']::file-selector-button {
+  display: none;
+}
+
+.avatarImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* .usersvg {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.label {
+  position: relative;
+}
+.label:hover {
+  & svg {
+    opacity: 100%;
+  }
+}
+.svgbefore,
+.svgafter {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  stroke: black;
+  opacity: 0.3;
+  top: 25%;
+  left: 14px;
+}
+.svgafter {
+  left: 251px;
+}
+
 .cross {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 12%;
-  left: 86%;
+  top: -18px;
+  left: 170px;
   z-index: 11112;
   cursor: pointer;
 }
@@ -70,8 +146,6 @@
   }
 }
 
-@media screen and (min-width: 375px) {
-}
 @media screen and (min-width: 768px) {
   .container {
     width: 480px;
@@ -80,12 +154,29 @@
   .cross {
     width: 24px;
     height: 24px;
-    top: 17%;
-    left: 83%;
+    top: -30px;
+    left: 247px;
   }
   .input {
     height: 58px;
     font-size: 18px;
+    padding: 16px 20px 16px 51px;
+  }
+  .svgbefore,
+  .svgafter {
+    width: 24px;
+    height: 24px;
+    top: 25%;
+
+    left: 20px;
+  }
+  .svgafter {
+    left: 363px;
+  }
+
+  .addAvatarUrl {
+    left: 73px;
+    top: 81px;
   }
 }
 
@@ -93,13 +184,11 @@
   .container {
     width: 500px;
     padding: 60px 50px;
-    top: 11%;
+    top: 80px;
     left: 55%;
   }
   .cross {
-    width: 24px;
-    height: 24px;
-    top: 6%;
-    left: 89%;
+    top: -35px;
+    left: 255px;
   }
 }
