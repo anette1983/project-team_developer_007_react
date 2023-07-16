@@ -3,7 +3,7 @@
     url(../../images/login/reg-bgc_mob_1x.png);
   background-repeat: no-repeat;
   background-position: top 87px center, bottom;
-  background-size: 285px 250px, 375px 490px;
+  background-size: 285px 250px, 100% 490px;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -16,7 +16,7 @@
     background-image: url(../../images/login/woman_tab_1x.png),
       url(../../images/login/reg-bgc_tab_1x.png);
     background-position: top 96px center, bottom;
-    background-size: 409px 359px, 768px 606px;
+    background-size: 409px 359px, 100% 606px;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -30,7 +30,7 @@
     background-image: url(../../images/login/woman_desk_1x.png),
       url(../../images/login/reg-bgc_desk_1x.png);
     background-position: top 115px left 113px, bottom;
-    background-size: 532px 468px, 1440px 325px;
+    background-size: 532px 468px, 100% 325px;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -247,6 +247,7 @@
   left: 14px;
 
   stroke: #fafafa;
+  opacity: 0.8;
 
   @media screen and (min-width: 768px) {
     top: 17.5px;
@@ -256,10 +257,21 @@
     height: 24px;
   }
 
-  transition: stroke 250ms linear;
+  transition: stroke 250ms linear, opacity 250ms linear;
 }
 
 .Registration__input:hover + .Registration__svg,
 .Registration__input:focus + .Registration__svg {
   stroke: #ffffff;
+  opacity: 1;
+}
+
+.Registration__svg_success {
+  opacity: 1;
+  stroke: #3cbc81;
+}
+
+.Registration__svg_error {
+  opacity: 1;
+  stroke: #e74a3b;
 }

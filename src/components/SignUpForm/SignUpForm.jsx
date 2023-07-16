@@ -33,43 +33,52 @@ export const SignUpForm = () => {
           validateOnBlur={false}
           onSubmit={handleFormSubmit}
         >
-          {({ errors, touched, isSubmitting }) => (
+          {({ errors, touched }) => (
             <Form className={css.Registration__form}>
-              
               <b className={css.Registration__title}>Registration</b>
-              
+
               <label className={css.Registration__label}>
-                
                 <div className={css.Registration__inputwrapper}>
                   <Field
-                    className={`${css.Registration__input} ${touched.name && errors.name
-                      ? `${css.Registration__input_error}`
-                      : touched.name && !errors.name && isSubmitting
+                    className={`${css.Registration__input} ${
+                      touched.name && errors.name
+                        ? `${css.Registration__input_error}`
+                        : touched.name && !errors.name
                         ? `${css.Registration__input_success}`
                         : ''
-                      }`}
+                    }`}
                     type="text"
                     name="name"
                     placeholder="Name"
                     required
                   />
-                  
-                  <svg width={18} height={18} className={css.Registration__svg}>
+
+                  <svg
+                    width={18}
+                    height={18}
+                    className={`${css.Registration__svg} ${
+                      touched.name && errors.name
+                        ? `${css.Registration__svg_error}`
+                        : touched.name && !errors.name
+                        ? `${css.Registration__svg_success}`
+                        : ''
+                    }`}
+                  >
                     <use href={sprite + '#reg-name'} />
                   </svg>
                 </div>
               </label>
-              
+
               <label className={css.Registration__label}>
-                
                 <div className={css.Registration__inputwrapper}>
                   <Field
-                    className={`${css.Registration__input} ${touched.email && errors.email
-                      ? `${css.Registration__input_error}`
-                      : touched.email && !errors.email && isSubmitting
+                    className={`${css.Registration__input} ${
+                      touched.email && errors.email
+                        ? `${css.Registration__input_error}`
+                        : touched.email && !errors.email
                         ? `${css.Registration__input_success}`
                         : ''
-                      }`}
+                    }`}
                     type="email"
                     name="email"
                     placeholder="Email"
@@ -81,23 +90,33 @@ export const SignUpForm = () => {
                       <p className={css.Registration__error}>{msg}</p>
                     )}
                   />
-                  
-                  <svg width={18} height={18} className={css.Registration__svg}>
+
+                  <svg
+                    width={18}
+                    height={18}
+                    className={`${css.Registration__svg} ${
+                      touched.email && errors.email
+                        ? `${css.Registration__svg_error}`
+                        : touched.email && !errors.email
+                        ? `${css.Registration__svg_success}`
+                        : ''
+                    }`}
+                  >
                     <use href={sprite + '#reg-email'} />
                   </svg>
                 </div>
               </label>
-              
+
               <label className={css.Registration__label}>
-                
                 <div className={css.Registration__inputwrapper}>
                   <Field
-                    className={`${css.Registration__input} ${touched.password && errors.password
-                      ? `${css.Registration__input_error}`
-                      : touched.password && !errors.password && isSubmitting
+                    className={`${css.Registration__input} ${
+                      touched.password && errors.password
+                        ? `${css.Registration__input_error}`
+                        : touched.password && !errors.password
                         ? `${css.Registration__input_success}`
                         : ''
-                      }`}
+                    }`}
                     type="password"
                     name="password"
                     placeholder="Password"
@@ -111,8 +130,18 @@ export const SignUpForm = () => {
                       </p>
                     )}
                   />
-                  
-                  <svg width={18} height={18} className={css.Registration__svg}>
+
+                  <svg
+                    width={18}
+                    height={18}
+                    className={`${css.Registration__svg} ${
+                      touched.password && errors.password
+                        ? `${css.Registration__svg_error}`
+                        : touched.password && !errors.password
+                        ? `${css.Registration__svg_success}`
+                        : ''
+                    }`}
+                  >
                     <use href={sprite + '#reg-pass'} />
                   </svg>
                 </div>
