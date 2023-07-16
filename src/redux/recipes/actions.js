@@ -1,4 +1,3 @@
-
 export const handlePending = state => {
   state.isLoading = true;
 };
@@ -6,8 +5,7 @@ export const handlePending = state => {
 export const handleReject = (state, { payload }) => {
   state.isLoading = false;
   state.error = payload;
-  state.availableRecipes = []
-  
+  state.availableRecipes = [];
 };
 
 export const handleFirstFetchFulfilled = (state, { payload }) => {
@@ -30,7 +28,7 @@ export const handleFetchByIdFullfilled = (state, { payload }) => {
   state.currentRecipe = payload;
 };
 
-export const handleClearRecipe = (state) => {
-  state.availableRecipes = []
-  state.total=null
-}
+export const handleClearRecipe = state => {
+  state.availableRecipes = [];
+  state.total = null;
+};

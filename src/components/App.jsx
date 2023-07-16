@@ -5,9 +5,7 @@ import Loader from './Loader';
 import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
 import { refreshUser } from 'redux/auth/operations';
-import {
-  selectIsRefreshing,
-} from 'redux/auth/selectors';
+import { selectIsRefreshing } from 'redux/auth/selectors';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 
@@ -32,9 +30,6 @@ export const App = () => {
   // Перед сдачеє проекта видалити коментарі в RecipePage
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-
-
-
 
   // useEffect(() => {
   //   if (token) {
@@ -114,7 +109,7 @@ export const App = () => {
         <Route
           path="recipe/:recipeId"
           element={<PrivateRoute component={RecipePage} redirectTo="/signin" />}
-        ></Route>
+        />
         <Route
           path="my"
           element={
