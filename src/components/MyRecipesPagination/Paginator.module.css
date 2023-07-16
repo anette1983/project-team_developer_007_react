@@ -1,0 +1,9 @@
+
+.pagination_wrapper {
+  margin: 0 auto;
+  width: 275px;
+  height: 51px;
+  border-radius: 26px;
+  background: #fafafa;
+  box-shadow: 0px 4px 4px 0px rgba(135, 135, 135, 0.2);
+}

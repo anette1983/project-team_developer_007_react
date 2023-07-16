@@ -4,3 +4,5 @@ export const selectMyRecipes = state =>
 export const selectMyRecipesIsLoading = state => state.myRecipes.isLoading;
 
 export const selectMyRecipesError = state => state.myRecipes.error;
+export const selectTotalMyRecipes = state =>
+  state.myRecipes.availableRecipes.total;

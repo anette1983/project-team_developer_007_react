@@ -12,6 +12,9 @@ import {
 import { useEffect } from 'react';
 import { fetchMyRecipes } from 'redux/myRecipes/operations';
 import searchCss from '../SearchPage/searchContainer.module.css';
+import MyRecipesPagination from 'components/MyRecipesPagination/Paginator';
+import { Pagination } from '@mui/material';
+import Paginator from 'components/MyRecipesPagination/Paginator';
 
 const MyRecipesPage = () => {
   const isLoading = useSelector(selectMyRecipesIsLoading);
@@ -25,6 +28,7 @@ const MyRecipesPage = () => {
     }
   }, [dispatch, token]);
   const text = 'My recipes';
+
   return (
     <>
       <div className={`${myRecipesCss.wrapper_leaf}`}>
@@ -35,10 +39,14 @@ const MyRecipesPage = () => {
             <MainPageTitle text={text} />
           </div>
 
-          <div className={`${css.container} ${myRecipesCss.wrapper}`}>
+          <div className={`${css.container} ${myRecipesCss.wrapper} `}>
             <MyRecipesList />
           </div>
+          <div className={`${css.container} ${myRecipesCss.pagin_container}`}>
+            <Paginator />
+          </div>
         </div>
+        <div className={myRecipesCss.leaf_bg}></div>
       </div>
     </>
   );
