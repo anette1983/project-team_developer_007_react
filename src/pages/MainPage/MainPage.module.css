@@ -86,11 +86,12 @@ background-position: 0 70px;
 }
 
 .container {
+   width: 375px;
 display: flex;
 flex-direction: column;
 background-image: url('../../../src/images/bgc/salt_mob_1x.png');
 background-repeat: no-repeat;
-background-position: 28px 322px;
+background-position: 28px 258px;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -103,6 +104,7 @@ background-position: 28px 322px;
 
 @media screen and (min-width: 768px) {
   .container {
+    width: 768px; 
     flex-direction: row;
     flex-wrap: wrap;
     background-image: url('../../../src/images/bgc/salt_tab_1x.png');
@@ -121,6 +123,9 @@ background-position: 28px 322px;
 
 @media screen and (min-width: 1440px) {
   .container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px 0 100px;
     background-image: url('../../../src/images/bgc/salt_desk_1x.png');
     background-position: 650px 130px;
     background-size: 578px;
@@ -141,16 +146,19 @@ background-position: 28px 322px;
  }
 
 .title {
+  margin: 0;
     font-size: 60px;
     line-height: 60px;
     letter-spacing: -0.005em;
     text-align: center;
     font-weight: 400;
     color:#22252A;
-    padding-top: 132px;
+    padding-top: 68px;
+    padding-bottom: 14px;
     background-image: url('../../images/bgc/start_lefttop_mob_1x.png');
     background-repeat: no-repeat;
-
+    background-size: 10%;
+   background-position: 0px -10px;
 }
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -189,7 +197,8 @@ background-position: 28px 322px;
       font-size: 100px;
       line-height: 100px;
       background-image: url('../../../src/images/bgc/start_lefttop_desk_1x.png');
-
+      /* background-position: 50%;
+      background-size: 0%; */
     }
   
     @media (min-device-pixel-ratio: 2),
@@ -208,7 +217,7 @@ background-position: 28px 322px;
     line-height: 18px;
     letter-spacing: -0.02em;
     text-align: center;
-    padding: 14px 63px 0 64px;
+    padding: 0px 63px 0 64px;
    
 
 }

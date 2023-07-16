@@ -8,6 +8,15 @@ export const PreviewCategories =()=>{
 
 const recipes = useSelector(selectRecipes);
 
+// recipes[1] = recipes.splice(0,1, recipes[1])[0]
+// console.log(recipes);
+// for (const value of recipes ) {
+//     console.log(value[1]);
+// }
+// const x = recipes.map(res=> [...res].sort((a,b)=>b-a))
+// console.log(x);
+// const newRecipes = [...x].sort((a,b)=>b-a)
+// console.log(newRecipes);
     return (
         
          <div className={css.container}>

@@ -17,7 +17,7 @@
 @media screen and (min-width: 768px) {
     .list_item{
         width: 336px;
-        /* margin-right: 32px; */
+      
         
     }
     .list_item:not(:first-child) {

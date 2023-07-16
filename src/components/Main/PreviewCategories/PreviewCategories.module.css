@@ -18,7 +18,7 @@ background-position: 0px 300px;
 
 @media screen and (min-width: 768px) {
     .container {
-        /* padding: 72px 32px 32px 32px; */
+       
       background-image: url('../../../images/bgc/404_spinach_top_bg_tab_1x.png');
       background-position: 0px 280px;
      }
@@ -36,7 +36,7 @@ background-position: 0px 300px;
         .container {
           
           background-image: url('../../../images/bgc/404_spinach_top_bg_desk_1x.png');
-          /* background-position: 400px 159px; */
+        
          }
     
          @media (min-device-pixel-ratio: 2),
