@@ -27,7 +27,7 @@ const recipes = useSelector(selectRecipes);
                 <section className={css.section}>
                <h2 className={css.title}>{recipe[0].category}</h2>  
                <RecipeList data={recipe}/>
-               <Link to={`/categories/:${recipe[0].category.toLowerCase()}`}>
+               <Link to={`/categories/${recipe[0].category.toLowerCase()}`}>
          <button className={css.btn} type="button">See all</button>
          </Link>
                </section>
@@ -46,7 +46,7 @@ const recipes = useSelector(selectRecipes);
          <section className={css.section}>
          <h2 className={css.title}>Breakfast</h2>
          <RecipeList data={recipes.Breakfast}/>
-         <Link to="/categories/:breakfast">
+         <Link to="/categories/breakfast">
          <button className={css.btn} type="button">See all</button>
          </Link>
          
@@ -55,7 +55,7 @@ const recipes = useSelector(selectRecipes);
  <section className={css.section}>
      <h2 className={css.title}>Miscellaneous</h2>
      <RecipeList data={recipes.Miscellaneous}/>
-     <Link to="/categories/:miscellaneous">
+     <Link to="/categories/miscellaneous">
      <button className={css.btn} type="button">See all</button>
      </Link>
      
@@ -63,14 +63,14 @@ const recipes = useSelector(selectRecipes);
  <section className={css.section}>
      <h2 className={css.title}>Chicken</h2>
      <RecipeList data={recipes.Chicken}/>
-     <Link to="/categories/:chicken">
+     <Link to="/categories/chicken">
      <button className={css.btn} type="button">See all</button>
      </Link>
      </section>
  <section className={css.section}>
      <h2 className={css.title}>Deserts</h2>
      <RecipeList data={recipes.Deserts}/>
-     <Link to="/categories/:deserts">
+     <Link to="/categories/deserts">
      <button className={css.btn} type="button">See all</button>
      </Link>
      </section> */}
