@@ -22,7 +22,7 @@ export const AddRecipeForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('Breakfast');
-  const [cookingTime, setCookingTime] = useState('30 min');
+  const [cookingTime, setCookingTime] = useState('30');
   const [ingredients, setIngredients] = useState([
     {
       id: nanoid(),
