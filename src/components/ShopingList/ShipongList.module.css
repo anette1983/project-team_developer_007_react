@@ -6,3 +6,15 @@
     flex-wrap: wrap;
     gap: 24px;
 }
+.deleteBtn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.deleteBtnIcon {
+    color: #333333;
+}

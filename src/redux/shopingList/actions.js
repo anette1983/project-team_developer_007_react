@@ -11,6 +11,7 @@ export const handleFetchShopingList = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
   state.list = payload;
+  console.log(payload);
 };
 
 export const handleAddToShopingList = (state, { payload }) => {
