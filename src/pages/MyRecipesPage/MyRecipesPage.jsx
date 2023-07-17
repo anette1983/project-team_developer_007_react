@@ -12,8 +12,8 @@ import {
 import { useEffect } from 'react';
 import { fetchMyRecipes } from 'redux/myRecipes/operations';
 import searchCss from '../SearchPage/searchContainer.module.css';
-import MyRecipesPagination from 'components/MyRecipesPagination/Paginator';
-import { Pagination } from '@mui/material';
+// import MyRecipesPagination from 'components/MyRecipesPagination/Paginator';
+// import { Pagination } from '@mui/material';
 import Paginator from 'components/MyRecipesPagination/Paginator';
 
 const MyRecipesPage = () => {

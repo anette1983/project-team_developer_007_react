@@ -33,7 +33,7 @@
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  top: 35px;
+  top: 45px;
   left: 40%;
   z-index: 11111;
   background-color: rgba(250, 250, 250, 1);
@@ -42,6 +42,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
+  position: relative;
 }
 
 .UserLogoutModalText p {
@@ -78,8 +79,8 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 12%;
-  left: 86%;
+  top: -22px;
+  left: 243px;
   z-index: 11112;
   cursor: pointer;
 }
@@ -102,7 +103,7 @@
   .UserLogoutModal {
     width: 480px;
     height: 215px;
-    top: 40px;
+    top: 60px;
     left: 40%;
   }
   .UserLogoutModalText {
@@ -111,8 +112,8 @@
   .cross {
     width: 24px;
     height: 24px;
-    top: 17%;
-    left: 83%;
+    top: -27px;
+    left: 333px;
   }
   .UserLogoutModalButtons {
     gap: 16px;
@@ -140,7 +141,7 @@
   .cross {
     width: 24px;
     height: 24px;
-    top: 15%;
-    left: 89%;
+    top: -33px;
+    left: 345px;
   }
 }

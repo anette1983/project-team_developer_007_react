@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import css from './Modal.module.css';
 import Logo from '../Logo';
 import Navigation from '../Navigation';
-import { ReactComponent as Cross } from '../X.svg';
+import { ReactComponent as Cross } from '../../../images/header/svg/X.svg';
 import sprite from '../../../images/svg/sprite.svg';
 
 const Modal = () => {

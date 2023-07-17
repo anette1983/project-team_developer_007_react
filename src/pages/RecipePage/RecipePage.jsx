@@ -1,6 +1,6 @@
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import { selectIsLoading } from 'redux/recipes/selectors';
 import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectors';
 import { fetchRecipeById } from 'redux/recipes/operations';

@@ -1,8 +1,8 @@
 export const initialState = {
   availableRecipes: [],
   page: 1,
-  currentRecipe: null,
+  currentRecipe: {},
   isLoading: false,
   error: null,
-  total:null,
+  total: null,
 };

@@ -19,15 +19,15 @@ const ThemeToggler = () => {
     };
   }, []);
 
-  return (
-    <div>
-      {windowWidth > 1440 ? (
-        <p onClick={() => console.log('change theme')}>Theme Toggler</p>
-      ) : (
-        <Modal />
-      )}
-    </div>
-  );
+  return <div>{windowWidth < 1440 && <Modal />}</div>;
 };
 
 export default ThemeToggler;
+
+// <div>
+//   {windowWidth > 1440 ? (
+//     <p onClick={() => console.log('change theme')}>Theme Toggler</p>
+//   ) : (
+//     <Modal />
+//   )}
+// </div>;

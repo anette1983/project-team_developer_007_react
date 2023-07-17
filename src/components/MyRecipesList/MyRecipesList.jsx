@@ -3,7 +3,7 @@ import css from './MyRecipesList.module.css';
 import { useSelector } from 'react-redux';
 import {
   selectMyRecipes,
-  selectTotalMyRecipes,
+  // selectTotalMyRecipes,
 } from 'redux/myRecipes/selectors';
 // import { useSelector } from 'react-redux';
 // import { selectMyRecipes } from 'redux/myRecipes/selectors';

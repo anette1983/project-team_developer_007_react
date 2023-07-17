@@ -7,11 +7,13 @@ export const RecipePreparation = () => {
   return (
     <section>
       <h2>Recipe Preparation</h2>
-      <ol>
+
+      {/* Там є пустий масив, тому не працює split */}
+      {/* <ol>
         {recipe.instructions.split('.').map(el => {
           return <li>{el}</li>;
         })}
-      </ol>
+      </ol> */}
       <img src={recipe.preview} alt={recipe.title} />
     </section>
   );

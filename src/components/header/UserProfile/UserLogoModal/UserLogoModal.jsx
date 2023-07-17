@@ -1,6 +1,6 @@
 import css from './UserLogo.module.css';
-import { ReactComponent as Arrow } from '../../arrow-right.svg';
-import { ReactComponent as Pencil } from '../../pencil.svg';
+import { ReactComponent as Arrow } from '../../../../images/header/svg/arrow-right.svg';
+import { ReactComponent as Pencil } from '../../../../images/header/svg/pencil.svg';
 // import { useState } from 'react';
 
 const UserLogoModal = ({ openUserLogoutModal, openUserInfoModal }) => {
