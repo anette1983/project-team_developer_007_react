@@ -29,13 +29,14 @@ onSubmit(value)
             value={value}
             onChange={handleChange}
             placeholder="Enter the text"
+            
             />
             <Link 
             // to={{
             //     pathname: "/search",
             //     propsSearch: {value}
             // }}
-            to={`/search/?${value}`} 
+            to={`/search/?query=${value}`} 
             data={value}
             >
             <button className={css.btn} type="submit">Search</button>

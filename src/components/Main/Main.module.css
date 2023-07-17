@@ -3,9 +3,10 @@
     margin: 0 auto;
     padding: 0 100px 0 100px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 0;
 }
 }
 

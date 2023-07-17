@@ -16,12 +16,10 @@ return (
        <Link to={`/recipe/${recipe._id}`}>
        <h3 className={css.list_title}>{recipe.title}</h3>
        <img src={recipe.thumb} alt="recipe" className={css.img}/>
+       <h3 className={css.list_title}>{recipe.title}</h3>
        </Link>
       
   </li>
- 
-     
-
   )})}
    </ul>
     </> 
