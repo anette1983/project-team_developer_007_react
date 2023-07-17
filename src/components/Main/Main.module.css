@@ -1,18 +1,18 @@
 @media screen and (min-width: 768px) {
 .container {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 0 100px 0 100px;
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 0;
 }
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
     .container {
         display: block;
      
     }
-    }
+    } */

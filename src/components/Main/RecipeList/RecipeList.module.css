@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.list_item {
+    position: relative;
+}
+
 .list_item:not(:first-child) {
     display: none;
 }
@@ -12,12 +16,14 @@
     .list_item{
         width: 336px;
        
+       
     }
     .list_item:not(:first-child) {
         display: block;
+        margin-left: 32px;
     }
 
-    .list_item:nth-child(odd){
+    .list_item:nth-child(even){
         
         display: none;
     }
@@ -27,7 +33,7 @@
     .list_item{
         width: 300px;
     }
-    .list_item:nth-child(odd){
+    .list_item:nth-child(even){
         
         display: block;
        
@@ -54,13 +60,16 @@ padding: 16px 0px 16px 16px;
 @media screen and (min-width: 768px) {
     .list_title {
         width: 300px;
-        padding: 16px 149px 16px 16px;
+        top: 280px;
+        left: 20px;
+       padding: 16px 0px 16px 16px;
     }
     }
     @media screen and (min-width: 1440px) {
         .list_title {
-            width: 300px;
-            padding: 16px 82px 16px 16px;
+            width: 268px;
+            padding: 16px 0px 46px 16px;
+            align-items: center;
         }
         }
 .img {
@@ -69,4 +78,16 @@ padding: 16px 0px 16px 16px;
     height: 323px;
     margin-top: 32px;
     position: relative;
-}    
+} 
+
+@media screen and (min-width: 768px) {
+    .img {
+        width: 336px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .img {
+        width: 300px;
+    }
+}

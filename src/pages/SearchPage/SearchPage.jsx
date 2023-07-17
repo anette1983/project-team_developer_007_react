@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchMoreBySearch, clearRecipes } from 'redux/recipes/operations';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 import { useSearchParams } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 const SearchPage = () => {
   const [page, setPage] = useState(1);
@@ -64,6 +65,13 @@ const SearchPage = () => {
   const setParams = value => {
     setSearchParams({ query: value.search, page, limit });
   };
+
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
 
   return (

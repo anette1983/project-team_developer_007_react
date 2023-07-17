@@ -29,7 +29,7 @@ export default function PopularRecipe() {
           </li>)}
         </ul>
       ) : (
-        <p className={css.notFoundText}>No popular recipes yet</p>
+        <p className={css.notFoundText}>There are no popular recipes yet</p>
       )}
     </div>
   );
