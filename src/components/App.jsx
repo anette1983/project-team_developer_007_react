@@ -30,10 +30,12 @@ export const App = () => {
   // Перед сдачеє проекта видалити коментарі в RecipePage
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
+  // const token = JSON.parse(localStorage.getItem('token')) ?? null;
 
   // useEffect(() => {
-  //   if (token) {
+  //   if (!token) {
   //     dispatch(refreshUser());
+  //     return Notify.failure('Please, sign in!');
   //   }
   // }, [dispatch, token]);
 
