@@ -19,16 +19,18 @@ import { useLocation } from 'react-router-dom';
 const SearchPage = () => {
   const [page, setPage] = useState(1);
   const [searchBy, setSearchBy] = useState('search');
-  const [limit, setLimit] = useState(6);
+  let limit = 6;
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
   const { total, recipes } = useSelector(selectRecipes);
   const isLoged = useSelector(selectIsLoggedIn);
   const query = searchParams.get('query') ?? '';
-  const [pageCount, setPageCount] = useState(1);
-  const windowsWidth = window.innerWidth;
 
+  const [pageCount, setPageCount] = useState(1)
+  const windowsWidth = window.innerWidth
+  
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+   
     setPage(value);
   };
 
@@ -47,12 +49,16 @@ const SearchPage = () => {
 
     //check width
     if (windowsWidth >= 1440) {
-      setLimit(12);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      limit = 12;
     }
 
     //set pagination pages
-    setPageCount(Math.ceil(+total / limit));
 
+    if (total) {
+       setPageCount(Math.ceil(+total / limit));
+    }
+   
     if (isLoged) {
       dispatch(fetchMoreBySearch({ searchBy, page, limit, query }));
     }
@@ -74,11 +80,13 @@ const SearchPage = () => {
     setSearchParams({ query: value.search, page, limit });
   };
 
+
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
 
   return (
     <div className={css.section}>
@@ -86,10 +94,12 @@ const SearchPage = () => {
         <MainPageTitle text="Search" />
       </div>
       <div className={`${css.container} ${searchCss.container}`}>
-        <SearchForm title={setParams} setSearchBy={setSearchBy} />
+
+        <SearchForm title={setParams} setSearchBy={setSearchBy} page={setPage} />
+
       </div>
       {!recipes && (
-        <div className={`${css.container} ${searchCss.container}`}>
+        <div className={`${css.container} ${searchCss.container} ${searchCss.center}`}>
           <img
             className={searchCss.mobPhoto}
             src={require('../../images/SearchPage/vegetables-5abfb9c60122f5 1.png')}
@@ -109,14 +119,9 @@ const SearchPage = () => {
             <SearchedRecipesList recipes={recipes} />
           </div>
           <div className={`${searchCss.paginationWrap} `}>
-            {pageCount && (
-              <Pagination
-                count={+pageCount}
-                page={page}
-                onChange={handleChange}
-                siblingCount={0}
-              />
-            )}
+
+            {page && <Pagination count={pageCount} page={page} onChange={handleChange} siblingCount={0}/>}
+
           </div>
         </>
       )}
