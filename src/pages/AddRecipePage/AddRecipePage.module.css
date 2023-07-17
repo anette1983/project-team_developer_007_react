@@ -10,7 +10,7 @@
 }
 
 .formContainer {
-    margin-top: 72px;
+    padding-top: 72px;
 }
 
 @media (min-width: 375px) {
@@ -20,6 +20,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .formContainer {
+        padding-top: 100px;
+    }
+
     .pageContent {
         padding-top: 136px;
         padding-bottom: 200px;
@@ -39,7 +43,7 @@
     .formContainer {
         display: flex;
         justify-content: space-between;
-        margin-top: 100px;
+        padding-top: 100px;
     }
 
     .sidebar {

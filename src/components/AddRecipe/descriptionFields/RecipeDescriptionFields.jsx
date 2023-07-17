@@ -138,7 +138,7 @@ export const RecipeDescriptionFields = ({
         <div className={css.selectBox} onClick={toggleCookingTime}>
           <div className={css.selectLabel}>Cooking time</div>
           <div className={css.selectVariantsBox}>
-            <span className={css.selectVariants}>{time}</span>
+            <span className={css.selectVariants}>{time} min</span>
             <MdKeyboardArrowDown className={css.arrow} size="18" />
           </div>
           {timeSelectIsActive && (
@@ -147,7 +147,7 @@ export const RecipeDescriptionFields = ({
                 <li
                   className={css.selectItem}
                   key={item}
-                  onClick={() => setCookingTime(`${item} min`)}
+                  onClick={() => setCookingTime(`${item}`)}
                 >
                   {item}
                 </li>

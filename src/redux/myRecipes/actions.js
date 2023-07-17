@@ -17,7 +17,7 @@ export const handleFetchMyRecipes = (state, { payload }) => {
 export const handleAddMyRecipe = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-  state.availableRecipes.push(payload);
+  state.availableRecipes = payload;
 };
 
 

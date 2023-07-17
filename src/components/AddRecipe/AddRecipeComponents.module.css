@@ -139,6 +139,7 @@
 
     .socialsWrapper {
         display: block;
+        padding-bottom: 100px;
     }
 
     .popularRecipesList {
@@ -160,7 +161,6 @@
     }
 
     .followUsBlock {
-        margin-left: -220px;
-        margin-bottom: 100px;
+        margin-left: -190px;
     }
 }
