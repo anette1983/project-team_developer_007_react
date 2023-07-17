@@ -1,7 +1,7 @@
 .form {
     margin-top: 115px;
     padding-left: 40px;
-   
+   position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -33,7 +33,12 @@
     position: relative;
     padding-left: 32px;
     color: #BDBDBD;
-
+    outline: none;
+    opacity: 0.8;
+}
+.input::placeholder{
+    border-right: #23262A;
+ 
 }
 .input:focus {
     color:#23262A;
@@ -73,7 +78,7 @@ border:1px solid
     .btn {
         width: 161px ;
         height: 59px;
-        left: 32%;
+        left: 61%;
         
      }
   }
@@ -81,7 +86,7 @@ border:1px solid
   @media screen and (min-width: 1440px) {
     .btn {
         height: 70px;
-        left: 31%;
+        left: 69%;
 
      }
   }

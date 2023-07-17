@@ -1,18 +1,19 @@
 .container {
     display: flex;
     justify-content: space-around;
+    
     }
 
-    /* @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
         .container {
-            
+          margin-left: 290px;  
         }
-    }   */
+    }  
    
     @media screen and (min-width: 1440px) {
         .container {
           margin-top: 41px;
-          
+          margin-left: 0px; 
         }
     } 
 
