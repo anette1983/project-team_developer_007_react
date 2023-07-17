@@ -9,6 +9,8 @@ import { ReactComponent as Cross } from '../../../../images/header/svg/X.svg';
 import { ReactComponent as Pencil } from '../../../../images/header/svg/pencil.svg';
 import { ReactComponent as UserDefault } from '../../../../images/header/svg/usericondefault.svg';
 import { ReactComponent as Plus } from '../../../../images/header/svg/plus.svg';
+import { Notify } from 'notiflix';
+
 const defualtImage = defaultUserAvatar;
 
 const UserInfoModal = ({ onClose }) => {
@@ -18,14 +20,18 @@ const UserInfoModal = ({ onClose }) => {
   const [name, setName] = useState(nickName);
   const [avatar, setAvatar] = useState(newAvatarUrl || '');
   const [file, setFile] = useState(null);
+  const [disabled, setDisabled] = useState(true);
   const dispatch = useDispatch();
 
   const uploadAvatar = e => {
-    if (e.target.files[0]) {
-      const avatarTempUrl = URL.createObjectURL(e.target.files[0]);
-      setAvatar(avatarTempUrl);
-      setFile(e.target.files[0]);
-    }
+    if (!e.target.files[0]) return;
+    if (e.target.files[0].size > 50000000)
+      return Notify.failure(`Image too big, choose another image`);
+
+    const avatarTempUrl = URL.createObjectURL(e.target.files[0]);
+    setDisabled(false);
+    setAvatar(avatarTempUrl);
+    setFile(e.target.files[0]);
   };
 
   const handleSubmit = e => {
@@ -70,7 +76,10 @@ const UserInfoModal = ({ onClose }) => {
           id="name"
           name="name"
           placeholder={nickName}
-          onChange={e => setName(e.target.value)}
+          onChange={e => {
+            setDisabled(false);
+            setName(e.target.value);
+          }}
           value={name}
           className={css.input}
         />
@@ -81,6 +90,7 @@ const UserInfoModal = ({ onClose }) => {
         onClick={handleSubmit}
         className={css.UserLogoutModalButton}
         aria-label="edit-profile-save-changes-button"
+        disabled={disabled}
       >
         Save changes
       </button>
