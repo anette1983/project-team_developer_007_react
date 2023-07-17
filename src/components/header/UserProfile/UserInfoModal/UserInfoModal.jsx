@@ -25,7 +25,7 @@ const UserInfoModal = ({ onClose }) => {
 
   const uploadAvatar = e => {
     if (!e.target.files[0]) return;
-    if (e.target.files[0].size > 50000000)
+    if (e.target.files[0].size > 5000000)
       return Notify.failure(`Image too big, choose another image`);
 
     const avatarTempUrl = URL.createObjectURL(e.target.files[0]);
