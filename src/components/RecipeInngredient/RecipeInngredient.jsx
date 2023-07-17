@@ -21,30 +21,30 @@ export default function RecipeInngredient({ ingredient }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const dispatch = useDispatch();
-  console.log(ingredient);
+  console.log(ingredient._id._id, ingredient.measure);
 
-  const handleOnClick = () => {
+  const handleOnChange = () => {
     if (!isChecked) {
       dispatch(
         addToShopingList({
-          ingredientId: ingredient._id,
+          ingredientId: ingredient._id._id,
           measure: ingredient.measure,
         })
       );
       setIsChecked(true);
     } else {
-      dispatch(deleteFromShopingList(ingredient._id));
+      dispatch(deleteFromShopingList(ingredient._id._id));
       setIsChecked(false);
     }
   };
 
   return (
     <div className={container}>
-      <div className={wrapper_img}>{/* <img></img> */}</div>
+      <div className={wrapper_img}>
+        <img src={ingredient._id.img} alt={ingredient._id.name} />
+      </div>
       <div className={wrapper_ingridient_title}>
-        <p className={ingridient_title}>
-          Name will be here {/* {ingredient.name } */}
-        </p>
+        <p className={ingridient_title}>{ingredient._id.name}</p>
       </div>
       <div className={wrapper_ingridient_quantity}>
         <p className={text_ingridient_quantity}>{ingredient.measure}</p>
@@ -53,7 +53,7 @@ export default function RecipeInngredient({ ingredient }) {
         className={input_checkbox}
         type="checkbox"
         checked={isChecked}
-        onChange={handleOnClick}
+        onChange={handleOnChange}
       />
     </div>
   );

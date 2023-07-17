@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import clsx from 'clsx';
 import { selectCurrentRecipe } from 'redux/recipes/selectors';
-// import RecipeInngredient from 'components/RecipeInngredient/RecipeInngredient';
+import RecipeInngredient from 'components/RecipeInngredient/RecipeInngredient';
 
 import css from './RecipeIngredientsList.module.css';
 
@@ -10,7 +10,9 @@ export const RecipeInngredientsList = () => {
     css;
 
   const recipe = useSelector(selectCurrentRecipe);
-  console.log(recipe);
+  const ingredients =
+    Object.keys(recipe).length !== 0 ? recipe.ingredients : [];
+  console.log(ingredients);
 
   return (
     <section className={section}>
@@ -20,18 +22,17 @@ export const RecipeInngredientsList = () => {
         <p className={title_table}>Add to list</p>
       </div>
 
-      {/* Продумати логіку з інгрідієнтів  */}
-      {/* {recipe.ingredients.length !== 0 ? (
-        recipe.ingredients.map(el => {
+      {ingredients.length !== 0 ? (
+        ingredients.map(el => {
           return (
-            <li style={{ listStyleType: 'none' }} key={el._id}>
+            <li style={{ listStyleType: 'none' }} key={el._id._id}>
               <RecipeInngredient ingredient={el} />
             </li>
           );
         })
       ) : (
         <>No ingredients</>
-      )} */}
+      )}
     </section>
   );
 };
