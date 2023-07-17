@@ -1,28 +1,42 @@
+import { useEffect } from 'react';
 import Logo from './Logo';
 import Navigation from './Navigation';
 import ThemeToggler from './ThemeToggler';
 import UserLogo from './UserProfile/UserLogo';
 import css from './header.module.css';
-import globalcss from '../../pages/pages.module.css';
+// import globalcss from '../../pages/pages.module.css';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from 'redux/auth/selectors';
+import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectors';
+import { useLocation } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 // import defaultUserAvatar from '../../pictures/userDefault.png'
 
 const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  return (
-    isLoggedIn && (
-      <div className={` ${globalcss.container} ${css.header}`}>
-        <Logo />
-        <Navigation width={1441} />
+  const { pathname } = useLocation();
+  const isloading = useSelector(selectIsRefreshing);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-        <div className={css.userContainer}>
-          <UserLogo />
-          <ThemeToggler />
-        </div>
-      </div>
-    )
+  return (
+    <>
+      {isLoggedIn &&
+        (!isloading ? (
+          <div className={css.header}>
+            <Logo />
+            <Navigation width={1441} />
+
+            <div className={css.userContainer}>
+              <UserLogo />
+              <ThemeToggler />
+            </div>
+          </div>
+        ) : (
+          <Loader />
+        ))}
+    </>
   );
 };
 export default Header;
