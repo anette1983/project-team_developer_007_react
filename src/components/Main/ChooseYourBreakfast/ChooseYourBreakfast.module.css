@@ -6,6 +6,7 @@
     margin-top: 157px;
     margin-left: 105px;
     padding: 8px 8px 30px 8px;
+    position: relative;
   }
 
 @media screen and (min-width: 768px) {
@@ -25,7 +26,8 @@
         height: 114px;
         padding: 16px 16px 38px 16px;
         margin-top: 0;
-        margin-left: 1020px;
+        margin-right: 40px;
+        /* margin-left: 1020px; */
        
      }
   }  
@@ -57,8 +59,6 @@ color: #3E4462;
 }
 
 .btn {
-    /* width: 81px;
-    height: 18px; */
    font-size: 10px;
    font-weight: 400;
    line-height: 12px;
@@ -74,6 +74,15 @@ color: #3E4462;
     .btn {
         width: 86px;
         margin: 4px 12px 12px 162px;
+        position: absolute;
+        top: 65%;
+     }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .btn {
+        
+        top: 65%;
      }
   }
 
@@ -84,3 +93,15 @@ color: #3E4462;
    padding-top: 7px;
    
  } 
+ .crossbolt {
+   display: none;
+ }
+
+ @media screen and (min-width: 768px) {
+  
+ .crossbolt {
+   
+   margin-left: 15px;
+   display: block;
+ }
+}

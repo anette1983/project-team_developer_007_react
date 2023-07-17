@@ -15,6 +15,7 @@ import searchCss from '../SearchPage/searchContainer.module.css';
 // import MyRecipesPagination from 'components/MyRecipesPagination/Paginator';
 // import { Pagination } from '@mui/material';
 import Paginator from 'components/MyRecipesPagination/Paginator';
+import { useLocation } from "react-router-dom";
 
 const MyRecipesPage = () => {
   const isLoading = useSelector(selectMyRecipesIsLoading);
@@ -28,6 +29,12 @@ const MyRecipesPage = () => {
     }
   }, [dispatch, token]);
   const text = 'My recipes';
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>

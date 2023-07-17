@@ -17,10 +17,10 @@ background-position: 100px -30px;
 @media screen and (min-width: 768px) {
   .wrapper {
     background-image: url('../../../src/images/bgc/start_corner_tab_1x.png');
-    background-position: 450px -280px;
+    background-position: 490px -130px;
+    background-size: 50%;
    
    }
-
    @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -33,8 +33,8 @@ background-position: 100px -30px;
 @media screen and (min-width: 1440px) {
   .wrapper {
     background-image: url('../../../src/images/bgc/start_corner_desk_1x.png');
-    background-position: 700px -230px;
-    background-size: 35%;
+    background-position: 720px -70px;
+    background-size: 50%;
     
   }
   @media (min-device-pixel-ratio: 2),
@@ -63,15 +63,16 @@ background-position: 0 10px;
 }
 @media screen and (min-width: 768px) {
   .wrapper_leaf {
-    background-position: 350px -220px;
+    background-position: 390px -200px;
+    background-size: 50%;
   }
   }
 
 @media screen and (min-width: 1440px) {
   .wrapper_leaf {
     background-image: url('../../../src/images/bgc/start_midle_desk_1x.png');
-    background-position: 480px -25px;
-    background-size: 65%;
+    background-position: 645px -5px;
+    background-size: 55%;
    
    
    }
@@ -86,6 +87,7 @@ background-position: 0 10px;
 }
 
 .container {
+  margin: 0 auto;
    width: 375px;
 display: flex;
 flex-direction: column;
@@ -104,6 +106,7 @@ background-position: 15px 258px;
 
 @media screen and (min-width: 768px) {
   .container {
+    margin: 0 auto;
     width: 768px; 
     flex-direction: row;
     flex-wrap: wrap;
@@ -125,9 +128,9 @@ background-position: 15px 258px;
   .container {
     width: 1440px;
     margin: 0 auto;
-    padding: 0 100px 0 100px;
+    /* padding: 0 100px 0 100px; */
     background-image: url('../../../src/images/bgc/salt_desk_1x.png');
-    background-position: 650px 130px;
+    background-position: 710px 110px;
     background-size: 578px;
     flex-direction: column;
    }
@@ -198,8 +201,8 @@ background-position: 15px 258px;
       font-size: 100px;
       line-height: 100px;
       background-image: url('../../../src/images/bgc/start_lefttop_desk_1x.png');
-      /* background-position: 50%;
-      background-size: 0%; */
+      background-position: 0 8px;
+      background-size: 7%;
     }
   
     @media (min-device-pixel-ratio: 2),
