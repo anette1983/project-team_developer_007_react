@@ -4,7 +4,10 @@ import searchCss from "./shopingContainer.module.css"
 import ShopingHeader from "components/ShopingHeader/ShopingHeader";
 import ShopingList from "components/ShopingList/ShopingList";
 
+
 const ShoppingListPage = () => {
+
+
   return (
     <div className={css.section}>
     <div className={`${css.container} ${searchCss.container}`}>
@@ -14,7 +17,7 @@ const ShoppingListPage = () => {
                 <ShopingHeader/>
       </div>
       <div className={`${css.container} ${searchCss.sahopingConteiner}`}>
-                <ShopingList/>
+        <ShopingList/>
       </div>
       </div>
     );

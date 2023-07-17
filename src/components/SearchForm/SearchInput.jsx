@@ -1,7 +1,7 @@
 import { useState } from "react";
 import css from "./searchInput.module.css"
 
-const SearchForm = ({title, setSearchBy }) => {
+const SearchForm = ({title, setSearchBy, page }) => {
     const [selectBy, setSelectBy] = useState("Title");
     const [search, setSearch] = useState('')
     const [isHidden, setIsHidden] = useState(false);
@@ -14,6 +14,7 @@ const SearchForm = ({title, setSearchBy }) => {
          if (selectBy === "Ingredients") {
             setSearchBy("ingredients")
         }
+        page(1)
         reset()    
     }
     const handleOption = (e) => {
