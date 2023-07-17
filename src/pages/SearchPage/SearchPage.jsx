@@ -6,12 +6,15 @@ import searchCss from './searchContainer.module.css';
 import SearchedRecipesList from 'components/SearchedRecipesList/SearchedRecipesList';
 import { Pagination } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { selectRecipes } from '../../redux/recipes/selectors';
+import { selectRecipes } from '../../redux/recipesBySearch/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMoreBySearch, clearRecipes } from 'redux/recipes/operations';
+import {
+  fetchMoreBySearch,
+  clearRecipes,
+} from 'redux/recipesBySearch/operations';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 import { useSearchParams } from 'react-router-dom';
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 const SearchPage = () => {
   const [page, setPage] = useState(1);
@@ -19,12 +22,11 @@ const SearchPage = () => {
   const [limit, setLimit] = useState(6);
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
-  const {total, recipes} = useSelector(selectRecipes);
+  const { total, recipes } = useSelector(selectRecipes);
   const isLoged = useSelector(selectIsLoggedIn);
   const query = searchParams.get('query') ?? '';
-  const [pageCount, setPageCount] = useState(1)
-  const windowsWidth = window.innerWidth
-  
+  const [pageCount, setPageCount] = useState(1);
+  const windowsWidth = window.innerWidth;
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
@@ -34,13 +36,12 @@ const SearchPage = () => {
     dispatch(clearRecipes());
   }, [dispatch]);
 
-  useEffect(() => { 
-
+  useEffect(() => {
     if (query) {
-      setPageCount(1)
+      setPageCount(1);
     }
-  }, [query])
-  
+  }, [query]);
+
   useEffect(() => {
     if (!query) return;
 
@@ -51,13 +52,23 @@ const SearchPage = () => {
 
     //set pagination pages
     setPageCount(Math.ceil(+total / limit));
-        
+
     if (isLoged) {
       dispatch(fetchMoreBySearch({ searchBy, page, limit, query }));
     }
     setSearchParams({ query, page, limit });
-    
-  }, [dispatch, page, query, limit, searchBy, isLoged, pageCount, total, setSearchParams, windowsWidth]);
+  }, [
+    dispatch,
+    page,
+    query,
+    limit,
+    searchBy,
+    isLoged,
+    pageCount,
+    total,
+    setSearchParams,
+    windowsWidth,
+  ]);
 
   const setParams = value => {
     setSearchParams({ query: value.search, page, limit });
@@ -75,7 +86,7 @@ const SearchPage = () => {
         <MainPageTitle text="Search" />
       </div>
       <div className={`${css.container} ${searchCss.container}`}>
-        <SearchForm title={setParams} setSearchBy={setSearchBy}/>
+        <SearchForm title={setParams} setSearchBy={setSearchBy} />
       </div>
       {!recipes && (
         <div className={`${css.container} ${searchCss.container}`}>
@@ -98,7 +109,14 @@ const SearchPage = () => {
             <SearchedRecipesList recipes={recipes} />
           </div>
           <div className={`${searchCss.paginationWrap} `}>
-            {pageCount && <Pagination count={+pageCount} page={page} onChange={handleChange} siblingCount={0}/>}
+            {pageCount && (
+              <Pagination
+                count={+pageCount}
+                page={page}
+                onChange={handleChange}
+                siblingCount={0}
+              />
+            )}
           </div>
         </>
       )}
