@@ -4,12 +4,14 @@
     background-color: #FAFAFA;
     border-radius: 8px;
     margin-top: 157px;
+    margin-left: 105px;
     padding: 8px 8px 30px 8px;
   }
 
 @media screen and (min-width: 768px) {
     .container  {
         width: 260px;
+        height: 100px;
         padding: 12px 12px 34px 12px;
         margin-top: 0;
         margin-left: 75px;
@@ -55,8 +57,8 @@ color: #3E4462;
 }
 
 .btn {
-    width: 81px;
-    height: 18px;
+    /* width: 81px;
+    height: 18px; */
    font-size: 10px;
    font-weight: 400;
    line-height: 12px;
@@ -65,7 +67,7 @@ color: #3E4462;
    color: #3E4462;   
    border: none;
    background-color: transparent;
-   margin: 4px 8px 8px 136px;
+   margin: 4px 8px 8px 119px;
 }
 
 @media screen and (min-width: 768px) {
@@ -74,3 +76,11 @@ color: #3E4462;
         margin: 4px 12px 12px 162px;
      }
   }
+
+ .img {
+   width: 18px;
+   height: 18px;
+   margin-left: 4px;
+   padding-top: 7px;
+   
+ } 

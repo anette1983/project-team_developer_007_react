@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import css from "./ChooseYourBreakfast.module.css"
+import sprite from './Icon.svg';
 
 export const ChooseYourBreakfast = () => {
     return (
@@ -9,7 +10,14 @@ export const ChooseYourBreakfast = () => {
         way to enjoy a variety of fresh ingredients in one satisfying meal
         </p>
         <Link to= "/categories">
-        <button type="button" className={css.btn}> See recipes</button>
+        <button type="button" className={css.btn}> 
+       
+         
+          
+        See recipes
+        <svg className={css.img} width="12" height="9">
+            <use href={sprite + "#arrow-right"}/>
+          </svg></button>
         </Link>
         
         </div>
