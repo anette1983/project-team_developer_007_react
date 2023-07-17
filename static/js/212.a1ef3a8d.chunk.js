@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkproject_team_developer_007_react=self.webpackChunkproject_team_developer_007_react||[]).push([[212],{9212:function(e,t,r){r.r(t);var a=r(2791),c=r(7689),n=r(184);t.default=function(){var e=(0,c.TH)().pathname;return(0,a.useEffect)((function(){window.scrollTo(0,0)}),[e]),(0,n.jsx)(n.Fragment,{children:"FavoritePage"})}}}]);
+//# sourceMappingURL=212.a1ef3a8d.chunk.js.map
