@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { addMyRecipe } from '../../redux/myRecipes/operations';
 import { selectMyRecipesError } from '../../redux/myRecipes/selectors';
+import { selectIngredients } from "../../redux/ingredients/selectors";
 
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -34,6 +35,8 @@ export const AddRecipeForm = () => {
   const [preparation, setPreparation] = useState('');
   const [errors, setErrors] = useState({});
 
+    const ingredientsList = useSelector(selectIngredients);
+
   const onInputImgUpload = e => {
     setImg(e.target.files[0]);
     updateErrors('img');
@@ -54,7 +57,7 @@ export const AddRecipeForm = () => {
   };
 
   const onTimeChange = value => {
-    setCookingTime(value);
+    setCookingTime(`${value}`);
   };
 
   const incrIngredientFields = () => {
@@ -82,15 +85,18 @@ export const AddRecipeForm = () => {
     setIngredients(ingredients.filter(item => item.id !== itemId));
   };
 
-  const updateIngredient = (index, value, id, prop) => {
-    console.log('ADD', { index, value, id, prop })
+  const updateIngredient = (index, value, _id, prop) => {
+    console.log(ingredientsList);
+    // const choosenIngr = ingredientsList.find(item => item.name === value);
+    // console.log('FIND', choosenIngr);
+    console.log('ADD', { index, value, _id, prop })
 
     setIngredients(prevState => {
       console.log('STATE', prevState)
       const newState = [...prevState];
       newState[index][prop] = value;
-      newState[index].id = id;
-      console.log(newState);
+      newState[index].id = _id;
+      console.log('NEWSTATE', newState);
       return newState;
     });
   };
@@ -108,7 +114,8 @@ export const AddRecipeForm = () => {
         const { id, ingredientsQuantity, ingredientsQuantityMeasure } =
           ingredient;
         const measure = `${ingredientsQuantity} ${ingredientsQuantityMeasure}`;
-        return { measure: measure, id: id };
+        console.log('OBJECTRES', { measure: measure, _id: id });
+        return { measure: measure, _id: id };
       }),
     [ingredients]
   );
@@ -129,7 +136,7 @@ export const AddRecipeForm = () => {
   formData.append('title', title);
   formData.append('description', description);
   formData.append('category', category);
-  formData.append('time', cookingTime);
+  formData.append('time', `${cookingTime} min`);
   formData.append('ingredients', JSON.stringify(updatedIngredients));
   formData.append('instructions', preparation);
 

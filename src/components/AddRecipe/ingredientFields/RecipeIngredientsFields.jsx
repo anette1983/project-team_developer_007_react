@@ -117,7 +117,9 @@ export const RecipeIngredientsFields = ({
   };
 
   const setIngredient = (index, value, id) => {
-    updateIngredient(index, value, id, 'name');
+    const choosenIngr = ingredientsList.find(item => item.name === value);
+    console.log('FIND', choosenIngr);
+    updateIngredient(index, value, choosenIngr._id, 'name');
 
     setIngredientIsActive(prevState => {
       const newState = [...prevState];
@@ -176,7 +178,7 @@ export const RecipeIngredientsFields = ({
                           className={css.selectIngredientItem}
                           key={item}
                           onClick={() =>
-                            setIngredient(index, item, ingredient.id)
+                            setIngredient(index, item, ingredient._id)
                           }
                         >
                           {item}
@@ -232,7 +234,7 @@ export const RecipeIngredientsFields = ({
               <button
                 className={css.deleteBtn}
                 type="button"
-                onClick={() => deleteField(ingredient.id, index)}
+                onClick={() => deleteField(ingredient._id, index)}
               >
                 <MdOutlineClose className={css.deleteBtnIcon} size="18px" />
               </button>
