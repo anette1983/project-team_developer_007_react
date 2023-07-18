@@ -18,7 +18,8 @@ import { myRecipesReduser } from './myRecipes/slice';
 import { ingredientsReduser } from './ingredients/slice';
 import { favoriteRecipesReduser } from './favoriteRecipes/slice';
 import { shopingListReduser } from './shopingList/slice';
-import {popularRecipesReduser} from './popularRecipes/slice'
+import { popularRecipesReduser } from './popularRecipes/slice';
+import { recipesBySearchReduser } from './recipesBySearch/slice';
 
 const authPersistConfig = {
   key: 'auth',
@@ -36,6 +37,7 @@ export const store = configureStore({
     favoriteRecipes: favoriteRecipesReduser,
     shopingList: shopingListReduser,
     popularRecipes: popularRecipesReduser,
+    recipesBySearch: recipesBySearchReduser,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -21,7 +21,6 @@ export default function RecipeInngredient({ ingredient }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const dispatch = useDispatch();
-  console.log(ingredient._id._id, ingredient.measure);
 
   const handleOnChange = () => {
     if (!isChecked) {

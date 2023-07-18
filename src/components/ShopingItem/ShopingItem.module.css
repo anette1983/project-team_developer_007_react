@@ -59,6 +59,9 @@
 .icon{
     margin-right: 19px;
 }
+.delete_wraper{
+    cursor: pointer;
+}
 @media screen and (min-width:768px) {
     .container {
         height: 178px;
