@@ -19,7 +19,12 @@ export const handleAddMyRecipe = (state, { payload }) => {
   state.availableRecipes.recipes.push(payload);
 };
 
-export const handleDeleteMyRecipe = state => {
+export const handleDeleteMyRecipe = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
+  const index = state.availableRecipes.recipes.findIndex(
+    item => item._id === payload.id
+  );
+  state.availableRecipes.recipes.splice(index, 1);
+  state.availableRecipes.total = state.availableRecipes.total - 1;
 };
