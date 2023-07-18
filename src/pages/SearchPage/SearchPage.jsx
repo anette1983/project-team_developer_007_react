@@ -5,36 +5,36 @@ import css from '../pages.module.css';
 import searchCss from './searchContainer.module.css';
 import SearchedRecipesList from 'components/SearchedRecipesList/SearchedRecipesList';
 import { useEffect, useState } from 'react';
-import { selectRecipes } from '../../redux/recipesBySearch/selectors';
+import { selectRecipes, selectError} from '../../redux/recipesBySearch/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchMoreBySearch,
   clearRecipes,
 } from 'redux/recipesBySearch/operations';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 const SearchPage = () => {
   const [page, setPage] = useState(1);
   const [searchBy, setSearchBy] = useState('search');
+  const navigate = useNavigate();
   let limit = 6;
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
   const { total, recipes } = useSelector(selectRecipes);
   const isLoged = useSelector(selectIsLoggedIn);
+  const isError = useSelector(selectError)
   const query = searchParams.get('query') ?? '';
 
   const [pageCount, setPageCount] = useState(1);
   const windowsWidth = window.innerWidth;
 
-  
-
   useEffect(() => {
-    if (!searchParams.size) {
+    if (!searchParams.size || isError) {
       dispatch(clearRecipes());
     }
-  }, [dispatch, searchParams.size]);
+  }, [dispatch, isError, searchParams.size]);
 
   useEffect(() => {
     if (query) {
@@ -83,6 +83,12 @@ const SearchPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(() => {
+    if (isError) {
+      navigate("/error", { replace: true })
+    }
+  },[isError, navigate])
 
   return (
     <div className={css.section}>
