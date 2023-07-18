@@ -34,9 +34,11 @@ const SearchPage = () => {
     setPage(value);
   };
 
+
   useEffect(() => {
-    dispatch(clearRecipes());
-  }, [dispatch]);
+    if(!searchParams.size)
+    {dispatch(clearRecipes());}
+  }, [dispatch, searchParams.size]);
 
   useEffect(() => {
     if (query) {
@@ -116,6 +118,7 @@ const SearchPage = () => {
       {recipes && (
         <>
           <div className={`${css.container} ${searchCss.container}`}>
+            
             <SearchedRecipesList recipes={recipes} />
           </div>
           <div className={`${searchCss.paginationWrap} `}>

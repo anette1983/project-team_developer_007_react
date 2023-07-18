@@ -1,15 +1,15 @@
 .tabs_button{
-    margin-left: 28px;
     color: #E0E0E0;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
-    margin-bottom: 64px;
-    margin-top: 60px;
+    margin-top: 50px;
+    border-bottom: solid 1px;
 }
 .tabs_button:hover,.tabs_button:active{
     color: #8BAA36;
+    border-bottom: solid 2px;
 }
 .tabs_list{
     display: flex;
@@ -17,19 +17,22 @@
     align-items: center;
 }
 .img{
+    
     width: 343px;
     height: 323px;
-    border-radius: 8px;
-    
+    border-radius: 8px;  
+}
+.list_item{
+position: relative;
 }
 .title_wrapp{
-    position: relative;
+    position: absolute;
     width: 307px;
     height: 50px;
     background-color: #fff;
     border-radius: 8px;
     left:18px;
-    bottom: 76px;
+    bottom: 26px;
     display: flex;
     align-items: center
 }
@@ -40,4 +43,28 @@
     line-height: 20px;
     letter-spacing: -0.24px;
     color:#3E4462;
+}
+
+@media screen and (min-width: 768px) {
+    .img {
+        width: 336px;
+        }
+    .title_wrapp {
+        width: 300px;
+        }
+    .tabs_list {
+    gap: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+        }
+}
+@media screen and (min-width: 1440px) {
+    .img {
+        width: 300px;
+    }
+    .title_wrapp {
+         width: 268px;
+    }
 }

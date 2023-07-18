@@ -15,7 +15,7 @@ export const ChooseYourBreakfast = () => {
             <use href={sprite + "#crossbolt"}/>
           </svg>
 
-        <Link to= "/categories">
+        <Link to= "/categories/Breakfast">
         <button type="button" className={css.btn}> 
        
         See recipes

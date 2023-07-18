@@ -26,9 +26,8 @@
         height: 114px;
         padding: 16px 16px 38px 16px;
         margin-top: 0;
-        margin-right: 40px;
-        /* margin-left: 1020px; */
-       
+        margin-right: 80px;
+             
      }
   }  
 
@@ -81,8 +80,7 @@ color: #3E4462;
 
   @media screen and (min-width: 1440px) {
     .btn {
-        
-        top: 65%;
+    top: 65%;
      }
   }
 
@@ -100,8 +98,9 @@ color: #3E4462;
  @media screen and (min-width: 768px) {
   
  .crossbolt {
-   
-   margin-left: 15px;
+   width: 186px;
+   height: 115px;
+   margin-left: 20px;
    display: block;
  }
 }

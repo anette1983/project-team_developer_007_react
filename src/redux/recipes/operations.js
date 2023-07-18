@@ -17,9 +17,7 @@ export const fetchByCategory = createAsyncThunk(
   'recipes/fetchByCategory',
   async (category, thunkAPI) => {
     try {
-      const { data } = await axios.get('/api/recipes/', {
-        params: { category },
-      });
+      const { data } = await axios.get(`/api/recipes/category/${category}`);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -45,7 +43,7 @@ export const fetchRecipeById = createAsyncThunk(
   'recipes/fetchRecipeById',
   async (recipeId, thunkAPI) => {
     try {
-      const { data } = await axios.get(`/api/recipes/recipe/${recipeId}`);
+      const { data } = await axios.get(`/api/recipes/${recipeId}`);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
