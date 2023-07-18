@@ -4,30 +4,26 @@ import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import css from '../../pages/pages.module.css';
 import myRecipesCss from './MyRecipesPage.module.css';
 import MyRecipesList from 'components/MyRecipesList/MyRecipesList';
-// import { selectToken } from 'redux/auth/selectors';
 import {
   selectMyRecipesError,
   selectMyRecipesIsLoading,
 } from 'redux/myRecipes/selectors';
 import { useEffect } from 'react';
-// import { fetchMyRecipes } from 'redux/myRecipes/operations';
 import searchCss from '../SearchPage/searchContainer.module.css';
-// import MyRecipesPagination from 'components/MyRecipesPagination/Paginator';
-// import { Pagination } from '@mui/material';
 import Paginator from 'components/MyRecipesPagination/Paginator';
 import { useLocation } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const MyRecipesPage = () => {
   const isLoading = useSelector(selectMyRecipesIsLoading);
   const error = useSelector(selectMyRecipesError);
-  // const dispatch = useDispatch();
-  // const token = useSelector(selectToken);
 
   // useEffect(() => {
   //   if (token) {
-  //     dispatch(fetchMyRecipes());
+  //     dispatch(fetchMyRecipes(page));
   //   }
-  // }, [dispatch, token]);
+  // }, [dispatch, token, page]);
+
   const text = 'My recipes';
 
   const { pathname } = useLocation();
@@ -41,7 +37,7 @@ const MyRecipesPage = () => {
       <div className={`${myRecipesCss.wrapper_leaf}`}>
         <div className={myRecipesCss.leaf_bg}></div>
         <div className={css.section}>
-          {isLoading && !error && <h3>Request in progress...</h3>}
+          {isLoading && !error && <Loader />}
           {error && <p>{error}</p>}
           <div className={`${css.container} ${searchCss.container}`}>
             <MainPageTitle text={text} />
@@ -53,7 +49,9 @@ const MyRecipesPage = () => {
           <div
             className={`${myRecipesCss.container} ${myRecipesCss.pagin_container}`}
           >
-            <Paginator />
+            <Paginator
+            // onPageChange={page => dispatch(fetchMyRecipes(page))}
+            />
           </div>
         </div>
       </div>

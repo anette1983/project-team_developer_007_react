@@ -13,20 +13,17 @@ export const handleFetchMyRecipes = (state, { payload }) => {
   state.availableRecipes = payload;
 };
 
-
 export const handleAddMyRecipe = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
   state.availableRecipes = payload;
 };
 
-
 export const handleDeleteMyRecipe = (state, { payload }) => {
-
   state.isLoading = false;
   state.error = null;
-  const index = state.availableRecipes.findIndex(
+  const index = state.availableRecipes.recipes.findIndex(
     item => item._id === payload._id
   );
-  state.availableRecipes.splice(index, 1);
+  state.availableRecipes.recipes.splice(index, 1);
 };

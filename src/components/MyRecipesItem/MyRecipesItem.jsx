@@ -1,19 +1,22 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import css from './MyRecipesItem.module.css';
 import { deleteMyRecipe, fetchMyRecipes } from 'redux/myRecipes/operations';
 import sprite from '../../images/svg/sprite.svg';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-const MyRecipesItem = ({ recipe }) => {
+const MyRecipesItem = ({ recipe, page }) => {
   const [delId, setDelId] = useState();
   const dispatch = useDispatch();
+  const [, setSearchParams] = useSearchParams();
 
   const handleDelete = id => {
     setDelId(id);
     dispatch(deleteMyRecipe(id));
-    dispatch(fetchMyRecipes());
+    setSearchParams({ page });
+    dispatch(fetchMyRecipes(page));
+
     return Notify.success(`Recipe deleted successfully`);
   };
 
