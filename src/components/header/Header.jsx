@@ -34,7 +34,9 @@ const Header = () => {
             </div>
           </div>
         ) : (
-          <Loader />
+          <div className={css.header}>
+            <Loader />
+          </div>
         ))}
     </>
   );

@@ -7,7 +7,7 @@ export const Footer = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     isLoggedIn && (
-      <div className={css.footer}>
+      <footer className={css.footer}>
         <div className={css.container}>
           <Navigation />
         </div>
@@ -15,7 +15,7 @@ export const Footer = () => {
           <p>&#169; 2023 All Rights Reserved.</p>
           <p className={css.footer_text_service}>Terms of Service</p>
         </div>
-      </div>
+      </footer>
     )
   );
 };

@@ -84,7 +84,6 @@ export const RecipeIngredientsFields = ({
   };
 
   const setQuantityMeasure = (index, value, id) => {
-    console.log('Set quantity', {id, value})
     setQuantityIsActive(prevState => {
       const newState = [...prevState];
       newState[index] = !newState[index];
@@ -95,7 +94,6 @@ export const RecipeIngredientsFields = ({
   };
 
   const changeQuantity = (index, value, id) => {
-    console.log('Quantity', { index, value })
     updateIngredient(index, value, id, 'ingredientsQuantity');
     updateErrors([`ingredients[${index}].ingredientQuantity`]);
   };
@@ -117,7 +115,8 @@ export const RecipeIngredientsFields = ({
   };
 
   const setIngredient = (index, value, id) => {
-    updateIngredient(index, value, id, 'name');
+    const choosenIngr = ingredientsList.find(item => item.name === value);
+    updateIngredient(index, value, choosenIngr._id, 'name');
 
     setIngredientIsActive(prevState => {
       const newState = [...prevState];
@@ -176,7 +175,7 @@ export const RecipeIngredientsFields = ({
                           className={css.selectIngredientItem}
                           key={item}
                           onClick={() =>
-                            setIngredient(index, item, ingredient.id)
+                            setIngredient(index, item, ingredient._id)
                           }
                         >
                           {item}
@@ -232,7 +231,7 @@ export const RecipeIngredientsFields = ({
               <button
                 className={css.deleteBtn}
                 type="button"
-                onClick={() => deleteField(ingredient.id, index)}
+                onClick={() => deleteField(ingredient._id, index)}
               >
                 <MdOutlineClose className={css.deleteBtnIcon} size="18px" />
               </button>

@@ -16,8 +16,10 @@ const AddRecipePage = () => {
   }, [pathname]);
   return (
     <div className={css.wrapper}>
-      <section className={css.pageContent}>
+      <div className={css.titleWrapper}>
         <MainPageTitle text="Add recipe" />
+      </div>
+      <section className={css.pageContent}>
         <div className={css.formContainer}>
           <AddRecipeForm />
           <div className={css.sidebar}>
