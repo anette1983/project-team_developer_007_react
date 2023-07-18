@@ -118,6 +118,7 @@ const SearchPage = () => {
       {recipes && (
         <>
           <div className={`${css.container} ${searchCss.container}`}>
+            
             <SearchedRecipesList recipes={recipes} />
           </div>
           <div className={`${searchCss.paginationWrap} `}>

@@ -1,21 +1,18 @@
-import RecipeItem from "components/RecipeItem/RecipeItem";
+
 
 import css from "./searcLwist.module.css"
+
+import { SearchRecipeItem } from "components/SearchRecipeItem/SearchRecipeItem";
 
 const SearchedRecipesList = ({ recipes }) => {
     
     return (
       
         <ul className={css.list}>
-            
-            {recipes.map(element => {
-              
-                return <RecipeItem url={element.preview} text={ element.title} key={element._id} />
-          })}
-           
-           
+            <SearchRecipeItem data={ recipes} />         
         </ul>
     )
 }
 
 export default SearchedRecipesList;
+

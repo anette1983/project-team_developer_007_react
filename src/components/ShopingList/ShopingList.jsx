@@ -10,11 +10,14 @@ const ShopingList = () => {
   const shopinList = useSelector(selectShopingList);
   const [itemId, setItemId] = useState("");
 
-  useEffect(() => {
-    dispatch(fetchShopingList())
+  useEffect(() => {   
+   
+     dispatch( fetchShopingList())
+  
   }, [dispatch])
 
-  const handleDelete = ({currentTarget}) => {
+  const handleDelete = ({ currentTarget }) => {
+    
     setItemId(currentTarget.id);
   }
   useEffect(() => {
@@ -24,7 +27,7 @@ const ShopingList = () => {
 
   return (
     <div className={css.wrap}>
-      <ul className={css.list}>
+       <ul className={css.list}>
         {shopinList.map(item => {
           return (<ShopingItem title={item.ingredient.name} img={item.ingredient.img}
             quantity={item.measure} key={item.ingredient._id} id={item.ingredient._id} deleteItem={ handleDelete} />
