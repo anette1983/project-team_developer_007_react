@@ -28,6 +28,7 @@ export const RecipePageTitle = () => {
     favoriteRecipes.find(el => el._id === recipe._id)
       ? setIsInFavorite(true)
       : setIsInFavorite(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleClick = () => {
