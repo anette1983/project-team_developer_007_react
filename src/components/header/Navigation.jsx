@@ -1,9 +1,13 @@
-import React from 'react';
+// import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './header.module.css';
 import { ReactComponent as Search } from '../../images/header/svg/search/search.svg';
+// import { fetchShopingList } from 'redux/shopingList/operations';
+// import { useDispatch } from 'react-redux';
 
 const Navigation = ({ width, closeModal }) => {
+  // const dispatch = useDispatch()
+
   return (
     <nav className={width < 1441 ? css.mobileNav : css.nav}>
       <NavLink
@@ -37,7 +41,9 @@ const Navigation = ({ width, closeModal }) => {
       <NavLink
         to="/shopping-list"
         className={navData => (navData.isActive ? css.active : '')}
-        onClick={closeModal}
+        onClick={() => {
+          closeModal()
+        }}
       >
         Shopping List
       </NavLink>

@@ -3,7 +3,6 @@ import { Nav } from "../Nav/Nav"
 import { SubscribeForm } from "../SubscribeForm/SubscribeForm"
 import css from "./Navigation.module.css";
 import { Link } from "react-router-dom";
-// import dfd from "../logo/logo.svg"
 import { ReactComponent as Logo } from "../logo/logo.svg"
 
 export const Navigation =()=>{

@@ -3,7 +3,6 @@ import css from "../pages.module.css"
 import searchCss from "./shopingContainer.module.css"
 import ShopingHeader from "components/ShopingHeader/ShopingHeader";
 import ShopingList from "components/ShopingList/ShopingList";
-
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -15,7 +14,6 @@ const ShoppingListPage = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-
   return (
     <div className={css.section}>
     <div className={`${css.container} ${searchCss.container}`}>
@@ -25,7 +23,7 @@ const ShoppingListPage = () => {
                 <ShopingHeader/>
       </div>
       <div className={`${css.container} ${searchCss.sahopingConteiner}`}>
-                <ShopingList/>
+        <ShopingList/>
       </div>
       </div>
     );

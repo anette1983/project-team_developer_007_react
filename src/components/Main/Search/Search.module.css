@@ -32,27 +32,23 @@
     border: 1px solid #F0F0F0;
     position: relative;
     padding-left: 32px;
-    color: #BDBDBD;
     outline: none;
     opacity: 0.8;
+    color: #23262A
+  
 }
-.input::placeholder{
-    border-right: #23262A;
- 
-}
-.input:focus {
+
+ .input:focus {
     color:#23262A;
-   
-    border-color: linear-gradient(0deg, rgba(35, 38, 42, 0.2), rgba(35, 38, 42, 0.2)),
-linear-gradient(0deg, #FFFFFF, #FFFFFF);
-border:1px solid 
-}
+   background-color: transparent;
+   border: 1px solid #23262A;
+} 
 
 @media screen and (min-width: 768px) {
     .input {
         width: 369px ;
         height: 59px;
-        
+       
      }
   }
 

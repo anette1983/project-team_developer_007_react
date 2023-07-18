@@ -5,7 +5,6 @@ export const RecipePreparation = () => {
   const recipe = useSelector(selectCurrentRecipe);
   const instructionArr =
     Object.keys(recipe).length !== 0 ? recipe.instructions.split('.') : [];
-  console.log(instructionArr);
   return (
     <section>
       <h2>Recipe Preparation</h2>

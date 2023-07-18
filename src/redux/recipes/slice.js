@@ -5,8 +5,6 @@ import {
   fetchByCategory,
   fetchMore,
   fetchRecipeById,
-  fetchBySearch,
-  fetchMoreBySearch,
   fetchPopular,
   clearRecipes,
 } from './operations';
@@ -37,12 +35,6 @@ const recipesSlice = createSlice({
       .addCase(fetchRecipeById.pending, handlePending)
       .addCase(fetchRecipeById.fulfilled, handleFetchByIdFullfilled)
       .addCase(fetchRecipeById.rejected, handleReject)
-      .addCase(fetchBySearch.pending, handlePending)
-      .addCase(fetchBySearch.fulfilled, handleFirstFetchFulfilled)
-      .addCase(fetchBySearch.rejected, handleReject)
-      .addCase(fetchMoreBySearch.pending, handlePending)
-      .addCase(fetchMoreBySearch.fulfilled, handleFetchMoreFullfilled)
-      .addCase(fetchMoreBySearch.rejected, handleReject)
       .addCase(fetchPopular.pending, handlePending)
       .addCase(fetchPopular.fulfilled, handleFirstFetchFulfilled)
       .addCase(fetchPopular.rejected, handleReject)

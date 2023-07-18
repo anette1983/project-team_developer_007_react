@@ -1,7 +1,7 @@
 import css from './ShopingItem.module.css';
 
-// const ShopingItem = ({ img, title, quantity, handleDelete }) => {
-const ShopingItem = ({ title, quantity }) => {
+
+const ShopingItem = ({ title, img, quantity, deleteItem, id }) => {
   const {
     container,
     wrapper_img,
@@ -12,15 +12,16 @@ const ShopingItem = ({ title, quantity }) => {
     wrapper_img_text,
     icon,
     ingredient_img,
+    delete_wraper,
   } = css;
   return (
-    <li className={container}>
+    <li className={container} onClick={deleteItem} id={id}>
       <div className={wrapper_img_text}>
-        <div className={wrapper_img}>
+        <div className={wrapper_img} >
           <img
             className={ingredient_img}
-            src={require('../../images/shopping_list/avocado_mob_1x.png')}
-            alt="trout"
+            src={img}
+            alt={title}
           />
         </div>
         <div className={wrapper_ingridient_title}>
@@ -30,7 +31,9 @@ const ShopingItem = ({ title, quantity }) => {
       <div className={wrapper_ingridient_quantity}>
         <p className={text_ingridient_quantity}>{quantity}</p>
       </div>
-      <svg
+      <div className={ delete_wraper} id='delete'>
+        <svg
+          
         className={icon}
         width="14"
         height="14"
@@ -38,21 +41,23 @@ const ShopingItem = ({ title, quantity }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
+          <path
+            id='delete'
           d="M10.9375 3.0625L3.0625 10.9375"
           stroke="#333333"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M10.9375 10.9375L3.0625 3.0625"
           stroke="#333333"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
-      </svg>
+        </svg>
+        </div>
     </li>
   );
 };

@@ -1,7 +1,7 @@
 .list {
     display: flex;
-    gap: 8px;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .list_item {

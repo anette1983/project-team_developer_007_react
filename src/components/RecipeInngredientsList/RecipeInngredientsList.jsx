@@ -12,7 +12,6 @@ export const RecipeInngredientsList = () => {
   const recipe = useSelector(selectCurrentRecipe);
   const ingredients =
     Object.keys(recipe).length !== 0 ? recipe.ingredients : [];
-  console.log(ingredients);
 
   return (
     <section className={section}>

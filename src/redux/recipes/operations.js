@@ -41,56 +41,11 @@ export const fetchMore = createAsyncThunk(
   }
 );
 
-// export const fetchRecipeById = createAsyncThunk(
-//   'recipes/fetchRecipeById',
-//   async (recipiId, thunkAPI) => {
-//     console.log(recipiId);
-//     try {
-//       const { data } = await axios.get('/api/recipes/', {
-//         params: { id: recipiId },
-//       });
-//       return data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
 export const fetchRecipeById = createAsyncThunk(
   'recipes/fetchRecipeById',
   async (recipeId, thunkAPI) => {
     try {
       const { data } = await axios.get(`/api/recipes/recipe/${recipeId}`);
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
-
-export const fetchBySearch = createAsyncThunk(
-  'recipes/fetchBySearch',
-  async ({ searchBy, query }, thunkAPI) => {
-    //possible value for searchBy: 'search' (means title) || 'ingredients'
-    try {
-      const { data } = await axios.get(`/api/recipes/${searchBy}`, {
-        params: { query },
-      });
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
-
-export const fetchMoreBySearch = createAsyncThunk(
-  'recipes/fetchMoreBySearch',
-  async ({ searchBy, query, page, limit }, thunkAPI) => {
-    //possible value for searchBy: 'search' (means title) || 'ingredients'
-    try {
-      const { data } = await axios.get(`/api/recipes/${searchBy}`, {
-        params: { query, page, limit },
-      });
-
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
