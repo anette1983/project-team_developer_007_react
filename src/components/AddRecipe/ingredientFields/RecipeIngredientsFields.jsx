@@ -84,7 +84,6 @@ export const RecipeIngredientsFields = ({
   };
 
   const setQuantityMeasure = (index, value, id) => {
-    console.log('Set quantity', {id, value})
     setQuantityIsActive(prevState => {
       const newState = [...prevState];
       newState[index] = !newState[index];
@@ -95,7 +94,6 @@ export const RecipeIngredientsFields = ({
   };
 
   const changeQuantity = (index, value, id) => {
-    console.log('Quantity', { index, value })
     updateIngredient(index, value, id, 'ingredientsQuantity');
     updateErrors([`ingredients[${index}].ingredientQuantity`]);
   };
@@ -118,7 +116,6 @@ export const RecipeIngredientsFields = ({
 
   const setIngredient = (index, value, id) => {
     const choosenIngr = ingredientsList.find(item => item.name === value);
-    console.log('FIND', choosenIngr);
     updateIngredient(index, value, choosenIngr._id, 'name');
 
     setIngredientIsActive(prevState => {

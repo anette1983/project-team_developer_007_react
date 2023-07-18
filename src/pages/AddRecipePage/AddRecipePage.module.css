@@ -4,8 +4,11 @@
     padding: 0 16px;
 }
 
-.pageContent {
+.titleWrapper {
     padding-top: 114px;
+}
+
+.pageContent {
     padding-bottom: 100px;
 }
 
@@ -24,8 +27,11 @@
         padding-top: 100px;
     }
 
-    .pageContent {
+    .titleWrapper {
         padding-top: 136px;
+    }
+
+    .pageContent {
         padding-bottom: 200px;
     }
 
@@ -36,7 +42,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .pageContent {
+    .titleWrapper {
         padding-top: 164px;
     }
 

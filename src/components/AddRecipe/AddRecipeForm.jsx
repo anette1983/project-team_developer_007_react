@@ -1,11 +1,9 @@
 import React from 'react';
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { addMyRecipe } from '../../redux/myRecipes/operations';
-import { selectMyRecipesError } from '../../redux/myRecipes/selectors';
-import { selectIngredients } from "../../redux/ingredients/selectors";
 
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -34,8 +32,6 @@ export const AddRecipeForm = () => {
   ]);
   const [preparation, setPreparation] = useState('');
   const [errors, setErrors] = useState({});
-
-    const ingredientsList = useSelector(selectIngredients);
 
   const onInputImgUpload = e => {
     setImg(e.target.files[0]);
@@ -86,17 +82,11 @@ export const AddRecipeForm = () => {
   };
 
   const updateIngredient = (index, value, _id, prop) => {
-    console.log(ingredientsList);
-    // const choosenIngr = ingredientsList.find(item => item.name === value);
-    // console.log('FIND', choosenIngr);
-    console.log('ADD', { index, value, _id, prop })
 
     setIngredients(prevState => {
-      console.log('STATE', prevState)
       const newState = [...prevState];
       newState[index][prop] = value;
       newState[index].id = _id;
-      console.log('NEWSTATE', newState);
       return newState;
     });
   };
@@ -114,7 +104,6 @@ export const AddRecipeForm = () => {
         const { id, ingredientsQuantity, ingredientsQuantityMeasure } =
           ingredient;
         const measure = `${ingredientsQuantity} ${ingredientsQuantityMeasure}`;
-        console.log('OBJECTRES', { measure: measure, _id: id });
         return { measure: measure, _id: id };
       }),
     [ingredients]
@@ -142,7 +131,6 @@ export const AddRecipeForm = () => {
 
 
   const dispatch = useDispatch();
-  const error = useSelector(selectMyRecipesError);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -152,17 +140,14 @@ export const AddRecipeForm = () => {
         dispatch(addMyRecipe(formData))
           .unwrap()
           .then((res) => {
-            console.log('RES', res)
             navigate('/my', { replace: true });
             Notify.success('Hooray! The recipe was successfully added');
           })
           .catch(error => {
-            console.log(error)
             Notify.error('Ooops, smth is going wrong... Try again!');
           });
       })
       .catch(err => {
-        console.log('ERRR', err)
         const errors = err.inner.reduce(
           (acc, err) => ({ ...acc, [err.path]: err.message }),
           {}
@@ -175,7 +160,6 @@ export const AddRecipeForm = () => {
     setErrors(prevState => ({ ...prevState, [value]: '' }));
   };
 
-  console.log(error);
 
   return (
     <div className={css.addSectionWrap}>
