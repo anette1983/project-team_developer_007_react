@@ -34,9 +34,11 @@ const SearchPage = () => {
     setPage(value);
   };
 
+
   useEffect(() => {
-    dispatch(clearRecipes());
-  }, [dispatch]);
+    if(!searchParams.size)
+    {dispatch(clearRecipes());}
+  }, [dispatch, searchParams.size]);
 
   useEffect(() => {
     if (query) {
