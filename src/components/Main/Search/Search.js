@@ -19,9 +19,10 @@ const handleChange = e => setValue(e.currentTarget.value.toLowerCase());
             placeholder="Enter the text"
             />
             <Link
-           
-            to={`/search/?query=${value}`} 
+           to={value ? `/search/?query=${value}` : '#'}
+            
             >
+                
             <button className={css.btn} type="submit">Search</button>
             </Link>
             </form>

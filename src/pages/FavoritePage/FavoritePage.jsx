@@ -23,12 +23,18 @@ const FavoritePage = () => {
 
   return (
     <>
-      <section className={`${css.container} ${searchCss.container}`}>
-        <MainPageTitle text="Favorites" />
-      </section>
-      <section>
-        <FavoriteList favoriteRecipes={favoriteRecipes}></FavoriteList>
-      </section>
+      {favoriteRecipes.length === 0 ? (
+        <h1>No favorite recipes</h1>
+      ) : (
+        <>
+          <section className={`${css.container} ${searchCss.container}`}>
+            <MainPageTitle text="Favorites" />
+          </section>
+          <section>
+            <FavoriteList favoriteRecipes={favoriteRecipes}></FavoriteList>
+          </section>
+        </>
+      )}
     </>
   );
 };

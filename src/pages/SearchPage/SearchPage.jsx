@@ -4,7 +4,6 @@ import SearchForm from '../../components/SearchForm/SearchInput';
 import css from '../pages.module.css';
 import searchCss from './searchContainer.module.css';
 import SearchedRecipesList from 'components/SearchedRecipesList/SearchedRecipesList';
-import { Pagination } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { selectRecipes } from '../../redux/recipesBySearch/selectors';
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,18 +25,15 @@ const SearchPage = () => {
   const isLoged = useSelector(selectIsLoggedIn);
   const query = searchParams.get('query') ?? '';
 
-  const [pageCount, setPageCount] = useState(1)
-  const windowsWidth = window.innerWidth
-  
-  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-   
-    setPage(value);
-  };
+  const [pageCount, setPageCount] = useState(1);
+  const windowsWidth = window.innerWidth;
 
+  
 
   useEffect(() => {
-    if(!searchParams.size)
-    {dispatch(clearRecipes());}
+    if (!searchParams.size) {
+      dispatch(clearRecipes());
+    }
   }, [dispatch, searchParams.size]);
 
   useEffect(() => {
@@ -58,9 +54,9 @@ const SearchPage = () => {
     //set pagination pages
 
     if (total) {
-       setPageCount(Math.ceil(+total / limit));
+      setPageCount(Math.ceil(+total / limit));
     }
-   
+
     if (isLoged) {
       dispatch(fetchMoreBySearch({ searchBy, page, limit, query }));
     }
@@ -82,13 +78,11 @@ const SearchPage = () => {
     setSearchParams({ query: value.search, page, limit });
   };
 
-
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
 
   return (
     <div className={css.section}>
@@ -96,12 +90,16 @@ const SearchPage = () => {
         <MainPageTitle text="Search" />
       </div>
       <div className={`${css.container} ${searchCss.container}`}>
-
-        <SearchForm title={setParams} setSearchBy={setSearchBy} page={setPage} />
-
+        <SearchForm
+          title={setParams}
+          setSearchBy={setSearchBy}
+          page={setPage}
+        />
       </div>
       {!recipes && (
-        <div className={`${css.container} ${searchCss.container} ${searchCss.center}`}>
+        <div
+          className={`${css.container} ${searchCss.container} ${searchCss.center}`}
+        >
           <img
             className={searchCss.mobPhoto}
             src={require('../../images/SearchPage/vegetables-5abfb9c60122f5 1.png')}
@@ -118,13 +116,7 @@ const SearchPage = () => {
       {recipes && (
         <>
           <div className={`${css.container} ${searchCss.container}`}>
-            
             <SearchedRecipesList recipes={recipes} />
-          </div>
-          <div className={`${searchCss.paginationWrap} `}>
-
-            {page && <Pagination count={pageCount} page={page} onChange={handleChange} siblingCount={0}/>}
-
           </div>
         </>
       )}
@@ -132,3 +124,5 @@ const SearchPage = () => {
   );
 };
 export default SearchPage;
+
+

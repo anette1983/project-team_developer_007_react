@@ -1,11 +1,11 @@
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { selectIsRefreshing, selectToken } from 'redux/auth/selectors';
 import Loader from './Loader';
 import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
 import { refreshUser } from 'redux/auth/operations';
-import { selectIsRefreshing } from 'redux/auth/selectors';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 
@@ -27,9 +27,9 @@ const ShoppingListPage = lazy(() =>
 );
 
 export const App = () => {
-  // Перед сдачеє проекта видалити коментарі в RecipePage
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
+  const persistedToken = useSelector(selectToken);
   // const token = JSON.parse(localStorage.getItem('token')) ?? null;
 
   // useEffect(() => {
@@ -39,23 +39,16 @@ export const App = () => {
   //   }
   // }, [dispatch, token]);
 
-  // const hasFetchedData = useRef(false);
-
-  // useEffect(() => {
-  //   if (!hasFetchedData.current) {
-  //     dispatch(refreshUser());
-  //     hasFetchedData.current = true;
-  //   }
-  // }, []);
-
   useEffect(() => {
+    if (!persistedToken) {
+      return;
+    }
     dispatch(refreshUser());
-  }, [dispatch]);
+  }, [dispatch, persistedToken]);
+
   // useEffect(() => {
-  //   if (isLoggedIn) {
-  //     dispatch(refreshUser());
-  //   }
-  // }, [dispatch, isLoggedIn]);
+  //   dispatch(refreshUser());
+  // }, [dispatch]);
 
   return isRefreshing ? (
     <Loader />
