@@ -1,5 +1,5 @@
 export const initialState = {
-  favoriteRecipesList: [],
+  favoriteRecipesList: { recipes: [] },
   isLoading: false,
   error: null,
 };
