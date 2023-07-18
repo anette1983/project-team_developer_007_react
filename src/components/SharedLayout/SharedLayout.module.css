@@ -1,0 +1,64 @@
+.layoutBG {
+    background-image: url(../../images/bgc/404_spinach_top_bg_mob_1x.png);
+    background-repeat: no-repeat;
+
+        background-position-x: calc(50% - 60px);
+        background-position-y: calc(100% + 200px);
+        background-size: 256px;
+    }
+
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .layoutBG {
+        background-image: url(../../images/bgc/404_spinach_top_bg_mob_2x.png);
+        background-position-x: calc(50% - 60px);
+        background-position-y: calc(100% + 200px);
+        background-size: 256px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .layoutBG {       
+        background-image: url(../../images/bgc/404_spinach_top_bg_tab_1x.png);
+        background-repeat: no-repeat;
+
+        background-position-x: calc(50% - 172px);
+        background-position-y: calc(100% + 300px);
+        background-size: 423px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .layoutBG {
+            background-image: url(../../images/bgc/404_spinach_top_bg_tab_2x.png);
+            background-position-x: calc(50% - 172px);
+            background-position-y: calc(100% + 300px);
+            background-size: 423px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .layoutBG {
+        background-image: url(../../images/bgc/404_spinach_top_bg_desk_1x.png);
+        background-repeat: no-repeat;
+
+        background-position-x: calc(50% - 440px);
+        background-position-y: calc(100% + 400px);
+        background-size: 558px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .layoutBG {
+            background-image: url(../../images/bgc/404_spinach_top_bg_desk_2x.png);
+            background-position-x: calc(50% - 440px);
+            background-position-y: calc(100% + 400px);
+            background-size: 558px;
+        }
+    }
+}
