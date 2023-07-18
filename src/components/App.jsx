@@ -1,7 +1,7 @@
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsRefreshing, selectToken } from 'redux/auth/selectors';
+import { selectIsRefreshing } from 'redux/auth/selectors';
 import Loader from './Loader';
 import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
@@ -29,7 +29,7 @@ const ShoppingListPage = lazy(() =>
 export const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  const persistedToken = useSelector(selectToken);
+  // const persistedToken = useSelector(selectToken);
   // const token = JSON.parse(localStorage.getItem('token')) ?? null;
 
   // useEffect(() => {
@@ -39,16 +39,16 @@ export const App = () => {
   //   }
   // }, [dispatch, token]);
 
-  useEffect(() => {
-    if (!persistedToken) {
-      return;
-    }
-    dispatch(refreshUser());
-  }, [dispatch, persistedToken]);
-
   // useEffect(() => {
+  //   if (!persistedToken) {
+  //     return;
+  //   }
   //   dispatch(refreshUser());
-  // }, [dispatch]);
+  // }, [dispatch, persistedToken]);
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
   return isRefreshing ? (
     <Loader />
