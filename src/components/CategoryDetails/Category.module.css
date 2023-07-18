@@ -14,7 +14,7 @@
 .tabs_list{
     display: flex;
     flex-direction: column;   
-    align-items: center;
+    align-items: center; 
 }
 .img{
     
@@ -24,6 +24,7 @@
 }
 .list_item{
 position: relative;
+margin-top: 28px;
 }
 .title_wrapp{
     position: absolute;
