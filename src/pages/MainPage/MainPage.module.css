@@ -128,7 +128,6 @@ background-position: 15px 258px;
   .container {
     width: 1440px;
     margin: 0 auto;
-    /* padding: 0 100px 0 100px; */
     background-image: url('../../../src/images/bgc/salt_desk_1x.png');
     background-position: 710px 110px;
     background-size: 578px;
@@ -242,5 +241,6 @@ background-position: 15px 258px;
       margin-left: 107px;
       text-align: start;
       line-height: 24px;
+      margin-bottom: 0;
     }
     }

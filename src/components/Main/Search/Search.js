@@ -7,8 +7,6 @@ const [value, setValue] = useState ('');
 
 const handleChange = e => setValue(e.currentTarget.value.toLowerCase());
 
-
-
     return (
         <form className={css.form}>
             <input
@@ -26,9 +24,6 @@ const handleChange = e => setValue(e.currentTarget.value.toLowerCase());
             >
             <button className={css.btn} type="submit">Search</button>
             </Link>
-            
-            
-            
-        </form>
+            </form>
     )
 }
