@@ -2,34 +2,40 @@
     .container {
         display: flex;
         padding: 50px 16px 0 16px;
-        
+
     }
+
+    /* .section_wrapp {
+                            width: 375px;
+                        }
+                                                .tablist{
+width: 375px;
+                                                } */
 }
 
 @media screen and (min-width: 768px) {
     .container {
         padding: 72px 32px 0 32px;
-        width: 756px;
+
     }
 
+    .section_wrapp {
+        max-width: 768px;
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 1440px) {
     .container {
         padding: 102px 100px 0 100px;
     }
-        .section_wrapp {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+
+    .section_wrapp {
+        min-width: 1440px;
+        margin: auto;
+    }
 }
 
-.tablist{
-    display: flex;
-    width: 1440px;
+.tablist {
     padding-bottom: 100px;
-    background:no-repeat url('../../images/bgc/404_spinach_top_bg_mob_1x.png') bottom -220px  left  ;
 }
-
