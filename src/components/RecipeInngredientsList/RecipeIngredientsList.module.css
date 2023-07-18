@@ -13,11 +13,11 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--PRIMARYCOLOR);
-  width: 100%;
+  width: 343px;
   height: 42px;
   border-radius: 8px;
   padding: 12px 14px;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
 }
 
 .title_table {
@@ -32,6 +32,15 @@
   margin-left: 122px;
 }
 
+.ingredients_list li:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.ingredients_list {
+  width: 343px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 767.98px) {
   .section {
     padding-top: 50px;
@@ -42,6 +51,7 @@
     height: 60px;
     padding: 21px 32px;
     margin-bottom: 32px;
+    width: 704px;
   }
 
   .title_table {
@@ -51,6 +61,14 @@
 
   .title_table_position {
     margin-left: 312px;
+  }
+
+  .ingredients_list li:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+
+  .ingredients_list {
+    width: 704px;
   }
 }
 
