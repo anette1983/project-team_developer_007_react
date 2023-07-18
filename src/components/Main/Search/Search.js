@@ -20,8 +20,9 @@ const handleChange = e => setValue(e.currentTarget.value.toLowerCase());
             />
             <Link
            to={value ? `{/search/?query=${value}}` : '#'}
-            // to={`/search/?query=${value}`} 
+            
             >
+                
             <button className={css.btn} type="submit">Search</button>
             </Link>
             </form>
