@@ -33,7 +33,7 @@ background-position: 100px -30px;
 @media screen and (min-width: 1440px) {
   .wrapper {
     background-image: url('../../../src/images/bgc/start_corner_desk_1x.png');
-    background-position: 720px -70px;
+    background-position: 720px -10px;
     background-size: 50%;
     
   }
@@ -71,8 +71,8 @@ background-position: 0 10px;
 @media screen and (min-width: 1440px) {
   .wrapper_leaf {
     background-image: url('../../../src/images/bgc/start_midle_desk_1x.png');
-    background-position: 832px -155px;
-    background-size: 45%;
+    background-position: 505px -50px;
+    background-size: 65%;
    
    
    }
@@ -108,7 +108,6 @@ background-position: 15px 258px;
   .container {
     margin: 0 auto;
     width: 768px; 
-    flex-direction: row;
     flex-wrap: wrap;
     background-image: url('../../../src/images/bgc/salt_tab_1x.png');
     background-position: 400px 79px;
@@ -176,10 +175,11 @@ background-position: 15px 258px;
     padding-left: 32px;
     padding-bottom: 15px;
     font-size: 72px;
+    text-align:start;
     line-height: 72px;
     background-image: url('../../../src/images/bgc/start_lefttop_tab_1x.png');
     background-position: 0px -20px;
-    background-size: 12%;
+    background-size: 7%;
   }
 
   @media (min-device-pixel-ratio: 2),
