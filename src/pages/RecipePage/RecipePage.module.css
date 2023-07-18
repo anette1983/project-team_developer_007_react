@@ -6,8 +6,7 @@
 .container {
   width: 375px;
   margin: 0 auto;
-  padding: 0 16px;
-  outline: 1px solid red;
+  padding: 0 0;
 }
 
 .section {

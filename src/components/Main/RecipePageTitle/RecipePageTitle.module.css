@@ -11,6 +11,53 @@
   align-items: center;
   justify-content: center;
   background-color: gray;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 768px;
+  background-image: url(../../../images/bgc/recipe_mob_1x.png);
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../../images/bgc/recipe_mob_2x.png);
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: url(../../../images/bgc/recipe_tab_1x.png);
+    max-width: 1439px;
+    height: 495px;
+  }
+}
+
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 769px) and (min-resolution: 192dpi),
+  screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../../images/bgc/recipe_tab_2x.png);
+    max-width: 1439px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    background-image: url(../../../images/bgc/recipe_desk_1x.png);
+    max-width: 1440px;
+    height: 493px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1440px) and (min-resolution: 192dpi),
+  screen and (min-width: 1440px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../../images/bgc/recipe_desk_2x.png);
+    max-width: 1440px;
+  }
 }
 
 .title {
@@ -50,7 +97,14 @@
   margin-bottom: 42px;
 }
 
+.icon {
+  background-color: transparent;
+  margin-right: 4px;
+}
+
 .time_prepeare {
+  display: flex;
+  align-items: center;
   color: #23262a;
   font-family: Poppins_Medium;
   font-size: 10px;
