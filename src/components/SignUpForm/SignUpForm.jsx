@@ -33,7 +33,7 @@ export const SignUpForm = () => {
           validateOnBlur={false}
           onSubmit={handleFormSubmit}
         >
-          {({ errors, touched }) => (
+          {({ errors, touched, values }) => (
             <Form className={css.Registration__form}>
               <b className={css.Registration__title}>Registration</b>
 
@@ -43,7 +43,9 @@ export const SignUpForm = () => {
                     className={`${css.Registration__input} ${
                       touched.name && errors.name
                         ? `${css.Registration__input_error}`
-                        : touched.name && !errors.name
+                        : touched.name &&
+                          !errors.name &&
+                          values.name.length >= 1
                         ? `${css.Registration__input_success}`
                         : ''
                     }`}
@@ -59,7 +61,9 @@ export const SignUpForm = () => {
                     className={`${css.Registration__svg} ${
                       touched.name && errors.name
                         ? `${css.Registration__svg_error}`
-                        : touched.name && !errors.name
+                        : touched.name &&
+                          !errors.name &&
+                          values.name.length >= 1
                         ? `${css.Registration__svg_success}`
                         : ''
                     }`}
@@ -75,7 +79,9 @@ export const SignUpForm = () => {
                     className={`${css.Registration__input} ${
                       touched.email && errors.email
                         ? `${css.Registration__input_error}`
-                        : touched.email && !errors.email
+                        : touched.email &&
+                          !errors.email &&
+                          emailRegexp.test(values.email)
                         ? `${css.Registration__input_success}`
                         : ''
                     }`}
@@ -97,7 +103,9 @@ export const SignUpForm = () => {
                     className={`${css.Registration__svg} ${
                       touched.email && errors.email
                         ? `${css.Registration__svg_error}`
-                        : touched.email && !errors.email
+                        : touched.email &&
+                          !errors.email &&
+                          emailRegexp.test(values.email)
                         ? `${css.Registration__svg_success}`
                         : ''
                     }`}
@@ -113,7 +121,9 @@ export const SignUpForm = () => {
                     className={`${css.Registration__input} ${
                       touched.password && errors.password
                         ? `${css.Registration__input_error}`
-                        : touched.password && !errors.password
+                        : touched.password &&
+                          !errors.password &&
+                          values.password.length >= 6
                         ? `${css.Registration__input_success}`
                         : ''
                     }`}
@@ -137,7 +147,9 @@ export const SignUpForm = () => {
                     className={`${css.Registration__svg} ${
                       touched.password && errors.password
                         ? `${css.Registration__svg_error}`
-                        : touched.password && !errors.password
+                        : touched.password &&
+                          !errors.password &&
+                          values.password.length >= 6
                         ? `${css.Registration__svg_success}`
                         : ''
                     }`}
