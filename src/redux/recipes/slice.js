@@ -15,6 +15,7 @@ import {
   handlePending,
   handleReject,
   handleClearRecipe,
+  fetchByCategoryPending,
 } from './actions';
 
 const recipesSlice = createSlice({
@@ -26,7 +27,7 @@ const recipesSlice = createSlice({
       .addCase(fetchMainPage.pending, handlePending)
       .addCase(fetchMainPage.fulfilled, handleFirstFetchFulfilled)
       .addCase(fetchMainPage.rejected, handleReject)
-      .addCase(fetchByCategory.pending, handlePending)
+      .addCase(fetchByCategory.pending, fetchByCategoryPending)
       .addCase(fetchByCategory.fulfilled, handleFirstFetchFulfilled)
       .addCase(fetchByCategory.rejected, handleReject)
       .addCase(fetchMore.pending, handlePending)

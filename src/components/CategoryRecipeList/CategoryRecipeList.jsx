@@ -3,7 +3,6 @@ import css from '../CategoryDetails/Category.module.css';
 import { Link } from 'react-router-dom';
 
 const CategoryRecipeList = ({ recipeByCategory }) => {
-  console.log(recipeByCategory);
   return (
     <ul className={css.tabs_list}>
       {recipeByCategory?.flatMap(({ title, _id, preview }) => (

@@ -2,6 +2,11 @@ export const handlePending = state => {
   state.isLoading = true;
 };
 
+export const fetchByCategoryPending = state => {
+  state.isLoading = true;
+  state.availableRecipes = [];
+};
+
 export const handleReject = (state, { payload }) => {
   state.isLoading = false;
   state.error = payload;

@@ -6,7 +6,6 @@ import { selectRecipes } from 'redux/recipes/selectors';
 
 export const PreviewCategories = () => {
   const recipes = useSelector(selectRecipes);
- 
 
   return (
     <div className={css.container}>
@@ -28,23 +27,23 @@ export const PreviewCategories = () => {
         })}
       </ul>
 
-      {/* 
+      {/*
          <section className={css.section}>
          <h2 className={css.title}>Breakfast</h2>
          <RecipeList data={recipes.Breakfast}/>
          <Link to="/categories/breakfast">
          <button className={css.btn} type="button">See all</button>
          </Link>
-         
+
          </section>
-  
+
  <section className={css.section}>
      <h2 className={css.title}>Miscellaneous</h2>
      <RecipeList data={recipes.Miscellaneous}/>
      <Link to="/categories/miscellaneous">
      <button className={css.btn} type="button">See all</button>
      </Link>
-     
+
      </section>
  <section className={css.section}>
      <h2 className={css.title}>Chicken</h2>
