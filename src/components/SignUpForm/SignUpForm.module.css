@@ -89,6 +89,8 @@
   display: block;
   margin-bottom: 18px;
 
+  text-align: left;
+
   color: #fafafa;
 
   font-size: 24px;
@@ -210,6 +212,17 @@
 .Registration__link {
   padding: 5px;
   color: #fafafa;
+
+  text-decoration: underline;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.Registration__link:hover,
+.Registration__link:focus {
+  color: #8baa36;
 }
 
 .Registration__error {
