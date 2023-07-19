@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import css from './searchInput.module.css';
 
 const SearchForm = ({ title, setSearchBy, page, searchQuery }) => {
@@ -29,6 +31,17 @@ const SearchForm = ({ title, setSearchBy, page, searchQuery }) => {
   const handleCloseHidden = () => {
     setIsHidden(false);
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.from) {
+      setSearchBy('ingredients');
+      setSelectBy('Ingredients');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <form onSubmit={handleBtnSubmit} className={css.form}>
       <div className={css.inputWrap}>
