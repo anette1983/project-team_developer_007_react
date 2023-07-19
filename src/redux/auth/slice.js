@@ -5,6 +5,7 @@ import {
   logOut,
   refreshUser,
   register,
+  subscribe,
   updateUserData,
 } from './operations';
 import {
@@ -15,6 +16,8 @@ import {
   handleRefreshReject,
   handleRegisterFulfilled,
   handleReject,
+  handleSubscribePending,
+  handleSubscribeReject,
   handleUpdateFulfilled,
 } from './actions';
 
@@ -34,7 +37,9 @@ const authSlice = createSlice({
       .addCase(refreshUser.rejected, handleRefreshReject)
       .addCase(updateUserData.pending, handleRefreshPending)
       .addCase(updateUserData.fulfilled, handleUpdateFulfilled)
-      .addCase(updateUserData.rejected, handleRefreshReject);
+      .addCase(updateUserData.rejected, handleRefreshReject)
+      .addCase(subscribe.pending, handleSubscribePending)
+      .addCase(subscribe.rejected, handleSubscribeReject);
   },
 });
 

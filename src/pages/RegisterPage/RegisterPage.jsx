@@ -6,10 +6,8 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const RegisterPage = () => {
   const error = useSelector(selectAuthError);
 
-  if (error) {
-    Notify.failure('Sorry, something went wrong');
-  } else {
-    Notify.success('Verification letter was send to your email');
+  if (error !== 'Unable to fetch user') {
+    Notify.failure(error);
   }
 
   return (
