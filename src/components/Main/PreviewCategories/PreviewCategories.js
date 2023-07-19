@@ -14,16 +14,14 @@ export const PreviewCategories = () => {
         {recipes?.map(recipe => {
           return (
             <li className={css.list_item} key={recipe[0]?._id}>
-              <section className={css.section}>
-                <h2 className={css.title}>{recipe[0]?.category}</h2>
+               <h2 className={css.title}>{recipe[0]?.category}</h2>
                 <RecipeList data={recipe} />
-                <Link to={`/categories/${recipe[0]?.category.toLowerCase()}`}>
+                <Link to={`/categories/${recipe[0]?.category}`}>
                   <button className={css.btn} type="button">
                     See all
                   </button>
                 </Link>
-              </section>
-            </li>
+              </li>
           );
         })}
       </ul>
