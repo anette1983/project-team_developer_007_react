@@ -3,13 +3,20 @@ export const handleRefreshPending = state => {
   state.error = null;
 };
 
+export const handleSubscribePending = state => {
+  state.error = null;
+};
+
 export const handleReject = (state, { payload }) => {
-  state.isLoading = false;
   state.error = payload;
 };
 
 export const handleRefreshReject = (state, { payload }) => {
   state.isRefreshing = false;
+  state.error = payload;
+};
+
+export const handleSubscribeReject = (state, { payload }) => {
   state.error = payload;
 };
 
