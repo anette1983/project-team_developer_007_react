@@ -22,7 +22,7 @@ const FavoritePage = () => {
 
   return (
     <div className={css.wrapper}>
-      {favoriteRecipes.length === 0 ? (
+      {favoriteRecipes?.length === 0 ? (
         <h1>No favorite recipes</h1>
       ) : (
         <>
