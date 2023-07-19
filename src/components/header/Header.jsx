@@ -8,7 +8,7 @@ import css from './header.module.css';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectors';
 import { useLocation } from 'react-router-dom';
-import Loader from 'components/Loader';
+// import Loader from 'components/Loader';
 
 // import defaultUserAvatar from '../../pictures/userDefault.png'
 
