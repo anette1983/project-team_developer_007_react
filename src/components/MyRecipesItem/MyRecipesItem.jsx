@@ -45,7 +45,7 @@ const MyRecipesItem = ({ recipe, page }) => {
           <p className={css.card_text}>{recipe.description}</p>
         </div>
         <div className={css.bottom_wrapper}>
-          <span className={css.card_time}>{recipe.time}</span>
+          <span className={css.card_time}>{recipe.time} min</span>
 
           <Link
             to={`/recipe/${recipe._id}`}

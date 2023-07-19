@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
-import css from '../pages.module.css';
-import searchCss from '../ShoppingListPage/shopingContainer.module.css';
+import css from './FavoritePage.module.css';
 import FavoriteList from 'components/FavoriteList/FavoriteList';
 import { selectFavoriteRecipes } from 'redux/favoriteRecipes/selectors';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,20 +21,20 @@ const FavoritePage = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className={css.wrapper}>
       {favoriteRecipes.length === 0 ? (
         <h1>No favorite recipes</h1>
       ) : (
         <>
-          <section className={`${css.container} ${searchCss.container}`}>
+          <section className={css.titleWrapper}>
             <MainPageTitle text="Favorites" />
           </section>
-          <section>
+          <section className={css.favSection}>
             <FavoriteList favoriteRecipes={favoriteRecipes}></FavoriteList>
           </section>
         </>
       )}
-    </>
+    </div>
   );
 };
 

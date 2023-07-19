@@ -5,6 +5,8 @@
   gap: 14px;
   padding: 14px 9px;
   width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
 
   position: relative;
 }
@@ -20,6 +22,7 @@
     display: flex;
     gap: 24px;
     padding: 28px 24px;
+    max-width: 768px;
   }
   .card_container:not(:last-child) {
     margin-bottom: 40px;
@@ -28,7 +31,7 @@
 @media screen and (min-width: 1440px) {
   .card_container {
     display: flex;
-
+    max-width: 1440px;
     gap: 54px;
     padding: 40px;
   }
@@ -113,8 +116,8 @@
   align-items: center;
   width: 24px;
   height: 24px;
-  background-color: #8baa36;
-  color: #fafafa;
+  background-color: #EBF3D4;
+  color: #22252A;
   border-radius: 4px;
   position: absolute;
   top: 14px;
@@ -140,14 +143,21 @@
   }
 }
 
+#trash {
+  fill: #22252a;
+  color: #22252a;
+}
+
 .delete_btn svg {
   width: 14px;
   height: 14px;
+  fill:#22252A
 }
 
 .delete_btn:hover,
 .delete_btn:focus {
   background-color: #22252a;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -193,7 +203,7 @@
 
   padding: 6px 14px;
 
-  background-color: #8baa36;
+  background-color: #22252A;
 
   border-radius: 24px 44px;
   color: #fafafa;
