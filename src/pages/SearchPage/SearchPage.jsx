@@ -5,7 +5,10 @@ import css from '../pages.module.css';
 import searchCss from './searchContainer.module.css';
 import SearchedRecipesList from 'components/SearchedRecipesList/SearchedRecipesList';
 import { useEffect, useState } from 'react';
-import { selectRecipes, selectError} from '../../redux/recipesBySearch/selectors';
+import {
+  selectRecipes,
+  selectError,
+} from '../../redux/recipesBySearch/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchMoreBySearch,
@@ -24,7 +27,7 @@ const SearchPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { total, recipes } = useSelector(selectRecipes);
   const isLoged = useSelector(selectIsLoggedIn);
-  const isError = useSelector(selectError)
+  const isError = useSelector(selectError);
   const query = searchParams.get('query') ?? '';
 
   const [pageCount, setPageCount] = useState(1);
@@ -86,9 +89,9 @@ const SearchPage = () => {
 
   useEffect(() => {
     if (isError) {
-      navigate("/error", { replace: true })
+      navigate('/error', { replace: true });
     }
-  },[isError, navigate])
+  }, [isError, navigate]);
 
   return (
     <div className={css.section}>
@@ -100,6 +103,7 @@ const SearchPage = () => {
           title={setParams}
           setSearchBy={setSearchBy}
           page={setPage}
+          searchQuery={query}
         />
       </div>
       {!recipes && (
@@ -130,5 +134,3 @@ const SearchPage = () => {
   );
 };
 export default SearchPage;
-
-
