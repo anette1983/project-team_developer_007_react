@@ -141,7 +141,7 @@ export const AddRecipeForm = () => {
         dispatch(addMyRecipe(formData))
           .unwrap()
           .then((res) => {
-            navigate('/my', { replace: true });
+            navigate('/my?page=1', { replace: true });
             Notify.success('Hooray! The recipe was successfully added');
           })
           .catch(error => {
