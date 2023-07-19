@@ -18,21 +18,9 @@ const CategoryDetails = () => {
   const [prevIndex, setPrevIndex] = useState(0);
   const [nameCategory, setNameCategory] = useState('Beef');
   const { categoryName } = useParams();
-  console.log(categoryName);
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (categoryParam) {
-  //     setNameCategory(categoryParam);
-  //     dispatch(fetchByCategory(nameCategory));
-  //   }
-  //   dispatch(fetchCategories());
-  // }, [dispatch, categoryParam, nameCategory]);
-
-  // useEffect(() => {
-  //   dispatch(fetchByCategory(nameCategory));
-  // }, [dispatch, nameCategory]);
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
@@ -40,30 +28,25 @@ const CategoryDetails = () => {
   useEffect(() => {
     if (categoryName) {
       setNameCategory(categoryName);
+      setIndex(category.findIndex(c => c.name === categoryName));
       dispatch(fetchByCategory(categoryName));
     } else {
       dispatch(fetchByCategory(nameCategory));
     }
-  }, [dispatch, categoryName, nameCategory]);
-
-  // const handleClick = e => {
-  //   e.preventDefault();
-  //   const category = e.target.textContent;
-  //   setNameCategory(category);
-  //   navigate(`/categories/${category}`);
-  // };
+  }, [dispatch, categoryName, nameCategory, category]);
 
   const handleClick = e => {
     e.preventDefault();
     const category = e.target.textContent;
     setNameCategory(category);
+
     navigate(`/categories/${category}`);
     dispatch(fetchByCategory(category));
   };
   const handleScroll = e => {
     setIndex(prev => setPrevIndex(prev));
-    console.log('0', prevIndex);
-    console.log('1', index);
+    /*     console.log('0', prevIndex);
+    console.log('1', index); */
     if (index > prevIndex) {
       document.getElementById('content').scrollBy({
         top: 0,
@@ -85,6 +68,7 @@ const CategoryDetails = () => {
       variant="unstyled"
       isLazy
       defaultIndex={0}
+      index={index}
       onClick={handleScroll}
       onChange={index => setIndex(index)}
     >
@@ -98,7 +82,7 @@ const CategoryDetails = () => {
           },
         }}
       >
-        {category.map(({ name }) => (
+        {category?.map(({ name }) => (
           <Tab
             onClick={handleClick}
             _selected={{ color: '#8BAA36' }}
