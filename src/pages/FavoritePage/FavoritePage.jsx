@@ -6,6 +6,7 @@ import FavoriteList from 'components/FavoriteList/FavoriteList';
 import { selectFavoriteRecipes } from 'redux/favoriteRecipes/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFavoriteRecipes } from 'redux/favoriteRecipes/operations';
+import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 // import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
 const FavoritePage = () => {
@@ -28,6 +29,9 @@ const FavoritePage = () => {
       ) : (
         <>
           <section className={css.favSection}>
+            {favoriteRecipes && (
+              <NotFoundPage text="you have no personal recipes" />
+            )}
             <FavoriteList favoriteRecipes={favoriteRecipes}></FavoriteList>
           </section>
         </>

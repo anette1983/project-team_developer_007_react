@@ -6,17 +6,18 @@ import { selectRecipes } from 'redux/recipes/selectors';
 
 export const PreviewCategories = () => {
   const recipes = useSelector(selectRecipes);
+  console.log(recipes);
 
   return (
     <div className={css.container}>
       <ul className={css.list}>
-        {recipes.map(recipe => {
+        {recipes?.map(recipe => {
           return (
-            <li className={css.list_item} key={recipe[0]._id}>
+            <li className={css.list_item} key={recipe[0]?._id}>
               <section className={css.section}>
-                <h2 className={css.title}>{recipe[0].category}</h2>
+                <h2 className={css.title}>{recipe[0]?.category}</h2>
                 <RecipeList data={recipe} />
-                <Link to={`/categories/${recipe[0].category.toLowerCase()}`}>
+                <Link to={`/categories/${recipe[0]?.category.toLowerCase()}`}>
                   <button className={css.btn} type="button">
                     See all
                   </button>
