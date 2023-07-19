@@ -294,7 +294,7 @@
 }
 
 .Registration__svg_err.Registration__svg_error,
-.Registration__svg.Registration__svg_success {
+.Registration__svg.Registration__svg_error {
   opacity: 1;
   stroke: #e74a3b;
 }
