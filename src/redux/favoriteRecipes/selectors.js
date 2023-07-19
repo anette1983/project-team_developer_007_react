@@ -1,5 +1,6 @@
 export const selectFavoriteRecipes = state =>
-  state.favoriteRecipes.favoriteRecipesList.recipes;
+  state.favoriteRecipes.favoriteRecipesList.recipes ||
+  state.favoriteRecipes.favoriteRecipesList;
 
 export const selectFavoriteRecipesIsLoading = state =>
   state.favoriteRecipes.isLoading;

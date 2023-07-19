@@ -23,11 +23,10 @@ const FavoritePage = () => {
 
   return (
     <div className={css.wrapper}>
-      <section className={css.titleWrapper}>
-        <MainPageTitle text="Favorites" />
-      </section>
-      {!favoriteRecipes ? (
-        <NotFoundPage text="you have no favorite recipes yet!" />
+
+      {favoriteRecipes?.length === 0 ? (
+        <h1>No favorite recipes</h1>
+
       ) : (
         <>
           <section className={css.favSection}>

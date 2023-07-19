@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 20px;
   top: 200px;
-  left: 13%;
+  right: 35px;
   z-index: 1111;
   padding: 32px 24px;
   width: 330px;
@@ -152,7 +152,7 @@ input[type='file']::file-selector-button {
     width: 480px;
     padding: 50px 40px;
     top: 80px;
-    left: 40%;
+    right: 120px;
   }
   .cross {
     width: 24px;
@@ -188,7 +188,7 @@ input[type='file']::file-selector-button {
     width: 500px;
     padding: 60px 50px;
     top: 80px;
-    left: 55%;
+    right: 130px;
   }
   .cross {
     top: -35px;
