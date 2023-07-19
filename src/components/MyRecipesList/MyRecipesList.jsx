@@ -13,17 +13,21 @@ const MyRecipesList = () => {
 
   return (
     <>
-      <ul className={css.list}>
-        {myRecipes?.map(recipe => {
-          return (
-            <MyRecipesItem
-              key={recipe._id}
-              recipe={recipe}
-              page={currentPage}
-            />
-          );
-        })}
-      </ul>
+      {myRecipes.length > 0 ? (
+        <ul className={css.list}>
+          {myRecipes?.map(recipe => {
+            return (
+              <MyRecipesItem
+                key={recipe._id}
+                recipe={recipe}
+                page={currentPage}
+              />
+            );
+          })}
+        </ul>
+      ) : (
+        <p>There are no your recipes yet. Please start to create</p>
+      )}
     </>
   );
 };
