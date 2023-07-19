@@ -29,22 +29,6 @@ const ShoppingListPage = lazy(() =>
 export const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  // const persistedToken = useSelector(selectToken);
-  // const token = JSON.parse(localStorage.getItem('token')) ?? null;
-
-  // useEffect(() => {
-  //   if (!token) {
-  //     dispatch(refreshUser());
-  //     return Notify.failure('Please, sign in!');
-  //   }
-  // }, [dispatch, token]);
-
-  // useEffect(() => {
-  //   if (!persistedToken) {
-  //     return;
-  //   }
-  //   dispatch(refreshUser());
-  // }, [dispatch, persistedToken]);
 
   useEffect(() => {
     dispatch(refreshUser());
@@ -123,14 +107,17 @@ export const App = () => {
         />
         <Route
           path="error"
-          element={<PrivateRoute component={NotFoundPage} redirectTo="/error" />}
-          />
-          <Route
-          path='*'
-          element={<PrivateRoute component={NotFoundPage} redirectTo="/error" />}
-          />
-        </Route>
-        
+          element={
+            <PrivateRoute component={NotFoundPage} redirectTo="/error" />
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <PrivateRoute component={NotFoundPage} redirectTo="/error" />
+          }
+        />
+      </Route>
     </Routes>
   );
 };
