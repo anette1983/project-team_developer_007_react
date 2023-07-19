@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Main } from '../../components/Main/Main';
 import css from './MainPage.module.css';
-import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectors';
+import { selectIsRefreshing } from 'redux/auth/selectors';
 import { useEffect } from 'react';
 import { fetchMainPage } from '../../redux/recipes/operations';
 
 const MainPage = () => {
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   const isRefresh = useSelector(selectIsRefreshing);
 
   //  useEffect(()=> {
