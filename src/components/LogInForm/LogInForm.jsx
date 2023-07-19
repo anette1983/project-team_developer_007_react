@@ -78,6 +78,38 @@ export const LogInForm = () => {
                   >
                     <use href={sprite + '#reg-email'} />
                   </svg>
+                  
+                   <svg
+                    width={20}
+                    height={20}
+                    className={`${css.Registration__svg_succ} ${
+                      touched.email && errors.email
+                        ? `${css.Registration__svg_error}`
+                        : touched.email &&
+                          !errors.email &&
+                          emailRegexp.test(values.email)
+                        ? `${css.Registration__svg_success}`
+                        : ''
+                    }`}
+                  >
+                    <use href={sprite + '#input-succ'} />
+                  </svg>
+                  
+                  <svg
+                    width={20}
+                    height={20}
+                    className={`${css.Registration__svg_err} ${
+                      touched.email && errors.email
+                        ? `${css.Registration__svg_error}`
+                        : touched.email &&
+                          !errors.email &&
+                          emailRegexp.test(values.email)
+                        ? `${css.Registration__svg_success}`
+                        : ''
+                    }`}
+                  >
+                    <use href={sprite + '#input-err'} />
+                  </svg>
                 </div>
               </label>
 
@@ -121,6 +153,38 @@ export const LogInForm = () => {
                     }`}
                   >
                     <use href={sprite + '#reg-pass'} />
+                  </svg>
+                  
+                  <svg
+                    width={20}
+                    height={20}
+                    className={`${css.Registration__svg_succ} ${
+                      touched.password && errors.password
+                        ? `${css.Registration__svg_error}`
+                        : touched.password &&
+                          !errors.password &&
+                          values.password.length >= 6
+                        ? `${css.Registration__svg_success}`
+                        : ''
+                    }`}
+                  >
+                    <use href={sprite + '#input-succ'} />
+                  </svg>
+                  
+                  <svg
+                    width={20}
+                    height={20}
+                    className={`${css.Registration__svg_err} ${
+                      touched.password && errors.password
+                        ? `${css.Registration__svg_error}`
+                        : touched.password &&
+                          !errors.password &&
+                          values.password.length >= 6
+                        ? `${css.Registration__svg_success}`
+                        : ''
+                    }`}
+                  >
+                    <use href={sprite + '#input-err'} />
                   </svg>
                 </div>
               </label>
