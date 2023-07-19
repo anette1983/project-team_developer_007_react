@@ -8,6 +8,7 @@ import { fetchCategories } from 'redux/categories/operations';
 import { fetchByCategory } from 'redux/recipes/operations';
 import { selectRecipes } from 'redux/recipes/selectors';
 import CategoryRecipeList from 'components/CategoryRecipeList/CategoryRecipeList';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const CategoryDetails = () => {
   const dispatch = useDispatch();
@@ -16,21 +17,49 @@ const CategoryDetails = () => {
   const [index, setIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(0);
   const [nameCategory, setNameCategory] = useState('Beef');
+  const { categoryName } = useParams();
+  console.log(categoryName);
 
+  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   if (categoryParam) {
+  //     setNameCategory(categoryParam);
+  //     dispatch(fetchByCategory(nameCategory));
+  //   }
+  //   dispatch(fetchCategories());
+  // }, [dispatch, categoryParam, nameCategory]);
+
+  // useEffect(() => {
+  //   dispatch(fetchByCategory(nameCategory));
+  // }, [dispatch, nameCategory]);
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(fetchByCategory(nameCategory));
-  }, [dispatch, nameCategory]);
+    if (categoryName) {
+      setNameCategory(categoryName);
+      dispatch(fetchByCategory(categoryName));
+    } else {
+      dispatch(fetchByCategory(nameCategory));
+    }
+  }, [dispatch, categoryName, nameCategory]);
+
+  // const handleClick = e => {
+  //   e.preventDefault();
+  //   const category = e.target.textContent;
+  //   setNameCategory(category);
+  //   navigate(`/categories/${category}`);
+  // };
 
   const handleClick = e => {
     e.preventDefault();
     const category = e.target.textContent;
     setNameCategory(category);
+    navigate(`/categories/${category}`);
+    dispatch(fetchByCategory(category));
   };
-
   const handleScroll = e => {
     setIndex(prev => setPrevIndex(prev));
     console.log('0', prevIndex);
@@ -69,12 +98,12 @@ const CategoryDetails = () => {
           },
         }}
       >
-        {category.map(({ name, _id }) => (
+        {category.map(({ name }) => (
           <Tab
             onClick={handleClick}
             _selected={{ color: '#8BAA36' }}
             className={css.tabs_button}
-            key={_id}
+            key={name}
           >
             {name}
           </Tab>
