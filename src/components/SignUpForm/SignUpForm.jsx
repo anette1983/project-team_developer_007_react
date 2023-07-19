@@ -1,7 +1,8 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useCallback, useEffect, useState } from 'react';
 import { register } from 'redux/auth/operations';
 import sprite from '../../images/svg/sprite.svg';
 import css from './SignUpForm.module.css';
@@ -17,10 +18,24 @@ const schema = yup.object().shape({
 
 export const SignUpForm = () => {
   const dispatch = useDispatch();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const [isRegisterPage, setIsRegisterPage] = useState(true);
+
+  useEffect(() => {
+    if (pathname === '/signin') {
+      setIsRegisterPage(false);
+    }
+  }, [pathname]);
+
+  const handleNavigate = useCallback(() => {
+    isRegisterPage ? navigate('/signin') : navigate('/register');
+  }, [navigate, isRegisterPage]);
 
   const handleFormSubmit = (values, { resetForm }) => {
     dispatch(register(values));
     resetForm();
+    handleNavigate();
   };
 
   return (
