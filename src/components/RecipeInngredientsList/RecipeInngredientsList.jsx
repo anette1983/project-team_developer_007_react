@@ -6,8 +6,13 @@ import RecipeInngredient from 'components/RecipeInngredient/RecipeInngredient';
 import css from './RecipeIngredientsList.module.css';
 
 export const RecipeInngredientsList = () => {
-  const { wrapper_title_table, section, title_table, title_table_position } =
-    css;
+  const {
+    wrapper_title_table,
+    section,
+    title_table,
+    title_table_position,
+    ingredients_list,
+  } = css;
 
   const recipe = useSelector(selectCurrentRecipe);
   const ingredients =
@@ -22,13 +27,15 @@ export const RecipeInngredientsList = () => {
       </div>
 
       {ingredients.length !== 0 ? (
-        ingredients.map(el => {
-          return (
-            <li style={{ listStyleType: 'none' }} key={el._id._id}>
-              <RecipeInngredient ingredient={el} />
-            </li>
-          );
-        })
+        <ul className={ingredients_list}>
+          {ingredients.map(el => {
+            return (
+              <li style={{ listStyleType: 'none' }} key={el._id._id}>
+                <RecipeInngredient ingredient={el} />
+              </li>
+            );
+          })}
+        </ul>
       ) : (
         <>No ingredients</>
       )}
