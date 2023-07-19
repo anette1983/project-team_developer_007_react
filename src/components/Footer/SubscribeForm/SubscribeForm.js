@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { subscribe } from '../../../redux/auth/operations';
-import {  selectAuthError } from '../../../redux/auth/selectors';
+import { selectAuthError } from '../../../redux/auth/selectors';
 
 export const SubscribeForm = () => {
 const dispatch = useDispatch();
@@ -13,15 +13,15 @@ const [email, setEmail] = useState('');
 
 const errorMessage = useSelector(selectAuthError);
 
-
 const handleChange = e => {
   const value = e.currentTarget.value;
+ 
    setEmail(value);
 }
 
 const handleSubmit = e => {
   e.preventDefault();
-  console.log(email);
+ 
   const form = e.currentTarget;
   if(email==="") {
     return Notify.failure('Please enter email!');
@@ -34,12 +34,7 @@ const handleSubmit = e => {
     setEmail('')
     form.reset();
   } 
-  // if (errorMessage.status !== "401"){
-  // //  console.log(errorMessage);
-  //    form.reset();
-  //   return Notify.failure("Not authorized");
   
-  // }
 
 }
 

@@ -2,54 +2,54 @@
     display: flex;
     flex-direction: column;
     padding: 64px 16px 100px 16px;
-    background-image: url('../../../images/bgc/404_spinach_top_bg_mob_1x.png');
+    /* background-image: url('../../../images/bgc/404_spinach_top_bg_mob_1x.png'); */
   background-repeat: no-repeat;
 background-size: contain;
 background-position: 0px 1850px;
 }
 
-@media (min-device-pixel-ratio: 2),
+/* @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .container {
     background-image: url('../../../images/bgc/404_spinach_top_bg_mob_2x.png');
   }
-}
+} */
 
 @media screen and (min-width: 768px) {
     .container {
       width: 768px;
        padding:72px 32px 100px 32px;
-      background-image: url('../../../images/bgc/404_spinach_top_bg_tab_1x.png');
+      /* background-image: url('../../../images/bgc/404_spinach_top_bg_tab_1x.png'); */
       background-position: 0px 1950px;
       background-size: 80%;
      }
 
-     @media (min-device-pixel-ratio: 2),
+     /* @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .container {
     background-image: url('../../../images/bgc/404_spinach_top_bg_tab_2x.png');
   }
-}
+} */
     }
 
     @media screen and (min-width: 1440px) {
         .container {
           width: 1440px;
           padding: 100px;
-          background-image: url('../../../images/bgc/404_spinach_top_bg_desk_1x.png');
+          /* background-image: url('../../../images/bgc/404_spinach_top_bg_desk_1x.png'); */
           background-position: 10px 2250px;
           background-size: 40%;
          }
     
-         @media (min-device-pixel-ratio: 2),
+         /* @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       .container {
         background-image: url('../../../images/bgc/404_spinach_top_bg_desk_2x.png');
       }
-    }
+    } */
         }
 
 .list_item {
