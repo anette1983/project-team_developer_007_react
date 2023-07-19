@@ -1,30 +1,44 @@
 import css from "./SubscribeForm.module.css";
 import sprite from "../../../images/svg/sprite.svg"
-// import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-// import { subscribe } from '../../../redux/auth/operations';
+import { subscribe } from '../../../redux/auth/operations';
+import {  selectAuthError } from '../../../redux/auth/selectors';
 
 export const SubscribeForm = () => {
-// const dispatch = useDispatch();
+const dispatch = useDispatch();
 const [email, setEmail] = useState('');
 
+const errorMessage = useSelector(selectAuthError);
+
+
 const handleChange = e => {
-  const value = e.currentTarget;
+  const value = e.currentTarget.value;
   setEmail(value);
 }
 
 const handleSubmit = e => {
   e.preventDefault();
-  // dispatch(subscribe(email))
   const form = e.currentTarget;
-  
   if(email==="") {
-  return Notify.failure('Please enter email!');
+    return Notify.failure('Please enter email!');
+   }
+  
+  dispatch(subscribe({email}))
+
+  if(errorMessage==="") {
+    Notify.success('Congratulations! You are subscribed!');
+    setEmail('')
+    form.reset();
+  } 
+  if (errorMessage.status !== "401"){
+  //  console.log(errorMessage);
+     form.reset();
+    return Notify.failure("Not authorized");
+  
   }
-  Notify.success('Congratulations! You are subscribed!');
-  setEmail('')
-  form.reset();
+
 }
 
     return(
@@ -36,7 +50,7 @@ const handleSubmit = e => {
      <form className={css.form} onSubmit={handleSubmit}>
       <label>
       <input
-      className={`${css.input} ${email ? `${css.input_succes}` : `${css.input_error}`}`}
+      className={`${css.input} ${!email ? `${css.input_succes}` : `${css.input_error}`}`}
       type="email"
        placeholder="Enter your email address"
       onChange={handleChange}
