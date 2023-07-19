@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
-import css from '../pages.module.css';
-import searchCss from '../ShoppingListPage/shopingContainer.module.css';
+// import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
+import css from './FavoritePage.module.css';
 import FavoriteList from 'components/FavoriteList/FavoriteList';
 import { selectFavoriteRecipes } from 'redux/favoriteRecipes/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFavoriteRecipes } from 'redux/favoriteRecipes/operations';
+import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
+// import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
 const FavoritePage = () => {
   const { pathname } = useLocation();
@@ -22,20 +23,20 @@ const FavoritePage = () => {
   }, [dispatch]);
 
   return (
-    <>
-      {favoriteRecipes.length === 0 ? (
+    <div className={css.wrapper}>
+      {favoriteRecipes?.length === 0 ? (
         <h1>No favorite recipes</h1>
       ) : (
         <>
-          <section className={`${css.container} ${searchCss.container}`}>
-            <MainPageTitle text="Favorites" />
-          </section>
-          <section>
+          <section className={css.favSection}>
+            {favoriteRecipes && (
+              <NotFoundPage text="you have no personal recipes" />
+            )}
             <FavoriteList favoriteRecipes={favoriteRecipes}></FavoriteList>
           </section>
         </>
       )}
-    </>
+    </div>
   );
 };
 

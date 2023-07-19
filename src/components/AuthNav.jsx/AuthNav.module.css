@@ -3,7 +3,8 @@
   justify-content: center;
 }
 
-.AuthNav__button {
+.AuthNav__button_reg,
+.AuthNav__button_sign {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,5 +42,19 @@
   &:focus {
     background-color: #8baa36;
     border-color: transparent;
+  }
+}
+
+.AuthNav__button_reg {
+  background-color: #8baa36;
+
+  border-color: transparent;
+
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border-color: #fafafa;
   }
 }

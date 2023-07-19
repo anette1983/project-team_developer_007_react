@@ -17,7 +17,6 @@ export const register = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const { data } = await axios.post('users/register', credentials);
-      authHeader.set(data.token);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -76,6 +75,21 @@ export const updateUserData = createAsyncThunk(
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const subscribe = createAsyncThunk(
+  'auth/subscribe',
+  async (email, thunkAPI) => {
+    try {
+      await axios.patch('/users/subscribe', { email });
+      return true;
+    } catch (error) {
+      return thunkAPI.rejectWithValue({
+        status: error.response.status,
+        message: error.message,
+      });
     }
   }
 );

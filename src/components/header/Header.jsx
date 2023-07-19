@@ -9,8 +9,6 @@ import { useSelector } from 'react-redux';
 import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectors';
 import { useLocation } from 'react-router-dom';
 
-// import defaultUserAvatar from '../../pictures/userDefault.png'
-
 const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const { pathname } = useLocation();

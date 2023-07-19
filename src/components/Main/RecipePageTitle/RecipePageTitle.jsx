@@ -50,7 +50,7 @@ export const RecipePageTitle = () => {
       </button>
       <p className={time_prepeare}>
         <Clock className={icon} />
-        <span>{recipe.time}</span>
+        <span>{recipe.time} min</span>
       </p>
     </section>
   );

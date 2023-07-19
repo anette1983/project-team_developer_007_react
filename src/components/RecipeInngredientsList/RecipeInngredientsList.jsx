@@ -1,9 +1,12 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import clsx from 'clsx';
 import { selectCurrentRecipe } from 'redux/recipes/selectors';
+import { selectShopingList } from 'redux/shopingList/selectors';
+import { fetchShopingList } from 'redux/shopingList/operations';
 import RecipeInngredient from 'components/RecipeInngredient/RecipeInngredient';
 
 import css from './RecipeIngredientsList.module.css';
+import { useEffect } from 'react';
 
 export const RecipeInngredientsList = () => {
   const {
@@ -17,6 +20,13 @@ export const RecipeInngredientsList = () => {
   const recipe = useSelector(selectCurrentRecipe);
   const ingredients =
     Object.keys(recipe).length !== 0 ? recipe.ingredients : [];
+  const shopingList = useSelector(selectShopingList);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchShopingList());
+  }, [dispatch]);
 
   return (
     <section className={section}>
@@ -31,7 +41,7 @@ export const RecipeInngredientsList = () => {
           {ingredients.map(el => {
             return (
               <li style={{ listStyleType: 'none' }} key={el._id._id}>
-                <RecipeInngredient ingredient={el} />
+                <RecipeInngredient ingredient={el} shopingList={shopingList} />
               </li>
             );
           })}

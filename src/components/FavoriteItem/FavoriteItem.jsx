@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import css from './FavoriteItem.module.css';
-import sprite from '../../images/svg/sprite.svg';
+// import sprite from '../../images/svg/sprite.svg';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteMyRecipe } from 'redux/myRecipes/operations';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import {BiTrash} from 'react-icons/bi'
 
 const FavoriteItem = ({ recipe }) => {
   const [delId, setDelId] = useState();
@@ -32,7 +33,7 @@ const FavoriteItem = ({ recipe }) => {
         disabled={delId === recipe._id}
       >
         <svg>
-          <use href={sprite + '#trash'} />
+          <BiTrash size='100%'/>
         </svg>
       </button>
       <div className={css.wrapper}>
@@ -41,7 +42,7 @@ const FavoriteItem = ({ recipe }) => {
           <p className={css.card_text}>{recipe.description}</p>
         </div>
         <div className={css.bottom_wrapper}>
-          <span className={css.card_time}>{recipe.time}</span>
+          <span className={css.card_time}>{recipe.time} min</span>
 
           <Link
             to={`/recipe/${recipe._id}`}

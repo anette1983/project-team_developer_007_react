@@ -131,6 +131,16 @@
     }
 }
 
+.input_success {
+    opacity: 1;
+    border-color: #3cbc81;
+  }
+  
+  .input_error {
+    opacity: 1;
+    border-color: #e74a3b;
+  }
+
 .btn {
     width: 204px;
     height: 38px;
