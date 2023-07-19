@@ -1,15 +1,19 @@
 import { LogInForm } from 'components/LogInForm/LogInForm';
 import { useSelector } from 'react-redux';
-// import { selectAuthError, selectUserName } from 'redux/auth/selectors';
-import { selectAuthError } from 'redux/auth/selectors';
+import { selectAuthError, selectMessage } from 'redux/auth/selectors';
 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const SignInPage = () => {
   const error = useSelector(selectAuthError);
+  const message = useSelector(selectMessage);
 
-  if (error) {
-    Notify.failure('Sorry, something went wrong');
+  if (error !== 'Unable to fetch user' && error !== null) {
+    Notify.failure(error);
+  }
+
+  if (message) {
+    Notify.success(message);
   }
 
   return (

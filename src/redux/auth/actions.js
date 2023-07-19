@@ -14,7 +14,7 @@ export const handleRefreshReject = (state, { payload }) => {
 };
 
 export const handleRegisterFulfilled = (state, { payload }) => {
-  state.token = payload.token;
+  state.message = payload.message;
   state.error = null;
 };
 
