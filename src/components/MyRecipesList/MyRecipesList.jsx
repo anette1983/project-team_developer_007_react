@@ -26,7 +26,8 @@ const MyRecipesList = () => {
           })}
         </ul>
       ) : (
-        <p>There are no your recipes yet. Please start to create</p>
+          <p>There are no your recipes yet. Please start to create</p>
+          
       )}
     </>
   );
