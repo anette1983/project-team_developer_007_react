@@ -27,16 +27,13 @@ const Header = () => {
           <div className={css.header}>
             <Logo />
             <Navigation width={1441} />
-
             <div className={css.userContainer}>
               <UserLogo />
               <ThemeToggler />
             </div>
           </div>
         ) : (
-          <div className={css.header}>
-            <Loader />
-          </div>
+          <></>
         ))}
     </>
   );

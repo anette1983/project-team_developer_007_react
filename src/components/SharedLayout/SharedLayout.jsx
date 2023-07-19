@@ -4,7 +4,7 @@ import Header from 'components/header/Header';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import css from './SharedLayout.module.css'
+import css from './SharedLayout.module.css';
 
 const SharedLayout = () => {
   return (
