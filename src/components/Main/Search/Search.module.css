@@ -69,6 +69,10 @@
     border-radius: 24px 44px;
     border: none;
 }
+.btn:focus,
+.btn:hover{
+    background-color: #8BAA36;
+}
 
 @media screen and (min-width: 768px) {
     .btn {

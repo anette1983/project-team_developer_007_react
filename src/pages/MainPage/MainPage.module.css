@@ -94,6 +94,7 @@ flex-direction: column;
 background-image: url('../../../src/images/bgc/salt_mob_1x.png');
 background-repeat: no-repeat;
 background-position: 15px 258px;
+background-size: 320px;
 }
 
 @media (min-device-pixel-ratio: 2),

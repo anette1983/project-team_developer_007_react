@@ -56,7 +56,9 @@ background-position: 0px 1850px;
     margin-top: 32px;
 }
 
-
+.list_item:first-child {
+    margin-top: 64px;
+}
 .title {
 color: #001833;    
 font-size: 28px;
