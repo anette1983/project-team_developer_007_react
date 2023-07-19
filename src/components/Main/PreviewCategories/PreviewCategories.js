@@ -6,7 +6,7 @@ import { selectRecipes } from 'redux/recipes/selectors';
 
 export const PreviewCategories = () => {
   const recipes = useSelector(selectRecipes);
-  console.log(recipes);
+ 
 
   return (
     <div className={css.container}>
