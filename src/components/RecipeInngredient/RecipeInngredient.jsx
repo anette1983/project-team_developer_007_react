@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   addToShopingList,
   deleteFromShopingList,
@@ -7,7 +7,7 @@ import {
 
 import css from './RecipeInngredient.module.css';
 
-export default function RecipeInngredient({ ingredient }) {
+export default function RecipeInngredient({ ingredient, shopingList }) {
   const {
     container,
     wrapper_img,
@@ -21,6 +21,15 @@ export default function RecipeInngredient({ ingredient }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (shopingList.find(el => el.ingredient._id === ingredient._id._id)) {
+      setIsChecked(true);
+    } else {
+      setIsChecked(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleOnChange = () => {
     if (!isChecked) {
