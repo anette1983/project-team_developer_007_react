@@ -6,6 +6,7 @@ import { selectFavoriteRecipes } from 'redux/favoriteRecipes/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFavoriteRecipes } from 'redux/favoriteRecipes/operations';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
+import { SectionTitle } from 'components/SectionTitle/SectionTitle';
 
 const FavoritePage = () => {
   const { pathname } = useLocation();
@@ -22,6 +23,7 @@ const FavoritePage = () => {
 
   return (
     <div className={css.wrapper}>
+      <SectionTitle text={'Favorites'}/>
       <section className={css.favSection}>
         {favoriteRecipes.length !== 0 ? (
           <FavoriteList favoriteRecipes={favoriteRecipes}></FavoriteList>
