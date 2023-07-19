@@ -83,7 +83,7 @@ export const subscribe = createAsyncThunk(
   'auth/subscribe',
   async (email, thunkAPI) => {
     try {
-      await axios.patch('/users/subscribe', email);
+      await axios.patch('/users/subscribe', { email });
       return true;
     } catch (error) {
       return thunkAPI.rejectWithValue({
