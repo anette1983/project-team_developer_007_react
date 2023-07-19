@@ -287,12 +287,14 @@
   opacity: 0;
 }
 
-.Registration__svg_succ.Registration__svg_success {
+.Registration__svg_succ.Registration__svg_success,
+.Registration__svg.Registration__svg_success {
   opacity: 1;
   stroke: #3cbc81;
 }
 
-.Registration__svg_err.Registration__svg_error {
+.Registration__svg_err.Registration__svg_error,
+.Registration__svg.Registration__svg_success {
   opacity: 1;
   stroke: #e74a3b;
 }
