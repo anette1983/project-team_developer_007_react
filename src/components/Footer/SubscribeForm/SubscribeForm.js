@@ -16,29 +16,30 @@ const errorMessage = useSelector(selectAuthError);
 
 const handleChange = e => {
   const value = e.currentTarget.value;
-  setEmail(value);
+   setEmail(value);
 }
 
 const handleSubmit = e => {
   e.preventDefault();
+  console.log(email);
   const form = e.currentTarget;
   if(email==="") {
     return Notify.failure('Please enter email!');
    }
   
-  dispatch(subscribe({email}))
+  dispatch(subscribe(email))
 
   if(errorMessage==="") {
     Notify.success('Congratulations! You are subscribed!');
     setEmail('')
     form.reset();
   } 
-  if (errorMessage.status !== "401"){
-  //  console.log(errorMessage);
-     form.reset();
-    return Notify.failure("Not authorized");
+  // if (errorMessage.status !== "401"){
+  // //  console.log(errorMessage);
+  //    form.reset();
+  //   return Notify.failure("Not authorized");
   
-  }
+  // }
 
 }
 
