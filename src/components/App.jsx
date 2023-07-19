@@ -122,10 +122,15 @@ export const App = () => {
           }
         />
         <Route
-          path="*"
-          element={<PrivateRoute component={NotFoundPage} redirectTo="/" />}
-        />
-      </Route>
+          path="error"
+          element={<PrivateRoute component={NotFoundPage} redirectTo="/error" />}
+          />
+          <Route
+          path='*'
+          element={<PrivateRoute component={NotFoundPage} redirectTo="/error" />}
+          />
+        </Route>
+        
     </Routes>
   );
 };

@@ -1,121 +1,132 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 86px;
-    border-radius: 8px;
-    padding: 0px 10px;
-    background-color: #EBF3D4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 86px;
+  border-radius: 8px;
+  padding: 0px 10px;
+  background-color: #ebf3d4;
 }
 
 .wrapper_img {
-    width: 65px;
-    height: 65px;
-    padding: 4px;
-    background-color: transparent;
-    outline: 1px solid blue;
-    margin-right: 8px;
+  width: 65px;
+  height: 65px;
+  padding: 4px;
+  background-color: transparent;
+  margin-right: 8px;
+}
+
+.wrapper_img img {
+  display: block;
 }
 
 .wrapper_ingridient_title {
-    display: flex;
-    align-items: center;
-    width: 95px;
-    height: 54px;
+  display: flex;
+  align-items: center;
+  width: 95px;
+  height: 54px;
 }
 
 .ingridient_title {
-    color: #3E4462;
-    font-family: Poppins_Medium;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: -0.24px;
+  color: #3e4462;
+  font-family: Poppins_Medium;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: -0.24px;
 }
 
 .wrapper_ingridient_quantity {
-    width: 62px;
-    height: 23px;
-    border-radius: 4px;
-    background: #8BAA36;
-    padding: 4px;
-    margin-left: 28px;
+  text-align: center;
+  width: 62px;
+  height: 23px;
+  border-radius: 4px;
+  background: #8baa36;
+  padding: 4px;
+  margin-left: 28px;
 }
 
 .ingridient_quantity {
-    color: #FAFAFA;
-    font-family: Poppins_Bold;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: normal;
+  color: #fafafa;
+  font-family: Poppins_Bold;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .input_checkbox {
-    margin-left: 28px;
+  margin-left: 28px;
+  margin-right: 19px;
+  width: 18px;
+  height: 18px;
 }
 
-@media screen and (min-width:767.98px) {
-    .container {
-        height: 178px;
-        padding: 0px 24px;
-    }
-
-    .wrapper_img {
-        width: 144px;
-        height: 146px;
-        padding: 17px 16px;
-        margin-right: 24px;
-    }
-
-    .wrapper_ingridient_title {
-        width: 208px;
-    }
-
-    .ingridient_title {
-        font-size: 24px;
-        line-height: 24px;
-    }
-
-    .wrapper_ingridient_quantity {
-        width: 68px;
-        height: 53px;
-        padding: 4px 8px;
-        margin-left: 65px;
-    }
-
-    .text_ingridient_quantity {
-        font-size: 18px;
-    }
-
-    .input_checkbox {
-        margin-left: 58px;
-    }
+.input_checkbox:checked {
+  fill: #8baa36;
 }
 
-@media screen and (min-width:1439.98px) {
-    .container {
-        height: 182px;
-        padding: 0px 32px;
-    }
+@media screen and (min-width: 767.98px) {
+  .container {
+    height: 178px;
+    padding: 0px 24px;
+  }
 
-    .wrapper_img {
-        width: 180px;
-        height: 180px;
-        padding: 26px;
-        margin-right: 40px;
-    }
+  .wrapper_img {
+    width: 144px;
+    height: 146px;
+    padding: 17px 16px;
+    margin-right: 24px;
+  }
 
-    .wrapper_ingridient_title {
-        width: 547px;
-    }
+  .wrapper_ingridient_title {
+    width: 208px;
+  }
 
-    .wrapper_ingridient_quantity {
-        height: 35px;
-        margin-left: 117px;
-    }
+  .ingridient_title {
+    font-size: 24px;
+    line-height: 24px;
+  }
 
-    .input_checkbox {
-        margin-right: 70px;
-    }
+  .wrapper_ingridient_quantity {
+    width: 68px;
+    height: 53px;
+    padding: 4px 8px;
+    margin-left: 65px;
+  }
+
+  .text_ingridient_quantity {
+    font-size: 18px;
+  }
+
+  .input_checkbox {
+    margin-left: 58px;
+  }
+}
+
+@media screen and (min-width: 1439.98px) {
+  .container {
+    height: 182px;
+    padding: 0px 32px;
+  }
+
+  .wrapper_img {
+    width: 180px;
+    height: 180px;
+    padding: 26px;
+    margin-right: 40px;
+  }
+
+  .wrapper_ingridient_title {
+    width: 547px;
+  }
+
+  .wrapper_ingridient_quantity {
+    height: 35px;
+    margin-left: 117px;
+  }
+
+  .input_checkbox {
+    margin-right: 70px;
+  }
 }

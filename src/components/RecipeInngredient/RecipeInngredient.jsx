@@ -14,7 +14,7 @@ export default function RecipeInngredient({ ingredient }) {
     wrapper_ingridient_title,
     ingridient_title,
     wrapper_ingridient_quantity,
-    text_ingridient_quantity,
+    ingridient_quantity,
     input_checkbox,
   } = css;
 
@@ -46,7 +46,7 @@ export default function RecipeInngredient({ ingredient }) {
         <p className={ingridient_title}>{ingredient._id.name}</p>
       </div>
       <div className={wrapper_ingridient_quantity}>
-        <p className={text_ingridient_quantity}>{ingredient.measure}</p>
+        <p className={ingridient_quantity}>{ingredient.measure}</p>
       </div>
       <input
         className={input_checkbox}

@@ -18,4 +18,5 @@ export const handleFetchMoreFullfilled = (state, { payload }) => {
 export const handleClearRecipe = state => {
   state.availableRecipes = [];
   state.total = null;
+  state.error = null
 };

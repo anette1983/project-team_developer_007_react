@@ -6,7 +6,7 @@ function FavoriteList({ favoriteRecipes }) {
   console.log(favoriteRecipes);
   return (
     <>
-      <ul className={css.list}>
+      <ul className={css.favList}>
         {favoriteRecipes?.map(recipe => {
           return <FavoriteItem key={recipe.title} recipe={recipe} />;
         })}
