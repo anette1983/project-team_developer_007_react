@@ -3,8 +3,11 @@ import { NavLink } from 'react-router-dom/dist';
 import { ReactComponent as LogoDesktop } from '../../images/header/svg/logo/logoDesktop.svg';
 import { ReactComponent as LogoMobile } from '../../images/header/svg/logo/logoMobile.svg';
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchMainPage } from 'redux/recipes/operations';
 const Logo = ({ closeModal }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const dispatch = useDispatch();
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -22,7 +25,13 @@ const Logo = ({ closeModal }) => {
 
   return (
     <div>
-      <NavLink to="/" onClick={closeModal}>
+      <NavLink
+        to="/"
+        onClick={() => {
+          closeModal();
+          dispatch(fetchMainPage());
+        }}
+      >
         {windowWidth > 768 ? <LogoDesktop /> : <LogoMobile />}
       </NavLink>
     </div>
