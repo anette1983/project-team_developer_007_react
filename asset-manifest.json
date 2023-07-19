@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-team_developer_007_react/static/css/main.95e5a7d7.css",
-    "main.js": "/project-team_developer_007_react/static/js/main.fcfb0c46.js",
+    "main.js": "/project-team_developer_007_react/static/js/main.218d02d0.js",
     "static/css/154.73929eed.chunk.css": "/project-team_developer_007_react/static/css/154.73929eed.chunk.css",
     "static/js/154.55297d49.chunk.js": "/project-team_developer_007_react/static/js/154.55297d49.chunk.js",
     "static/css/632.0f926e04.chunk.css": "/project-team_developer_007_react/static/css/632.0f926e04.chunk.css",
@@ -17,8 +17,8 @@
     "static/js/671.1110440a.chunk.js": "/project-team_developer_007_react/static/js/671.1110440a.chunk.js",
     "static/css/240.a986233f.chunk.css": "/project-team_developer_007_react/static/css/240.a986233f.chunk.css",
     "static/js/240.95c24297.chunk.js": "/project-team_developer_007_react/static/js/240.95c24297.chunk.js",
-    "static/css/434.4eca4ae6.chunk.css": "/project-team_developer_007_react/static/css/434.4eca4ae6.chunk.css",
-    "static/js/434.741bb688.chunk.js": "/project-team_developer_007_react/static/js/434.741bb688.chunk.js",
+    "static/css/434.0b64180e.chunk.css": "/project-team_developer_007_react/static/css/434.0b64180e.chunk.css",
+    "static/js/434.fded8764.chunk.js": "/project-team_developer_007_react/static/js/434.fded8764.chunk.js",
     "static/css/937.91a95148.chunk.css": "/project-team_developer_007_react/static/css/937.91a95148.chunk.css",
     "static/js/937.c723d5eb.chunk.js": "/project-team_developer_007_react/static/js/937.c723d5eb.chunk.js",
     "static/css/372.ad523128.chunk.css": "/project-team_developer_007_react/static/css/372.ad523128.chunk.css",
@@ -102,7 +102,7 @@
     "static/media/arrow-right.svg": "/project-team_developer_007_react/static/media/arrow-right.adc1d6cdd20420ad9d9560d33060e6e5.svg",
     "static/media/Icon.svg": "/project-team_developer_007_react/static/media/Icon.0a8a3971e234ad8c5e19a6955068f22a.svg",
     "main.95e5a7d7.css.map": "/project-team_developer_007_react/static/css/main.95e5a7d7.css.map",
-    "main.fcfb0c46.js.map": "/project-team_developer_007_react/static/js/main.fcfb0c46.js.map",
+    "main.218d02d0.js.map": "/project-team_developer_007_react/static/js/main.218d02d0.js.map",
     "154.73929eed.chunk.css.map": "/project-team_developer_007_react/static/css/154.73929eed.chunk.css.map",
     "154.55297d49.chunk.js.map": "/project-team_developer_007_react/static/js/154.55297d49.chunk.js.map",
     "632.0f926e04.chunk.css.map": "/project-team_developer_007_react/static/css/632.0f926e04.chunk.css.map",
@@ -118,8 +118,8 @@
     "671.1110440a.chunk.js.map": "/project-team_developer_007_react/static/js/671.1110440a.chunk.js.map",
     "240.a986233f.chunk.css.map": "/project-team_developer_007_react/static/css/240.a986233f.chunk.css.map",
     "240.95c24297.chunk.js.map": "/project-team_developer_007_react/static/js/240.95c24297.chunk.js.map",
-    "434.4eca4ae6.chunk.css.map": "/project-team_developer_007_react/static/css/434.4eca4ae6.chunk.css.map",
-    "434.741bb688.chunk.js.map": "/project-team_developer_007_react/static/js/434.741bb688.chunk.js.map",
+    "434.0b64180e.chunk.css.map": "/project-team_developer_007_react/static/css/434.0b64180e.chunk.css.map",
+    "434.fded8764.chunk.js.map": "/project-team_developer_007_react/static/js/434.fded8764.chunk.js.map",
     "937.91a95148.chunk.css.map": "/project-team_developer_007_react/static/css/937.91a95148.chunk.css.map",
     "937.c723d5eb.chunk.js.map": "/project-team_developer_007_react/static/js/937.c723d5eb.chunk.js.map",
     "372.ad523128.chunk.css.map": "/project-team_developer_007_react/static/css/372.ad523128.chunk.css.map",
@@ -134,6 +134,6 @@
   },
   "entrypoints": [
     "static/css/main.95e5a7d7.css",
-    "static/js/main.fcfb0c46.js"
+    "static/js/main.218d02d0.js"
   ]
 }
