@@ -1,0 +1,106 @@
+.mobileNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobileSearchSVG {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  margin-top: -4px;
+}
+.smallContainer {
+  display: flex;
+}
+.smallContainer:hover {
+  & svg {
+    stroke: rgba(139, 170, 54, 1);
+    fill: none;
+  }
+}
+.nav a {
+  color: rgba(34, 37, 42, 1);
+  cursor: pointer;
+}
+.nav a:hover {
+  color: rgba(139, 170, 54, 1);
+}
+
+.nav a.active {
+  color: rgba(139, 170, 54, 1);
+  cursor: pointer;
+}
+.mobileSearchLink:hover {
+  & a {
+    color: rgba(139, 170, 54, 1);
+  }
+
+  & svg {
+    stroke: rgba(139, 170, 54, 1);
+    fill: none;
+  }
+}
+
+.mobileNav a {
+  color: rgba(34, 37, 42, 1);
+  cursor: pointer;
+}
+.mobileNav a:hover {
+  color: rgba(139, 170, 54, 1);
+}
+
+.mobileNav a.active {
+  color: rgba(139, 170, 54, 1);
+  cursor: pointer;
+}
+
+.searchSVG,
+.mobileSearchSVG {
+  stroke: black;
+  fill: none;
+}
+
+.searchSVG:hover,
+.mobileSearchSVG:hover {
+  stroke: rgba(139, 170, 54, 1);
+  fill: none;
+}
+
+@media screen and (min-width: 375px) {
+  .nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .mobileSearchSVG {
+    width: 24px;
+    height: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mobileNav {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: raw;
+    gap: 30px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}

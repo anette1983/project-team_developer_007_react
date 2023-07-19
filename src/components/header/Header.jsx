@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Logo from './Logo';
-import Navigation from './Navigation';
+import Navigation from './Navigation/Navigation';
 import ThemeToggler from './ThemeToggler';
 import UserLogo from './UserProfile/UserLogo';
 import css from './header.module.css';

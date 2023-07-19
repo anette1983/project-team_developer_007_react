@@ -1,8 +1,8 @@
 .UserLogoModal {
   position: absolute;
 
-  top: 40px;
-  left: 60%;
+  top: 55px;
+  right: 80px;
   width: 177px;
   height: 134px;
   z-index: 11111;
@@ -95,13 +95,13 @@
 @media screen and (min-width: 768px) {
   .UserLogoModal {
     top: 80px;
-    left: 50%;
+    right: 120px;
     gap: 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .UserLogoModal {
-    left: 65%;
+    right: 130px;
   }
 }
