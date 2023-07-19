@@ -11,10 +11,14 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  width: 375px;
+  /* width: 375px; */
   max-width: 1440px;
   width: 100%;
 }
+
+/* .headerLoader {
+
+} */
 
 .nav a {
   color: rgba(34, 37, 42, 1);

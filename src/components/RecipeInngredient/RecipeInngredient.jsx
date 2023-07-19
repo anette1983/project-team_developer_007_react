@@ -23,7 +23,7 @@ export default function RecipeInngredient({ ingredient, shopingList }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (shopingList.find(el => el.ingredient._id === ingredient._id._id)) {
+    if (shopingList?.find(el => el.ingredient._id === ingredient._id._id)) {
       setIsChecked(true);
     } else {
       setIsChecked(false);

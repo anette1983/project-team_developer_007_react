@@ -2,10 +2,11 @@ import React from 'react';
 import css from '../CategoryDetails/Category.module.css';
 import { Link } from 'react-router-dom';
 
-function CategoryRecipeList({ recipeByCategory }) {
+const CategoryRecipeList = ({ recipeByCategory }) => {
+  console.log(recipeByCategory);
   return (
     <ul className={css.tabs_list}>
-      {recipeByCategory.map(({ title, _id, preview }) => (
+      {recipeByCategory?.flatMap(({ title, _id, preview }) => (
         <li key={_id} className={css.list_item}>
           <img className={css.img} src={preview} alt={title} />
           <div className={css.title_wrapp}>
@@ -17,6 +18,6 @@ function CategoryRecipeList({ recipeByCategory }) {
       ))}
     </ul>
   );
-}
+};
 
 export default CategoryRecipeList;

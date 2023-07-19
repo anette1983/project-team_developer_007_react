@@ -5,6 +5,7 @@ import css from '../../pages/pages.module.css';
 import myRecipesCss from './MyRecipesPage.module.css';
 import MyRecipesList from 'components/MyRecipesList/MyRecipesList';
 import {
+  selectMyRecipes,
   selectMyRecipesError,
   selectMyRecipesIsLoading,
 } from 'redux/myRecipes/selectors';
@@ -18,15 +19,7 @@ import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 const MyRecipesPage = () => {
   const isLoading = useSelector(selectMyRecipesIsLoading);
   const error = useSelector(selectMyRecipesError);
-  const isNotFound = error?.includes('code 404');
-  // const isNotFound = myRecipes.length === 0;
-
-  // useEffect(() => {
-  //   if (token) {
-  //     dispatch(fetchMyRecipes(page));
-  //   }
-  // }, [dispatch, token, page]);
-
+  const myRecipes = useSelector(selectMyRecipes);
   const text = 'My recipes';
 
   const { pathname } = useLocation();
@@ -37,8 +30,6 @@ const MyRecipesPage = () => {
 
   return (
     <>
-      {/* <div className={`${myRecipesCss.wrapper_leaf}`}> */}
-      {/* <div className={myRecipesCss.leaf_bg}></div> */}
       <div className={css.section}>
         {isLoading && !error && <Loader />}
 
@@ -47,22 +38,15 @@ const MyRecipesPage = () => {
         </div>
 
         <div className={`${css.container} ${myRecipesCss.wrapper} `}>
-          {error && isNotFound ? (
-            <NotFoundPage text="You have no personal recipes" />
-          ) : (
-            <p>{error}</p>
-          )}
+          {!myRecipes && <NotFoundPage text="you have no personal recipes" />}
           <MyRecipesList />
         </div>
         <div
           className={`${myRecipesCss.container} ${myRecipesCss.pagin_container}`}
         >
-          <Paginator
-          // onPageChange={page => dispatch(fetchMyRecipes(page))}
-          />
+          <Paginator />
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 };
