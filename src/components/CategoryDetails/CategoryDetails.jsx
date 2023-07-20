@@ -6,9 +6,10 @@ import { selectCategories } from 'redux/categories/selectors';
 import { fetchCategories } from 'redux/categories/operations';
 
 import { fetchByCategory } from 'redux/recipes/operations';
-import { selectRecipes } from 'redux/recipes/selectors';
+import { selectIsLoading, selectRecipes } from 'redux/recipes/selectors';
 import CategoryRecipeList from 'components/CategoryRecipeList/CategoryRecipeList';
 import { useNavigate, useParams } from 'react-router-dom';
+import MyLoader from './categoryLoader';
 
 const CategoryDetails = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const CategoryDetails = () => {
   const [prevIndex, setPrevIndex] = useState(0);
   const [nameCategory, setNameCategory] = useState('Beef');
   const { categoryName } = useParams();
-
+  const isLoading = useSelector(selectIsLoading);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -93,13 +94,17 @@ const CategoryDetails = () => {
           </Tab>
         ))}
       </TabList>
-      <TabPanels className={css.list}>
-        {category.map(({ _id }) => (
-          <TabPanel p="0" key={_id}>
-            <CategoryRecipeList recipeByCategory={recipeByCategory} />
-          </TabPanel>
-        ))}
-      </TabPanels>
+      {isLoading ? (
+        <MyLoader />
+      ) : (
+        <TabPanels className={css.list}>
+          {category.map(({ _id }) => (
+            <TabPanel p="0" key={_id}>
+              <CategoryRecipeList recipeByCategory={recipeByCategory} />
+            </TabPanel>
+          ))}
+        </TabPanels>
+      )}
     </Tabs>
   );
 };
