@@ -4,16 +4,19 @@ import Logo from '../Logo';
 import Navigation from '../Navigation/Navigation';
 import { ReactComponent as Cross } from '../../../images/header/svg/X.svg';
 import sprite from '../../../images/svg/sprite.svg';
+import '../../../index.css';
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true);
+    document.body.classList.add('overflowhidden');
   };
 
   const closeModal = () => {
     setIsOpen(false);
+    document.body.classList.remove('overflowhidden');
   };
 
   return (
