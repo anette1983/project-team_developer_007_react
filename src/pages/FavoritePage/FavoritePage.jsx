@@ -5,9 +5,11 @@ import FavoriteList from 'components/FavoriteList/FavoriteList';
 import { selectFavoriteRecipes } from 'redux/favoriteRecipes/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFavoriteRecipes } from 'redux/favoriteRecipes/operations';
+
 import searchCss from '../SearchPage/searchContainer.module.css';
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import { deleteMyRecipe } from 'redux/myRecipes/operations';
+
 
 const FavoritePage = () => {
   const { pathname } = useLocation();
@@ -31,9 +33,11 @@ const FavoritePage = () => {
 
   return (
     <div className={css.wrapper}>
+
       <section className={css.container}>
         <MainPageTitle text="Favorites" />
       </section>
+
       <section className={css.favSection}>
         {favoriteRecipes.length !== 0 ? (
           <FavoriteList

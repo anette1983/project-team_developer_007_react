@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-// import { Link } from 'react-router-dom';
 
 import { addMyRecipe } from '../../redux/myRecipes/operations';
 
@@ -88,6 +87,7 @@ export const AddRecipeForm = () => {
       const newState = [...prevState];
       newState[index][prop] = value;
       newState[index].id = _id;
+
       return newState;
     });
   };
@@ -120,7 +120,6 @@ export const AddRecipeForm = () => {
     preparation,
   };
 
-
   const formData = new FormData();
   formData.append('preview', img);
   formData.append('title', title);
@@ -140,12 +139,12 @@ export const AddRecipeForm = () => {
       .then(() => {
         dispatch(addMyRecipe(formData))
           .unwrap()
-          .then((res) => {
-            navigate('/my?page=1', { replace: true });
+          .then(() => {
+            navigate('/my', { replace: true });
             Notify.success('Hooray! The recipe was successfully added');
           })
           .catch(error => {
-            Notify.error('Ooops, smth is going wrong... Try again!');
+            Notify.failure('Ooops, smth is going wrong... Try again!');
           });
       })
       .catch(err => {

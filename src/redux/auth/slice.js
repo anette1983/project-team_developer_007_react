@@ -25,6 +25,15 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
 
+  reducers: {
+    clearErrorMessage: state => {
+      state.error = null;
+    },
+    clearMessage: state => {
+      state.message = '';
+    },
+  },
+
   extraReducers: builder => {
     builder
       .addCase(register.fulfilled, handleRegisterFulfilled)
@@ -44,3 +53,5 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
+
+export const { clearErrorMessage, clearMessage } = authSlice.actions;

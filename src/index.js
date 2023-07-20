@@ -20,7 +20,7 @@ import './fonts/Poppins/Poppins-SemiBold.ttf';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ChakraProvider>
-    <React.StrictMode>
+    {/* <React.StrictMode> */}
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter basename="/project-team_developer_007_react">
@@ -28,6 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </BrowserRouter>
         </PersistGate>
       </Provider>
-    </React.StrictMode>
+    {/* </React.StrictMode> */}
   </ChakraProvider>
 );

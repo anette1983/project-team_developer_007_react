@@ -1,10 +1,11 @@
-import { MainPageTitle } from "components/MainPageTitle/MainPageTitle";
+// import { MainPageTitle } from "components/MainPageTitle/MainPageTitle";
 import css from "../pages.module.css"
 import searchCss from "./shopingContainer.module.css"
 import ShopingHeader from "components/ShopingHeader/ShopingHeader";
 import ShopingList from "components/ShopingList/ShopingList";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { SectionTitle } from "components/SectionTitle/SectionTitle";
 
 const ShoppingListPage = () => {
 
@@ -16,9 +17,7 @@ const ShoppingListPage = () => {
 
   return (
     <div className={css.section}>
-    <div className={`${css.container} ${searchCss.container}`}>
-                <MainPageTitle text='Shopping list' />
-      </div>
+      <SectionTitle text={'Shopping list'}/>
        <div className={`${css.container} ${searchCss.container}`}>
                 <ShopingHeader/>
       </div>

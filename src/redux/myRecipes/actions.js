@@ -10,12 +10,20 @@ export const handleReject = (state, { payload }) => {
 export const handleFetchMyRecipes = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-  state.availableRecipes = payload;
+
+  if ('recipes' in payload) {
+    state.availableRecipes.recipes = payload.recipes
+  }
+
+  if ('total' in payload) {
+    state.availableRecipes.total = payload.total
+  }
 };
 
 export const handleAddMyRecipe = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
+  // state.availableRecipes.recipes?state.availableRecipes.recipes.push(payload):state.availableRecipes.recipes=payload;
   state.availableRecipes.recipes.push(payload);
 };
 
