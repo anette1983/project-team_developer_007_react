@@ -11,12 +11,11 @@ import {
 const ShopingList = () => {
   const dispatch = useDispatch();
   const shopinList = useSelector(selectShopingList);
-  console.log(shopinList);
   const [itemId, setItemId] = useState('');
 
   useEffect(() => {
     dispatch(fetchShopingList());
-  }, [dispatch]);
+  }, [dispatch, shopinList.length]);
 
   const handleDelete = ({ currentTarget }) => {
     setItemId(currentTarget.id);

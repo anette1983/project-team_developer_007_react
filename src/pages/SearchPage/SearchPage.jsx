@@ -1,4 +1,4 @@
-import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
+// import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import SearchForm from '../../components/SearchForm/SearchInput';
 
 import css from '../pages.module.css';
@@ -15,13 +15,15 @@ import {
   clearRecipes,
 } from 'redux/recipesBySearch/operations';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import {  useSearchParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { SectionTitle } from 'components/SectionTitle/SectionTitle';
+import { Notify } from 'notiflix';
 
 const SearchPage = () => {
   const [page, setPage] = useState(1);
   const [searchBy, setSearchBy] = useState('search');
-  const navigate = useNavigate();
+ 
   let limit = 6;
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -89,15 +91,13 @@ const SearchPage = () => {
 
   useEffect(() => {
     if (isError) {
-      navigate('/error', { replace: true });
+      Notify.failure("Ooops, we can't found what you want!");
     }
-  }, [isError, navigate]);
+  }, [isError,]);
 
   return (
     <div className={css.section}>
-      <div className={`${css.container} ${searchCss.container}`}>
-        <MainPageTitle text="Search" />
-      </div>
+      <SectionTitle text={'Search'}/>
       <div className={`${css.container} ${searchCss.container}`}>
         <SearchForm
           title={setParams}

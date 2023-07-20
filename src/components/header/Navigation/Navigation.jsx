@@ -46,7 +46,7 @@ const Navigation = ({ width, closeModal }) => {
           <NavLink
             to="/shopping-list"
             className={navData => (navData.isActive ? css.active : '')}
-            onClick={closeModal}
+            onClick={()=>closeModal()}
           >
             Shopping List
           </NavLink>
@@ -64,7 +64,7 @@ const Navigation = ({ width, closeModal }) => {
           </li>
         ) : (
           <li>
-            <NavLink to="/search" onClick={closeModal}>
+            <NavLink to="/search" onClick={()=>closeModal()}>
               <Search className={css.searchSVG} />
             </NavLink>
           </li>

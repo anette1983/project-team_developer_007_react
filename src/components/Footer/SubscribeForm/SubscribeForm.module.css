@@ -160,6 +160,18 @@
     color: #22252A;
 }    
 
+.btn_disabled {
+    color: #22252A;
+    /* background-color: #D9D9D9; */
+}
+.btn_disabled:hover {
+    color: #22252A;
+}
+/* .btn_not_disabled {
+    color: #FAFAFA;
+} */
+
+
 @media screen and (min-width: 768px) {
     .btn {
         margin-left: 12px;
