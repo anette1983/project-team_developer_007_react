@@ -87,7 +87,7 @@ const SearchPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
+// console.log(isError);
   useEffect(() => {
     if (isError) {
       navigate('/error', { replace: true });
