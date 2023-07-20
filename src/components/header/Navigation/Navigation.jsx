@@ -46,7 +46,7 @@ const Navigation = ({ width, closeModal }) => {
           <NavLink
             to="/shopping-list"
             className={navData => (navData.isActive ? css.active : '')}
-            onClick={closeModal}
+            onClick={()=>closeModal()}
           >
             Shopping List
           </NavLink>
