@@ -19,14 +19,14 @@ const CategoryLoader = props => {
           foregroundColor="#8BAA36"
           {...props}
         >
-          <rect x="100" y="78" rx="8" ry="8" width="300" height="323" />
-          <rect x="412" y="78" rx="8" ry="8" width="300" height="323" />
-          <rect x="724" y="78" rx="8" ry="8" width="300" height="323" />
-          <rect x="1036" y="78" rx="8" ry="8" width="300" height="323" />
-          <rect x="100" y="506" rx="8" ry="8" width="300" height="323" />
-          <rect x="412" y="506" rx="8" ry="8" width="300" height="323" />
-          <rect x="724" y="506" rx="8" ry="8" width="300" height="323" />
-          <rect x="1036" y="506" rx="8" ry="8" width="300" height="323" />
+          <rect x="100" y="50" rx="8" ry="8" width="300" height="323" />
+          <rect x="412" y="50" rx="8" ry="8" width="300" height="323" />
+          <rect x="724" y="50" rx="8" ry="8" width="300" height="323" />
+          <rect x="1036" y="50" rx="8" ry="8" width="300" height="323" />
+          <rect x="100" y="470" rx="8" ry="8" width="300" height="323" />
+          <rect x="412" y="470" rx="8" ry="8" width="300" height="323" />
+          <rect x="724" y="470" rx="8" ry="8" width="300" height="323" />
+          <rect x="1036" y="470" rx="8" ry="8" width="300" height="323" />
         </ContentLoader>
       )}
 
@@ -38,10 +38,10 @@ const CategoryLoader = props => {
           foregroundColor="#8BAA36"
           {...props}
         >
-          <rect x="32" y="78" rx="8" ry="8" width="336" height="323" />
-          <rect x="400" y="78" rx="8" ry="8" width="336" height="323" />
-          <rect x="32" y="433" rx="8" ry="8" width="336" height="323" />
-          <rect x="400" y="433" rx="8" ry="8" width="336" height="323" />
+          <rect x="32" y="50" rx="8" ry="8" width="336" height="323" />
+          <rect x="400" y="50" rx="8" ry="8" width="336" height="323" />
+          <rect x="32" y="405" rx="8" ry="8" width="336" height="323" />
+          <rect x="400" y="405" rx="8" ry="8" width="336" height="323" />
         </ContentLoader>
       )}
 
@@ -53,9 +53,9 @@ const CategoryLoader = props => {
           foregroundColor="#8BAA36"
           {...props}
         >
-          <rect x="18" y="60" rx="8" ry="8" width="343" height="323" />
-          <rect x="18" y="411" rx="8" ry="8" width="343" height="323" />
-          <rect x="18" y="762" rx="8" ry="8" width="343" height="323" />
+          <rect x="18" y="32" rx="8" ry="8" width="343" height="323" />
+          <rect x="18" y="383" rx="8" ry="8" width="343" height="323" />
+          <rect x="18" y="734" rx="8" ry="8" width="343" height="323" />
         </ContentLoader>
       )}
     </>
