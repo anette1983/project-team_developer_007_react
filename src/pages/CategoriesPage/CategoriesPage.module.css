@@ -1,6 +1,5 @@
 @media screen and (min-width: 375px) {
     .container {
-        display: flex;
         padding: 50px 16px 0 16px;
 
     }
