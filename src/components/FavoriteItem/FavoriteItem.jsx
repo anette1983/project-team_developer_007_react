@@ -1,20 +1,14 @@
 import { Link } from 'react-router-dom';
 import css from './FavoriteItem.module.css';
 // import sprite from '../../images/svg/sprite.svg';
-import { useState } from 'react';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { BiTrash } from 'react-icons/bi';
 
 const FavoriteItem = ({ recipe, childToParent }) => {
-  const [delId, setDelId] = useState();
-
   const handleDelete = id => {
     const data = id;
     Notify.success(`Recipe deleted successfully`);
-    setTimeout(() => {
-      childToParent(data);
-      setDelId(id);
-    }, 1000);
+    childToParent(data);
   };
 
   return (
@@ -30,7 +24,6 @@ const FavoriteItem = ({ recipe, childToParent }) => {
         className={css.delete_btn}
         type="button"
         onClick={() => handleDelete(recipe._id)}
-        disabled={delId === recipe._id}
       >
         <svg>
           <BiTrash size="100%" />
