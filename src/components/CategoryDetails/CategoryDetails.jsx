@@ -28,6 +28,7 @@ const CategoryDetails = () => {
   useEffect(() => {
     if (categoryName) {
       setNameCategory(categoryName);
+      console.log(2);
       setIndex(category.findIndex(c => c.name === categoryName));
       dispatch(fetchByCategory(categoryName));
     } else {

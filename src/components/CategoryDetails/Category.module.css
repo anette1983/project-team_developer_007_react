@@ -25,6 +25,12 @@
 .list_item{
 position: relative;
 margin-top: 28px;
+transition: transform 500ms ease;
+cursor: pointer;
+}
+
+.list_item:hover, .list_item:focus{
+    transform: scale(1.02);
 }
 .title_wrapp{
     position: absolute;

@@ -8,10 +8,20 @@
     max-width: 375px;
     margin: 0 auto;
 }
+.img_wrapp{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .favSection {
     padding: 50px 16px 40px;
 }
+.container {
+    display: flex;
+    padding: 50px 16px 0 16px;
+        }
 
 @media screen and (min-width: 768px) {
 
@@ -20,10 +30,17 @@
         max-width: 768px;
         margin: 0 auto;
     }
+    .container {
+        padding: 72px 32px 0 32px;
+        }
 
     .favSection {
         padding: 100px 32px 50px;
     }
+    .wrapper {
+    max-width: 768px;
+    margin: auto;
+                }
 }
 
 @media screen and (min-width: 1440px) {
@@ -33,7 +50,17 @@
         max-width: 1440px;
     }
 
+    .container {
+        padding: 102px 100px 0 100px;
+    }
+
     .favSection {
         padding: 100px 100px 50px;
     }
+
+    .wrapper {
+        min-width: 1440px;
+        margin: auto;
+                }
 }
+
