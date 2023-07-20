@@ -13,7 +13,6 @@ import { useEffect } from 'react';
 // import searchCss from '../SearchPage/searchContainer.module.css';
 import Paginator from 'components/MyRecipesPagination/Paginator';
 import { useLocation } from 'react-router-dom';
-import Loader from 'components/Loader';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 import { SectionTitle } from 'components/SectionTitle/SectionTitle';
 import MyLoader from './MyRecipesPageLoader';
@@ -36,7 +35,7 @@ const MyRecipesPage = () => {
         <SectionTitle text={text} />
         <div className={`${css.container} ${myRecipesCss.wrapper} `}>
           {!myRecipes && <NotFoundPage text="you have no personal recipes" />}
-          {isLoading ? <MyLoader /> : <MyRecipesList />}
+          {isLoading && !error ? <MyLoader /> : <MyRecipesList />}
         </div>
         <div
           className={`${myRecipesCss.container} ${myRecipesCss.pagin_container}`}
