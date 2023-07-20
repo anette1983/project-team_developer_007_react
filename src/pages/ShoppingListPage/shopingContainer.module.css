@@ -14,11 +14,18 @@
         .container{
           padding: 72px 32px 0 32px;
         }
-    
+    .sahopingConteiner{
+            padding: 50px 32px 0 32px; 
+            
+        }
     }
     @media screen and (min-width: 1440px) {
        .container{  
            padding: 102px 100px 0 100px;
+        }
+        .sahopingConteiner{
+            padding: 50px 140px 0 140px; 
+            
         }
     }
   

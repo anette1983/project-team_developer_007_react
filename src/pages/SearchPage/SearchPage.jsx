@@ -96,7 +96,7 @@ const SearchPage = () => {
   }, [isError,]);
 
   return (
-    <div className={css.section}>
+    <div className={css.sectionSearch}>
       <SectionTitle text={'Search'}/>
       <div className={`${css.container} ${searchCss.container}`}>
         <SearchForm
@@ -125,7 +125,7 @@ const SearchPage = () => {
       )}
       {recipes && (
         <>
-          <div className={`${css.container} ${searchCss.container}`}>
+          <div className={`${css.listContainer} ${searchCss.listContainer}`}>
             <SearchedRecipesList recipes={recipes} />
           </div>
         </>
