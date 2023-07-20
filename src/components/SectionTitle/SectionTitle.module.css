@@ -2,7 +2,7 @@
         .container{
             padding: 114px 16px 0 16px; 
             position: relative;
-            width: 359px;
+            width: 375px;
             margin: 0 auto;
         }
         
@@ -10,15 +10,15 @@
     @media screen and (min-width: 768px) {
         .container{
           padding: 136px 32px 0 32px;
-          width: 704px;
+          width: 768px;
         }
        
     }
   
     @media screen and (min-width: 1440px) {
        .container{  
-           padding: 164px 0 0 0;
-           width: 1240px;
+           padding: 164px 100px 0 100px;
+           width: 1440px;
         }
     }
         

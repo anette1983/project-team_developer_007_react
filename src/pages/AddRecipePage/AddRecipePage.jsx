@@ -15,19 +15,20 @@ const AddRecipePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  return (
-    <div className={css.wrapper}>
+  return (<>
       <SectionTitle text={'Add recipe'}/>
-      <section className={css.pageContent}>
-        <div className={css.formContainer}>
-          <AddRecipeForm />
-          <div className={css.sidebar}>
-            <FollowUsBlock />
-            <PopularRecipe />
+      <div className={css.wrapper}>
+        <section className={css.pageContent}>
+          <div className={css.formContainer}>
+            <AddRecipeForm />
+            <div className={css.sidebar}>
+              <FollowUsBlock />
+              <PopularRecipe />
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
