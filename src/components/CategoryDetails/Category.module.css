@@ -18,8 +18,17 @@
   height: 323px;
   border-radius: 8px;
 }
-.list_item {
-  position: relative;
+
+
+.list_item{
+position: relative;
+margin-top: 28px;
+transition: transform 500ms ease;
+cursor: pointer;
+}
+
+.list_item:hover, .list_item:focus{
+    transform: scale(1.02);
 }
 .title_wrapp {
   position: absolute;
@@ -31,6 +40,7 @@
   bottom: 26px;
   display: flex;
   align-items: center;
+
 }
 .title {
   margin-left: 16px;
