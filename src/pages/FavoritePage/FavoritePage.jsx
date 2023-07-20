@@ -4,11 +4,14 @@ import css from './FavoritePage.module.css';
 import FavoriteList from 'components/FavoriteList/FavoriteList';
 import { selectFavoriteRecipes } from 'redux/favoriteRecipes/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFavoriteRecipes } from 'redux/favoriteRecipes/operations';
+
+import {
+  deleteFavoriteRecipi,
+  fetchFavoriteRecipes,
+} from 'redux/favoriteRecipes/operations';
 
 import searchCss from '../SearchPage/searchContainer.module.css';
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
-import { deleteMyRecipe } from 'redux/myRecipes/operations';
 
 
 const FavoritePage = () => {
@@ -27,7 +30,8 @@ const FavoritePage = () => {
   useEffect(() => {
     dispatch(fetchFavoriteRecipes());
     if (data !== '') {
-      dispatch(deleteMyRecipe(data));
+      dispatch(deleteFavoriteRecipi(data));
+      dispatch(fetchFavoriteRecipes());
     }
   }, [dispatch, data]);
 
