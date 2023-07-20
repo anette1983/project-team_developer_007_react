@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bg_wrapper {
+  width: 208px;
+  height: 133px;
+  background-image: url('../../images/norecipe/no_recipe_mob_1x.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 14px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .bg_wrapper {
+    background-image: url('../../images/norecipe/no_recipe_mob_2x.png');
+  }
+}
+
+.heading {
+  text-align: center;
+  color: #000;
+  font-feature-settings: 'liga' off;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px; /* 111.111% */
+  letter-spacing: -0.36px;
+  margin-bottom: 8px;
+}
+
+.text_wrapper {
+  text-align: center;
+  max-width: 196px;
+}
+
+.text {
+  color: #000;
+
+  font-feature-settings: 'liga' off;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .bg_wrapper {
+    width: 350px;
+    height: 225px;
+    background-image: url('../../images/norecipe/no_recipe_tab_1x.png');
+    margin-bottom: 32px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg_wrapper {
+      background-image: url('../../images/norecipe/no_recipe_tab_2x.png');
+    }
+  }
+
+  .heading {
+    font-size: 24px;
+    line-height: 24px; /* 100% */
+    letter-spacing: -0.48px;
+    margin-bottom: 14px;
+  }
+
+  .text_wrapper {
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 18px;
+
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.36px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    padding-bottom: 105px;
+  }
+  .bg_wrapper {
+    width: 350px;
+    height: 225px;
+    background-image: url('../../images/norecipe/no_recipe_desk_1x.png');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg_wrapper {
+      background-image: url('../../images/norecipe/no_recipe_desk_2x.png');
+    }
+  }
+  .text {
+    font-size: 18px;
+
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.36px;
+  }
+}
