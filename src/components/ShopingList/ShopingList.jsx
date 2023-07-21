@@ -15,7 +15,7 @@ const ShopingList = () => {
 
   useEffect(() => {
     dispatch(fetchShopingList());
-  }, [dispatch, shopinList.length]);
+  }, [dispatch]);
 
   const handleDelete = ({ currentTarget }) => {
     setItemId(currentTarget.id);

@@ -1,14 +1,24 @@
 import { Link } from 'react-router-dom';
 import css from './FavoriteItem.module.css';
-// import sprite from '../../images/svg/sprite.svg';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { BiTrash } from 'react-icons/bi';
+import {
+  deleteFavoriteRecipi,
+  fetchFavoriteRecipes,
+} from 'redux/favoriteRecipes/operations';
+import { useDispatch } from 'react-redux';
 
-const FavoriteItem = ({ recipe, childToParent }) => {
+const FavoriteItem = ({ recipe }) => {
+  const dispatch = useDispatch();
+
   const handleDelete = id => {
     const data = id;
+    dispatch(deleteFavoriteRecipi(data));
+    setTimeout(() => {
+      dispatch(fetchFavoriteRecipes());
+    }, 500);
+
     Notify.success(`Recipe deleted successfully`);
-    childToParent(data);
   };
 
   return (
