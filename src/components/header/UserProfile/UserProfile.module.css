@@ -17,7 +17,7 @@
   }
 }
 .nickName {
-  font-family: inherit;
+  font-family: 'Poppins_SemiBold', sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.7;
@@ -46,7 +46,7 @@
 }
 
 .UserLogoutModalText p {
-  font-family: inherit;
+  font-family: 'Poppins_Regular', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.3;
