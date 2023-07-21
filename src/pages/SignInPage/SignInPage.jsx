@@ -13,7 +13,7 @@ const SignInPage = () => {
 
   useEffect(() => {
     if (error && error !== 'Unable to fetch user') {
-      Notify.failure(error);
+      error !== 'Request failed with status code 401' && Notify.failure(error);
       dispatch(clearErrorMessage());
     }
 

@@ -62,6 +62,7 @@ export const refreshUser = createAsyncThunk(
 
       return data;
     } catch (error) {
+      console.clear();
       return thunkAPI.rejectWithValue(error.message);
     }
   }
