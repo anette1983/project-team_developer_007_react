@@ -42,6 +42,7 @@
 }
 
 .counterValue {
+    font-family: 'Poppins_Regular';
     font-size: 14px;
     line-height: 1.3;
     color: #333333;
@@ -105,6 +106,7 @@
 }
 
 .selectIngredientItem {
+    font-family: 'Poppins_Regular';
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: -0.02em;
