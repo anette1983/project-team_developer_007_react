@@ -19,6 +19,8 @@
         }
         .listContainer{
             padding: 10px 16px 0 16px;
+            max-width: 375px;
+            margin: 0 auto;
         }
             .mobPhoto{
             margin: 0 auto;
@@ -41,6 +43,8 @@
         }
          .listContainer{
             padding: 8px 32px 0 32px;
+            max-width: 768px;
+            margin: 0 auto;
         }
     }
   
@@ -50,6 +54,8 @@
         }
           .listContainer{
             padding: 58px 100px 0 100px;
+            max-width: 1440px;
+            margin: 0 auto;
         }
     }
         .paginationWrap{
