@@ -45,6 +45,7 @@
 }
 
 .card_title {
+  font-family: 'Poppins_Semibold';
   max-width: 70%;
   color: #3e4462;
   font-size: 14px;
