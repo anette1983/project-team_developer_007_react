@@ -5,33 +5,35 @@
     border-radius: 8px;
     margin-top: 157px;
     margin-left: 105px;
-    padding: 8px 8px 30px 8px;
-    position: relative;
+    padding: 8px 8px 4px 8px;
+    
   }
 
 @media screen and (min-width: 768px) {
     .container  {
-        width: 260px;
+        width: 261px;
         height: 100px;
-        padding: 12px 12px 34px 12px;
-        margin-top: 0;
-        margin-left: 75px;
-       
+        padding: 12px 12px 12px 12px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 32px;
+      
+       position: relative;
      }
   }
 
   @media screen and (min-width: 1440px) {
     .container  {
+      /* width: 298px; */
         height: 114px;
-        padding: 16px 16px 38px 16px;
-        margin-top: 0;
-        margin-right: 80px;
+        padding: 16px 16px 16px 16px;
+        margin-right: 122px;
            
      }
   }  
 
 .text {
-  
+ 
 font-size: 12px;
 font-weight: 500;
 line-height: 18px;
@@ -57,30 +59,29 @@ color: #3E4462;
 }
 
 .btn {
-   width: 86px;
+   width: 81px;
    font-size: 10px;
    font-weight: 400;
    line-height: 12px;
    letter-spacing: 0.20px;
-   text-align: center;
+   text-align: start;
    color: #3E4462;   
    border: none;
    background-color: transparent;
-   margin: 4px 8px 8px 119px;
+   margin: 0px 8px 0px 128px;
+   position: relative;
+ 
 }
 
 @media screen and (min-width: 768px) {
     .btn {
-      
-        margin: 4px 12px 12px 142px;
-        position: absolute;
-        top: 75%;
-     }
+     margin: 0px 12px 0px 150px;
+         }
   }
 
   @media screen and (min-width: 1440px) {
     .btn {
-    top: 70%;
+      margin: 4px 16px 0px 154px;
      }
  
   }
@@ -88,22 +89,21 @@ color: #3E4462;
  .img {
    width: 18px;
    height: 18px;
-   margin-left: 72px;
-   margin-top: -11px;
-   
-   
- } 
+   position: absolute;
+   left: 60.5px;
+   top: 0.5px;
+   } 
 
  @media screen and (min-width: 768px) {
    .img {
-      margin-left: 80px;
-      margin-top: -11px;
+    left: 65px;
+  
      
      }
  }
  @media screen and (min-width: 1440px) {
    .img {
-      margin-left: 80px;
+    left: 64px;
         
      }
  }
@@ -116,7 +116,16 @@ color: #3E4462;
  .crossbolt {
    width: 186px;
    height: 115px;
-   margin-left: 20px;
    display: block;
+   position: absolute;
+   top: 70px;
+   left: 40px;
  }
+}
+@media screen and (min-width: 768px) {
+  
+  .crossbolt {
+    top: 90px;
+    left: 40px;
+  }
 }

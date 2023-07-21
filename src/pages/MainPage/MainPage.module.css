@@ -237,7 +237,7 @@ background-size: 320px;
 @media screen and (min-width: 768px) {
   .text {
     width: 362px;
-    margin: 0px 0 32px 38px;
+    margin: 0px 0 0 38px;
     padding: 0;
     text-align: start;
   }
