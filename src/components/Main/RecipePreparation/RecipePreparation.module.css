@@ -3,13 +3,129 @@
   --PRIMARYCOLOR: #8baa36;
 }
 
+.wrap {
+  padding: 0 16px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
 .title {
   color: #3e4462;
+  font-family: "Poppins_Bold";
   font-feature-settings: 'liga' off;
-  font-family: Poppins;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1;
   letter-spacing: -0.48px;
+  margin-bottom: 28px;
+}
+
+.list {
+  margin-bottom: 26px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.item:last-child {
+  display: none
+}
+
+.numb {
+  display: flex;
+  padding: 10px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'ss04' on;
+  font-family: Poppins_Bold;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 21px;
+  height: 21px;
+  border-radius: 100px;
+  background: #8BAA36;
+}
+
+.subtitle {
+  font-family: "Poppins_Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.24px;
+  margin-left: 14px;
+}
+
+@media screen and (min-width: 767.98px) {
+  .wrap {
+    padding: 0 32px;
+    padding-bottom: 200px;
+  }
+
+  .title {
+    font-feature-settings: 'clig' off, 'liga' off;
+    margin-bottom: 32px;
+  }
+
+  .list {
+    margin-bottom: 35px;
+  }
+
+  .item {
+    margin-bottom: 18px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
+    margin-left: 14px;
+  }
+}
+
+@media screen and (min-width: 1439.98px) {
+  .wrap {
+    padding: 0 100px;
+    padding-bottom: 200px;
+  }
+
+  .wrap_container {
+    display: flex;
+  }
+
+  .title {
+    font-feature-settings: 'clig' off, 'liga' off;
+    margin-bottom: 33.5px;
+    letter-spacing: -0.24px;
+  }
+
+  .list {
+    margin-right: 50px;
+    max-width: 757px;
+  }
+
+  .item {
+    margin-bottom: 21px;
+  }
+
+
+
+  .subtitle {
+    margin-left: 14px;
+  }
+
+  .preview_img {
+    width: 433px;
+    height: 332px;
+  }
 }
