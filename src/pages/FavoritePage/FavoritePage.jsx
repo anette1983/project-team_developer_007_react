@@ -32,9 +32,8 @@ const FavoritePage = () => {
     if (data !== '') {
       dispatch(deleteFavoriteRecipi(data));
       dispatch(fetchFavoriteRecipes());
-      setData('');
     }
-  }, [dispatch, data, favoriteRecipes.length]);
+  }, [dispatch, data]);
 
   return (
     <div className={css.wrapper}>

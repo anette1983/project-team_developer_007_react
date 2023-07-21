@@ -6,8 +6,6 @@ export const fetchShopingList = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get('/api/recipes/shopping-list');
-      console.log(data);
-      if (data === null || undefined) return {};
       return data.list || data;
     } catch (error) {
       return rejectWithValue(error.message);
