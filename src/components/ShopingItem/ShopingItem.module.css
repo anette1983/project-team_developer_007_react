@@ -78,7 +78,7 @@
     .wrapper_img {
         width: 93px;
         height: 97px;
-       
+       margin-right: 16px;
        
     }
 
@@ -95,7 +95,7 @@
         min-width: 68px;
         height: 53px;
         padding: 4px 8px;
-        margin-left: 100px;
+        margin-left: 94px;
     }
 
     .text_ingridient_quantity {
