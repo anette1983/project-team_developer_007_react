@@ -113,7 +113,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-  font: inherit;
+  font-family: 'Poppins_Regular';
   color: inherit;
 }
 
