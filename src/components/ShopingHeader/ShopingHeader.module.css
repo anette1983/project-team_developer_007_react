@@ -3,6 +3,9 @@
     color: #FAFAFA;
     font-family: "Poppins_SemiBold", sans-serif;
 }
+.wrap{
+margin: 0 auto;
+}
 @media screen and (min-width: 375px) {
       .wrap{
     width: 359px;
@@ -18,7 +21,7 @@
     display: flex;
     gap: 24px;
 }
-       
+
     }
     @media screen and (min-width: 768px) {
        .wrap{
