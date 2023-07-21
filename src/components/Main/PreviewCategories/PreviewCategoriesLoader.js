@@ -39,7 +39,7 @@ const CategoryLoader = props => {
           foregroundColor="#8BAA36"
           {...props}
         >
-          <rect x="0" y="0" rx="8" ry="8" width="300" height="44" />
+          <rect x="0" y="0" rx="8" ry="8" width="250" height="44" />
           <rect x="0" y="84" rx="8" ry="8" width="336" height="323" />
           <rect x="368" y="84" rx="8" ry="8" width="336" height="323" />
         </ContentLoader>
