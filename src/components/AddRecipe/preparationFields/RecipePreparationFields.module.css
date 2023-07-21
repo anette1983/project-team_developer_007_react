@@ -44,6 +44,7 @@
 
 @media screen and (min-width: 768px) {
     .recipeTextarea {
+        font-family: 'Poppins_Regular';
         width: 505px;
         min-height: 224px;
         padding: 16px 22px;

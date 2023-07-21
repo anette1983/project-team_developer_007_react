@@ -69,6 +69,7 @@
 
 .ingredientNameInput {
     display: block;
+    font-family: 'Poppins_Regular';
     width: 194px;
     height: 53px;
     margin-bottom: 0;
@@ -118,6 +119,7 @@
 
 .ingredientQuantityField {
     position: relative;
+    font-family: 'Poppins_Regular';
     width: 84px;
     height: 53px;
     margin-right: 33px;

@@ -1,6 +1,6 @@
 .title {
   color: #001833;
-  font-family: 'Poppins-SemiBold', sans-serif;
+  font-family: 'Poppins_SemiBold', sans-serif;
   font-size: 28px;
   line-height: 28px;
   letter-spacing: -0.56px;
@@ -24,7 +24,7 @@
 @media screen and (min-width: 375px) {
   .title {
     color: #001833;
-    font-family: 'Poppins-SemiBold', sans-serif;
+    font-family: 'Poppins_SemiBold', sans-serif;
     font-weight: 600;
     font-size: 28px;
     line-height: 28px;

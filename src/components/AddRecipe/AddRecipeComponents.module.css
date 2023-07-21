@@ -8,6 +8,7 @@
 }
 
 .addButton {
+  font-family: 'Poppins_Regular';
   width: 129px;
   height: 46px;
   border-radius: 24px 44px;
@@ -78,6 +79,7 @@
 }
 
 .popularRecipeText {
+  font-family: 'Poppins_Regular';
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: -0.24px;

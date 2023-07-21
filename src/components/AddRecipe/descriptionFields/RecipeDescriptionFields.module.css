@@ -46,6 +46,7 @@
 }
 
 .inputRaw {
+    font-family: 'Poppins_Regular';
     width: 343px;
     height: 40px;
     background-color: transparent;
@@ -69,6 +70,7 @@
 }
 
 .selectBox {
+    font-family: 'Poppins_Regular';
     width: 343px;
     height: 40px;
     border: none;
