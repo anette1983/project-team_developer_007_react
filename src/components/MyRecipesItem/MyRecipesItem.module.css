@@ -83,11 +83,15 @@
   line-height: 10px;
   letter-spacing: -0.16px;
   margin-bottom: 24px;
+  max-height: 39px;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
 }
 
 @media screen and (min-width: 768px) {
   .card_text {
     width: 350px;
+    max-height: 107px;
     font-size: 14px;
 
     line-height: 18px;
@@ -100,7 +104,7 @@
   .card_text {
     width: 100%;
     font-size: 18px;
-
+    max-height: 100%;
     line-height: 24px;
     letter-spacing: -0.36px;
     margin-bottom: 67px;
@@ -198,7 +202,7 @@
   border-radius: 24px 44px;
   color: #fafafa;
   font-family: inherit;
-  /* font-family: Poppins; */
+  font-family: 'Poppins';
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
