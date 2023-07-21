@@ -7,12 +7,12 @@ const CategoryRecipeList = ({ recipeByCategory }) => {
     <ul className={css.tabs_list}>
       {recipeByCategory?.flatMap(({ title, _id, preview }) => (
         <li key={_id} className={css.list_item}>
-          <img className={css.img} src={preview} alt={title} />
-          <div className={css.title_wrapp}>
-            <Link to={`/recipe/${_id}`} className={css.title}>
-              {title}
-            </Link>
-          </div>
+          <Link to={`/recipe/${_id}`}>
+            <img className={css.img} src={preview} alt={title} />
+            <div className={css.title_wrapp}>
+              <p className={css.title}>{title}</p>
+            </div>
+          </Link>
         </li>
       ))}
     </ul>

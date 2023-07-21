@@ -11,10 +11,7 @@ export const ChooseYourBreakfast = () => {
             <span className={css.text_active}> Delicious and healthy &nbsp;</span>
         way to enjoy a variety of fresh ingredients in one satisfying meal
         </p>
-        <svg className={css.crossbolt} >
-            <use href={sprite + "#crossbolt"}/>
-          </svg>
-
+       
         <Link to= "/categories/Breakfast">
         <button type="button" className={css.btn}> 
        
@@ -23,6 +20,9 @@ export const ChooseYourBreakfast = () => {
             <use href={icon + "#arrow-right"}/>
           </svg></button>
         </Link>
+        <svg className={css.crossbolt} >
+            <use href={sprite + "#crossbolt"}/>
+          </svg>
         </div>
     )
 }   

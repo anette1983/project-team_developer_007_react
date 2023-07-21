@@ -281,10 +281,15 @@
 .Registration__svg_err {
   position: absolute;
 
-  right: 20px;
-  top: 18px;
+  right: 14px;
+  top: 12.5px;
 
   opacity: 0;
+
+  @media screen and (min-width: 768px) {
+    right: 20px;
+    top: 18px;
+  }
 }
 
 .Registration__svg_succ.Registration__svg_success,

@@ -4,18 +4,12 @@ import css from './MainPage.module.css';
 import { selectIsRefreshing } from 'redux/auth/selectors';
 import { useEffect } from 'react';
 import { fetchMainPage } from '../../redux/recipes/operations';
+import { PreviewCategories } from 'components/Main/PreviewCategories/PreviewCategories';
 
 const MainPage = () => {
   const dispatch = useDispatch();
 
   const isRefresh = useSelector(selectIsRefreshing);
-
-  //  useEffect(()=> {
-  //  if (!isRefresh) {
-  //     dispatch(fetchMainPage())
-  // }
-  //  }, [dispatch, isRefresh])
-  // Це довелось прибрати, щоб при поверненні на мейн з інших сторінок не викидало помилку!
 
   useEffect(() => {
     dispatch(fetchMainPage());
@@ -26,6 +20,7 @@ const MainPage = () => {
       <div className={css.wrapper}>
         <div className={css.wrapper_leaf}>
           <div className={css.container}>
+            
             <h1 className={css.title}>
               <span className={css.title_start}>So</span>Yummy
             </h1>
@@ -36,6 +31,7 @@ const MainPage = () => {
             </p>
             <Main />
           </div>
+          <PreviewCategories/>
         </div>
       </div>
     </>

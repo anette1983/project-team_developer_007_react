@@ -46,8 +46,6 @@ const CategoryDetails = () => {
   };
   const handleScroll = e => {
     setIndex(prev => setPrevIndex(prev));
-    /*     console.log('0', prevIndex);
-    console.log('1', index); */
     if (index > prevIndex) {
       document.getElementById('content').scrollBy({
         top: 0,
@@ -66,6 +64,7 @@ const CategoryDetails = () => {
 
   return (
     <Tabs
+      size={window.innerWidth < 767 ? 'sm' : 'lg'}
       variant="unstyled"
       isLazy
       defaultIndex={0}
@@ -76,6 +75,7 @@ const CategoryDetails = () => {
       <TabList
         id={'content'}
         overflowY="hidden"
+        className={css.tab_list}
         sx={{
           scrollbarWidth: 'none',
           '::-webkit-scrollbar': {
@@ -86,7 +86,7 @@ const CategoryDetails = () => {
         {category?.map(({ name }) => (
           <Tab
             onClick={handleClick}
-            _selected={{ color: '#8BAA36' }}
+            _selected={{ color: '#8BAA36', borderBottom: 'solid 2px' }}
             className={css.tabs_button}
             key={name}
           >

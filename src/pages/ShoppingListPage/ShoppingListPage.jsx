@@ -16,7 +16,7 @@ const ShoppingListPage = () => {
   }, [pathname]);
 
   return (
-    <div className={css.section}>
+    <div className={css.sectionSearch}>
       <SectionTitle text={'Shopping list'}/>
        <div className={`${css.container} ${searchCss.container}`}>
                 <ShopingHeader/>

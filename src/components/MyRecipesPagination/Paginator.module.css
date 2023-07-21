@@ -16,13 +16,24 @@
   text-align: center;
   font-family: inherit;
   font-size: 12px;
+  font-feature-settings: 'ss04' on;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin-right: 5px;
 }
 
-.pagination_item:not(:last-child) {
-  margin-right: 5px;
+.pagination_item:first-child {
+  margin-right: 11px;
+}
+
+.pagination_item:last-child {
+  margin-left: 11px;
+  margin-right: 0px;
+}
+
+.pagination_item:nth-last-child(2) {
+  margin-right: 0px;
 }
 
 .pagination_btn {
@@ -58,5 +69,20 @@
 @media screen and (min-width: 768px) {
   .pagination_list {
     height: 55px;
+  }
+  .pagination_item {
+    margin-right: 11px;
+  }
+  .pagination_item:first-child {
+    margin-right: 27px;
+  }
+
+  .pagination_item:last-child {
+    margin-left: 27px;
+    margin-right: 0px;
+  }
+
+  .pagination_item:nth-last-child(2) {
+    margin-right: 0px;
   }
 }

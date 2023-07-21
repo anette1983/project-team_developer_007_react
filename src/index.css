@@ -120,3 +120,6 @@ button {
 a {
   text-decoration: none;
 }
+.overflowhidden {
+  overflow: hidden;
+}

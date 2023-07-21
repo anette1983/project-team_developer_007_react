@@ -1,22 +1,16 @@
 import { Link } from 'react-router-dom';
 import css from './FavoriteItem.module.css';
 // import sprite from '../../images/svg/sprite.svg';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { deleteMyRecipe } from 'redux/myRecipes/operations';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import {BiTrash} from 'react-icons/bi'
+import { BiTrash } from 'react-icons/bi';
 
-const FavoriteItem = ({ recipe }) => {
-  const [delId, setDelId] = useState();
-  const dispatch = useDispatch();
-
+const FavoriteItem = ({ recipe, childToParent }) => {
   const handleDelete = id => {
-    setDelId(id);
-    dispatch(deleteMyRecipe(id));
-
-    return Notify.success(`Recipe deleted successfully`);
+    const data = id;
+    Notify.success(`Recipe deleted successfully`);
+    childToParent(data);
   };
+
   return (
     <li className={css.card_container}>
       <div className={css.img_wrapper}>
@@ -30,10 +24,9 @@ const FavoriteItem = ({ recipe }) => {
         className={css.delete_btn}
         type="button"
         onClick={() => handleDelete(recipe._id)}
-        disabled={delId === recipe._id}
       >
         <svg>
-          <BiTrash size='100%'/>
+          <BiTrash size="100%" />
         </svg>
       </button>
       <div className={css.wrapper}>

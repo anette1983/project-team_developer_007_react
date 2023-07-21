@@ -64,7 +64,7 @@ const Navigation = ({ width, closeModal }) => {
           </li>
         ) : (
           <li>
-            <NavLink to="/search" onClick={closeModal}>
+            <NavLink to="/search" onClick={()=>closeModal()}>
               <Search className={css.searchSVG} />
             </NavLink>
           </li>

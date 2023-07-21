@@ -80,9 +80,14 @@
   .wrapper_title_table {
     padding: 21px 40px;
     margin-bottom: 50px;
+    width: 1240px;
   }
 
   .title_table_position {
     margin-left: 761px;
+  }
+
+  .ingredients_list {
+    width: 1240px;
   }
 }
