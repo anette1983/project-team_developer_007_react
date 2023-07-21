@@ -2,12 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 343px;
     height: 86px;
     background-color: #FAFAFA;
     border-bottom: 1px solid #E0E0E0;
     align-items: flex-start;
     gap: 10px;
+    margin: 0 auto;
 }
 
 .wrapper_img {
@@ -28,7 +29,7 @@
 
 .ingridient_title {
     color: #3E4462;
-    font-family: Poppins_Medium;
+    font-family: "Poppins_Medium", sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 14px;
@@ -36,7 +37,7 @@
 }
 
 .wrapper_ingridient_quantity {
-    width: 37px;
+    min-width: 37px;
     height: 23px;
     border-radius: 4px;
     background: #8BAA36;
@@ -45,12 +46,13 @@
     justify-content: center;
 }
 
-.ingridient_quantity {
-    color: #FAFAFA;
-    font-family: Poppins_Bold;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: normal;
+.ingridient_quantity,
+.text_ingridient_quantity {
+     color: #fafafa;
+  font-family: "Poppins_Bold" ,sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .wrapper_img_text{
@@ -88,10 +90,10 @@
     }
 
     .wrapper_ingridient_quantity {
-        width: 68px;
+        min-width: 68px;
         height: 53px;
         padding: 4px 8px;
-        margin-left: 80px;
+        margin-left: 100px;
     }
 
     .text_ingridient_quantity {
