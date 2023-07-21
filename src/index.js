@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from 'components/App';
 import { persistor, store } from 'redux/store';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import './index.css';
 
 // import fonts
@@ -18,8 +18,14 @@ import './fonts/Poppins/Poppins-Medium.ttf';
 import './fonts/Poppins/Poppins-Regular.ttf';
 import './fonts/Poppins/Poppins-SemiBold.ttf';
 
+
+const theme = extendTheme({
+  fonts: {
+    body: `'Poppins_Regular', sans-serif`,
+  },
+})
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     {/* <React.StrictMode> */}
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
