@@ -13,6 +13,7 @@ import {
 import searchCss from '../SearchPage/searchContainer.module.css';
 import { SectionTitle } from 'components/SectionTitle/SectionTitle';
 
+
 const FavoritePage = () => {
   const { pathname } = useLocation();
   const dispatch = useDispatch();
@@ -36,7 +37,9 @@ const FavoritePage = () => {
 
   return (
     <div className={css.wrapper}>
+
       <SectionTitle text={'Favorites'} />
+
       <section className={css.favSection}>
         {favoriteRecipes.length !== 0 ? (
           <FavoriteList

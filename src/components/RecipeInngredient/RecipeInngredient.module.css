@@ -38,6 +38,9 @@
 }
 
 .wrapper_ingridient_quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 62px;
   height: 23px;
@@ -90,9 +93,9 @@
 
   .wrapper_ingridient_quantity {
     width: 68px;
-    height: 53px;
+    height: 35px;
     padding: 4px 8px;
-    margin-left: 65px;
+    margin-left: 35px;
   }
 
   .text_ingridient_quantity {
@@ -101,6 +104,8 @@
 
   .input_checkbox {
     margin-left: 58px;
+    width: 35px;
+    height: 35px;
   }
 }
 

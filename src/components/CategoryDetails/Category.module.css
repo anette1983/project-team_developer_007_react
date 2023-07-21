@@ -13,16 +13,16 @@
   border-radius: 8px;
 }
 
+.list_item {
+  position: relative;
 
-.list_item{
-position: relative;
-margin-top: 28px;
-transition: transform 500ms ease;
-cursor: pointer;
+  transition: transform 500ms ease;
+  cursor: pointer;
 }
 
-.list_item:hover, .list_item:focus{
-    transform: scale(1.02);
+.list_item:hover,
+.list_item:focus {
+  transform: scale(1.02);
 }
 .title_wrapp {
   position: absolute;
@@ -34,7 +34,6 @@ cursor: pointer;
   bottom: 26px;
   display: flex;
   align-items: center;
-
 }
 .title {
   margin-left: 16px;
@@ -95,7 +94,7 @@ cursor: pointer;
     display: grid;
     justify-content: center;
     grid-template-columns: 336px 336px;
-    grid-template-rows: 323px 323px;
+    grid-template-rows: 323px;
     column-gap: 32px;
     row-gap: 32px;
   }
@@ -113,10 +112,11 @@ cursor: pointer;
     }
   .tabs_list {
     display: grid;
+    align-items: center;
 
     justify-content: center;
     grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 323px 323px 323px 323px;
+    grid-template-rows: 323px;
     column-gap: 12px;
     row-gap: 100px;
   }
