@@ -39,7 +39,6 @@ const Paginator = () => {
 
   const handlePrevBtnClick = () => {
     const prevPage = currentPage - 1;
-    console.log('prevPage :>> ', prevPage);
     setCurrentPage(prevPage);
     setSearchParams({ page: prevPage });
     dispatch(fetchMyRecipes(prevPage));
@@ -112,4 +111,3 @@ const Paginator = () => {
 };
 
 export default Paginator;
-

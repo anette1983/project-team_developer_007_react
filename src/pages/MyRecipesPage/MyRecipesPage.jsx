@@ -1,6 +1,4 @@
 import { useSelector } from 'react-redux';
-
-// import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import css from '../../pages/pages.module.css';
 import myRecipesCss from './MyRecipesPage.module.css';
 import MyRecipesList from 'components/MyRecipesList/MyRecipesList';
@@ -10,12 +8,14 @@ import {
   selectMyRecipesIsLoading,
 } from 'redux/myRecipes/selectors';
 import { useEffect } from 'react';
-// import searchCss from '../SearchPage/searchContainer.module.css';
+
 import Paginator from 'components/MyRecipesPagination/Paginator';
 import { useLocation } from 'react-router-dom';
-import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
+
+import Loader from 'components/Loader';
 import { SectionTitle } from 'components/SectionTitle/SectionTitle';
-import MyLoader from './MyRecipesPageLoader';
+import NoRecipesPlug from './NoRecipesPlug';
+
 
 const MyRecipesPage = () => {
   const isLoading = useSelector(selectMyRecipesIsLoading);
@@ -32,10 +32,16 @@ const MyRecipesPage = () => {
   return (
     <>
       <div className={css.section}>
+
+        {isLoading && !error && <Loader />}
         <SectionTitle text={text} />
         <div className={`${css.container} ${myRecipesCss.wrapper} `}>
-          {!myRecipes && <NotFoundPage text="you have no personal recipes" />}
-          {isLoading && !error ? <MyLoader /> : <MyRecipesList />}
+          {myRecipes.length !== 0 ? (
+            <MyRecipesList />
+          ) : (
+            <NoRecipesPlug text="you have no personal recipes" />
+          )}
+
         </div>
         <div
           className={`${myRecipesCss.container} ${myRecipesCss.pagin_container}`}
