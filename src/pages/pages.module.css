@@ -2,6 +2,9 @@
   .section {
     padding-bottom: 50px;
   }
+  .sectionSearch{
+    padding-bottom: 100px;
+  }
   .container {
     min-width: 375px;
     width: 100%;
@@ -17,6 +20,9 @@
     width: 768px;
     padding: 18px 32px 0 32px;
   }
+  .sectionSearch{
+    padding-bottom: 200px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -26,5 +32,8 @@
   .container {
     width: 1440px;
     padding: 50px 100px 0 100px;
+  }
+   .sectionSearch{
+    padding-bottom: 200px;
   }
 }

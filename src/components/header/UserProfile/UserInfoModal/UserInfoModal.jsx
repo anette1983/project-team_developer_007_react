@@ -60,7 +60,7 @@ const UserInfoModal = ({ onClose }) => {
           onChange={uploadAvatar}
         />
         <Plus className={css.addAvatarUrl} id="modal" />
-        {/* <UserDefault className={css.usersvg} /> */}
+
         <img
           src={avatar || defualtImage}
           alt="avatar_image"
@@ -70,7 +70,7 @@ const UserInfoModal = ({ onClose }) => {
       </label>
 
       <label htmlFor="name" id="modal" className={css.label}>
-        <UserDefault className={css.svgafter} />
+        <Pencil className={css.svgafter} />
         <input
           type="text"
           id="name"
@@ -82,8 +82,9 @@ const UserInfoModal = ({ onClose }) => {
           }}
           value={name}
           className={css.input}
+          autoComplete="off"
         />
-        <Pencil className={css.svgbefore} />
+        <UserDefault className={css.svgbefore} />
       </label>
       <button
         type="submit"

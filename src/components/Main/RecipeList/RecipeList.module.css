@@ -7,6 +7,14 @@
 
 .list_item {
     position: relative;
+    transition: transform 500ms ease;
+    
+}
+
+    
+.list_item:hover,
+.list_item:focus {
+    transform: scale(1.02);
 }
 
 .list_item:not(:first-child) {
@@ -25,7 +33,6 @@
     }
     .list_item:not(:first-child) {
         display: block;
-        /* margin-left: 32px; */
     }
 
     .list_item:nth-child(even){
@@ -56,11 +63,10 @@
 
 .list_title {
     width: 307px;
-    /* height: 52px; */
     color: #3E4462;
     background-color: #FFFFFF;
     position: absolute;
-    top: 280px;
+    bottom: 26px;
     right: 18px;
     font-size: 16px;
     font-weight: 500;
@@ -69,23 +75,21 @@
     text-align: left;
    border-radius: 8px;
 padding: 16px 0px 16px 16px;
-top: 245px;
+
 }
 
 @media screen and (min-width: 768px) {
     .list_title {
         width: 300px;
-        left: 18px;
-       
     }
     }
     @media screen and (min-width: 1440px) {
         .list_title {
             width: 268px;
-            top: 248px;
-            left: 16px;
+            right: 16px;
             padding: 16px 0px 16px 16px;
             align-items: center;
+            bottom: 26px;
         }
         }
 .img {

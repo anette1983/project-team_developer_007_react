@@ -20,13 +20,13 @@
   width: 88px;
   height: 88px;
   margin-left: 97px;
-  margin-bottom: 52px;
+  margin-bottom: 34px;
 
   @media screen and (min-width: 768px) {
     width: 103px;
     height: 103px;
     margin-left: 150px;
-    margin-bottom: 52px;
+    margin-bottom: 30px;
   }
 }
 .avatarContainer {
@@ -53,7 +53,6 @@
 .input {
   height: 48px;
   width: 100%;
-  border-width: 0px, 0px, 0px, 0px;
   border-style: solid;
   opacity: 30%;
   border-color: rgba(35, 38, 42, 1);
@@ -65,10 +64,11 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-align: left;
-
+  border-radius: 6px;
+  border-width: 1px;
   &:hover,
   &:focus {
-    opacity: 100%;
+    opacity: 80%;
   }
 }
 
@@ -85,21 +85,14 @@ input[type='file']::file-selector-button {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* .usersvg {
-  position: absolute;
-  width: 47px;
-  height: 47px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 
 .label {
   position: relative;
 }
-.label:hover {
+.label:hover,
+.label:focus {
   & svg {
-    opacity: 100%;
+    opacity: 80%;
   }
 }
 .svgbefore,
@@ -109,7 +102,7 @@ input[type='file']::file-selector-button {
   position: absolute;
   stroke: black;
   opacity: 0.3;
-  top: 25%;
+  top: 31%;
   left: 14px;
 }
 .svgafter {
@@ -170,7 +163,6 @@ input[type='file']::file-selector-button {
     width: 24px;
     height: 24px;
     top: 25%;
-
     left: 20px;
   }
   .svgafter {

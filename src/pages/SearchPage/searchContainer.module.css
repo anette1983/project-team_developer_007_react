@@ -17,6 +17,9 @@
             position: relative;
             
         }
+        .listContainer{
+            padding: 10px 16px 0 16px;
+        }
             .mobPhoto{
             margin: 0 auto;
         }
@@ -36,11 +39,17 @@
             display: block;
             margin: 0 auto;
         }
+         .listContainer{
+            padding: 8px 32px 0 32px;
+        }
     }
   
     @media screen and (min-width: 1440px) {
        .container{  
            padding: 102px 100px 0 100px;
+        }
+          .listContainer{
+            padding: 58px 100px 0 100px;
         }
     }
         .paginationWrap{

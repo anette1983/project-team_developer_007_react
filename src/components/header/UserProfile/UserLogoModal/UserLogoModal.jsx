@@ -14,7 +14,7 @@ const UserLogoModal = ({ openUserLogoutModal, openUserInfoModal }) => {
           id="modal"
         >
           <span>Edit profile</span>
-          <span>
+          <span id="modal">
             <Pencil />
           </span>
         </button>
@@ -25,7 +25,7 @@ const UserLogoModal = ({ openUserLogoutModal, openUserInfoModal }) => {
           id="modal"
         >
           <span>Log out</span>
-          <span className={css.UserLogoModal_buttonSVG}>
+          <span className={css.UserLogoModal_buttonSVG} id="modal">
             <Arrow />
           </span>
         </button>
