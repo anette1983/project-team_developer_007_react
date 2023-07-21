@@ -55,7 +55,7 @@ const handleSubmit = e => {
         </p>
       </div>
      <form className={css.form} onSubmit={handleSubmit}>
-      <label>
+      <label className={css.label}>
       <input
       className={`${css.input} ${handleSubmit ? `${css.input_succes}` : `${css.input_error}`}`}
       type="email"
