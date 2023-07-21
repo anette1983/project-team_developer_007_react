@@ -85,9 +85,9 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .wrapper {
+  /* .wrapper {
     padding-bottom: 105px;
-  }
+  } */
   .bg_wrapper {
     width: 350px;
     height: 225px;
