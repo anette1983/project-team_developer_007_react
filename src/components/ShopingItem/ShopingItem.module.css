@@ -18,7 +18,7 @@
     display: flex; 
     align-items: center;
     justify-content: center;
-   
+   margin-right: 10px;
 }
 
 .wrapper_ingridient_title {
@@ -77,6 +77,7 @@
     .wrapper_img {
         width: 93px;
         height: 97px;
+       
        
     }
 
