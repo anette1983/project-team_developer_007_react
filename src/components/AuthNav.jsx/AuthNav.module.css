@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
 }
-
 .AuthNav__button_reg,
 .AuthNav__button_sign {
   display: flex;
@@ -21,40 +20,42 @@
 
   cursor: pointer;
   text-decoration: none;
-
-  @media screen and (min-width: 768px) {
-    padding: 22px 44px;
-
-    font-size: 16px;
-  }
-
-  &:nth-of-type(2) {
-    margin-left: 12px;
-
-    @media screen and (min-width: 768px) {
-      margin-left: 18px;
-    }
-  }
-
+  font-family: 'Poppins_Regular';
   transition: background-color 250ms linear;
-
-  &:hover,
-  &:focus {
-    background-color: #8baa36;
-    border-color: transparent;
-  }
 }
 
 .AuthNav__button_reg {
   background-color: #8baa36;
 
   border-color: transparent;
+  margin-right: 12px;
 
   transition: background-color 250ms linear;
+}
 
-  &:hover,
-  &:focus {
-    background-color: transparent;
-    border-color: #fafafa;
+.AuthNav__button_reg:hover,
+.AuthNav__button_reg:focus {
+  background-color: transparent;
+  border-color: #fafafa;
+  /* color: #8baa36; */
+  color: #fafafa;
+}
+
+.AuthNav__button_sign:hover,
+.AuthNav__button_sign:focus {
+  background-color: #8baa36;
+  border-color: transparent;
+  color: #fafafa;
+}
+
+@media screen and (min-width: 768px) {
+  .AuthNav__button_reg,
+  .AuthNav__button_sign {
+    padding: 22px 44px;
+
+    font-size: 16px;
+  }
+  .AuthNav__button_reg {
+    margin-right: 18px;
   }
 }

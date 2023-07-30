@@ -4,40 +4,15 @@
   background-repeat: no-repeat;
   background-position: top 87px center, bottom;
   background-size: 285px 250px, 100% 490px;
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+  width: 100%;
+  min-height: 100vh;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .Registration__Section {
     background-image: url(../../images/login/woman_mob_2x.png),
       url(../../images/login/reg-bgc_mob_2x.png);
-  }
-
-  @media screen and (min-width: 768px) {
-    background-image: url(../../images/login/woman_tab_1x.png),
-      url(../../images/login/reg-bgc_tab_1x.png);
-    background-position: top 96px center, bottom;
-    background-size: 409px 359px, 100% 606px;
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../../images/login/woman_tab_2x.png),
-        url(../../images/login/reg-bgc_tab_2x.png);
-    }
-  }
-
-  @media screen and (min-width: 1440px) {
-    background-image: url(../../images/login/woman_desk_1x.png),
-      url(../../images/login/reg-bgc_desk_1x.png);
-    background-position: top 115px left 113px, bottom;
-    background-size: 532px 468px, 100% 325px;
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../../images/login/woman_desk_2x.png),
-        url(../../images/login/reg-bgc_desk_2x.png);
-    }
   }
 }
 
@@ -46,24 +21,13 @@
   margin: 0 auto;
   padding: 305px 20px 118px 20px;
   min-height: 812px;
-
-  @media screen and (max-width: 767.8px) {
-    max-width: 375px;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 443px 134px 59px 134px;
-    width: 768px;
-    min-height: 1024px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding: 122px 180px 122px 760px;
-    width: 1440px;
-    min-height: 770px;
-  }
 }
-
+.SignIn__container {
+  text-align: center;
+  margin: 0 auto;
+  padding: 305px 20px 153px 20px;
+  min-height: 812px;
+}
 .Registration__form {
   margin-bottom: 18px;
 
@@ -74,18 +38,10 @@
   border-radius: 30px;
   background: #2a2c36;
   box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.1);
-
-  @media screen and (max-width: 767.8px) {
-    max-width: 335px;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 44px 50px;
-    width: 500px;
-  }
 }
 
 .Registration__title {
+  font-family: 'Poppins_SemiBold';
   display: block;
   margin-bottom: 18px;
 
@@ -97,14 +53,6 @@
   font-weight: 600;
   line-height: 1.17;
   letter-spacing: -0.48px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 32px;
-
-    font-size: 28px;
-    line-height: 1.07;
-    letter-spacing: -0.56px;
-  }
 }
 
 .Registration__label {
@@ -114,18 +62,10 @@
 .Registration__label:nth-of-type(1),
 .Registration__label:nth-of-type(2) {
   margin-bottom: 12px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 24px;
-  }
 }
 
 .Registration__label:nth-of-type(3) {
   margin-bottom: 28px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 50px;
-  }
 }
 
 .Registration__input {
@@ -133,6 +73,7 @@
 
   width: 100%;
   height: 45px;
+  font-family: 'Poppins_Regular';
 
   letter-spacing: -0.28px;
   color: #fafafa;
@@ -141,14 +82,6 @@
   border-radius: 4px;
   outline: none;
   background-color: transparent;
-
-  @media screen and (min-width: 768px) {
-    height: 59px;
-    padding: 16px 16px 16px 50px;
-    font-size: 18px;
-    letter-spacing: -0.36px;
-  }
-
   transition: border-color 250ms linear, color 250ms linear;
 }
 
@@ -156,20 +89,23 @@
 .Registration__input:focus {
   border-color: #ffffff;
   color: #ffffff;
+  opacity: 1;
 }
 
 .Registration__input::placeholder {
+  font-family: 'Poppins_Regular';
   color: #fafafa;
   opacity: 0.8;
   letter-spacing: -0.28px;
+}
 
-  @media screen and (min-width: 768px) {
-    font-size: 18px;
-    letter-spacing: -0.36px;
-  }
+.Registration__input:hover::placeholder {
+  color: #ffffff;
+  opacity: 1;
 }
 
 .Registration__button {
+  font-family: 'Poppins_Regular';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,16 +127,6 @@
   cursor: pointer;
   border-radius: 6px;
   background: #8baa36;
-
-  @media screen and (min-width: 768px) {
-    height: 56px;
-    padding: 21px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    height: 59px;
-  }
-
   transition: color 250ms linear;
 }
 
@@ -210,14 +136,12 @@
 }
 
 .Registration__link {
+  font-family: 'Poppins_Regular';
   padding: 5px;
   color: #fafafa;
 
   text-decoration: underline;
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
-  }
+  transition: color 250ms linear;
 }
 
 .Registration__link:hover,
@@ -231,10 +155,6 @@
 
   font-size: 8px;
   color: #e74a3b;
-
-  @media screen and (min-width: 768px) {
-    font-size: 14px;
-  }
 }
 
 .Registration__input_success {
@@ -260,14 +180,6 @@
   stroke: #fafafa;
   opacity: 0.8;
 
-  @media screen and (min-width: 768px) {
-    top: 17.5px;
-    left: 18px;
-
-    width: 24px;
-    height: 24px;
-  }
-
   transition: stroke 250ms linear, opacity 250ms linear;
 }
 
@@ -285,11 +197,6 @@
   top: 12.5px;
 
   opacity: 0;
-
-  @media screen and (min-width: 768px) {
-    right: 20px;
-    top: 18px;
-  }
 }
 
 .Registration__svg_succ.Registration__svg_success,
@@ -302,4 +209,125 @@
 .Registration__svg.Registration__svg_error {
   opacity: 1;
   stroke: #e74a3b;
+}
+
+@media screen and (max-width: 767.8px) {
+  .Registration__container,
+  .SignIn__container {
+    max-width: 375px;
+  }
+
+  .Registration__form {
+    max-width: 335px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Registration__Section {
+    background-image: url(../../images/login/woman_tab_1x.png),
+      url(../../images/login/reg-bgc_tab_1x.png);
+    background-position: top 96px center, bottom;
+    background-size: 409px 359px, 100% 606px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .Registration__Section {
+      background-image: url(../../images/login/woman_tab_2x.png),
+        url(../../images/login/reg-bgc_tab_2x.png);
+    }
+  }
+  .Registration__container {
+    padding: 443px 134px 59px 134px;
+    width: 768px;
+    min-height: 1024px;
+  }
+  .SignIn__container {
+    padding: 443px 134px 120px 134px;
+    width: 768px;
+    min-height: 1024px;
+  }
+  .Registration__form {
+    padding: 44px 50px;
+    width: 500px;
+  }
+  .Registration__title {
+    margin-bottom: 32px;
+
+    font-size: 28px;
+    line-height: 1.07;
+    letter-spacing: -0.56px;
+  }
+  .Registration__label:nth-of-type(1),
+  .Registration__label:nth-of-type(2) {
+    margin-bottom: 24px;
+  }
+  .Registration__label:nth-of-type(3) {
+    margin-bottom: 50px;
+  }
+  .Registration__input {
+    height: 59px;
+    padding: 16px 16px 16px 50px;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
+  .Registration__input::placeholder {
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
+  .Registration__button {
+    height: 56px;
+    padding: 21px;
+  }
+  .Registration__link {
+    font-size: 16px;
+  }
+  .Registration__error {
+    font-size: 14px;
+  }
+  .Registration__svg {
+    top: 17.5px;
+    left: 18px;
+
+    width: 24px;
+    height: 24px;
+  }
+  .Registration__svg_succ,
+  .Registration__svg_err {
+    right: 20px;
+    top: 18px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Registration__Section {
+    background-image: url(../../images/login/woman_desk_1x.png),
+      url(../../images/login/reg-bgc_desk_1x.png);
+    background-position: top 115px left 113px, bottom;
+    background-size: 532px 468px, 100% 325px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .Registration__Section {
+      background-image: url(../../images/login/woman_desk_2x.png),
+        url(../../images/login/reg-bgc_desk_2x.png);
+    }
+  }
+  .Registration__container {
+    padding: 122px 180px 122px 760px;
+    width: 1440px;
+    min-height: 770px;
+  }
+
+  .SignIn__container {
+    padding: 155px 180px 153px 760px;
+    width: 1440px;
+    min-height: 770px;
+  }
+  .Registration__button {
+    height: 59px;
+  }
 }

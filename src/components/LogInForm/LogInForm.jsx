@@ -27,7 +27,7 @@ export const LogInForm = () => {
 
   return (
     <section className={css.Registration__Section}>
-      <div className={css.Registration__container}>
+      <div className={css.SignIn__container}>
         <Formik
           initialValues={initialValues}
           validationSchema={schema}

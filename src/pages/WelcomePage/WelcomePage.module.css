@@ -11,10 +11,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: lightgray;
+  width: 100%;
+  min-height: 100vh;
+}
 
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .Welcome__section {
     background-image: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.6) 46.3%,
@@ -22,56 +26,6 @@
         rgba(0, 0, 0, 0) 100%
       ),
       url('../../images/login/reg-start-bgc_mob_2x.png');
-  }
-
-  @media screen and (min-width: 768px) {
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.6) 46.3%,
-        rgba(0, 0, 0, 0.35) 72.75%,
-        rgba(0, 0, 0, 0) 100%
-      ),
-      url('../../images/login/reg-start-bgc_tab_1x.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.6) 46.3%,
-          rgba(0, 0, 0, 0.35) 72.75%,
-          rgba(0, 0, 0, 0) 100%
-        ),
-        url('../../images/login/reg-start-bgc_tab_2x.png');
-    }
-  }
-
-  @media screen and (min-width: 1440px) {
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.6) 46.3%,
-        rgba(0, 0, 0, 0.35) 72.75%,
-        rgba(0, 0, 0, 0) 100%
-      ),
-      url('../../images/login/reg-start-bgc_desk_1x.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.6) 46.3%,
-        rgba(0, 0, 0, 0.35) 72.75%,
-        rgba(0, 0, 0, 0) 100%
-      ),
-      url('../../images/login/reg-start-bgc_desk_2x.png');
   }
 }
 
@@ -81,22 +35,6 @@
   margin: 0 auto;
 
   padding: 280px 35px 261px 35px;
-
-  @media screen and (max-width: 767.8px) {
-    max-width: 375px;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 342px 131.5px;
-
-    width: 768px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding: 214px 450px 216px 450px;
-
-    width: 1440px;
-  }
 }
 
 .Welcome__svgwrapper {
@@ -110,44 +48,119 @@
   border-radius: 12px;
 
   background-color: #8baa36;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 44px;
-    padding: 12px;
-
-    width: 68px;
-  }
 }
 
 .Welcome__title {
   margin-bottom: 14px;
 
-  font-family: 'Poppins_Bold';
+  font-family: 'Poppins_SemiBold';
   color: #fafafa;
   font-size: 24px;
   line-height: 1;
   letter-spacing: -0.48px;
   text-align: center;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 40px;
-
-    font-size: 28px;
-    letter-spacing: -0.56px;
-  }
 }
 
 .Welcome__subtitle {
   margin-bottom: 44px;
+  font-family: 'Poppins_Regular';
 
   text-align: center;
   color: #fafafa;
   line-height: 1.29;
   letter-spacing: -0.28px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (max-width: 767.8px) {
+  .Welcome__container {
+    max-width: 375px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Welcome__section {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.6) 46.3%,
+        rgba(0, 0, 0, 0.35) 72.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url('../../images/login/reg-start-bgc_tab_1x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .Welcome__container {
+    padding: 342px 131.5px;
+
+    width: 768px;
+  }
+
+  .Welcome__svgwrapper {
+    margin-bottom: 44px;
+    padding: 12px;
+
+    width: 68px;
+  }
+
+  .Welcome__title {
+    margin-bottom: 40px;
+
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+
+  .Welcome__subtitle {
     font-size: 18px;
     line-height: 1.33;
     letter-spacing: -0.36px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .Welcome__section {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.6) 46.3%,
+          rgba(0, 0, 0, 0.35) 72.75%,
+          rgba(0, 0, 0, 0) 100%
+        ),
+        url('../../images/login/reg-start-bgc_tab_2x.png');
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Welcome__section {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.6) 46.3%,
+        rgba(0, 0, 0, 0.35) 72.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url('../../images/login/reg-start-bgc_desk_1x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .Welcome__container {
+    padding: 214px 450px 216px 450px;
+
+    width: 1440px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .Welcome__section {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.6) 46.3%,
+          rgba(0, 0, 0, 0.35) 72.75%,
+          rgba(0, 0, 0, 0) 100%
+        ),
+        url('../../images/login/reg-start-bgc_desk_2x.png');
+    }
   }
 }
