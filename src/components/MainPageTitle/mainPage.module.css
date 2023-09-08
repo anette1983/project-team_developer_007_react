@@ -9,16 +9,22 @@
   position: absolute;
   bottom: 56px;
   left: 130px;
+  width: 8px;
+  height: 8px;
 }
 .black {
   position: absolute;
   bottom: 0;
   left: 231px;
+  width: 7px;
+  height: 7px;
 }
 .lastGreen {
   position: absolute;
   bottom: 28px;
   right: 16px;
+  width: 8px;
+  height: 8px;
 }
 
 @media screen and (min-width: 375px) {
@@ -34,16 +40,23 @@
     position: absolute;
     bottom: 56px;
     left: 130px;
+    width: 8px;
+    height: 8px;
   }
   .black {
     position: absolute;
     bottom: 0;
     left: 231px;
+    width: 7px;
+    height: 7px;
+    border-radius: 3px;
   }
   .lastGreen {
     position: absolute;
     bottom: 28px;
     right: 16px;
+    width: 8px;
+    height: 8px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -55,13 +68,19 @@
   .firstGreen {
     bottom: 64px;
     left: 187px;
+    width: 18px;
+    height: 18px;
   }
   .black {
     left: 405px;
+    width: 12px;
+    height: 12px;
   }
   .lastGreen {
     bottom: 52px;
     right: 32px;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -76,7 +95,7 @@
     left: 328px;
   }
   .black {
-    left: 807px;
+    left: 55%;
   }
   .lastGreen {
     bottom: 70px;

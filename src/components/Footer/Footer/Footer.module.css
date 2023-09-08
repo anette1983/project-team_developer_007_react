@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
 
   background-position: 200px 365px;
+  background-size: 438px;
 }
 
 /* @media (min-device-pixel-ratio: 2),
@@ -38,14 +39,15 @@
     width: 100%;
 
     background-image: url(../../../images/bgc/404_spinach_bottom_bg_desk_1x.png);
-    background-position: 100% 260px;
+    /* background-position: 100% 260px; */
+    background-position: 100% 100%;
     background-size: 25%;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .footer {
-      background-image: url(../../../images/bgc/404_spinach_bottom_bg_desk_2x.png);
+      /* background-image: url(../../../images/bgc/404_spinach_bottom_bg_desk_2x.png); */
     }
   }
 }
@@ -54,6 +56,7 @@
   display: flex;
   justify-content: center;
   padding: 28px 0;
+  /* height: 114px; */
   font-size: 10px;
   font-weight: 500;
   line-height: 10px;
