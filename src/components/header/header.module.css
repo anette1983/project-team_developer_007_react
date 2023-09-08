@@ -11,9 +11,9 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  /* width: 375px; */
-  max-width: 1440px;
-  width: 100%;
+  width: 375px; 
+  /* max-width: 1440px;
+  /* width: 100%; */
 }
 
 /* .headerLoader {
@@ -111,7 +111,7 @@
   }
   .header {
     width: 375px;
-    padding: 18px 16px 0 16px;
+    padding: 27px 16px 0 16px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -129,15 +129,16 @@
     height: 28px;
   }
   .header {
-    padding: 18px 32px 0 32px;
+    padding: 25px 32px 0 32px;
     width: 768px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .header {
-    padding: 18px 100px 0 100px;
+    padding: 21px 100px 0 100px;
     width: 1440px;
+    /* width: 100%; */
   }
   .burgerMenu {
     display: none;

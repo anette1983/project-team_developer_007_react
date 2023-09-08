@@ -318,13 +318,15 @@
   }
   .Registration__container {
     padding: 122px 180px 122px 760px;
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     min-height: 770px;
   }
 
   .SignIn__container {
     padding: 155px 180px 153px 760px;
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     min-height: 770px;
   }
   .Registration__button {

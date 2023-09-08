@@ -158,7 +158,8 @@
 
 @media screen and (min-width: 1439.98px) {
   .container {
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
   }
 
   .title {

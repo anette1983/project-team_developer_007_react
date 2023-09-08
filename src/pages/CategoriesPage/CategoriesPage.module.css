@@ -22,7 +22,8 @@
   }
 
   .section_wrapp {
-    min-width: 1440px;
+    /* min-width: 1440px; */
+    width: 100%;
     margin: auto;
   }
 }

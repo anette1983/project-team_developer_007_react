@@ -31,7 +31,6 @@ export const PreviewCategories = () => {
         </ul>
       )}
 
-   
       <Link className={css.btn_other} to="/categories">
         Other categories
       </Link>

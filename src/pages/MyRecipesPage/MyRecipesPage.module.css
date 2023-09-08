@@ -71,12 +71,14 @@
 
 @media screen and (min-width: 1440px) {
   .container {
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     padding: 0 100px 0 100px;
   }
 
   .pagin_container {
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     max-width: 100%;
 
     margin-left: auto;
@@ -122,11 +124,13 @@
 @media screen and (min-width: 1440px) {
   .wrapper {
     width: 1440px;
+    /* width: 100%; */
     padding-top: 64px;
     /* padding-bottom: 195px; */
   }
   .pagin_container {
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     z-index: 10;
     position: relative;
   }
