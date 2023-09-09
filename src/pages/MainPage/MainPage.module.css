@@ -156,7 +156,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .container {
-      background-image: url('../../../src/images/bgc/salt_desk_2x.jpg');
+      background-image: url('../../../src/images/bgc/salt_desk_2x.png');
     }
   }
 }
