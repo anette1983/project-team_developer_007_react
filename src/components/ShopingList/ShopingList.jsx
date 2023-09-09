@@ -3,20 +3,13 @@ import css from './ShipongList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { selectShopingList } from 'redux/shopingList/selectors';
-import {
-  deleteFromShopingList,
-  fetchShopingList,
-} from 'redux/shopingList/operations';
+import { deleteFromShopingList } from 'redux/shopingList/operations';
 import { refreshUser } from 'redux/auth/operations';
 
 const ShopingList = () => {
   const dispatch = useDispatch();
   const shopinList = useSelector(selectShopingList);
   const [itemId, setItemId] = useState('');
-
-  useEffect(() => {
-    dispatch(fetchShopingList());
-  }, [dispatch]);
 
   const handleDelete = ({ currentTarget }) => {
     setItemId(currentTarget.id);
