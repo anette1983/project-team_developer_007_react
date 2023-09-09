@@ -1,66 +1,65 @@
-.wrapper { 
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 16px;
-    font-family: 'Poppins_SemiBold', sans-serif;
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  font-family: 'Poppins_SemiBold', sans-serif;
 }
 
 .titleWrapper {
-    padding-top: 114px;
+  padding-top: 114px;
 }
 
 .pageContent {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .formContainer {
-    padding-top: 72px;
+  padding-top: 72px;
 }
 
 @media (min-width: 375px) {
-    .wrapper {
-        width: 375px;
-    }
+  .wrapper {
+    width: 375px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .formContainer {
-        padding-top: 100px;
-    }
+  .formContainer {
+    padding-top: 100px;
+  }
 
-    .titleWrapper {
-        padding-top: 136px;
-    }
+  .titleWrapper {
+    padding-top: 136px;
+  }
 
-    .pageContent {
-        padding-bottom: 200px;
-    }
+  .pageContent {
+    padding-bottom: 200px;
+  }
 
-    .wrapper {
-        padding: 0 32px;
-        width: 768px;
-    }
+  .wrapper {
+    padding: 0 32px;
+    width: 768px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .titleWrapper {
-        padding-top: 164px;
-    }
+  .titleWrapper {
+    padding-top: 164px;
+  }
 
-    .formContainer {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 100px;
-    }
+  .formContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+  }
 
-    .sidebar {
-        display: block;
-        width: 319px;
-    }
+  .sidebar {
+    display: block;
+    width: 319px;
+  }
 
-    .wrapper {
-        padding: 0 100px;
-        /* width: 1440px; */
-        width: 100%;
-    }
+  .wrapper {
+    padding: 0 100px;
+    width: 1440px;
+  }
 }

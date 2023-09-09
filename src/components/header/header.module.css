@@ -95,7 +95,8 @@
   margin-bottom: 5px;
 }
 
-@media screen and (min-width: 375px) {
+/* @media screen and (min-width: 375px) { */
+@media screen and (max-width: 767px) {
   .burgerMenu {
     display: flex;
   }
@@ -110,7 +111,9 @@
     gap: 32px;
   }
   .header {
-    width: 375px;
+    /* width: 375px; */
+    max-width: 375px;
+    width: 100%;
     padding: 27px 16px 0 16px;
   }
 }
@@ -139,7 +142,7 @@
 
 @media screen and (min-width: 1440px) {
   .header {
-    padding: 21px 100px 0 100px;
+    padding: 25px 100px 0 100px;
     width: 1440px;
     /* width: 100%; */
   }

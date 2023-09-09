@@ -1,12 +1,25 @@
+.section {
+  padding-bottom: 50px;
+}
+.sectionSearch {
+  padding-bottom: 100px;
+}
+.container {
+  /* min-width: 375px; */
+  width: 100%;
+  padding: 50px 16px 0 16px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 375px) {
   .section {
     padding-bottom: 50px;
   }
-  .sectionSearch{
+  .sectionSearch {
     padding-bottom: 100px;
   }
   .container {
-    min-width: 375px;
+    /* min-width: 375px; */
     width: 100%;
     padding: 50px 16px 0 16px;
     margin: 0 auto;
@@ -20,7 +33,7 @@
     width: 768px;
     padding: 18px 32px 0 32px;
   }
-  .sectionSearch{
+  .sectionSearch {
     padding-bottom: 200px;
   }
 }
@@ -34,7 +47,7 @@
     width: 100%;
     padding: 50px 100px 0 100px;
   }
-   .sectionSearch{
+  .sectionSearch {
     padding-bottom: 200px;
   }
 }

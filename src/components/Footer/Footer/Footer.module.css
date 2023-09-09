@@ -6,31 +6,37 @@
   background-image: url(../../../images/bgc/404_spinach_bottom_bg_mob_1x.png);
   background-repeat: no-repeat;
 
-  background-position: 200px 365px;
-  background-size: 438px;
+  background-position: 100% 100%;
+  background-size: 172px;
+
+  /* background-position: 200px 365px;
+  background-size: 438px; */
 }
 
-/* @media (min-device-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .footer {
-    background-image: url('../../../images/bgc/404_spinach_bottom_bg_mob_2x.png')
+    background-image: url('../../../images/bgc/404_spinach_bottom_bg_mob_2x.png');
   }
-} */
+}
 
 @media screen and (min-width: 768px) {
   .footer {
-    width: 768px;
+    /* width: 768px; */
+    width: 100%;
     background-image: url(../../../images/bgc/404_spinach_bottom_bg_tab_1x.png);
-    background-position: 450px 260px;
+    /* background-position: 450px 260px; */
+    background-position: 100% 100%;
+    background-size: 290px;
   }
-  /* @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .footer {
-    background-image: url('../../../images/bgc/404_spinach_bottom_bg_tab_2x.png')
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .footer {
+      background-image: url('../../../images/bgc/404_spinach_bottom_bg_tab_2x.png');
+    }
   }
-} */
 }
 
 @media screen and (min-width: 1440px) {
@@ -47,9 +53,13 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .footer {
-      /* background-image: url(../../../images/bgc/404_spinach_bottom_bg_desk_2x.png); */
+      background-image: url(../../../images/bgc/404_spinach_bottom_bg_desk_2x.png);
     }
   }
+}
+
+.container {
+  background-color: rgba(34, 37, 42, 1);
 }
 
 .footer_text {
@@ -57,8 +67,8 @@
   justify-content: center;
   padding: 28px 0;
   /* height: 114px; */
+  font-family: 'Poppins_Medium';
   font-size: 10px;
-  font-weight: 500;
   line-height: 10px;
   letter-spacing: -0.01em;
   text-align: left;
@@ -75,7 +85,7 @@
 }
 
 .footer_text_service {
-  font-weight: 400;
+  font-family: 'Poppins_Regular';
   margin-left: 14px;
 }
 
