@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import css from './UserInfoModal.module.css';
-// import { Formik, Form, Field } from 'formik';
 import defaultUserAvatar from '../../../../images/header/userDefault.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUserData } from 'redux/auth/operations';

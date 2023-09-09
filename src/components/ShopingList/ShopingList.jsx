@@ -7,6 +7,7 @@ import {
   deleteFromShopingList,
   fetchShopingList,
 } from 'redux/shopingList/operations';
+import { refreshUser } from 'redux/auth/operations';
 
 const ShopingList = () => {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ const ShopingList = () => {
   useEffect(() => {
     if (!itemId) return;
     dispatch(deleteFromShopingList(itemId));
+    dispatch(refreshUser());
   }, [dispatch, itemId]);
 
   return (

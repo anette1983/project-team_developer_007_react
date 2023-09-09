@@ -1,6 +1,4 @@
-// import { FollowUs } from '../Footer/FollowUs/FollowUs';
 import sprite from '../../images/svg/sprite.svg';
-
 import css from './AddRecipeComponents.module.css';
 
 export const FollowUsBlock = () => {
