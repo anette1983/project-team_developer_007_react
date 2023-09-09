@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { initialState } from './initialState';
 import {
   logIn,
@@ -19,6 +19,7 @@ import {
   handleSubscribePending,
   handleSubscribeReject,
   handleUpdateFulfilled,
+  handlePending,
 } from './actions';
 
 const authSlice = createSlice({
@@ -48,7 +49,11 @@ const authSlice = createSlice({
       .addCase(updateUserData.fulfilled, handleUpdateFulfilled)
       .addCase(updateUserData.rejected, handleRefreshReject)
       .addCase(subscribe.pending, handleSubscribePending)
-      .addCase(subscribe.rejected, handleSubscribeReject);
+      .addCase(subscribe.rejected, handleSubscribeReject)
+      .addMatcher(
+        isAnyOf(register.pending, logIn.pending, logOut.pending),
+        handlePending
+      );
   },
 });
 

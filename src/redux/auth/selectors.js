@@ -13,3 +13,5 @@ export const selectUserAvatar = state => state.auth.user.avatar;
 export const selectToken = state => state.auth.token;
 
 export const selectMessage = state => state.auth.message;
+
+export const selectIsLoading = state => state.auth.isLoading;

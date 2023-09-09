@@ -1,129 +1,120 @@
 .container {
-    width: 225px;
-    height: 92px;
-    background-color: #FAFAFA;
-    border-radius: 8px;
-    margin-top: 157px;
-    margin-left: 105px;
-    padding: 8px 8px 4px 8px;
-    
-  }
-
-@media screen and (min-width: 768px) {
-    .container  {
-        width: 261px;
-        height: 100px;
-        padding: 12px 12px 12px 12px;
-        margin-top: 0px;
-        margin-left: 0px;
-        margin-right: 32px;
-      
-       position: relative;
-     }
-  }
-
-  @media screen and (min-width: 1440px) {
-    .container  {
-      width: 298px;
-        height: 114px;
-        padding: 16px 16px 16px 16px;
-        margin-right: 122px;
-           
-     }
-  }  
-
-.text {
- 
-font-size: 12px;
-font-weight: 500;
-line-height: 18px;
-letter-spacing: -0.24px;
-text-align: left;
-color: #3E4462;
+  width: 225px;
+  height: 92px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-top: 157px;
+  margin-left: 105px;
+  padding: 8px 8px 4px 8px;
 }
 
 @media screen and (min-width: 768px) {
-    .text {
-        font-size: 14px;
-     }
-  }
+  .container {
+    width: 261px;
+    height: 100px;
+    padding: 12px 12px 12px 12px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 43px;
 
-  @media screen and (min-width: 1440px) {
-    .text {
-        line-height: 20px;
-     }
-  }  
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 298px;
+    height: 114px;
+    padding: 16px 16px 16px 16px;
+    margin-right: 122px;
+  }
+}
+
+.text {
+  font-family: 'Poppins_Medium';
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+  text-align: left;
+  color: #3e4462;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .text {
+    line-height: 20px;
+  }
+}
 
 .text_active {
- color: #8BAA36;   
+  color: #8baa36;
 }
 
 .btn {
-   width: 81px;
-   font-size: 10px;
-   font-weight: 400;
-   line-height: 12px;
-   letter-spacing: 0.20px;
-   text-align: start;
-   color: #3E4462;   
-   border: none;
-   background-color: transparent;
-   margin: 0px 8px 0px 128px;
-   position: relative;
- 
+  width: 81px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  text-align: start;
+  color: #3e4462;
+  border: none;
+  background-color: transparent;
+  margin: 0px 8px 0px 128px;
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
-    .btn {
-     margin: 0px 12px 0px 150px;
-         }
+  .btn {
+    margin: 0px 12px 0px 150px;
   }
+}
 
-  @media screen and (min-width: 1440px) {
-    .btn {
-      margin: 4px 16px 0px 184px;
-     }
- 
+@media screen and (min-width: 1440px) {
+  .btn {
+    margin: 4px 16px 0px 184px;
   }
+}
 
- .img {
-   width: 18px;
-   height: 18px;
-   position: absolute;
-   left: 60.5px;
-   top: 0.5px;
-   } 
+.img {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 60.5px;
+  top: 0.5px;
+}
 
- @media screen and (min-width: 768px) {
-   .img {
+@media screen and (min-width: 768px) {
+  .img {
     left: 65px;
-  
-     
-     }
- }
- @media screen and (min-width: 1440px) {
-   .img {
+  }
+}
+@media screen and (min-width: 1440px) {
+  .img {
     left: 64px;
-        
-     }
- }
- .crossbolt {
-   display: none;
- }
+  }
+}
+.crossbolt {
+  display: none;
+}
 
- @media screen and (min-width: 768px) {
-  
- .crossbolt {
-   width: 186px;
-   height: 115px;
-   display: block;
-   position: absolute;
-   top: 70px;
-   left: 40px;
- }
+@media screen and (min-width: 768px) {
+  .crossbolt {
+    width: 186px;
+    height: 115px;
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 40px;
+  }
 }
 @media screen and (min-width: 768px) {
-  
   .crossbolt {
     top: 90px;
     left: 70px;

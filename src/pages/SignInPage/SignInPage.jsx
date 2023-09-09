@@ -1,13 +1,15 @@
 import { LogInForm } from 'components/LogInForm/LogInForm';
 import { useSelector } from 'react-redux';
-import { selectAuthError } from 'redux/auth/selectors';
+import { selectAuthError, selectIsLoading } from 'redux/auth/selectors';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { clearErrorMessage } from 'redux/auth/slice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import LoadingNotice from 'components/LoadingNotice/LoadingNotice';
 
 const SignInPage = () => {
   const error = useSelector(selectAuthError);
+  const isLoading = useSelector(selectIsLoading);
 
   const dispatch = useDispatch();
 
@@ -20,10 +22,11 @@ const SignInPage = () => {
     return () => {
       dispatch(clearErrorMessage());
     };
-  }, [dispatch, error]);
+  }, [dispatch, error, isLoading]);
 
   return (
     <>
+      {isLoading && <LoadingNotice />}
       <LogInForm />
     </>
   );
