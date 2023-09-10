@@ -21,12 +21,14 @@ const Header = () => {
     <>
       {isLoggedIn &&
         (!isloading ? (
-          <header className={css.header}>
-            <Logo />
-            <Navigation width={1441} />
-            <div className={css.userContainer}>
-              <UserLogo />
-              <ThemeToggler />
+          <header>
+            <ThemeToggler />
+            <div className={css.header}>
+              <Logo />
+              <Navigation width={1441} />
+              <div className={css.userContainer}>
+                <UserLogo />
+              </div>
             </div>
           </header>
         ) : (

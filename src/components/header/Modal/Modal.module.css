@@ -8,6 +8,10 @@
 }
 
 .svg {
+  position: absolute;
+  top: 19px;
+  right: calc(50% - 380px);
+  z-index: 9999;
   height: 28px;
   width: 28px;
   stroke: rgba(34, 37, 42, 1);
@@ -88,8 +92,22 @@
   right: 10%;
   cursor: pointer;
 }
+
+@media screen and (max-width: 374px) {
+  .svg {
+    right: calc(50% - 144px);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .svg {
+    right: calc(50% - 170px);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .svg {
+    right: calc(50% - 363px);
     height: 32px;
     width: 32px;
   }

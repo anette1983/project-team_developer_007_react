@@ -9,7 +9,7 @@ import { fetchByCategory } from 'redux/recipes/operations';
 import { selectIsLoading, selectRecipes } from 'redux/recipes/selectors';
 import CategoryRecipeList from 'components/CategoryRecipeList/CategoryRecipeList';
 import { useNavigate, useParams } from 'react-router-dom';
-import MyLoader from './categoryLoader';
+import MyLoader from './СategoryLoader';
 
 const CategoryDetails = () => {
   const dispatch = useDispatch();

@@ -16,7 +16,6 @@ import Loader from 'components/Loader';
 import { SectionTitle } from 'components/SectionTitle/SectionTitle';
 import NoRecipesPlug from './NoRecipesPlug';
 
-
 const MyRecipesPage = () => {
   const isLoading = useSelector(selectMyRecipesIsLoading);
   const error = useSelector(selectMyRecipesError);
@@ -32,16 +31,18 @@ const MyRecipesPage = () => {
   return (
     <>
       <div className={css.section}>
-
         {isLoading && !error && <Loader />}
         <SectionTitle text={text} />
         <div className={`${css.container} ${myRecipesCss.wrapper} `}>
-          {myRecipes.length !== 0 ? (
+          {myRecipes.length !== 0 && <MyRecipesList />}
+          {/* {myRecipes.length !== 0 ? (
             <MyRecipesList />
           ) : (
             <NoRecipesPlug text="you have no personal recipes" />
+          )} */}
+          {myRecipes.length === 0 && (
+            <NoRecipesPlug text="you have no personal recipes" />
           )}
-
         </div>
         <div
           className={`${myRecipesCss.container} ${myRecipesCss.pagin_container}`}

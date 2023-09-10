@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import {
   selectRecipes,
   selectError,
+  selectIsLoading,
 } from '../../redux/recipesBySearch/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -15,15 +16,16 @@ import {
   clearRecipes,
 } from 'redux/recipesBySearch/operations';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-import {  useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { SectionTitle } from 'components/SectionTitle/SectionTitle';
 import { Notify } from 'notiflix';
+import CategoryLoader from 'components/CategoryDetails/СategoryLoader';
 
 const SearchPage = () => {
   const [page, setPage] = useState(1);
   const [searchBy, setSearchBy] = useState('search');
- 
+
   let limit = 6;
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -31,6 +33,7 @@ const SearchPage = () => {
   const isLoged = useSelector(selectIsLoggedIn);
   const isError = useSelector(selectError);
   const query = searchParams.get('query') ?? '';
+  const isLoading = useSelector(selectIsLoading);
 
   const [pageCount, setPageCount] = useState(1);
   const windowsWidth = window.innerWidth;
@@ -91,13 +94,13 @@ const SearchPage = () => {
 
   useEffect(() => {
     if (isError) {
-      Notify.failure("Ooops, we can't found what you want!");
+      Notify.failure("Ooops, we couldn't find what you want!");
     }
-  }, [isError,]);
+  }, [isError]);
 
   return (
     <div className={css.sectionSearch}>
-      <SectionTitle text={'Search'}/>
+      <SectionTitle text={'Search'} />
       <div className={`${css.container} ${searchCss.container}`}>
         <SearchForm
           title={setParams}
@@ -106,6 +109,15 @@ const SearchPage = () => {
           searchQuery={query}
         />
       </div>
+      {isLoading ? (
+        <CategoryLoader />
+      ) : (
+        recipes && (
+          <div className={`${css.listContainer} ${searchCss.listContainer}`}>
+            <SearchedRecipesList recipes={recipes} />
+          </div>
+        )
+      )}
       {!recipes && (
         <div
           className={`${css.container} ${searchCss.container} ${searchCss.center}`}
@@ -123,13 +135,14 @@ const SearchPage = () => {
           <p className={searchCss.text}>Try looking for something else..</p>
         </div>
       )}
-      {recipes && (
-        <>
-          <div className={`${css.listContainer} ${searchCss.listContainer}`}>
-            <SearchedRecipesList recipes={recipes} />
-          </div>
-        </>
-      )}
+
+      {/* {recipes && (
+      //   <>
+      //     <div className={`${css.listContainer} ${searchCss.listContainer}`}>
+      //       <SearchedRecipesList recipes={recipes} />
+      //     </div>
+      //   </>
+      // )} */}
     </div>
   );
 };

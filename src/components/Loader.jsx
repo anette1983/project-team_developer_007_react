@@ -13,6 +13,7 @@ export default function Loader({
         position: 'fixed',
         top: '30%',
         left: '50%',
+        marginLeft: '-60px',
         transform: 'translate(-50%, -50%)',
         zIndex: 111111,
       }}

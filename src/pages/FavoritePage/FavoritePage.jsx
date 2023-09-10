@@ -6,9 +6,8 @@ import { selectFavoriteRecipes } from 'redux/favoriteRecipes/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchFavoriteRecipes } from 'redux/favoriteRecipes/operations';
-
-import searchCss from '../SearchPage/searchContainer.module.css';
 import { SectionTitle } from 'components/SectionTitle/SectionTitle';
+import NoRecipesPlug from 'pages/MyRecipesPage/NoRecipesPlug';
 
 const FavoritePage = () => {
   const { pathname } = useLocation();
@@ -31,19 +30,7 @@ const FavoritePage = () => {
         {favoriteRecipes.length !== 0 ? (
           <FavoriteList favoriteRecipes={favoriteRecipes}></FavoriteList>
         ) : (
-          <div className={css.img_wrapp}>
-            <img
-              className={searchCss.mobPhoto}
-              src={require('../../images/SearchPage/vegetables-5abfb9c60122f5 1.png')}
-              alt="vegetables"
-            />
-            <img
-              className={searchCss.tabPhoto}
-              src={require('../../images/SearchPage/vegetables-5abfb9c60122f5 1_tab.png')}
-              alt="vegetables"
-            />
-            <h3 className={searchCss.text}>You have no favorite recipes..</h3>
-          </div>
+          <NoRecipesPlug text="you have no favorite recipes..." />
         )}
       </section>
     </div>
