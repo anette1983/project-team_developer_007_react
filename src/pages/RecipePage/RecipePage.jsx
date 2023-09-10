@@ -11,7 +11,7 @@ import { RecipePreparation } from 'components/Main/RecipePreparation/RecipePrepa
 import css from './RecipePage.module.css';
 
 const RecipePage = () => {
-  const { container } = css;
+  const { container, content_wrapper } = css;
 
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -34,8 +34,10 @@ const RecipePage = () => {
             <>
               <RecipePageTitle />
 
-              <RecipeInngredientsList />
-              <RecipePreparation />
+              <div className={content_wrapper}>
+                <RecipeInngredientsList />
+                <RecipePreparation />
+              </div>
             </>
           )}
         </>

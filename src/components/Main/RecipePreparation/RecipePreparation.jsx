@@ -37,11 +37,13 @@ export const RecipePreparation = () => {
             </ol>
           </div>
 
-          <img
-            src={recipe.preview}
-            alt={recipe.title}
-            className={preview_img}
-          />
+          <div className={css.img_wrapper}>
+            <img
+              src={recipe.preview}
+              alt={recipe.title}
+              className={preview_img}
+            />
+          </div>
         </div>
       ) : (
         <p>No instructions</p>
