@@ -3,7 +3,8 @@
     url(../../images/login/reg-bgc_mob_1x.png);
   background-repeat: no-repeat;
   background-position: top 87px center, bottom;
-  background-size: 285px 250px, 100% 490px;
+  /* background-size: 285px 250px, 100% 490px; */
+  background-size: 285px 250px, 100% 61%;
   width: 100%;
   min-height: 100vh;
 }
@@ -227,7 +228,8 @@
     background-image: url(../../images/login/woman_tab_1x.png),
       url(../../images/login/reg-bgc_tab_1x.png);
     background-position: top 96px center, bottom;
-    background-size: 409px 359px, 100% 606px;
+    /* background-size: 409px 359px, 100% 606px; */
+    background-size: 409px 359px, 100% 59%;
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -305,7 +307,10 @@
     background-image: url(../../images/login/woman_desk_1x.png),
       url(../../images/login/reg-bgc_desk_1x.png);
     background-position: top 115px left 113px, bottom;
-    background-size: 532px 468px, 100% 325px;
+    /* background-size: 532px 468px, 100% 325px; */
+    background-size: 532px 468px, 100% 42%;
+    /* background-size: 532px 468px, 100% calc(50% + 10px); */
+    /* background-position: 115px 114px, 0 445px; */
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -321,6 +326,9 @@
     /* width: 1440px; */
     width: 100%;
     min-height: 770px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .SignIn__container {
@@ -328,6 +336,9 @@
     /* width: 1440px; */
     width: 100%;
     min-height: 770px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .Registration__button {
     height: 59px;
