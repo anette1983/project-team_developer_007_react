@@ -42,9 +42,9 @@ const UserLogo = () => {
     };
   }, []);
 
-  useEffect(() => {
-    dispatch(refreshUser);
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(refreshUser);
+  // }, [dispatch]);
 
   return (
     <div id="modal">
