@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 import UserLogoModal from './UserLogoModal/UserLogoModal';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectUserAvatar, selectUserName } from 'redux/auth/selectors';
 import css from './UserProfile.module.css';
 import defaultUserAvatar from '../../../images/header/userDefault.png';
 import UserLogoutModal from './UserLogoutModal';
 import UserInfoModal from './UserInfoModal/UserInfoModal';
-import { refreshUser } from 'redux/auth/operations';
+// import { refreshUser } from 'redux/auth/operations';
 
 const defualtImage = defaultUserAvatar;
 const UserLogo = () => {
   const [modalToShow, setModalToShow] = useState(false);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const nickName = useSelector(selectUserName);
   const newAvatarUrl = useSelector(selectUserAvatar);
