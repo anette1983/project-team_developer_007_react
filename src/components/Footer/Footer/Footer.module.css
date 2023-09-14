@@ -1,6 +1,5 @@
 .footer {
   margin: 0 auto;
-  /* width: 375px; */
   width: 100%;
   color: #fafafa;
   background-image: url(../../../images/bgc/404_spinach_bottom_bg_mob_1x.png);
@@ -8,9 +7,6 @@
 
   background-position: 100% 100%;
   background-size: 172px;
-
-  /* background-position: 200px 365px;
-  background-size: 438px; */
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -23,11 +19,9 @@
 
 @media screen and (min-width: 768px) {
   .footer {
-    /* width: 768px; */
     width: 100%;
     background-image: url(../../../images/bgc/404_spinach_bottom_bg_tab_1x.png);
-    /* background-position: 450px 260px; */
-    background-position: 100% 100%;
+    background-position: 100% 96%;
     background-size: 290px;
   }
   @media (min-device-pixel-ratio: 2),
@@ -41,11 +35,9 @@
 
 @media screen and (min-width: 1440px) {
   .footer {
-    /* width: 1440px; */
     width: 100%;
 
     background-image: url(../../../images/bgc/404_spinach_bottom_bg_desk_1x.png);
-    /* background-position: 100% 260px; */
     background-position: 100% 100%;
     background-size: 25%;
   }
@@ -60,13 +52,13 @@
 
 .container {
   background-color: rgba(34, 37, 42, 1);
+  padding-bottom: 18px;
 }
 
 .footer_text {
   display: flex;
   justify-content: center;
   padding: 28px 0;
-  /* height: 114px; */
   font-family: 'Poppins_Medium';
   font-size: 10px;
   line-height: 10px;
@@ -81,6 +73,9 @@
     font-size: 14px;
     line-height: 14px;
     padding: 32px 0;
+  }
+  .container {
+    padding-bottom: 24px;
   }
 }
 
@@ -98,5 +93,9 @@
 @media screen and (min-width: 1440px) {
   .footer_text_service {
     margin-left: 40px;
+  }
+
+  .container {
+    padding-bottom: 40px;
   }
 }

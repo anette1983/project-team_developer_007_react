@@ -1,4 +1,3 @@
-// import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import SearchForm from '../../components/SearchForm/SearchInput';
 
 import css from '../pages.module.css';
@@ -135,14 +134,6 @@ const SearchPage = () => {
           <p className={searchCss.text}>Try looking for something else..</p>
         </div>
       )}
-
-      {/* {recipes && (
-      //   <>
-      //     <div className={`${css.listContainer} ${searchCss.listContainer}`}>
-      //       <SearchedRecipesList recipes={recipes} />
-      //     </div>
-      //   </>
-      // )} */}
     </div>
   );
 };

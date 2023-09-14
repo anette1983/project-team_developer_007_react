@@ -19,7 +19,6 @@
 @media screen and (min-width: 1440px) {
   .container {
     width: 1440px;
-    /* width: 100%; */
     padding: 100px;
     background-position: 10px 2250px;
     background-size: 40%;

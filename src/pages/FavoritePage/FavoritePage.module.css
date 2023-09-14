@@ -40,10 +40,8 @@
 
   .favSection {
     padding: 100px 32px 50px;
-    /* width: 1440px; */
   }
   .wrapper {
-    /* max-width: 768px; */
     margin: auto;
     padding-bottom: 150px;
   }
@@ -52,7 +50,6 @@
 @media screen and (min-width: 1440px) {
   .titleWrapper {
     padding: 164px 100px 0;
-    /* max-width: 1440px; */
     width: 100%;
   }
 
@@ -63,6 +60,5 @@
   .wrapper {
     min-width: 1440px;
     width: 100%;
-    /* margin: auto; */
   }
 }

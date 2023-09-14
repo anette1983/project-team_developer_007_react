@@ -22,9 +22,7 @@
     stroke: rgba(139, 170, 54, 1);
   }
 }
-/* .relative {
-  position: relative;
-} */
+
 
 .modalOverlay {
   position: absolute;
@@ -36,6 +34,7 @@
   background-image: url('../../../images/bgc/menu_mob_1x.png');
   background-repeat: no-repeat;
   background-position: bottom right;
+  background-size: 360px;
   animation-name: UpDown;
   animation-duration: 500ms;
   animation-timing-function: ease-out;
@@ -63,6 +62,7 @@
   .modalOverlay {
     background-image: url('../../../images/bgc/menu_tab_1x.png');
     font-size: 24px;
+    background-size: 558px;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),

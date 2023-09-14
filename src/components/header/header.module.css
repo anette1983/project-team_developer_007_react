@@ -12,13 +12,8 @@
   top: 0;
   transform: translateX(-50%);
   width: 375px;
-  /* max-width: 1440px;
-  /* width: 100%; */
 }
 
-/* .headerLoader {
-
-} */
 
 .nav a {
   color: rgba(34, 37, 42, 1);
@@ -75,10 +70,6 @@
 }
 .userContainer {
   margin-right: 68px;
-  /* display: flex;
-  flex-direction: raw;
-  align-items: center;
-  gap: 24px; */
 }
 
 .nav {
@@ -112,7 +103,6 @@
     gap: 32px;
   }
   .header {
-    /* width: 375px; */
     max-width: 375px;
     width: 100%;
     padding: 27px 16px 0 16px;
@@ -137,7 +127,6 @@
     width: 768px;
   }
   .userContainer {
-    /* gap: 50px; */
     margin-right: 82px;
   }
 }
@@ -146,7 +135,6 @@
   .header {
     padding: 25px 100px 0 100px;
     width: 1440px;
-    /* width: 100%; */
   }
   .burgerMenu {
     display: none;

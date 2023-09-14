@@ -20,7 +20,7 @@
     background-image: url(../../images/bgc/404_spinach_top_bg_tab_1x.png);
     background-repeat: no-repeat;
     background-position-x: 0px;
-    background-position-y: calc(100% + 300px);
+    background-position-y: calc(100% + 310px);
     background-size: 423px;
     min-height: 800px;
   }
@@ -41,7 +41,6 @@
     background-repeat: no-repeat;
 
     background-position-x: 0px;
-    /* background-position: 100% 400px; */
 
     background-position-y: calc(100% + 400px);
     background-size: 558px;

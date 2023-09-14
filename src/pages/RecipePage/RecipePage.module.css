@@ -4,7 +4,6 @@
 }
 
 .container {
-  /* width: 375px; */
   width: 100%;
   margin: 0 auto;
   padding: 0 0;
@@ -39,7 +38,6 @@
   text-align: center;
   line-height: 24px;
   letter-spacing: -0.48px;
-  /* padding-top: 144px; */
   margin-bottom: 18px;
 }
 
@@ -101,16 +99,9 @@
   margin-left: 122px;
 }
 
-/* .wrapper_title_position {
-    width: 33%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 
 @media screen and (min-width: 767.98px) {
   .container {
-    /* width: 768px; */
     width: 100%;
   }
 
@@ -170,7 +161,6 @@
 
 @media screen and (min-width: 1439.98px) {
   .container {
-    /* width: 1440px; */
     width: 100%;
   }
 

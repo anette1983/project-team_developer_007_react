@@ -38,7 +38,6 @@
 
 @media screen and (min-width: 1440px) {
   .wrapper {
-    /* width: 1440px; */
     width: 100%;
     margin: 0 auto;
     background-image: url('../../../src/images/bgc/start_corner_desk_1x.png'),
@@ -84,7 +83,6 @@
 
 @media screen and (min-width: 1440px) {
   .wrapper_leaf {
-    /* width: 1440px; */
     width: 100%;
     margin: 0 auto;
     background-image: url('../../../src/images/bgc/start_midle_desk_1x.png');

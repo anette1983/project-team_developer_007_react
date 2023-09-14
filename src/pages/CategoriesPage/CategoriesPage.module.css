@@ -1,18 +1,12 @@
 @media screen and (min-width: 375px) {
-    .container {
-        padding: 50px 16px 0 16px;
-
-    }
+  .container {
+    padding: 50px 16px 0 16px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     padding: 72px 32px 0 32px;
-  }
-
-  .section_wrapp {
-    /* max-width: 768px;
-    margin: auto; */
   }
 }
 
@@ -22,7 +16,6 @@
   }
 
   .section_wrapp {
-    /* min-width: 1440px; */
     width: 100%;
     margin: auto;
   }

@@ -1,6 +1,5 @@
 import { AddRecipeForm } from '../../components/AddRecipe/AddRecipeForm';
 import { FollowUsBlock } from '../../components/AddRecipe/FollowUsBlock';
-// import { MainPageTitle } from '../../components/MainPageTitle/MainPageTitle';
 import PopularRecipe from '../../components/AddRecipe/PopularRecipe';
 import { useLocation } from "react-router-dom";
 import { useEffect } from 'react';

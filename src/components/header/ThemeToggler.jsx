@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import css from './header.module.css';
 import Modal from './Modal/Modal';
 
 const ThemeToggler = () => {

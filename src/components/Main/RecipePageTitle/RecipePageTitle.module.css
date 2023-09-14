@@ -17,7 +17,6 @@
   background-repeat: no-repeat;
 }
 
-
 @media screen and (min-width: 768px) {
   .hero {
     background-position: center top 25%;
@@ -25,14 +24,12 @@
   }
 }
 
-
 @media screen and (min-width: 1440px) {
   .hero {
     width: 100%;
     height: 493px;
   }
 }
-
 
 .title {
   min-width: 276px;
@@ -43,7 +40,6 @@
   text-align: center;
   line-height: 24px;
   letter-spacing: -0.48px;
-  /* padding-top: 144px; */
   margin-bottom: 18px;
 }
 

@@ -2,15 +2,11 @@
   display: flex;
   justify-content: space-around;
 }
-@media screen and (min-width: 768px) {
-  .container {
-    margin-left: 173px;
-  }
-}
 
 @media screen and (min-width: 1440px) {
   .container {
     padding-left: 0;
+    flex-grow: 2;
   }
 }
 
@@ -26,6 +22,7 @@
 }
 
 .item_link {
+  font-family: 'Poppins_Medium';
   color: #fafafa;
   text-decoration: none;
   font-size: 14px;
@@ -45,5 +42,6 @@
 @media screen and (min-width: 768px) {
   .list {
     align-items: baseline;
+    margin-bottom: 0;
   }
 }

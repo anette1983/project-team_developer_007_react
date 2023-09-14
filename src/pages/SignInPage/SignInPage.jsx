@@ -26,7 +26,8 @@ const SignInPage = () => {
 
   return (
     <>
-      {isLoading && <LoadingNotice />}
+      {/* {isLoading && <LoadingNotice />} */}
+      <LoadingNotice />
       <LogInForm />
     </>
   );

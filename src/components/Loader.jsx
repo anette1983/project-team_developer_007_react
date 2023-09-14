@@ -2,7 +2,7 @@ import { ColorRing } from 'react-loader-spinner';
 
 export default function Loader({
   children = (
-    <ColorRing height="150%" width="150%" ariaLabel="blocks-loading" />
+    <ColorRing height="100%" width="100%" ariaLabel="blocks-loading" />
   ),
 }) {
   return (
@@ -13,7 +13,6 @@ export default function Loader({
         position: 'fixed',
         top: '30%',
         left: '50%',
-        // marginLeft: '-65px',
         transform: 'translate(-50%, -50%)',
         zIndex: 111111,
       }}

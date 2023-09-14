@@ -37,7 +37,6 @@
 .AuthNav__button_reg:focus {
   background-color: transparent;
   border-color: #fafafa;
-  /* color: #8baa36; */
   color: #fafafa;
 }
 

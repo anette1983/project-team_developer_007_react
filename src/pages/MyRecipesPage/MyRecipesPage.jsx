@@ -35,11 +35,6 @@ const MyRecipesPage = () => {
         <SectionTitle text={text} />
         <div className={`${css.container} ${myRecipesCss.wrapper} `}>
           {myRecipes.length !== 0 && <MyRecipesList />}
-          {/* {myRecipes.length !== 0 ? (
-            <MyRecipesList />
-          ) : (
-            <NoRecipesPlug text="you have no personal recipes" />
-          )} */}
           {myRecipes.length === 0 && (
             <NoRecipesPlug text="you have no personal recipes" />
           )}

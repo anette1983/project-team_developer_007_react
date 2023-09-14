@@ -3,7 +3,6 @@
     url(../../images/login/reg-bgc_mob_1x.png);
   background-repeat: no-repeat;
   background-position: top 87px center, bottom;
-  /* background-size: 285px 250px, 100% 490px; */
   background-size: 285px 250px, 100% 61%;
   width: 100%;
   min-height: 100vh;
@@ -139,7 +138,7 @@
 .Registration__link {
   font-family: 'Poppins_Regular';
   padding: 5px;
-  color: #fafafa;
+  color: #8baa36;
 
   text-decoration: underline;
   transition: color 250ms linear;
@@ -147,7 +146,7 @@
 
 .Registration__link:hover,
 .Registration__link:focus {
-  color: #8baa36;
+  color: #e0e0e0;
 }
 
 .Registration__error {
@@ -228,7 +227,6 @@
     background-image: url(../../images/login/woman_tab_1x.png),
       url(../../images/login/reg-bgc_tab_1x.png);
     background-position: top 96px center, bottom;
-    /* background-size: 409px 359px, 100% 606px; */
     background-size: 409px 359px, 100% 59%;
   }
 
@@ -307,10 +305,7 @@
     background-image: url(../../images/login/woman_desk_1x.png),
       url(../../images/login/reg-bgc_desk_1x.png);
     background-position: top 115px left 113px, bottom;
-    /* background-size: 532px 468px, 100% 325px; */
     background-size: 532px 468px, 100% 42%;
-    /* background-size: 532px 468px, 100% calc(50% + 10px); */
-    /* background-position: 115px 114px, 0 445px; */
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -323,7 +318,6 @@
   }
   .Registration__container {
     padding: 122px 180px 122px 760px;
-    /* width: 1440px; */
     width: 100%;
     min-height: 770px;
     display: flex;
@@ -333,7 +327,6 @@
 
   .SignIn__container {
     padding: 155px 180px 153px 760px;
-    /* width: 1440px; */
     width: 100%;
     min-height: 770px;
     display: flex;

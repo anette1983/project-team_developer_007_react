@@ -2,7 +2,6 @@ import { SignUpForm } from 'components/SignUpForm/SignUpForm';
 import { useSelector } from 'react-redux';
 import {
   selectAuthError,
-  selectIsLoading,
   selectMessage,
 } from 'redux/auth/selectors';
 import { useDispatch } from 'react-redux';
@@ -15,7 +14,6 @@ import LoadingNotice from 'components/LoadingNotice/LoadingNotice';
 const RegisterPage = () => {
   const error = useSelector(selectAuthError);
   const message = useSelector(selectMessage);
-  const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -38,7 +36,7 @@ const RegisterPage = () => {
 
   return (
     <>
-      {isLoading && <LoadingNotice />}
+      <LoadingNotice />
       <SignUpForm />
     </>
   );

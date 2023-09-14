@@ -1,4 +1,4 @@
-// import { MainPageTitle } from "components/MainPageTitle/MainPageTitle";
+
 import css from '../pages.module.css';
 import searchCss from './shopingContainer.module.css';
 import ShopingHeader from 'components/ShopingHeader/ShopingHeader';
