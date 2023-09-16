@@ -1,113 +1,176 @@
-# React homework template
+# SoYummy - Your Ultimate Web Cookbook
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+![Alt text](./assets/image-14.png)
 
-## Создание репозитория по шаблону
+<p align="center">
+      <img src="https://i.pinimg.com/originals/86/5d/21/865d21c9cd8cf1805ee4bc83e1bac4fa.png" width="1010">
+</p>
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+SoYummy is a feature-rich web cookbook application. It allows you to easily
+discover, create, and share a wide variety of recipes, and make shopping lists
+for your cooking adventures. You can also create an account, log in, change your
+username, and update your profile picture. Enjoy cooking like never before with
+SoYummy!
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+This project is available at
+https://anette1983.github.io/project-team_developer_007_react
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+## Backend info
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+This application uses it's own backend created by our team with Node.js and
+MongoDB. The server manages collections of recipes and users, providing
+authentication/authorization, email verification, and the ability to work with
+images.
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+- Backend is available at https://so-yummy-project-hnb2.onrender.com
+- [Repository link](https://github.com/anette1983/project-team_developer_007_node)
+- Documentation:
+  [Swagger](https://so-yummy-project-hnb2.onrender.com/api-docs/#/)
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+## Features
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+### Authorization
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+- **User registration**: Easily create a new account by providing your email
+  address and password. A **verification email** is sent to validate the user's
+  account, ensuring account security.
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+- **User login**: Existing users can log in using their registered email address
+  and password.
 
-## Подготовка к работе
+### Recipe Exploration
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+- **Сategories**: Explore recipes by category, ensuring a wide range of options
+  for every taste.
 
-## Деплой
+- **Recipe sharing**: Share your culinary creations by providing recipe details,
+  including name, ingredients, preparation steps, and images.
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+- **Recipe discovery**: Discover a diverse array of recipes shared by fellow
+  users. Search recipes by name, category, or ingredients to find the perfect
+  dish.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+- **My recipes**: Keep track of your personally crafted recipes in one
+  convenient location.
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+- **Favorite recipes**: Curate your list of favorite recipes for quick and easy
+  access to your go-to dishes.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+### Shopping Made Simple
 
-### Статус деплоя
+- **Ingredient ordering**: Add recipe ingredients to your **shopping list** for
+  hassle-free grocery shopping.
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+### Newsletter subscribe
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+- **Subscribe** for our newsletters
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+### Personalization
 
-![Deployment status](./assets/deploy-status.png)
+- **Username and avatar management**: Customize your profile by changing your
+  username and updating your avatar image to reflect your personality.
 
-### Живая страница
+### User-Friendly Design
 
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+- **Adaptive design**: Enjoy a seamless experience across different devices with
+  adaptive design breakpoints at 375px, 768px, and 1440px.
 
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
+## Available Routes
 
-### Маршрутизация
+- `/register` - redirects to RegisterPage
+- `/signin` - redirects to SigninPage
+- `/main` - renders MainPage component
+- `/categories/:categoryName` - redirects to CategoriesPage
+- `/add` - redirects to AddRecipesPage
+- `/my` - redirects to MyRecipesPage
+- `/favorite` - redirects to FavoritePage
+- `/shopping-list` - redirects to ShoppingListPage
+- `/search` - redirects to SearchPage
 
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
+## Used Technologies
 
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
+The SoYummy web application is built using the following technologies:
 
-## Как это работает
+- Frontend:
+  <div align="center">
+    <p align="center">
+      <img width="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/>
+      <img width="50" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/>
+      <img width="50" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="JavaScript" title="JavaScript"/>
+      <img width="50" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React"/>
+      <img width="50" src="https://user-images.githubusercontent.com/25181517/187896150-cc1dcb12-d490-445c-8e4d-1275cd2388d6.png" alt="Redux" title="Redux"/>
+      <img width="50" src="https://user-images.githubusercontent.com/25181517/190887639-d0ba4ec9-ddbe-45dd-bea1-4db83846503e.png" alt="Chakra UI" title="Chakra UI"/>
+      <img height="50" src="https://reactrouter.com/favicon-light.png" alt="React Router" title="React Router"/>
+      <img width="50" src="https://user-images.githubusercontent.com/43313420/105883661-64604380-6007-11eb-8cfa-45ff66b37fdb.png" alt="Axios" title="Axios"/>
+      <img width="50" src="https://user-images.githubusercontent.com/4060187/61057426-4e5a4600-a3c3-11e9-9114-630743e05814.png" alt="Formik" title="Formik"/>
+      <img width="50" src="https://notiflix.github.io/webapp/notiflix-og.jpg" alt="Notiflix" title="Notiflix"/>
+    </p>
+  </div>
 
-![How it works](./assets/how-it-works.png)
+    <!-- - HTML5
+    - CSS3
+    - JavaScript
+    - React.js
+    - Redux Toolkit
+    - React Router -->
 
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+- Backend:
+
+<div align="center">
+	<img width="50" src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" alt="Node.js" title="Node.js"/>
+	<img width="50" src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png" alt="Express" title="Express"/>
+	<img width="50" src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png" alt="mongoDB" title="mongoDB"/>
+    <img height="50" src="https://icon.icepanel.io/Technology/svg/Mongoose.js.svg" alt="Mongoose" title="Mongoose"/>
+	<img width="50" src="https://user-images.githubusercontent.com/25181517/186711335-a3729606-5a78-4496-9a36-06efcc74f800.png" alt="Swagger" title="Swagger"/>
+   <img height="50" src="http://jwt.io/img/logo-asset.svg" alt="JSON web token" title="JWT"/>
+   <img height="50" src="https://nodemailer.com/nm_logo_200x136.png" alt="Nodemailer" title="NOdemailer"/>
+   <img height="50" src="https://cloudinary-marketing-res.cloudinary.com/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1638385862/cloudinary_cloud_glyph_blue_png.jpg?_s=public-apps" alt="Cloudinary" title="Cloudinary"/>
+   <img width="50" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Gravatar-default-logo.jpg" alt="Gravatar" title="Gravatar"/>
+   <img height="50" src="https://camo.githubusercontent.com/c306d97014be1caa9a2a511a0ff4722d54a77b0b6c81a18c81113d6051408325/68747470733a2f2f61692e6769746875622e696f2f6e616e6f69642f6c6f676f2e737667" alt="Nanoid" title="Nanoid"/>
+
+</div>
+
+- Additional tools and libraries:
+  - Animate.css
+  - bcrypt
+  - Multer
+  - Joi
+  - clsx
+
+## Usage
+
+To use this project locally, please follow these steps:
+
+1. Clone the repository to your local machine using the following command: git
+   clone https://github.com/anette1983/project-team_developer_007_react.git
+
+2. Navigate to the project's directory: cd project-team_developer_007_react
+
+3. Install the project dependencies using npm: npm install
+
+4. Customize the project's configuration according to your requirements. You may
+   need to modify configuration files and environment variables.
+
+5. Start the project: npm start
+
+6. Access the application by navigating to `http://localhost:3000` in your web
+   browser.
+
+## Our team
+
+![Alt text](./assets/image-2.png) 
+![Alt text](./assets/image.png)
+![Alt text](./assets/image-1.png)
+
+## Screenshots
+
+![Alt text](./assets/image-12.png) 
+![Alt text](./assets/image-13.png)
+![Alt text](./assets/image-4.png) 
+![Alt text](./assets/image-11.png)
+![Alt text](./assets/image-5.png) 
+![Alt text](./assets/image-6.png)
+![Alt text](./assets/image-7.png) 
+![Alt text](./assets/image-8.png)
+![Alt text](./assets/image-9.png) 
+![Alt text](./assets/image-10.png)

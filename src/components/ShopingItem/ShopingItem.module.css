@@ -1,141 +1,149 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 343px;
-    height: 86px;
-    background-color: #FAFAFA;
-    border-bottom: 1px solid #E0E0E0;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 343px; */
+  max-width: 343px;
+  height: 86px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0 auto;
 }
 
 .wrapper_img {
-    width: 60px;
-    height: 60px;
-    background-color: #EBF3D4;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-   margin-right: 10px;
-   border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: #ebf3d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
 .wrapper_ingridient_title {
-    display: flex;
-    width: 95px;
-    height: 54px;
+  display: flex;
+  width: 95px;
+  height: 54px;
 }
 
 .ingridient_title {
-    color: #3E4462;
-    font-family: "Poppins_Medium", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: -0.24px;
+  color: #3e4462;
+  font-family: 'Poppins_Medium', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: -0.24px;
 }
 
 .wrapper_ingridient_quantity {
-    min-width: 37px;
-    height: 23px;
-    border-radius: 4px;
-    background: #8BAA36;
-   display: flex;
-   align-items: center;
-    justify-content: center;
+  min-width: 37px;
+  height: 23px;
+  border-radius: 4px;
+  background: #8baa36;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ingridient_quantity,
 .text_ingridient_quantity {
-     color: #fafafa;
-  font-family: "Poppins_Bold" ,sans-serif;
+  color: #fafafa;
+  font-family: 'Poppins_Bold', sans-serif;
   font-size: 10px;
   font-weight: 600;
   line-height: normal;
 }
 
-.wrapper_img_text{
-    display: flex;
+.wrapper_img_text {
+  display: flex;
 }
-.icon{
-    margin-right: 19px;
+.icon {
+  margin-right: 19px;
 }
-.delete_wraper{
-    cursor: pointer;
+.delete_wraper {
+  cursor: pointer;
 }
-@media screen and (min-width:768px) {
-    .container {
-        height: 178px;
-        width: 704px;
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 100%;
+    max-width: 359px;
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    height: 178px;
+    max-width: 704px;
     margin: 0 auto;
     gap: 16px;
-    }
-.icon{
+  }
+  .icon {
     margin-right: 40px;
+  }
+  .wrapper_img {
+    width: 93px;
+    height: 97px;
+    margin-right: 16px;
+  }
+
+  .wrapper_ingridient_title {
+    width: 208px;
+  }
+
+  .ingridient_title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .wrapper_ingridient_quantity {
+    min-width: 68px;
+    height: 53px;
+    padding: 4px 8px;
+    margin-left: 94px;
+  }
+
+  .text_ingridient_quantity {
+    font-size: 18px;
+  }
+
+  .input_checkbox {
+    margin-left: 58px;
+  }
+  .ingredient_img {
+    width: 81px;
+  }
 }
-    .wrapper_img {
-        width: 93px;
-        height: 97px;
-       margin-right: 16px;
-       
-    }
 
-    .wrapper_ingridient_title {
-        width: 208px;
-    }
+@media screen and (min-width: 1440px) {
+  .container {
+    height: 140px;
+    max-width: 1160px;
+  }
 
-    .ingridient_title {
-        font-size: 24px;
-        line-height: 24px;
-    }
+  .wrapper_img {
+    width: 93px;
+    height: 97px;
+    padding: 26px;
+    margin-right: 16px;
+  }
 
-    .wrapper_ingridient_quantity {
-        min-width: 68px;
-        height: 53px;
-        padding: 4px 8px;
-        margin-left: 94px;
-    }
+  .wrapper_ingridient_title {
+    width: 547px;
+  }
 
-    .text_ingridient_quantity {
-        font-size: 18px;
-    }
+  .wrapper_ingridient_quantity {
+    height: 35px;
+    margin-left: 90px;
+  }
 
-    .input_checkbox {
-        margin-left: 58px;
-    }
-    .ingredient_img{
-        width: 81px;
-    }
-}
-
-@media screen and (min-width:1440px) {
-    .container {
-        height: 140px;
-        width: 1160px;
-    }
-
-    .wrapper_img {
-        width: 93px;
-        height: 97px;
-        padding: 26px;
-        margin-right: 16px;
-    }
-
-    .wrapper_ingridient_title {
-        width: 547px;
-    }
-
-    .wrapper_ingridient_quantity {
-        height: 35px;
-        margin-left: 90px;
-    }
-
-    .input_checkbox {
-        margin-right: 70px;
-    }
-    .icon{
+  .input_checkbox {
+    margin-right: 70px;
+  }
+  .icon {
     margin-right: 20px;
-}
+  }
 }

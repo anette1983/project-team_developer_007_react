@@ -14,7 +14,6 @@
   margin-bottom: 18px;
 }
 
-
 @media screen and (min-width: 768px) {
   .card_container {
     display: flex;
@@ -49,13 +48,20 @@
   max-width: 70%;
   color: #3e4462;
   font-family: 'Poppins_Semibold';
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: -0.24px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   margin-top: 6px;
+}
+
+@media screen and (min-width: 375px) {
+  .card_title {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
 }
 @media screen and (min-width: 768px) {
   .card_title {
@@ -76,15 +82,20 @@
 }
 
 .card_text {
-  width: 163px;
   color: #23262a;
-
   font-size: 8px;
   font-style: normal;
   font-weight: 400;
   line-height: 10px;
   letter-spacing: -0.16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 375px) {
+  .card_text {
+    margin-bottom: 24px;
+    width: 163px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -217,7 +228,6 @@
   line-height: normal;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 @media screen and (min-width: 768px) {
   .card_btn {

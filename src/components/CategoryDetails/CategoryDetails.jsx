@@ -63,49 +63,55 @@ const CategoryDetails = () => {
   };
 
   return (
-    <Tabs
-      size={window.innerWidth < 767 ? 'sm' : 'lg'}
-      variant="unstyled"
-      isLazy
-      defaultIndex={0}
-      index={index}
-      onClick={handleScroll}
-      onChange={index => setIndex(index)}
-    >
-      <TabList
-        id={'content'}
-        overflowY="hidden"
-        className={css.tab_list}
-        sx={{
-          scrollbarWidth: 'none',
-          '::-webkit-scrollbar': {
-            display: 'none',
-          },
-        }}
-      >
-        {category?.map(({ name }) => (
-          <Tab
-            onClick={handleClick}
-            _selected={{ color: '#8BAA36', borderBottom: 'solid 2px' }}
-            className={css.tabs_button}
-            key={name}
-          >
-            {name}
-          </Tab>
-        ))}
-      </TabList>
+    <>
       {isLoading ? (
         <MyLoader />
       ) : (
-        <TabPanels className={css.list}>
-          {category.map(({ _id }) => (
-            <TabPanel p="0" key={_id}>
-              <CategoryRecipeList recipeByCategory={recipeByCategory} />
-            </TabPanel>
-          ))}
-        </TabPanels>
+        <Tabs
+          size={window.innerWidth < 767 ? 'sm' : 'lg'}
+          variant="unstyled"
+          isLazy
+          defaultIndex={0}
+          index={index}
+          onClick={handleScroll}
+          onChange={index => setIndex(index)}
+        >
+          <TabList
+            id={'content'}
+            overflowY="hidden"
+            className={css.tab_list}
+            sx={{
+              scrollbarWidth: 'none',
+              '::-webkit-scrollbar': {
+                display: 'none',
+              },
+            }}
+          >
+            {category?.map(({ name }) => (
+              <Tab
+                onClick={handleClick}
+                _selected={{ color: '#8BAA36', borderBottom: 'solid 2px' }}
+                className={css.tabs_button}
+                key={name}
+              >
+                {name}
+              </Tab>
+            ))}
+          </TabList>
+          {/* {isLoading ? (
+          <MyLoader />
+        ) : ( */}
+          <TabPanels className={css.list}>
+            {category.map(({ _id }) => (
+              <TabPanel p="0" key={_id}>
+                <CategoryRecipeList recipeByCategory={recipeByCategory} />
+              </TabPanel>
+            ))}
+          </TabPanels>
+          {/* )} */}
+        </Tabs>
       )}
-    </Tabs>
+    </>
   );
 };
 

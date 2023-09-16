@@ -1,9 +1,20 @@
 .container {
   display: flex;
-  width: 375px;
+  width: 320px;
   flex-direction: column;
   padding: 64px 16px 100px 16px;
   margin: 0 auto;
+}
+
+.list {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -57,7 +68,8 @@
   line-height: 18px;
   letter-spacing: 0px;
   text-align: center;
-  margin-left: 249px;
+  margin-left: 195px;
+
   margin-top: 24px;
 }
 
@@ -66,24 +78,36 @@
 }
 
 .btn_other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 195px;
   height: 46px;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0em;
-  text-align: center;
   color: #22252a;
   border-radius: 24px 44px;
-  border: 1px solid #8baa36;
+  border: 2px solid #8baa36;
+  /* margin-top: 40px;
+  margin-left: 74px; */
   margin-top: 40px;
-  margin-left: 74px;
+
+  margin-left: auto;
+  margin-right: auto;
   padding: 14px 32px;
 }
 
 .btn_other:hover {
   background-color: #8baa36;
   color: #fafafa;
+}
+
+@media screen and (min-width: 375px) {
+  .btn {
+    margin-left: 72.5%;
+  }
 }
 
 @media screen and (min-width: 768px) {

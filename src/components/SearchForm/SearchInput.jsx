@@ -17,6 +17,7 @@ const SearchForm = ({ title, setSearchBy, page, searchQuery }) => {
       setSearchBy('ingredients');
     }
     page(1);
+    console.log('handle submit');
   };
   const handleOption = e => {
     setSelectBy(e.currentTarget.id);

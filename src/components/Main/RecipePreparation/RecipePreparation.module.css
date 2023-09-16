@@ -77,8 +77,10 @@
   background: #22252a;
   border-radius: 8px;
   overflow: hidden;
-  width: 343px;
-  height: 250px;
+  /* width: 343px;
+  height: 250px; */
+  max-width: 343px;
+  max-height: 250px;
 }
 
 .preview_img {

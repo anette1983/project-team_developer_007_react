@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { clearErrorMessage } from 'redux/auth/slice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import LoadingNotice from 'components/LoadingNotice/LoadingNotice';
+import Loader from 'components/Loader';
 
 const SignInPage = () => {
   const error = useSelector(selectAuthError);
@@ -26,8 +26,8 @@ const SignInPage = () => {
 
   return (
     <>
-      {/* {isLoading && <LoadingNotice />} */}
-      <LoadingNotice />
+      {isLoading && <Loader />}
+      {/* <LoadingNotice /> */}
       <LogInForm />
     </>
   );

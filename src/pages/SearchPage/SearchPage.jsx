@@ -19,7 +19,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { SectionTitle } from 'components/SectionTitle/SectionTitle';
 import { Notify } from 'notiflix';
-import CategoryLoader from 'components/CategoryDetails/СategoryLoader';
+import SearchPageLoader from './SearchPageLoader';
 
 const SearchPage = () => {
   const [page, setPage] = useState(1);
@@ -40,6 +40,7 @@ const SearchPage = () => {
   useEffect(() => {
     if (!searchParams.size || isError) {
       dispatch(clearRecipes());
+      console.log('!searchParams.size || isError:>> ');
     }
   }, [dispatch, isError, searchParams.size]);
 
@@ -65,9 +66,12 @@ const SearchPage = () => {
     }
 
     if (isLoged) {
+      console.log('windowsWidth :>> ', windowsWidth);
       dispatch(fetchMoreBySearch({ searchBy, page, limit, query }));
     }
     setSearchParams({ query, page, limit });
+    console.log('useEffect на странице поиска :>> ');
+    console.log('SearchParams', searchParams);
   }, [
     dispatch,
     page,
@@ -83,6 +87,7 @@ const SearchPage = () => {
 
   const setParams = value => {
     setSearchParams({ query: value.search, page, limit });
+    console.log('функция сетпарамс на странице поиска :>> ');
   };
 
   const { pathname } = useLocation();
@@ -109,7 +114,7 @@ const SearchPage = () => {
         />
       </div>
       {isLoading ? (
-        <CategoryLoader />
+        <SearchPageLoader />
       ) : (
         recipes && (
           <div className={`${css.listContainer} ${searchCss.listContainer}`}>

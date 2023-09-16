@@ -101,13 +101,15 @@
 
 .container {
   margin: 0 auto;
-  width: 375px;
+  width: 320px;
+  /* width: 375px; */
   height: 777px;
   display: flex;
   flex-direction: column;
   background-image: url('../../../src/images/bgc/salt_mob_1x.png');
   background-repeat: no-repeat;
-  background-position: 28px 322px;
+  background-position: center 324px;
+  /* background-position: 28px 322px; */
   background-size: 320px;
 }
 
@@ -116,6 +118,13 @@
   (min-resolution: 2dppx) {
   .container {
     background-image: url('../../../src/images/bgc/salt_mob_2x.png');
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    background-position: 28px 322px;
   }
 }
 
@@ -166,14 +175,26 @@
 .title {
   font-family: 'Poppins_Regular';
   margin: 0;
+  /* font-size: 60px;
+  line-height: 60px; */
   font-size: 60px;
   line-height: 60px;
+  text-align: center;
   letter-spacing: -0.005em;
-  padding-left: 36px;
+
   font-weight: 400;
   color: #22252a;
   padding-top: 132px;
   padding-bottom: 14px;
+}
+
+@media screen and (min-width: 375px) {
+  .title {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+    padding-left: 36px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -204,7 +225,13 @@
   line-height: 18px;
   letter-spacing: -0.02em;
   text-align: center;
-  margin: 0 63px 0 64px;
+  margin: 0 43px 0 44px;
+}
+
+@media screen and (min-width: 375px) {
+  .text {
+    margin: 0 63px 0 64px;
+  }
 }
 
 @media screen and (min-width: 768px) {

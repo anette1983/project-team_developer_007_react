@@ -31,7 +31,8 @@
 }
 
 .title_table_position {
-  margin-left: 122px;
+  /* margin-left: 122px; */
+  margin-left: 35%;
 }
 
 .ingredients_list li:not(:last-of-type) {
@@ -61,7 +62,8 @@
   }
 
   .title_table_position {
-    margin-left: 312px;
+    /* margin-left: 312px; */
+    margin-left: 45%;
   }
 
   .ingredients_list li:not(:last-of-type) {
@@ -85,7 +87,8 @@
   }
 
   .title_table_position {
-    margin-left: 761px;
+    /* margin-left: 761px; */
+    margin-left: calc(30% + 381px);
   }
 
   .ingredients_list {

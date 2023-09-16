@@ -16,7 +16,7 @@
 
 .textWrap {
   display: flex;
-  gap: 24px;
+  gap: 10px;
 }
 @media screen and (min-width: 375px) {
   .wrap {

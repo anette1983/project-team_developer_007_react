@@ -2,6 +2,7 @@ import { SignUpForm } from 'components/SignUpForm/SignUpForm';
 import { useSelector } from 'react-redux';
 import {
   selectAuthError,
+  selectIsLoading,
   selectMessage,
 } from 'redux/auth/selectors';
 import { useDispatch } from 'react-redux';
@@ -9,13 +10,15 @@ import { clearErrorMessage, clearMessage } from 'redux/auth/slice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LoadingNotice from 'components/LoadingNotice/LoadingNotice';
+import Loader from 'components/Loader';
+
 
 const RegisterPage = () => {
   const error = useSelector(selectAuthError);
   const message = useSelector(selectMessage);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     if (error && error !== 'Unable to fetch user') {
@@ -36,7 +39,7 @@ const RegisterPage = () => {
 
   return (
     <>
-      <LoadingNotice />
+      {isLoading && <Loader />}
       <SignUpForm />
     </>
   );
