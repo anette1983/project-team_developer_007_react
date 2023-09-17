@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading } from 'redux/recipes/selectors';
 import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectors';
@@ -9,6 +9,7 @@ import { RecipeInngredientsList } from 'components/RecipeInngredientsList/Recipe
 import { RecipePreparation } from 'components/Main/RecipePreparation/RecipePreparation';
 
 import css from './RecipePage.module.css';
+import LoadingNotice from 'components/LoadingNotice/LoadingNotice';
 
 const RecipePage = () => {
   const { container, content_wrapper } = css;
@@ -20,6 +21,12 @@ const RecipePage = () => {
 
   const { recipeId } = useParams();
 
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   useEffect(() => {
     dispatch(fetchRecipeById(recipeId));
   }, [dispatch, isRefresh, recipeId]);
@@ -29,7 +36,7 @@ const RecipePage = () => {
       {isLoggedIn && !isRefresh && (
         <>
           {isLoading ? (
-            <h3>Request in progress...</h3>
+            <LoadingNotice />
           ) : (
             <>
               <RecipePageTitle />

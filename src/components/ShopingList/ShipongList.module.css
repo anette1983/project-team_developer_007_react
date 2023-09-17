@@ -6,6 +6,8 @@
   /* flex-wrap: wrap; */
   flex-direction: column;
   gap: 24px;
+  width: 306px;
+  margin: 0 auto;
 }
 .deleteBtn {
   width: 30px;

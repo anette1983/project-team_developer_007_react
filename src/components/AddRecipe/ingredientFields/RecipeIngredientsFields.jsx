@@ -157,6 +157,7 @@ export const RecipeIngredientsFields = ({
                   <div className={css.ingredientInputBox}>
                     <input
                       name='ingredients'
+                      placeholder="Type in ingredient"
                       className={css.ingredientNameInput}
                       autoFocus={true}
                       value={ingredient.name}

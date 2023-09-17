@@ -40,11 +40,11 @@
 }
 
 .popularRecipesList {
-  width: 343px;
+  width: 291.5px;
 }
 
 .popularRecipesItem {
-  width: 343px;
+  width: 291.5px;
   height: 98px;
   padding-bottom: 13px;
   border-bottom: 1px solid rgba(112, 112, 112, 0.17);
@@ -85,7 +85,7 @@
   letter-spacing: -0.24px;
   color: #7e7e7e;
 
-  width: 212px;
+  width: 181px;
   height: 50px;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -99,6 +99,18 @@
   line-height: 1.25;
   letter-spacing: -0.24px;
   color: #3e4462;
+}
+@media screen and (min-width: 375px) {
+  .popularRecipesList {
+    width: 291.5px;
+  }
+
+  .popularRecipesItem {
+    width: 291.5px;
+  }
+  .popularRecipeText {
+    width: 212px;
+  }
 }
 
 @media screen and (min-width: 768px) {

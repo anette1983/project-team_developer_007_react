@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Main } from '../../components/Main/Main';
 import css from './MainPage.module.css';
-import { selectIsRefreshing } from 'redux/auth/selectors';
+// import { selectIsRefreshing } from 'redux/auth/selectors';
 import { useEffect } from 'react';
 import { fetchMainPage } from '../../redux/recipes/operations';
 import { PreviewCategories } from 'components/Main/PreviewCategories/PreviewCategories';
@@ -9,18 +9,20 @@ import { PreviewCategories } from 'components/Main/PreviewCategories/PreviewCate
 const MainPage = () => {
   const dispatch = useDispatch();
 
-  const isRefresh = useSelector(selectIsRefreshing);
+  // const isRefresh = useSelector(selectIsRefreshing);
 
+  // useEffect(() => {
+  //   dispatch(fetchMainPage());
+  // }, [dispatch, isRefresh]);
   useEffect(() => {
     dispatch(fetchMainPage());
-  }, [dispatch, isRefresh]);
+  }, [dispatch]);
 
   return (
     <>
       <div className={css.wrapper}>
         <div className={css.wrapper_leaf}>
           <div className={css.container}>
-            
             <h1 className={css.title}>
               <span className={css.title_start}>So</span>Yummy
             </h1>
@@ -31,7 +33,7 @@ const MainPage = () => {
             </p>
             <Main />
           </div>
-          <PreviewCategories/>
+          <PreviewCategories />
         </div>
       </div>
     </>

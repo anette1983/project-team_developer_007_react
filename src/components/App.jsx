@@ -1,8 +1,7 @@
-import { lazy, useEffect, useRef } from 'react';
+import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading, selectIsRefreshing } from 'redux/auth/selectors';
-import Loader from './Loader';
 import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
 import { refreshUser } from 'redux/auth/operations';
@@ -31,249 +30,95 @@ export const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
   const isLoading = useSelector(selectIsLoading);
-  const isFirstRender = useRef(true);
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   if (isFirstRender.current) {
-  //     isFirstRender.current = false;
-  //   }
-  // }, []);
-  let contentToRender;
+  return isRefreshing || isLoading ? (
+    <LoadingNotice />
+  ) : (
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route
+          index
+          element={
+            <RestrictedRoute component={WelcomePage} redirectTo="/main" />
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute component={RegisterPage} redirectTo="/main" />
+          }
+        />
+        <Route
+          path="/signin"
+          element={
+            <RestrictedRoute component={SignInPage} redirectTo="/main" />
+          }
+        />
+      </Route>
 
-  if (isRefreshing || isLoading) {
-    contentToRender = <Loader />;
-  } else if (isLoading && isFirstRender.current) {
-    contentToRender = <LoadingNotice />;
-    isFirstRender.current = false;
-  } else {
-    contentToRender = (
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route
-            index
-            element={
-              <RestrictedRoute component={WelcomePage} redirectTo="/main" />
-            }
-          />
-          <Route
-            path="/register"
-            element={
-              <RestrictedRoute component={RegisterPage} redirectTo="/main" />
-            }
-          />
-          <Route
-            path="/signin"
-            element={
-              <RestrictedRoute component={SignInPage} redirectTo="/main" />
-            }
-          />
+      <Route path="/" element={<SharedLayout />}>
+        <Route
+          path="main"
+          element={<PrivateRoute component={MainPage} redirectTo="/signin" />}
+        />
+
+        <Route
+          path="categories"
+          element={
+            <PrivateRoute component={CategoriesPage} redirectTo="/signin" />
+          }
+        >
+          <Route path=":categoryName" element={<CategoryDetails />} />
         </Route>
-
-        <Route path="/" element={<SharedLayout />}>
-          <Route
-            path="main"
-            element={<PrivateRoute component={MainPage} redirectTo="/signin" />}
-          />
-
-          <Route
-            path="categories"
-            element={
-              <PrivateRoute component={CategoriesPage} redirectTo="/signin" />
-            }
-          >
-            <Route path=":categoryName" element={<CategoryDetails />} />
-          </Route>
-          <Route
-            path="add"
-            element={
-              <PrivateRoute component={AddRecipePage} redirectTo="/signin" />
-            }
-          />
-          <Route
-            path="favorite"
-            element={
-              <PrivateRoute component={FavoritePage} redirectTo="/signin" />
-            }
-          />
-          <Route
-            path="recipe/:recipeId"
-            element={
-              <PrivateRoute component={RecipePage} redirectTo="/signin" />
-            }
-          />
-          <Route
-            path="my"
-            element={
-              <PrivateRoute component={MyRecipesPage} redirectTo="/signin" />
-            }
-          />
-          <Route
-            path="search"
-            element={
-              <PrivateRoute component={SearchPage} redirectTo="/signin" />
-            }
-          />
-          <Route
-            path="shopping-list"
-            element={
-              <PrivateRoute component={ShoppingListPage} redirectTo="/signin" />
-            }
-          />
-          <Route
-            path="error"
-            element={
-              <PrivateRoute component={NotFoundPage} redirectTo="/error" />
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <PrivateRoute component={NotFoundPage} redirectTo="/error" />
-            }
-          />
-        </Route>
-      </Routes>
-    );
-  }
-
-  return contentToRender;
+        <Route
+          path="add"
+          element={
+            <PrivateRoute component={AddRecipePage} redirectTo="/signin" />
+          }
+        />
+        <Route
+          path="favorite"
+          element={
+            <PrivateRoute component={FavoritePage} redirectTo="/signin" />
+          }
+        />
+        <Route
+          path="recipe/:recipeId"
+          element={<PrivateRoute component={RecipePage} redirectTo="/signin" />}
+        />
+        <Route
+          path="my"
+          element={
+            <PrivateRoute component={MyRecipesPage} redirectTo="/signin" />
+          }
+        />
+        <Route
+          path="search"
+          element={<PrivateRoute component={SearchPage} redirectTo="/signin" />}
+        />
+        <Route
+          path="shopping-list"
+          element={
+            <PrivateRoute component={ShoppingListPage} redirectTo="/signin" />
+          }
+        />
+        <Route
+          path="error"
+          element={
+            <PrivateRoute component={NotFoundPage} redirectTo="/error" />
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <PrivateRoute component={NotFoundPage} redirectTo="/error" />
+          }
+        />
+      </Route>
+    </Routes>
+  );
 };
-
-//   return (
-//     <>
-//       {isRefreshing || isLoading ? (
-//         // <Loader />
-//         <Loader />
-//       ) : (
-//         <>
-//           {isLoading && isFirstRender.current ? (
-//             <LoadingNotice />
-//           ) : (
-//             <Routes>
-//               <Route path="/" element={<SharedLayout />}>
-//                 <Route
-//                   index
-//                   element={
-//                     <RestrictedRoute
-//                       component={WelcomePage}
-//                       redirectTo="/main"
-//                     />
-//                   }
-//                 />
-//                 <Route
-//                   path="/register"
-//                   element={
-//                     <RestrictedRoute
-//                       component={RegisterPage}
-//                       redirectTo="/main"
-//                     />
-//                   }
-//                 />
-//                 <Route
-//                   path="/signin"
-//                   element={
-//                     <RestrictedRoute
-//                       component={SignInPage}
-//                       redirectTo="/main"
-//                     />
-//                   }
-//                 />
-//               </Route>
-
-//               <Route path="/" element={<SharedLayout />}>
-//                 <Route
-//                   path="main"
-//                   element={
-//                     <PrivateRoute component={MainPage} redirectTo="/signin" />
-//                   }
-//                 />
-
-//                 <Route
-//                   path="categories"
-//                   element={
-//                     <PrivateRoute
-//                       component={CategoriesPage}
-//                       redirectTo="/signin"
-//                     />
-//                   }
-//                 >
-//                   <Route path=":categoryName" element={<CategoryDetails />} />
-//                 </Route>
-//                 <Route
-//                   path="add"
-//                   element={
-//                     <PrivateRoute
-//                       component={AddRecipePage}
-//                       redirectTo="/signin"
-//                     />
-//                   }
-//                 />
-//                 <Route
-//                   path="favorite"
-//                   element={
-//                     <PrivateRoute
-//                       component={FavoritePage}
-//                       redirectTo="/signin"
-//                     />
-//                   }
-//                 />
-//                 <Route
-//                   path="recipe/:recipeId"
-//                   element={
-//                     <PrivateRoute component={RecipePage} redirectTo="/signin" />
-//                   }
-//                 />
-//                 <Route
-//                   path="my"
-//                   element={
-//                     <PrivateRoute
-//                       component={MyRecipesPage}
-//                       redirectTo="/signin"
-//                     />
-//                   }
-//                 />
-//                 <Route
-//                   path="search"
-//                   element={
-//                     <PrivateRoute component={SearchPage} redirectTo="/signin" />
-//                   }
-//                 />
-//                 <Route
-//                   path="shopping-list"
-//                   element={
-//                     <PrivateRoute
-//                       component={ShoppingListPage}
-//                       redirectTo="/signin"
-//                     />
-//                   }
-//                 />
-//                 <Route
-//                   path="error"
-//                   element={
-//                     <PrivateRoute
-//                       component={NotFoundPage}
-//                       redirectTo="/error"
-//                     />
-//                   }
-//                 />
-//                 <Route
-//                   path="*"
-//                   element={
-//                     <PrivateRoute
-//                       component={NotFoundPage}
-//                       redirectTo="/error"
-//                     />
-//                   }
-//                 />
-//               </Route>
-//             </Routes>
-//           )}
-//         </>
-//       )}
-//     </>
-//   );
-// };

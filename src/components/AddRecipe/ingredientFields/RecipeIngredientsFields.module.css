@@ -48,7 +48,7 @@
 }
 
 .ingredientItem {
-  width: 343px;
+  width: 291.5px;
   display: flex;
   align-items: baseline;
 }
@@ -70,10 +70,12 @@
 .ingredientNameInput {
   display: block;
   font-family: 'Poppins_Regular';
-  width: 194px;
+  width: 165px;
+
   height: 53px;
   margin-bottom: 0;
-  margin-right: 14px;
+  margin-right: 10px;
+
   padding: 16px;
   background-color: #d9d9d9;
   border-radius: 6px;
@@ -120,14 +122,17 @@
 .ingredientQuantityField {
   position: relative;
   font-family: 'Poppins_Regular';
-  width: 84px;
+
+  width: 70px;
+  margin-right: 20px;
   height: 53px;
-  margin-right: 33px;
+
   cursor: pointer;
 }
 
 .ingredientQuantityInput {
-  width: 84px;
+  width: 72px;
+
   height: 53px;
   padding: 16px 0 16px 10px;
   background-color: #d9d9d9;
@@ -173,8 +178,9 @@
 
 .arrowIngr {
   position: absolute;
-  right: calc(0% + 23px);
-  top: calc(50% - 10px);
+  right: calc(0% + 18px);
+  top: calc(50% - 8px);
+
   color: #8baa36;
   width: 20px;
 }
@@ -233,7 +239,28 @@
   color: red;
   font-size: 12px;
 }
+@media screen and (min-width: 375px) {
+  .ingredientItem {
+    width: 343px;
+  }
 
+  .ingredientNameInput {
+    width: 194px;
+    margin-right: 14px;
+  }
+  .arrowIngr {
+    right: calc(0% + 23px);
+    top: calc(50% - 10px);
+  }
+  .ingredientQuantityField {
+    width: 84px;
+    margin-right: 33px;
+  }
+
+  .ingredientQuantityInput {
+    width: 84px;
+  }
+}
 @media screen and (min-width: 768px) {
   .ingredientsFieldWrapper {
     padding-bottom: 100px;
