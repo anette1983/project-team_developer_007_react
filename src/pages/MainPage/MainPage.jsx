@@ -1,22 +1,20 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Main } from '../../components/Main/Main';
 import css from './MainPage.module.css';
 // import { selectIsRefreshing } from 'redux/auth/selectors';
 import { useEffect } from 'react';
 import { fetchMainPage } from '../../redux/recipes/operations';
 import { PreviewCategories } from 'components/Main/PreviewCategories/PreviewCategories';
+import { selectIsRefreshing } from 'redux/auth/selectors';
 
 const MainPage = () => {
   const dispatch = useDispatch();
 
-  // const isRefresh = useSelector(selectIsRefreshing);
+  const isRefresh = useSelector(selectIsRefreshing);
 
-  // useEffect(() => {
-  //   dispatch(fetchMainPage());
-  // }, [dispatch, isRefresh]);
   useEffect(() => {
     dispatch(fetchMainPage());
-  }, [dispatch]);
+  }, [dispatch, isRefresh]);
 
   return (
     <>

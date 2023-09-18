@@ -152,7 +152,8 @@
   .container {
     width: 1440px;
     height: 800px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-bottom: -50px;
     background-image: url('../../../src/images/bgc/salt_desk_1x.png');
     background-position: 700px 100px;
     background-size: 578px;

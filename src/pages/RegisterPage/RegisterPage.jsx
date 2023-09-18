@@ -12,7 +12,6 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Loader from 'components/Loader';
 
-
 const RegisterPage = () => {
   const error = useSelector(selectAuthError);
   const message = useSelector(selectMessage);
@@ -22,12 +21,13 @@ const RegisterPage = () => {
 
   useEffect(() => {
     if (error && error !== 'Unable to fetch user') {
-      Notify.failure(error);
+      // Notify.failure(error);
+      error !== 'Request failed with status code 409' && Notify.failure(error);
       dispatch(clearErrorMessage());
     }
 
-    if (message === 'Verification letter was send to your email') {
-      Notify.success('Verification letter was send to your email');
+    if (message === 'Verification letter was sent to your email') {
+      Notify.success('Verification letter was sent to your email');
       dispatch(clearMessage());
       navigate('/signin');
     }
@@ -36,6 +36,10 @@ const RegisterPage = () => {
       dispatch(clearMessage());
     };
   }, [dispatch, error, message, navigate]);
+
+  if (error && error.includes('409')) {
+    Notify.failure('Email is already in use');
+  }
 
   return (
     <>

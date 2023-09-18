@@ -10,6 +10,7 @@ import Loader from 'components/Loader';
 const SignInPage = () => {
   const error = useSelector(selectAuthError);
   const isLoading = useSelector(selectIsLoading);
+  console.log('error :>> ', error);
 
   const dispatch = useDispatch();
 
@@ -18,16 +19,18 @@ const SignInPage = () => {
       error !== 'Request failed with status code 401' && Notify.failure(error);
       dispatch(clearErrorMessage());
     }
-
     return () => {
       dispatch(clearErrorMessage());
     };
   }, [dispatch, error, isLoading]);
 
+  if (error && error.includes('401')) {
+    Notify.failure('Email or password is wrong');
+  }
+
   return (
     <>
       {isLoading && <Loader />}
-      {/* <LoadingNotice /> */}
       <LogInForm />
     </>
   );

@@ -1,12 +1,14 @@
 import { useSelector } from 'react-redux';
 import { Navigation } from '../Navigation/Navigation';
 import css from './Footer.module.css';
-import { selectIsLoggedIn } from 'redux/auth/selectors';
+import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectors';
 
 export const Footer = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
+  const isRefreshing = useSelector(selectIsRefreshing);
   return (
-    isLoggedIn && (
+    isLoggedIn &&
+    !isRefreshing && (
       <footer className={css.footer}>
         <div className={css.container}>
           <Navigation />

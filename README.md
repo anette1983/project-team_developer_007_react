@@ -1,9 +1,7 @@
 # SoYummy - Your Ultimate Web Cookbook
 
-![Alt text](./assets/image-14.png)
-
 <p align="center">
-      <img src="https://i.pinimg.com/originals/86/5d/21/865d21c9cd8cf1805ee4bc83e1bac4fa.png" width="1010">
+  <img src="./assets/image-14.png" alt="Alt text" width="1010">
 </p>
 
 SoYummy is a feature-rich web cookbook application. It allows you to easily
@@ -158,19 +156,13 @@ To use this project locally, please follow these steps:
 
 ## Our team
 
-![Alt text](./assets/image-2.png) 
-![Alt text](./assets/image.png)
+![Alt text](./assets/image-2.png) ![Alt text](./assets/image.png)
 ![Alt text](./assets/image-1.png)
 
 ## Screenshots
 
-![Alt text](./assets/image-12.png) 
-![Alt text](./assets/image-13.png)
-![Alt text](./assets/image-4.png) 
-![Alt text](./assets/image-11.png)
-![Alt text](./assets/image-5.png) 
-![Alt text](./assets/image-6.png)
-![Alt text](./assets/image-7.png) 
-![Alt text](./assets/image-8.png)
-![Alt text](./assets/image-9.png) 
+![Alt text](./assets/image-12.png) ![Alt text](./assets/image-13.png)
+![Alt text](./assets/image-4.png) ![Alt text](./assets/image-5.png)
+![Alt text](./assets/image-6.png) ![Alt text](./assets/image-7.png)
+![Alt text](./assets/image-8.png) ![Alt text](./assets/image-9.png)
 ![Alt text](./assets/image-10.png)

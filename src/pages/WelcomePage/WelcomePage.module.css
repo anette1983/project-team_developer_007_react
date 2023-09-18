@@ -156,9 +156,13 @@
     background-position: center;
   }
   .Welcome__container {
-    padding: 214px 450px 216px 450px;
+    /* padding: 214px 450px 216px 450px; */
 
-    width: 1440px;
+    /* width: 1440px; */
+    width: 540px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 32vh;
   }
 
   @media screen and (min-device-pixel-ratio: 2),

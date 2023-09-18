@@ -1,69 +1,69 @@
-.tabPhoto{
-            display: none;
-        }
-        .paginationWrap{
-            margin: 0 auto;
-        }
-        .text{
-            font-family: "Poppins_Medium", sans-serif;
-           
-        }
-        .center{
-            text-align: center;
-        }
+.tabPhoto {
+  display: none;
+}
+.paginationWrap {
+  margin: 0 auto;
+}
+.text {
+  font-family: 'Poppins_Medium', sans-serif;
+}
+.center {
+  text-align: center;
+}
+
+.mobPhoto {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 375px) {
-        .container{
-            padding: 50px 16px 0 16px; 
-            position: relative;
-            
-        }
-        .listContainer{
-            padding: 10px 16px 0 16px;
-            max-width: 375px;
-            margin: 0 auto;
-        }
-            .mobPhoto{
-            margin: 0 auto;
-        }
-        .tabPhoto{
-            display: none;
-        }
-    }
-    @media screen and (min-width: 768px) {
-        .container{
-          padding: 72px 32px 0 32px;
-        }
-          .mobPhoto{
-            display: none;
-          
-        }
-          .tabPhoto{
-            display: block;
-            margin: 0 auto;
-        }
-         .listContainer{
-            padding: 8px 32px 0 32px;
-            max-width: 768px;
-            margin: 0 auto;
-        }
-    }
-  
-    @media screen and (min-width: 1440px) {
-       .container{  
-           padding: 102px 100px 0 100px;
-        }
-          .listContainer{
-            padding: 58px 100px 0 100px;
-            max-width: 1440px;
-            margin: 0 auto;
-        }
-    }
-        .paginationWrap{
-        width: 275px;
-        height: 51px;
-        border-radius: 26px;
-        background: #FAFAFA;
-        box-shadow: 0px 4px 4px 0px rgba(135, 135, 135, 0.20);
-        display: flex;
-        align-items: center;
-    }
+  .container {
+    padding: 50px 16px 0 16px;
+    position: relative;
+  }
+  .listContainer {
+    padding: 10px 16px 0 16px;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+
+  .tabPhoto {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 72px 32px 0 32px;
+  }
+  .mobPhoto {
+    display: none;
+  }
+  .tabPhoto {
+    display: block;
+    margin: 0 auto;
+  }
+  .listContainer {
+    padding: 8px 32px 0 32px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 102px 100px 0 100px;
+  }
+  .listContainer {
+    padding: 58px 100px 0 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+.paginationWrap {
+  width: 275px;
+  height: 51px;
+  border-radius: 26px;
+  background: #fafafa;
+  box-shadow: 0px 4px 4px 0px rgba(135, 135, 135, 0.2);
+  display: flex;
+  align-items: center;
+}
