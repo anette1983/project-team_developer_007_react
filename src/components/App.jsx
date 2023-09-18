@@ -1,7 +1,7 @@
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading, selectIsRefreshing } from 'redux/auth/selectors';
+import { selectIsRefreshing } from 'redux/auth/selectors';
 import SharedLayout from './SharedLayout/SharedLayout';
 import CategoryDetails from 'components/CategoryDetails/CategoryDetails';
 import { refreshUser } from 'redux/auth/operations';
@@ -29,13 +29,12 @@ const ShoppingListPage = lazy(() =>
 export const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return isRefreshing || isLoading ? (
+  return isRefreshing ? (
     <LoadingNotice />
   ) : (
     <Routes>
