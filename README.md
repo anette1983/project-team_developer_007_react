@@ -15,7 +15,7 @@ https://anette1983.github.io/project-team_developer_007_react
 
 ## Backend info
 
-This application uses it's own backend created by our team with Node.js and
+This application uses its own backend created by our team with Node.js and
 MongoDB. The server manages collections of recipes and users, providing
 authentication/authorization, email verification, and the ability to work with
 images.
@@ -156,8 +156,11 @@ To use this project locally, please follow these steps:
 
 ## Our team
 
-![Alt text](./assets/image-2.png) ![Alt text](./assets/image.png)
-![Alt text](./assets/image-1.png)
+<p align="center">
+  <img src="./assets/image-2.png" alt="Alt text" width="1010">
+  <img src="./assets/image.png" alt="Alt text" width="1010">
+  <img src="./assets/image-1.png" alt="Alt text" width="1010">
+</p>
 
 ## Screenshots
 
