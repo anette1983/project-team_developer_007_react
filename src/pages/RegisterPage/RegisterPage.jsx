@@ -20,13 +20,18 @@ const RegisterPage = () => {
   const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
-    if (error && error !== 'Unable to fetch user') {
-      // Notify.failure(error);
-      error !== 'Request failed with status code 409' && Notify.failure(error);
+
+    if (
+      error &&
+      error !== 'Unable to fetch user' &&
+      error !== 'Request failed with status code 401' &&
+      error !== 'Request failed with status code 409'
+    ) {
+      Notify.failure(error);
       dispatch(clearErrorMessage());
     }
 
-    if (message === 'Verification letter was sent to your email') {
+    if (message === 'Verification letter was send to your email') {
       Notify.success('Verification letter was sent to your email');
       dispatch(clearMessage());
       navigate('/signin');
