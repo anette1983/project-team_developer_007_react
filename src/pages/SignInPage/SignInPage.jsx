@@ -10,7 +10,6 @@ import Loader from 'components/Loader';
 const SignInPage = () => {
   const error = useSelector(selectAuthError);
   const isLoading = useSelector(selectIsLoading);
-  console.log('error :>> ', error);
 
   const dispatch = useDispatch();
 
